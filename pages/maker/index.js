@@ -4,8 +4,6 @@ import { parseCookies } from '../../lib/parseCookies'
 import { Navbar } from '../../components/elements'
 import { ProductGrid } from '../../components/widgets/product'
 import ProductGridList from '../../components/elements/list/ProductGridList'
-import window from 'global'
-import AddImage from '../../components/graphics/images/AddImage'
 import { AddProduct } from '../../components/elements/product'
 
 const UserPage = props => {
@@ -43,7 +41,6 @@ const UserPage = props => {
       <div className="w-full">
         <Navbar cookies={props.cookies} className="w-full" />
         <ProductGridList className="p-2 pt-10" data={productsList}/>
-        <AddImage/>
         <AddProduct/>
       </div>
     );

@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/authentication/authentication */ "./services/authentication/authentication.js");
 /* harmony import */ var _services_hooks_onClickOutside__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/hooks/onClickOutside */ "./services/hooks/onClickOutside.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\elements\\NavMenu.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\NavMenu.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -127,7 +127,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user */ "./components/user/index.js");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! . */ "./components/elements/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\elements\\Navbar.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\Navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -264,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\elements\\list\\ProductGridList.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\list\\ProductGridList.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -307,10 +307,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+/* harmony import */ var _widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../widgets/image/AddImageGrid */ "./components/widgets/image/AddImageGrid.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\elements\\product\\AddProduct.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\product\\AddProduct.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -330,10 +332,11 @@ var AddProduct = function AddProduct(props) {
   };
 
   var content = __jsx("div", {
+    className: "m-4",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 9
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -344,7 +347,7 @@ var AddProduct = function AddProduct(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 13
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtArea"], {
@@ -355,7 +358,7 @@ var AddProduct = function AddProduct(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 13
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
@@ -366,7 +369,7 @@ var AddProduct = function AddProduct(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 25,
       columnNumber: 13
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
@@ -377,7 +380,14 @@ var AddProduct = function AddProduct(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
+      columnNumber: 13
+    }
+  }), __jsx(_widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
       columnNumber: 13
     }
   }));
@@ -417,7 +427,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\graphics\\images\\AddImage.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\images\\AddImage.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -432,6 +442,7 @@ var AddImage = function AddImage(props) {
   */
 
   var content = __jsx("div", {
+    className: props.className,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -439,6 +450,7 @@ var AddImage = function AddImage(props) {
       columnNumber: 9
     }
   }, __jsx("div", {
+    className: "relative m-1",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -446,13 +458,13 @@ var AddImage = function AddImage(props) {
       columnNumber: 13
     }
   }, __jsx("input", {
-    className: "invisible",
+    className: "absolute invisible",
     ref: inputRef,
     accept: "image/jpeg, image/jpg, image/png",
     multiple: true,
     type: "file",
     onChange: function onChange(input) {
-      return props.onChange(input);
+      props.onChange(Array.from(input.target.files));
     },
     __self: _this,
     __source: {
@@ -469,7 +481,7 @@ var AddImage = function AddImage(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 27,
       columnNumber: 17
     }
   }, __jsx("span", {
@@ -477,7 +489,7 @@ var AddImage = function AddImage(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 28,
       columnNumber: 21
     }
   }, "Upload Photo"))));
@@ -501,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\graphics\\images\\ImgRound.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\images\\ImgRound.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -540,17 +552,97 @@ var ImgRound = function ImgRound(props) {
 
 /***/ }),
 
+/***/ "./components/graphics/images/RemovedSquaredImg.js":
+/*!*********************************************************!*\
+  !*** ./components/graphics/images/RemovedSquaredImg.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\images\\RemovedSquaredImg.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var RemovedSquaredImg = function RemovedSquaredImg(props) {
+  var content = __jsx("div", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative h-full w-full bg-yellow-300",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "absolute w-full h-full object-cover",
+    src: props.src,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1",
+    role: "button",
+    onClick: function onClick() {
+      return props.onRemove(props.index);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 21
+    }
+  }, "x"))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RemovedSquaredImg);
+
+/***/ }),
+
 /***/ "./components/graphics/images/index.js":
 /*!*********************************************!*\
   !*** ./components/graphics/images/index.js ***!
   \*********************************************/
-/*! exports provided: ImgRound */
+/*! exports provided: ImgRound, AddImage, RemovedSquaredImg */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ImgRound__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ImgRound */ "./components/graphics/images/ImgRound.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ImgRound", function() { return _ImgRound__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _AddImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddImage */ "./components/graphics/images/AddImage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AddImage", function() { return _AddImage__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _RemovedSquaredImg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./RemovedSquaredImg */ "./components/graphics/images/RemovedSquaredImg.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RemovedSquaredImg", function() { return _RemovedSquaredImg__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+
 
 
 
@@ -568,7 +660,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\graphics\\textFields\\IntField.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\IntField.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -622,7 +714,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\graphics\\textFields\\PwdField.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\PwdField.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -675,7 +767,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\graphics\\textFields\\TxtArea.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TxtArea.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -730,7 +822,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\graphics\\textFields\\TxtField.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TxtField.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -811,7 +903,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\logo\\Brand.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\Brand.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -863,7 +955,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../graphics/images */ "./components/graphics/images/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\user\\Menu.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\user\\Menu.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -938,6 +1030,121 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/widgets/image/AddImageGrid.js":
+/*!**************************************************!*\
+  !*** ./components/widgets/image/AddImageGrid.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/images */ "./components/graphics/images/index.js");
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\image\\AddImageGrid.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var AddImageGrid = function AddImageGrid(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      files = _useState[0],
+      setFiles = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      imagesList = _useState2[0],
+      setImagesList = _useState2[1];
+
+  var appendFile = function appendFile(newFiles) {
+    if (newFiles.length > 0) {
+      newFiles.forEach(function (f) {
+        return files.push(f);
+      }, _this);
+      initList();
+    }
+  };
+
+  var removeFile = function removeFile(index) {
+    files.splice(index, 1);
+    initList();
+  };
+
+  var initList = function initList() {
+    if (files.length > 0) {
+      setImagesList(files.map(function (file, index) {
+        var imgSrc = (window.URL ? URL : webkitURL).createObjectURL(file);
+        console.log(index);
+        return __jsx(_graphics_images__WEBPACK_IMPORTED_MODULE_1__["RemovedSquaredImg"], {
+          className: "w-32 h-32 m-1",
+          src: imgSrc,
+          key: index,
+          index: index,
+          onRemove: removeFile,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 24
+          }
+        });
+      }));
+    } else {
+      setImagesList(null);
+    }
+  };
+
+  var content = __jsx("div", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "w-full",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 13
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 17
+    }
+  }, "Add Product Images"), __jsx("div", {
+    className: "h-auto w-full container flex content-start flex-wrap border py-2 px-3",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 17
+    }
+  }, imagesList, __jsx(_graphics_images__WEBPACK_IMPORTED_MODULE_1__["AddImage"], {
+    onChange: appendFile,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 21
+    }
+  }))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddImageGrid);
+
+/***/ }),
+
 /***/ "./components/widgets/product/ProductGrid.js":
 /*!***************************************************!*\
   !*** ./components/widgets/product/ProductGrid.js ***!
@@ -950,7 +1157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\components\\widgets\\product\\ProductGrid.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\product\\ProductGrid.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3108,35 +3315,10 @@ function tryDecode(str, decode) {
 
 /***/ }),
 
-/***/ "./node_modules/global/window.js":
-/*!***************************************!*\
-  !*** ./node_modules/global/window.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {var win;
-
-if (typeof window !== "undefined") {
-    win = window;
-} else if (typeof global !== "undefined") {
-    win = global;
-} else if (typeof self !== "undefined"){
-    win = self;
-} else {
-    win = {};
-}
-
-module.exports = win;
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5Cecomartwebapp%5Cpages%5Cmaker%5Cindex.js!./":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5Cecomartwebapp%5Cpages%5Cmaker%5Cindex.js ***!
-  \************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js!./":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js ***!
+  \*************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3571,37 +3753,6 @@ module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
 /***/ "./pages/maker/index.js":
 /*!******************************!*\
   !*** ./pages/maker/index.js ***!
@@ -3619,16 +3770,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/elements */ "./components/elements/index.js");
 /* harmony import */ var _components_widgets_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/widgets/product */ "./components/widgets/product/index.js");
 /* harmony import */ var _components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/elements/list/ProductGridList */ "./components/elements/list/ProductGridList.js");
-/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! global */ "./node_modules/global/window.js");
-/* harmony import */ var global__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(global__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_graphics_images_AddImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/graphics/images/AddImage */ "./components/graphics/images/AddImage.js");
-/* harmony import */ var _components_elements_product__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/elements/product */ "./components/elements/product/index.js");
+/* harmony import */ var _components_elements_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/elements/product */ "./components/elements/product/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\ecomartwebapp\\pages\\maker\\index.js";
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\pages\\maker\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
 
 
 
@@ -3660,7 +3806,7 @@ var UserPage = function UserPage(props) {
         setIsLoading(false);
       });
     } else {
-      global__WEBPACK_IMPORTED_MODULE_6___default.a.location = '/';
+      window.location = '/';
     }
   }, []);
 
@@ -3668,7 +3814,7 @@ var UserPage = function UserPage(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 32,
       columnNumber: 17
     }
   }, "Loading characters...");
@@ -3684,7 +3830,7 @@ var UserPage = function UserPage(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39,
+          lineNumber: 37,
           columnNumber: 14
         }
       });
@@ -3694,7 +3840,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
+        lineNumber: 41,
         columnNumber: 7
       }
     }, __jsx(_components_elements__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
@@ -3703,7 +3849,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 42,
         columnNumber: 9
       }
     }), __jsx(_components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -3712,21 +3858,14 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 43,
         columnNumber: 9
       }
-    }), __jsx(_components_graphics_images_AddImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }), __jsx(_components_elements_product__WEBPACK_IMPORTED_MODULE_6__["AddProduct"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
-        columnNumber: 9
-      }
-    }), __jsx(_components_elements_product__WEBPACK_IMPORTED_MODULE_8__["AddProduct"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 44,
         columnNumber: 9
       }
     }));
@@ -3735,7 +3874,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51,
+        lineNumber: 48,
         columnNumber: 15
       }
     }, "Could not fetch any data.");
@@ -3842,13 +3981,13 @@ function onClickOutside(ref, handler) {
 /***/ }),
 
 /***/ 1:
-/*!****************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5Cecomartwebapp%5Cpages%5Cmaker%5Cindex.js ***!
-  \****************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js ***!
+  \*****************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5Cecomartwebapp%5Cpages%5Cmaker%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5Cecomartwebapp%5Cpages%5Cmaker%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js!./");
 
 
 /***/ }),

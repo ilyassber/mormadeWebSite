@@ -12,15 +12,17 @@ const AddImage = props => {
     */
 
     let content = (
-        <div>
-            <div>
+        <div className={props.className}>
+            <div className="relative m-1">
                 <input
-                    className="invisible"
+                    className="absolute invisible"
                     ref={inputRef}
                     accept="image/jpeg, image/jpg, image/png"
                     multiple
                     type="file"
-                    onChange={(input) => props.onChange(input)}
+                    onChange={(input) => {
+                        props.onChange(Array.from(input.target.files))
+                    }}
                 />
                 <div className="container flex content-center flex-wrap text-center h-32 w-32 border border-1 border-gray-900 hover:bg-xw-200" role="button" onClick={() => { inputRef.current.click() }}>
                     <span className="text-center h-auto w-full">

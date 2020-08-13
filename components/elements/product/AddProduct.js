@@ -1,5 +1,6 @@
 import React from 'react'
 import { TxtField, TxtArea, IntField } from '../../graphics/textFields'
+import AddImageGrid from '../../widgets/image/AddImageGrid'
 
 const AddProduct = props => {
 
@@ -18,11 +19,12 @@ const AddProduct = props => {
     }
 
     let content = (
-        <div>
+        <div className="m-4">
             <TxtField label="Product Name" onChange={(event) => getValue(event, 'name')}/>
             <TxtArea label="Product Description" onChange={(event) => getValue(event, 'description')}/>
             <IntField label="Price" onChange={(event) => getValue(event, 'price')}/>
             <IntField label="Quantity" onChange={(event) => getValue(event, 'quantity')}/>
+            <AddImageGrid/>
         </div>
     )
 
