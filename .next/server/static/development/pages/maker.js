@@ -394,15 +394,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
-/* harmony import */ var _widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../widgets/image/AddImageGrid */ "./components/widgets/image/AddImageGrid.js");
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+/* harmony import */ var _widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../widgets/image/AddImageGrid */ "./components/widgets/image/AddImageGrid.js");
+/* harmony import */ var _services_api_uploadImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/api/uploadImage */ "./services/api/uploadImage.js");
+/* harmony import */ var _services_api_addProduct__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/api/addProduct */ "./services/api/addProduct.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\product\\AddProduct.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+
+
+
 const AddProduct = props => {
   let data = {};
+  data['pics_list'] = [];
+  const {
+    0: files,
+    1: setFiles
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
 
   const getValue = (event, access) => {
     if (access == 'name') {
@@ -416,13 +427,44 @@ const AddProduct = props => {
     }
   };
 
+  const appendFile = newFiles => {
+    newFiles.forEach(f => files.push(f), undefined);
+  };
+
+  const removeFile = index => {
+    files.splice(index, 1);
+  };
+
+  const handleSubmit = async event => {
+    event.preventDefault();
+
+    for (let i = 0; i < files.length; i++) {
+      let response = await Object(_services_api_uploadImage__WEBPACK_IMPORTED_MODULE_4__["uploadImage"])(event, files[0], props.cookies['csrftoken']).then(res => res);
+      data['pics_list'].push(response.data);
+    }
+
+    console.log(data);
+    Object(_services_api_addProduct__WEBPACK_IMPORTED_MODULE_5__["addProduct"])(data, props.cookies['csrftoken']).then(res => {
+      console.log(res);
+    });
+  };
+
   let content = __jsx("div", {
     className: "m-4",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 47,
       columnNumber: 9
+    }
+  }, __jsx("form", {
+    className: "",
+    action: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
     label: "Product Name",
@@ -430,8 +472,8 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
+      lineNumber: 49,
+      columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtArea"], {
     label: "Product Description",
@@ -439,8 +481,17 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 13
+      lineNumber: 50,
+      columnNumber: 17
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    label: "Product Region",
+    onChange: event => getValue(event, 'region'),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
     label: "Price",
@@ -448,8 +499,8 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
+      lineNumber: 52,
+      columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
     label: "Quantity",
@@ -457,17 +508,30 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 13
+      lineNumber: 53,
+      columnNumber: 17
     }
-  }), __jsx(_widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    files: files,
+    addImage: appendFile,
+    removeImage: removeFile,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 13
+      lineNumber: 54,
+      columnNumber: 17
     }
-  }));
+  }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
+    className: "w-full h-12 mt-8 mb-4",
+    value: "ADD PRODUCT",
+    onClick: handleSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 17
+    }
+  })));
 
   return content;
 };
@@ -487,6 +551,112 @@ const AddProduct = props => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AddProduct__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddProduct */ "./components/elements/product/AddProduct.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AddProduct", function() { return _AddProduct__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/BtnBbw.js":
+/*!***********************************************!*\
+  !*** ./components/graphics/buttons/BtnBbw.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnBbw.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnBbw = props => {
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: "w-full h-full bg-gray-900 hover:bg-gray-700 focus:outline-none focus:border-gray-900 font-sans font-medium text-white text-sm py-2 px-4",
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnBbw);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/BtnBtb.js":
+/*!***********************************************!*\
+  !*** ./components/graphics/buttons/BtnBtb.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnBtb.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnBtb = props => {
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: "w-full h-full bg-transparent border border-gray-900 hover:text-opacity-75 hover:border-opacity-75 focus:outline-none font-sans font-medium text-gray-900 text-sm py-2 px-4",
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnBtb);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/index.js":
+/*!**********************************************!*\
+  !*** ./components/graphics/buttons/index.js ***!
+  \**********************************************/
+/*! exports provided: BtnBbw, BtnBtb */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BtnBbw__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BtnBbw */ "./components/graphics/buttons/BtnBbw.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnBbw", function() { return _BtnBbw__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _BtnBtb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BtnBtb */ "./components/graphics/buttons/BtnBtb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnBtb", function() { return _BtnBtb__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
 
 
 
@@ -1106,29 +1276,25 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const AddImageGrid = props => {
   const {
-    0: files,
-    1: setFiles
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
-  const {
     0: imagesList,
     1: setImagesList
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
 
   const appendFile = newFiles => {
     if (newFiles.length > 0) {
-      newFiles.forEach(f => files.push(f), undefined);
+      props.addImage(newFiles);
       initList();
     }
   };
 
   const removeFile = index => {
-    files.splice(index, 1);
+    props.removeImage(index);
     initList();
   };
 
   const initList = () => {
-    if (files.length > 0) {
-      setImagesList(files.map(function (file, index) {
+    if (props.files.length > 0) {
+      setImagesList(props.files.map(function (file, index) {
         const imgSrc = (window.URL ? URL : webkitURL).createObjectURL(file);
         console.log(index);
         return __jsx(_graphics_images__WEBPACK_IMPORTED_MODULE_1__["RemovedSquaredImg"], {
@@ -1140,7 +1306,7 @@ const AddImageGrid = props => {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 25,
             columnNumber: 24
           }
         });
@@ -1155,7 +1321,7 @@ const AddImageGrid = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 33,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1163,7 +1329,7 @@ const AddImageGrid = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 34,
       columnNumber: 13
     }
   }, __jsx("label", {
@@ -1171,7 +1337,7 @@ const AddImageGrid = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 35,
       columnNumber: 17
     }
   }, "Add Product Images"), __jsx("div", {
@@ -1179,7 +1345,7 @@ const AddImageGrid = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 36,
       columnNumber: 17
     }
   }, imagesList, __jsx(_graphics_images__WEBPACK_IMPORTED_MODULE_1__["AddImage"], {
@@ -1187,7 +1353,7 @@ const AddImageGrid = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 38,
       columnNumber: 21
     }
   }))));
@@ -1370,6 +1536,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 const UserPage = props => {
   console.log(props.cookies);
+  console.log(props.data);
   const {
     0: data,
     1: setData
@@ -1398,7 +1565,7 @@ const UserPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 17
     }
   }, "Loading characters...");
@@ -1414,7 +1581,7 @@ const UserPage = props => {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37,
+          lineNumber: 38,
           columnNumber: 14
         }
       });
@@ -1424,7 +1591,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 7
       }
     }, __jsx(_components_elements__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
@@ -1433,7 +1600,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42,
+        lineNumber: 43,
         columnNumber: 9
       }
     }), __jsx(_components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -1442,14 +1609,15 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
+        lineNumber: 44,
         columnNumber: 9
       }
     }), __jsx(_components_elements_product__WEBPACK_IMPORTED_MODULE_6__["AddProduct"], {
+      cookies: props.cookies,
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 9
       }
     }));
@@ -1458,7 +1626,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 49,
         columnNumber: 15
       }
     }, "Could not fetch any data.");
@@ -1472,11 +1640,101 @@ UserPage.getInitialProps = ({
 }) => {
   const cookies = Object(_lib_parseCookies__WEBPACK_IMPORTED_MODULE_2__["parseCookies"])(req);
   return {
-    cookies: cookies
+    cookies: cookies,
+    data: req.data
   };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (UserPage);
+
+/***/ }),
+
+/***/ "./services/api/addProduct.js":
+/*!************************************!*\
+  !*** ./services/api/addProduct.js ***!
+  \************************************/
+/*! exports provided: addProduct */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addProduct", function() { return addProduct; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "querystring");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function addProduct(data, csrttoken) {
+  return new Promise((resolve, reject) => {
+    let axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': csrttoken
+      }
+    };
+    data['pics_list'] = querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(data['pics_list']);
+    let content = {
+      data: querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(data)
+    };
+    console.log(content);
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://localhost:8000/products/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
+      resolve(response.data);
+    }).catch(error => {
+      reject(error);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./services/api/uploadImage.js":
+/*!*************************************!*\
+  !*** ./services/api/uploadImage.js ***!
+  \*************************************/
+/*! exports provided: uploadImage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uploadImage", function() { return uploadImage; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//import useSWR from 'swr'
+
+/*
+const fetcher = (params) => axios.post(params.url, params.form_data, {
+    headers: {
+        'content-type': 'multipart/form-data'
+    }
+}).then(res => res.json())
+*/
+
+function uploadImage(e, file, csrttoken) {
+  return new Promise((resolve, reject) => {
+    let form_data = new FormData();
+    form_data.append('name', file.name);
+    form_data.append('image', file, file.name);
+    const url = 'http://localhost:8000/images/';
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, form_data, {
+      headers: {
+        'content-type': 'multipart/form-data',
+        'X-CSRFToken': csrttoken
+      }
+    }).then(response => {
+      resolve(response);
+    });
+    /*
+    const { data, error } = useSWR({url: url, form_data: form_data}, fetcher)
+    return {
+        user: data,
+        isLoading: !error && !data,
+        isError: error
+    }
+    */
+  });
+}
 
 /***/ }),
 

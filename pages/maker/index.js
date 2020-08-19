@@ -9,6 +9,7 @@ import { AddProduct } from '../../components/elements/product'
 const UserPage = props => {
 
   console.log(props.cookies)
+  console.log(props.data)
 
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +42,7 @@ const UserPage = props => {
       <div className="w-full">
         <Navbar cookies={props.cookies} className="w-full" />
         <ProductGridList className="p-2 pt-10" data={productsList}/>
-        <AddProduct/>
+        <AddProduct cookies={props.cookies}/>
       </div>
     );
   } else if (!isLoading && (!data || data.length === 0)) {
@@ -54,7 +55,8 @@ UserPage.getInitialProps = ({ req }) => {
   const cookies = parseCookies(req);
 
   return {
-    cookies: cookies
+    cookies: cookies,
+    data: req.data
   };
 };
 

@@ -3,24 +3,23 @@ import { AddImage, RemovedSquaredImg } from '../../graphics/images'
 
 const AddImageGrid = props => {
 
-    const [files, setFiles] = useState([])
     const [imagesList, setImagesList] = useState(null)
 
     const appendFile = (newFiles) => {
         if (newFiles.length > 0) {
-            newFiles.forEach((f) => files.push(f), this)
+            props.addImage(newFiles)
             initList()
         }
     }
 
     const removeFile = (index) => {
-        files.splice(index, 1)
+        props.removeImage(index)
         initList()
     }
 
     const initList = () => {
-        if (files.length > 0) {
-            setImagesList(files.map(function (file, index) {
+        if (props.files.length > 0) {
+            setImagesList(props.files.map(function (file, index) {
                 const imgSrc = (window.URL ? URL : webkitURL).createObjectURL(file)
                 console.log(index)
                 return <RemovedSquaredImg className="w-32 h-32 m-1" src={imgSrc} key={index} index={index} onRemove={removeFile}/>
