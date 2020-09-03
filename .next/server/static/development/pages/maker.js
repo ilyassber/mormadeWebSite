@@ -93,10 +93,10 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/elements/NavMenu.js":
-/*!****************************************!*\
-  !*** ./components/elements/NavMenu.js ***!
-  \****************************************/
+/***/ "./components/elements/bar/NavMenu.js":
+/*!********************************************!*\
+  !*** ./components/elements/bar/NavMenu.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,9 +104,9 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/authentication/authentication */ "./services/authentication/authentication.js");
-/* harmony import */ var _services_hooks_onClickOutside__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/hooks/onClickOutside */ "./services/hooks/onClickOutside.js");
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\NavMenu.js";
+/* harmony import */ var _services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/authentication/authentication */ "./services/authentication/authentication.js");
+/* harmony import */ var _services_hooks_onClickOutside__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/hooks/onClickOutside */ "./services/hooks/onClickOutside.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\bar\\NavMenu.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -203,10 +203,10 @@ const NavMenu = props => {
 
 /***/ }),
 
-/***/ "./components/elements/Navbar.js":
-/*!***************************************!*\
-  !*** ./components/elements/Navbar.js ***!
-  \***************************************/
+/***/ "./components/elements/bar/Navbar.js":
+/*!*******************************************!*\
+  !*** ./components/elements/bar/Navbar.js ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -214,10 +214,10 @@ const NavMenu = props => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _logo_Brand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logo/Brand */ "./components/logo/Brand.js");
-/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../user */ "./components/user/index.js");
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! . */ "./components/elements/index.js");
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\Navbar.js";
+/* harmony import */ var _logo_Brand__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../logo/Brand */ "./components/logo/Brand.js");
+/* harmony import */ var _user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../user */ "./components/user/index.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! . */ "./components/elements/bar/index.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\bar\\Navbar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -321,20 +321,109 @@ const Navbar = props => {
 
 /***/ }),
 
-/***/ "./components/elements/index.js":
-/*!**************************************!*\
-  !*** ./components/elements/index.js ***!
-  \**************************************/
-/*! exports provided: Navbar, NavMenu */
+/***/ "./components/elements/bar/SideBar.js":
+/*!********************************************!*\
+  !*** ./components/elements/bar/SideBar.js ***!
+  \********************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar */ "./components/elements/Navbar.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_buttons_BtnTtb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/buttons/BtnTtb */ "./components/graphics/buttons/BtnTtb.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\bar\\SideBar.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Sidebar = props => {
+  const {
+    0: clicked,
+    1: setClicked
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.clicked);
+  const btnsList = props.data.map(function (value) {
+    if (value.id == clicked) {
+      return __jsx(_graphics_buttons_BtnTtb__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        className: "w-full h-auto",
+        key: value.id,
+        value: value.value,
+        clicked: "true",
+        onClick: () => {
+          setClicked(value.id);
+          props.onClick(value.id);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 20
+        }
+      });
+    } else {
+      return __jsx(_graphics_buttons_BtnTtb__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        className: "w-full h-auto",
+        key: value.id,
+        value: value.value,
+        clicked: "false",
+        onClick: () => {
+          setClicked(value.id);
+          props.onClick(value.id);
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21,
+          columnNumber: 20
+        }
+      });
+    }
+  });
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "h-full w-full m-4",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 13
+    }
+  }, btnsList));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
+
+/***/ }),
+
+/***/ "./components/elements/bar/index.js":
+/*!******************************************!*\
+  !*** ./components/elements/bar/index.js ***!
+  \******************************************/
+/*! exports provided: Navbar, NavMenu, SideBar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Navbar */ "./components/elements/bar/Navbar.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _Navbar__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _NavMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavMenu */ "./components/elements/NavMenu.js");
+/* harmony import */ var _NavMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavMenu */ "./components/elements/bar/NavMenu.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "NavMenu", function() { return _NavMenu__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _SideBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SideBar */ "./components/elements/bar/SideBar.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SideBar", function() { return _SideBar__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
 
 
 
@@ -639,6 +728,55 @@ const BtnBtb = props => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (BtnBtb);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/BtnTtb.js":
+/*!***********************************************!*\
+  !*** ./components/graphics/buttons/BtnTtb.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnTtb.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnTtb = props => {
+  let style = "w-full h-full bg-transparent text-left hover:text-opacity-75 focus:outline-none font-sans font-bold text-gray-900 text-sm py-2 px-4";
+
+  if (props.clicked == 'true') {
+    style = "w-full h-full bg-transparent text-left focus:outline-none font-sans font-bold text-red-700 text-sm py-2 px-4";
+  }
+
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: style,
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnTtb);
 
 /***/ }),
 
@@ -1520,7 +1658,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _lib_parseCookies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib/parseCookies */ "./lib/parseCookies.js");
-/* harmony import */ var _components_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/elements */ "./components/elements/index.js");
+/* harmony import */ var _components_elements_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/elements/bar */ "./components/elements/bar/index.js");
 /* harmony import */ var _components_widgets_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/widgets/product */ "./components/widgets/product/index.js");
 /* harmony import */ var _components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/elements/list/ProductGridList */ "./components/elements/list/ProductGridList.js");
 /* harmony import */ var _components_elements_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/elements/product */ "./components/elements/product/index.js");
@@ -1545,6 +1683,17 @@ const UserPage = props => {
     0: isLoading,
     1: setIsLoading
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: clikced,
+    1: setClicked
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const sideBarData = [{
+    id: 0,
+    value: 'Products'
+  }, {
+    id: 1,
+    value: 'Add Product'
+  }];
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     console.log('useEffect runs');
     setIsLoading(true);
@@ -1565,7 +1714,7 @@ const UserPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 36,
       columnNumber: 17
     }
   }, "Loading characters...");
@@ -1581,52 +1730,93 @@ const UserPage = props => {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38,
+          lineNumber: 41,
           columnNumber: 14
         }
       });
     });
-    content = __jsx("div", {
-      className: "w-full",
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42,
-        columnNumber: 7
-      }
-    }, __jsx(_components_elements__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
-      cookies: props.cookies,
-      className: "w-full",
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43,
-        columnNumber: 9
-      }
-    }), __jsx(_components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      className: "p-2 pt-10",
+
+    let comp1 = __jsx(_components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      className: "p-2",
       data: productsList,
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 44,
-        columnNumber: 9
+        columnNumber: 18
       }
-    }), __jsx(_components_elements_product__WEBPACK_IMPORTED_MODULE_6__["AddProduct"], {
+    });
+
+    let comp2 = __jsx(_components_elements_product__WEBPACK_IMPORTED_MODULE_6__["AddProduct"], {
       cookies: props.cookies,
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 45,
+        columnNumber: 18
+      }
+    });
+
+    const componentsList = [comp1, comp2];
+    content = __jsx("div", {
+      className: "w-full",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52,
+        columnNumber: 7
+      }
+    }, __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
+      cookies: props.cookies,
+      className: "w-full",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53,
         columnNumber: 9
       }
-    }));
+    }), __jsx("div", {
+      className: "w-full flex pt-10",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54,
+        columnNumber: 9
+      }
+    }, __jsx("div", {
+      className: "w-64 h-full",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55,
+        columnNumber: 11
+      }
+    }, __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["SideBar"], {
+      className: "w-full h-full",
+      clicked: clikced,
+      data: sideBarData,
+      onClick: x => setClicked(x),
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56,
+        columnNumber: 13
+      }
+    })), __jsx("div", {
+      className: "w-full h-full",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58,
+        columnNumber: 11
+      }
+    }, componentsList[clikced])));
   } else if (!isLoading && (!data || data.length === 0)) {
     content = __jsx("p", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49,
+        lineNumber: 65,
         columnNumber: 15
       }
     }, "Could not fetch any data.");
