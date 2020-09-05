@@ -15,8 +15,6 @@ const UserPage = props => {
   const [isLoading, setIsLoading] = useState(false);
   const [clikced, setClicked] = useState(0)
 
-  const sideBarData = [{ id: 0, value: 'Products' }, { id: 1, value: 'Add Product' }]
-
   useEffect(() => {
     console.log('useEffect runs');
     setIsLoading(true);
@@ -29,7 +27,7 @@ const UserPage = props => {
           setIsLoading(false);
         })
     } else {
-      window.location = '/'
+      window.location = '/maker/auth'
     }
   }, []);
 
@@ -41,6 +39,7 @@ const UserPage = props => {
       return <ProductGrid className="h-auto w-auto m-2" key={product.id} data={product} owner="ilyass" />
     })
 
+    const sideBarData = [{ id: 0, value: 'Products' }, { id: 1, value: 'Add Product' }]
     let comp1 = (<ProductGridList className="p-2" data={productsList} />)
     let comp2 = (<AddProduct cookies={props.cookies} />)
     const componentsList = [

@@ -1,24 +1,13 @@
 import React from 'react'
-import { Authentication } from '../components/authentication'
-import { parseCookies } from '../lib/parseCookies'
 
-const Auth = ({ cookies = {}}) => {
-
+const hello = ({ cookies = {}}) => {
   console.log(cookies)
   
   let contentDOM = (
-    <Authentication cookies={cookies}/>
+    <h1>HELLO</h1>
   )
 
   return contentDOM
 }
 
-Auth.getInitialProps = ({ req }) => {
-  const cookies = parseCookies(req);
-
-  return {
-    cookies: cookies
-  };
-};
-
-export default Auth
+export default hello

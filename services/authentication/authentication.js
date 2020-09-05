@@ -19,7 +19,7 @@ export function authenticate(data, operation, csrttoken) {
                 console.log(response)
                 //window.open('/users')
                 if (operation == 'logout') {
-                    window.location = '/'
+                    window.location = '/maker/auth'
                 } else {
                     window.location = '/maker'
                 }

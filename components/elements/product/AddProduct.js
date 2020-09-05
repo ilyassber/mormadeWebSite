@@ -4,6 +4,7 @@ import { BtnBbw } from '../../graphics/buttons'
 import AddImageGrid from '../../widgets/image/AddImageGrid'
 import { uploadImage } from '../../../services/api/uploadImage'
 import { addProduct } from '../../../services/api/addProduct'
+import AddCategory from '../../widgets/category/AddCategory'
 
 const AddProduct = props => {
 
@@ -51,6 +52,7 @@ const AddProduct = props => {
                 <TxtField label="Product Region" onChange={(event) => getValue(event, 'region')} />
                 <IntField label="Price" onChange={(event) => getValue(event, 'price')} />
                 <IntField label="Quantity" onChange={(event) => getValue(event, 'quantity')} />
+                <AddCategory className=""/>
                 <AddImageGrid files={files} addImage={appendFile} removeImage={removeFile}/>
                 <BtnBbw className="w-full h-12 mt-8 mb-4" value="ADD PRODUCT" onClick={handleSubmit} />
             </form>

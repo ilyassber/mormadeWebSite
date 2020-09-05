@@ -487,8 +487,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../widgets/image/AddImageGrid */ "./components/widgets/image/AddImageGrid.js");
 /* harmony import */ var _services_api_uploadImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/api/uploadImage */ "./services/api/uploadImage.js");
 /* harmony import */ var _services_api_addProduct__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/api/addProduct */ "./services/api/addProduct.js");
+/* harmony import */ var _widgets_category_AddCategory__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../widgets/category/AddCategory */ "./components/widgets/category/AddCategory.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\product\\AddProduct.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -543,7 +545,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -552,7 +554,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -561,7 +563,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtArea"], {
@@ -570,7 +572,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -579,7 +581,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
@@ -588,7 +590,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
@@ -597,7 +599,15 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 54,
+      columnNumber: 17
+    }
+  }), __jsx(_widgets_category_AddCategory__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
       columnNumber: 17
     }
   }), __jsx(_widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -607,7 +617,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 56,
       columnNumber: 17
     }
   }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
@@ -617,7 +627,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 57,
       columnNumber: 17
     }
   })));
@@ -797,6 +807,90 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "./components/graphics/category/SelectCategory.js":
+/*!********************************************************!*\
+  !*** ./components/graphics/category/SelectCategory.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\category\\SelectCategory.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const SelectCategory = props => {
+  const optionsRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  const selectedRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  const options = props.data.map(option => {
+    return __jsx("option", {
+      key: option.id,
+      value: option.value,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 16
+      }
+    });
+  });
+
+  const getOption = () => {
+    let value = selectedRef.current.value;
+    props.data.map(option => {
+      if (option.value == value) {
+        props.setCategory(option.id, option.value, props.lvl);
+      }
+    });
+  };
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "border border-1 p-1",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 13
+    }
+  }, __jsx("input", {
+    className: "font-sans font-medium text-gray-700 leading-tight hover:outline-none focus:outline-none",
+    ref: selectedRef,
+    list: "data",
+    onChange: getOption,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 17
+    }
+  }), __jsx("datalist", {
+    id: "data",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 17
+    }
+  }, options)));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SelectCategory);
 
 /***/ }),
 
@@ -1395,6 +1489,94 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/widgets/category/AddCategory.js":
+/*!****************************************************!*\
+  !*** ./components/widgets/category/AddCategory.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/category/SelectCategory */ "./components/graphics/category/SelectCategory.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\category\\AddCategory.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const AddCategory = props => {
+  const {
+    0: categoriesList,
+    1: setCategoriesList
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+  let data = [{
+    id: 0,
+    value: 'Home'
+  }, {
+    id: 1,
+    value: 'Decoration'
+  }];
+  let categories = [];
+  let lvl = 0;
+
+  const setCategory = (id, value, lvl) => {
+    categories.splice(lvl, 0, id);
+    console.log(value);
+  };
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "w-full",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 17
+    }
+  }, "Add Product Category"), __jsx("div", {
+    className: "h-auto w-full container flex content-start flex-wrap py-2 px-3",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 17
+    }
+  }, __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: data,
+    lvl: lvl,
+    setCategory: setCategory,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 21
+    }
+  }))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddCategory);
+
+/***/ }),
+
 /***/ "./components/widgets/image/AddImageGrid.js":
 /*!**************************************************!*\
   !*** ./components/widgets/image/AddImageGrid.js ***!
@@ -1687,13 +1869,6 @@ const UserPage = props => {
     0: clikced,
     1: setClicked
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
-  const sideBarData = [{
-    id: 0,
-    value: 'Products'
-  }, {
-    id: 1,
-    value: 'Add Product'
-  }];
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     console.log('useEffect runs');
     setIsLoading(true);
@@ -1706,7 +1881,7 @@ const UserPage = props => {
         setIsLoading(false);
       });
     } else {
-      window.location = '/';
+      window.location = '/maker/auth';
     }
   }, []);
 
@@ -1714,7 +1889,7 @@ const UserPage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 34,
       columnNumber: 17
     }
   }, "Loading characters...");
@@ -1730,11 +1905,18 @@ const UserPage = props => {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 39,
           columnNumber: 14
         }
       });
     });
+    const sideBarData = [{
+      id: 0,
+      value: 'Products'
+    }, {
+      id: 1,
+      value: 'Add Product'
+    }];
 
     let comp1 = __jsx(_components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__["default"], {
       className: "p-2",
@@ -1742,7 +1924,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 43,
         columnNumber: 18
       }
     });
@@ -1752,7 +1934,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 44,
         columnNumber: 18
       }
     });
@@ -1763,7 +1945,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
+        lineNumber: 51,
         columnNumber: 7
       }
     }, __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
@@ -1772,7 +1954,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 52,
         columnNumber: 9
       }
     }), __jsx("div", {
@@ -1780,7 +1962,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54,
+        lineNumber: 53,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -1788,7 +1970,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55,
+        lineNumber: 54,
         columnNumber: 11
       }
     }, __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["SideBar"], {
@@ -1799,7 +1981,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56,
+        lineNumber: 55,
         columnNumber: 13
       }
     })), __jsx("div", {
@@ -1807,7 +1989,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58,
+        lineNumber: 57,
         columnNumber: 11
       }
     }, componentsList[clikced])));
@@ -1816,7 +1998,7 @@ const UserPage = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 64,
         columnNumber: 15
       }
     }, "Could not fetch any data.");
@@ -1961,7 +2143,7 @@ function authenticate(data, operation, csrttoken) {
       console.log(response); //window.open('/users')
 
       if (operation == 'logout') {
-        window.location = '/';
+        window.location = '/maker/auth';
       } else {
         window.location = '/maker';
       } //resolve(response.data)
