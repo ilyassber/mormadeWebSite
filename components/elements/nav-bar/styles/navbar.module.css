@@ -1,0 +1,75 @@
+.navbar {
+    @apply z-10 fixed flex-row w-full  font-sans bg-white; 
+}
+
+.up_container {
+    @apply flex flex-col justify-between w-full pl-5 pr-5 bg-white;
+}
+
+
+/*  logo styling  */
+
+.logo_icons_container {
+    @apply flex w-full h-12;
+}
+
+.logo_img {
+    @apply  w-32 object-contain cursor-pointer;
+}
+
+.logo_icons_left_space {
+    @apply h-full flex-1 ;
+}
+
+.logo_container {
+    @apply flex justify-center items-center flex-1 h-full;
+}
+.logo_title {
+    @apply text-xl;
+}
+/* search bar styling */
+
+
+.icons_container {
+    @apply flex flex-1 h-full justify-end items-center;
+
+}
+.icon {
+    @apply m-3 cursor-pointer text-gray-500 ; /* the div surrounding the icone */
+}
+
+
+.links_search_bar_container {
+    @apply flex h-12 w-full ;
+
+}
+
+.links_search_bar_left_space {
+    @apply h-full flex-1 ;
+}
+
+.link_container {
+    @apply flex flex-1 justify-center items-center h-full ;
+
+}
+
+.link {
+    @apply m-8 cursor-pointer;
+}
+
+.search_container {
+    @apply flex flex-1 justify-end items-center h-full;
+}
+
+.search_bar {
+    @apply flex justify-end h-8 w-32;
+}
+
+.search_input{
+    @apply h-full w-24 outline-none border-b border-gray-500 ;
+}
+
+.search_button{
+    @apply  h-full w-8 outline-none  border-b border-gray-500 ;
+}
+
