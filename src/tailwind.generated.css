@@ -12179,6 +12179,13 @@ video {
   font-family: Montserrat;
 }
 
+.font-inset font-family{
+  12: 3rem;
+  24: 6rem;
+  36: 9rem;
+  48: 12rem;
+}
+
 .font-hairline{
   font-weight: 100;
 }
@@ -22370,6 +22377,138 @@ video {
 }
 
 .left-auto{
+  left: auto;
+}
+
+.hover\:inset-0:hover{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hover\:inset-auto:hover{
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.hover\:inset-y-0:hover{
+  top: 0;
+  bottom: 0;
+}
+
+.hover\:inset-x-0:hover{
+  right: 0;
+  left: 0;
+}
+
+.hover\:inset-y-auto:hover{
+  top: auto;
+  bottom: auto;
+}
+
+.hover\:inset-x-auto:hover{
+  right: auto;
+  left: auto;
+}
+
+.hover\:top-0:hover{
+  top: 0;
+}
+
+.hover\:right-0:hover{
+  right: 0;
+}
+
+.hover\:bottom-0:hover{
+  bottom: 0;
+}
+
+.hover\:left-0:hover{
+  left: 0;
+}
+
+.hover\:top-auto:hover{
+  top: auto;
+}
+
+.hover\:right-auto:hover{
+  right: auto;
+}
+
+.hover\:bottom-auto:hover{
+  bottom: auto;
+}
+
+.hover\:left-auto:hover{
+  left: auto;
+}
+
+.focus\:inset-0:focus{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.focus\:inset-auto:focus{
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.focus\:inset-y-0:focus{
+  top: 0;
+  bottom: 0;
+}
+
+.focus\:inset-x-0:focus{
+  right: 0;
+  left: 0;
+}
+
+.focus\:inset-y-auto:focus{
+  top: auto;
+  bottom: auto;
+}
+
+.focus\:inset-x-auto:focus{
+  right: auto;
+  left: auto;
+}
+
+.focus\:top-0:focus{
+  top: 0;
+}
+
+.focus\:right-0:focus{
+  right: 0;
+}
+
+.focus\:bottom-0:focus{
+  bottom: 0;
+}
+
+.focus\:left-0:focus{
+  left: 0;
+}
+
+.focus\:top-auto:focus{
+  top: auto;
+}
+
+.focus\:right-auto:focus{
+  right: auto;
+}
+
+.focus\:bottom-auto:focus{
+  bottom: auto;
+}
+
+.focus\:left-auto:focus{
   left: auto;
 }
 
@@ -42932,6 +43071,13 @@ video {
     font-family: Montserrat;
   }
 
+  .sm\:font-inset font-family{
+    12: 3rem;
+    24: 6rem;
+    36: 9rem;
+    48: 12rem;
+  }
+
   .sm\:font-hairline{
     font-weight: 100;
   }
@@ -53123,6 +53269,138 @@ video {
   }
 
   .sm\:left-auto{
+    left: auto;
+  }
+
+  .sm\:hover\:inset-0:hover{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .sm\:hover\:inset-auto:hover{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .sm\:hover\:inset-y-0:hover{
+    top: 0;
+    bottom: 0;
+  }
+
+  .sm\:hover\:inset-x-0:hover{
+    right: 0;
+    left: 0;
+  }
+
+  .sm\:hover\:inset-y-auto:hover{
+    top: auto;
+    bottom: auto;
+  }
+
+  .sm\:hover\:inset-x-auto:hover{
+    right: auto;
+    left: auto;
+  }
+
+  .sm\:hover\:top-0:hover{
+    top: 0;
+  }
+
+  .sm\:hover\:right-0:hover{
+    right: 0;
+  }
+
+  .sm\:hover\:bottom-0:hover{
+    bottom: 0;
+  }
+
+  .sm\:hover\:left-0:hover{
+    left: 0;
+  }
+
+  .sm\:hover\:top-auto:hover{
+    top: auto;
+  }
+
+  .sm\:hover\:right-auto:hover{
+    right: auto;
+  }
+
+  .sm\:hover\:bottom-auto:hover{
+    bottom: auto;
+  }
+
+  .sm\:hover\:left-auto:hover{
+    left: auto;
+  }
+
+  .sm\:focus\:inset-0:focus{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .sm\:focus\:inset-auto:focus{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .sm\:focus\:inset-y-0:focus{
+    top: 0;
+    bottom: 0;
+  }
+
+  .sm\:focus\:inset-x-0:focus{
+    right: 0;
+    left: 0;
+  }
+
+  .sm\:focus\:inset-y-auto:focus{
+    top: auto;
+    bottom: auto;
+  }
+
+  .sm\:focus\:inset-x-auto:focus{
+    right: auto;
+    left: auto;
+  }
+
+  .sm\:focus\:top-0:focus{
+    top: 0;
+  }
+
+  .sm\:focus\:right-0:focus{
+    right: 0;
+  }
+
+  .sm\:focus\:bottom-0:focus{
+    bottom: 0;
+  }
+
+  .sm\:focus\:left-0:focus{
+    left: 0;
+  }
+
+  .sm\:focus\:top-auto:focus{
+    top: auto;
+  }
+
+  .sm\:focus\:right-auto:focus{
+    right: auto;
+  }
+
+  .sm\:focus\:bottom-auto:focus{
+    bottom: auto;
+  }
+
+  .sm\:focus\:left-auto:focus{
     left: auto;
   }
 
@@ -73620,6 +73898,13 @@ video {
     font-family: Montserrat;
   }
 
+  .md\:font-inset font-family{
+    12: 3rem;
+    24: 6rem;
+    36: 9rem;
+    48: 12rem;
+  }
+
   .md\:font-hairline{
     font-weight: 100;
   }
@@ -83811,6 +84096,138 @@ video {
   }
 
   .md\:left-auto{
+    left: auto;
+  }
+
+  .md\:hover\:inset-0:hover{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .md\:hover\:inset-auto:hover{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .md\:hover\:inset-y-0:hover{
+    top: 0;
+    bottom: 0;
+  }
+
+  .md\:hover\:inset-x-0:hover{
+    right: 0;
+    left: 0;
+  }
+
+  .md\:hover\:inset-y-auto:hover{
+    top: auto;
+    bottom: auto;
+  }
+
+  .md\:hover\:inset-x-auto:hover{
+    right: auto;
+    left: auto;
+  }
+
+  .md\:hover\:top-0:hover{
+    top: 0;
+  }
+
+  .md\:hover\:right-0:hover{
+    right: 0;
+  }
+
+  .md\:hover\:bottom-0:hover{
+    bottom: 0;
+  }
+
+  .md\:hover\:left-0:hover{
+    left: 0;
+  }
+
+  .md\:hover\:top-auto:hover{
+    top: auto;
+  }
+
+  .md\:hover\:right-auto:hover{
+    right: auto;
+  }
+
+  .md\:hover\:bottom-auto:hover{
+    bottom: auto;
+  }
+
+  .md\:hover\:left-auto:hover{
+    left: auto;
+  }
+
+  .md\:focus\:inset-0:focus{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .md\:focus\:inset-auto:focus{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .md\:focus\:inset-y-0:focus{
+    top: 0;
+    bottom: 0;
+  }
+
+  .md\:focus\:inset-x-0:focus{
+    right: 0;
+    left: 0;
+  }
+
+  .md\:focus\:inset-y-auto:focus{
+    top: auto;
+    bottom: auto;
+  }
+
+  .md\:focus\:inset-x-auto:focus{
+    right: auto;
+    left: auto;
+  }
+
+  .md\:focus\:top-0:focus{
+    top: 0;
+  }
+
+  .md\:focus\:right-0:focus{
+    right: 0;
+  }
+
+  .md\:focus\:bottom-0:focus{
+    bottom: 0;
+  }
+
+  .md\:focus\:left-0:focus{
+    left: 0;
+  }
+
+  .md\:focus\:top-auto:focus{
+    top: auto;
+  }
+
+  .md\:focus\:right-auto:focus{
+    right: auto;
+  }
+
+  .md\:focus\:bottom-auto:focus{
+    bottom: auto;
+  }
+
+  .md\:focus\:left-auto:focus{
     left: auto;
   }
 
@@ -104308,6 +104725,13 @@ video {
     font-family: Montserrat;
   }
 
+  .lg\:font-inset font-family{
+    12: 3rem;
+    24: 6rem;
+    36: 9rem;
+    48: 12rem;
+  }
+
   .lg\:font-hairline{
     font-weight: 100;
   }
@@ -114499,6 +114923,138 @@ video {
   }
 
   .lg\:left-auto{
+    left: auto;
+  }
+
+  .lg\:hover\:inset-0:hover{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .lg\:hover\:inset-auto:hover{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .lg\:hover\:inset-y-0:hover{
+    top: 0;
+    bottom: 0;
+  }
+
+  .lg\:hover\:inset-x-0:hover{
+    right: 0;
+    left: 0;
+  }
+
+  .lg\:hover\:inset-y-auto:hover{
+    top: auto;
+    bottom: auto;
+  }
+
+  .lg\:hover\:inset-x-auto:hover{
+    right: auto;
+    left: auto;
+  }
+
+  .lg\:hover\:top-0:hover{
+    top: 0;
+  }
+
+  .lg\:hover\:right-0:hover{
+    right: 0;
+  }
+
+  .lg\:hover\:bottom-0:hover{
+    bottom: 0;
+  }
+
+  .lg\:hover\:left-0:hover{
+    left: 0;
+  }
+
+  .lg\:hover\:top-auto:hover{
+    top: auto;
+  }
+
+  .lg\:hover\:right-auto:hover{
+    right: auto;
+  }
+
+  .lg\:hover\:bottom-auto:hover{
+    bottom: auto;
+  }
+
+  .lg\:hover\:left-auto:hover{
+    left: auto;
+  }
+
+  .lg\:focus\:inset-0:focus{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .lg\:focus\:inset-auto:focus{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .lg\:focus\:inset-y-0:focus{
+    top: 0;
+    bottom: 0;
+  }
+
+  .lg\:focus\:inset-x-0:focus{
+    right: 0;
+    left: 0;
+  }
+
+  .lg\:focus\:inset-y-auto:focus{
+    top: auto;
+    bottom: auto;
+  }
+
+  .lg\:focus\:inset-x-auto:focus{
+    right: auto;
+    left: auto;
+  }
+
+  .lg\:focus\:top-0:focus{
+    top: 0;
+  }
+
+  .lg\:focus\:right-0:focus{
+    right: 0;
+  }
+
+  .lg\:focus\:bottom-0:focus{
+    bottom: 0;
+  }
+
+  .lg\:focus\:left-0:focus{
+    left: 0;
+  }
+
+  .lg\:focus\:top-auto:focus{
+    top: auto;
+  }
+
+  .lg\:focus\:right-auto:focus{
+    right: auto;
+  }
+
+  .lg\:focus\:bottom-auto:focus{
+    bottom: auto;
+  }
+
+  .lg\:focus\:left-auto:focus{
     left: auto;
   }
 
@@ -134996,6 +135552,13 @@ video {
     font-family: Montserrat;
   }
 
+  .xl\:font-inset font-family{
+    12: 3rem;
+    24: 6rem;
+    36: 9rem;
+    48: 12rem;
+  }
+
   .xl\:font-hairline{
     font-weight: 100;
   }
@@ -145187,6 +145750,138 @@ video {
   }
 
   .xl\:left-auto{
+    left: auto;
+  }
+
+  .xl\:hover\:inset-0:hover{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .xl\:hover\:inset-auto:hover{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .xl\:hover\:inset-y-0:hover{
+    top: 0;
+    bottom: 0;
+  }
+
+  .xl\:hover\:inset-x-0:hover{
+    right: 0;
+    left: 0;
+  }
+
+  .xl\:hover\:inset-y-auto:hover{
+    top: auto;
+    bottom: auto;
+  }
+
+  .xl\:hover\:inset-x-auto:hover{
+    right: auto;
+    left: auto;
+  }
+
+  .xl\:hover\:top-0:hover{
+    top: 0;
+  }
+
+  .xl\:hover\:right-0:hover{
+    right: 0;
+  }
+
+  .xl\:hover\:bottom-0:hover{
+    bottom: 0;
+  }
+
+  .xl\:hover\:left-0:hover{
+    left: 0;
+  }
+
+  .xl\:hover\:top-auto:hover{
+    top: auto;
+  }
+
+  .xl\:hover\:right-auto:hover{
+    right: auto;
+  }
+
+  .xl\:hover\:bottom-auto:hover{
+    bottom: auto;
+  }
+
+  .xl\:hover\:left-auto:hover{
+    left: auto;
+  }
+
+  .xl\:focus\:inset-0:focus{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .xl\:focus\:inset-auto:focus{
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .xl\:focus\:inset-y-0:focus{
+    top: 0;
+    bottom: 0;
+  }
+
+  .xl\:focus\:inset-x-0:focus{
+    right: 0;
+    left: 0;
+  }
+
+  .xl\:focus\:inset-y-auto:focus{
+    top: auto;
+    bottom: auto;
+  }
+
+  .xl\:focus\:inset-x-auto:focus{
+    right: auto;
+    left: auto;
+  }
+
+  .xl\:focus\:top-0:focus{
+    top: 0;
+  }
+
+  .xl\:focus\:right-0:focus{
+    right: 0;
+  }
+
+  .xl\:focus\:bottom-0:focus{
+    bottom: 0;
+  }
+
+  .xl\:focus\:left-0:focus{
+    left: 0;
+  }
+
+  .xl\:focus\:top-auto:focus{
+    top: auto;
+  }
+
+  .xl\:focus\:right-auto:focus{
+    right: auto;
+  }
+
+  .xl\:focus\:bottom-auto:focus{
+    bottom: auto;
+  }
+
+  .xl\:focus\:left-auto:focus{
     left: auto;
   }
 

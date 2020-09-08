@@ -24,6 +24,12 @@ import Link from 'next/link'
 function NavBar({ categories, max_shown, links, home, logo }) {
 
 
+    const [searchIconClicked, setSearchIconClicked] = useState(false)
+
+    const clickSearchIcon = () => {
+        setSearchIconClicked(!searchIconClicked) // open/close the search component for small screens
+    }
+
     const font_style = {
         fontFamily: "Rubik, sans-serif"
     }
@@ -36,16 +42,28 @@ function NavBar({ categories, max_shown, links, home, logo }) {
         <nav className="z-10 fixed flex-row w-full  font-sans  bg-white" >
             <div className="flex flex-col justify-between w-full pl-5 pr-5">
                 <div className="flex w-full h-12">
-                    <div className="flex items-center justify-start h-full flex-1">
-                    <div className="m-1 md:hidden cursor-pointer text-gray-700">
+                    <div className="flex items-center justify-start h-full flex-1"> {/*menu container*/}
+                        <div className="m-1 md:hidden cursor-pointer text-gray-700">
                             <Icon size={25} icon={ic_menu}></Icon>
                         </div>
                     </div>
                     <div className="flex justify-center items-center flex-1 h-full"><Link href={home} ><a className="text-xl font-bold whitespace-no-wrap text-gray-900">Mor Made</a></Link></div>
                     <div className="flex flex-1 h-full justify-end items-center">
-                        <div className="m-1 md:hidden cursor-pointer text-gray-700">
-                            <Icon size={i_size} icon={search}></Icon>
+                        <div className="md:hidden  flex flex-1 justify-end items-center h-full">
+                            <form className="flex justify-end h-8 w-32">
+                               <div className={`flex justify-center h-full w-8 outline-none focus:outline-none`}
+                                    onClick={clickSearchIcon}
+                               >
+                                   {console.log("search icon : " , searchIconClicked ? "clicked": "not clicked")}
+                                    <Icon  icon={search}></Icon>
+                                </div>
+                                {/* <button className="h-full w-8 outline-none  border-b border-gray-500 focus:outline-none"><Icon icon={search}></Icon></button> */}
+                                <input className={searchIconClicked ? " h-full transform w-24 transition-all ease-out duration-500  outline-none border-b border-gray-500" : "transform w-0 transition-all ease-out duration-500"} type="text" placeholder="search" style={input_style}></input>
+                            </form>
                         </div>
+                        {/* <div className="m-1 md:hidden cursor-pointer text-gray-700">
+                            <Icon size={i_size} icon={search}></Icon>
+                        </div> */}
                         <div className="hidden md:inline m-1 md:m-2 cursor-pointer text-gray-700">
                             <Icon size={i_size} icon={user}></Icon>
                         </div>
@@ -70,7 +88,7 @@ function NavBar({ categories, max_shown, links, home, logo }) {
                     <div className="flex flex-1 justify-end items-center h-full">
                         <form className="flex justify-end h-8">
                             <button className="h-full w-8 outline-none  border-b border-gray-500 focus:outline-none"><Icon icon={search}></Icon></button>
-                            <input className="h-full w-24 outline-none border-b border-gray-500 focus:w-32" type="text" placeholder="search" style={input_style}></input>
+                            <input className="h-full w-24 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56" type="text" placeholder="search" style={input_style}></input>
                         </form>
                     </div>
                 </div>

@@ -8,6 +8,15 @@ module.exports = {
       grandstander: ['Grandstander'],
       amiri : ['Amiri'],
       montserrat : ['Montserrat'],
+      
+      inset: {
+        '12': '3rem',
+        '24': '6rem',
+        '36': '9rem',
+        '48': '12rem',
+
+      }
+
     },
     extend: {
       colors: {
@@ -73,6 +82,7 @@ module.exports = {
     width: ['responsive', 'hover', 'focus'],
     borderWidth: ['responsive', 'hover', 'focus'],
     visibility: ['responsive', 'hover', 'focus'],
+    inset: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
 }

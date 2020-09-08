@@ -17,7 +17,7 @@ export default function CategoriesBar({ max_shown, categories }) {
 
 
     return (
-        <div className="hidden lg:block z-50 w-full bg-gray-600 ">
+        <div className="hidden md:block z-50 w-full bg-gray-600 ">
             <div className="flex justify-center w-full border-b border-gray-300 bg-white">
                 <ul className="flex justify-center items-center h-12 " >
                     {categories.map((categorie, index) =>
