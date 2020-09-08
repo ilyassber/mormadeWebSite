@@ -3,7 +3,7 @@
 }
 
 .up_container {
-    @apply flex flex-col justify-between w-full pl-5 pr-5 bg-white;
+    @apply flex flex-col justify-between w-full pl-5 pr-5;
 }
 
 
@@ -25,7 +25,7 @@
     @apply flex justify-center items-center flex-1 h-full;
 }
 .logo_title {
-    @apply text-xl;
+    @apply text-3xl font-lobster;
 }
 /* search bar styling */
 
@@ -54,15 +54,15 @@
 }
 
 .link {
-    @apply m-8 cursor-pointer;
+    @apply m-8 cursor-pointer text-xl font-amiri;
 }
 
 .search_container {
-    @apply flex flex-1 justify-end items-center h-full;
+    @apply flex flex-1 justify-end items-center h-full ;
 }
 
 .search_bar {
-    @apply flex justify-end h-8 w-32;
+    @apply flex justify-end h-8;
 }
 
 .search_input{

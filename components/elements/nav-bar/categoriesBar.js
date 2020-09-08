@@ -8,7 +8,6 @@ export default function CategoriesBar({ max_shown, categories }) {
 
     const [hovredCategorie, setHovredCategorie] = useState({ hovered: false, categorie: null })
     const [moreCategorie, setmoreCategorie] = useState(true)
-    const [position, setPosition] = useState({position : "absolute", top : "8.5rem"});
     const show = () => {
         setHovredCategorie((prevstate) => ({ ...prevstate, hovered: true }))
     }
@@ -18,19 +17,17 @@ export default function CategoriesBar({ max_shown, categories }) {
 
 
     return (
-        <div className={ styles.container }>
-            <div className={ styles.bottom_container }>
-                <ul className={ styles.categories_container } >
+        <div className="hidden lg:block z-50 w-full bg-gray-600 ">
+            <div className="flex justify-center w-full border-b border-gray-300 bg-white">
+                <ul className="flex justify-center items-center h-12 " >
                     {categories.map((categorie, index) =>
                         (index < max_shown || moreCategorie) && <li key={ index }
-                            className={[styles.categorie, "hover:text-gray-500"].join(' ')}
+                            className="flex-shrink p-4 cursor-pointer text-md hover:text-gray-500"
                             onMouseEnter={() => setHovredCategorie({ hovered: true, categorie: categorie })}
                             onMouseLeave={() => setHovredCategorie({ hovered: false, categorie: categorie })}
-                        // onMouseEnter={() => show(categorie)}
-                        // onMouseLeave={() => hide(categorie)}
-                        >{categorie.tag}</li>
+                        >{categorie.tag.toUpperCase()}</li>
                     )}
-                    {categories.length >= max_shown && <li className={ styles.categorie } key={ max_shown }
+                    {categories.length >= max_shown && <li className="flex-shrink p-4 cursor-pointer font-bold font-amiri" key={ max_shown }
                         onMouseDown={() => setmoreCategorie(!moreCategorie)}
                     >{moreCategorie ? "less" : "more ..."}</li>}
                 </ul>

@@ -4,6 +4,10 @@ module.exports = {
     fontFamily: {
       sans: ['Quicksand'],
       roboto: ['Roboto'],
+      lobster: ['Lobster'],
+      grandstander: ['Grandstander'],
+      amiri : ['Amiri'],
+      montserrat : ['Montserrat'],
     },
     extend: {
       colors: {
@@ -66,6 +70,7 @@ module.exports = {
     },
   },
   variants: {
+    width: ['responsive', 'hover', 'focus'],
     borderWidth: ['responsive', 'hover', 'focus'],
     visibility: ['responsive', 'hover', 'focus'],
   },
