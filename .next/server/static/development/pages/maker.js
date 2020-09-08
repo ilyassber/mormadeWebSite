@@ -501,9 +501,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const AddProduct = props => {
   let data = {};
   data['pics_list'] = [];
+  data['tags'] = [];
   const {
     0: files,
     1: setFiles
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const {
+    0: categories,
+    1: setCategories
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
 
   const getValue = (event, access) => {
@@ -526,12 +531,24 @@ const AddProduct = props => {
     files.splice(index, 1);
   };
 
+  const appendCategory = category => {
+    categories.splice(category.lvl, 0, category);
+  };
+
+  const removeCategory = index => {
+    categories.splice(index, categories.length - index);
+  };
+
   const handleSubmit = async event => {
     event.preventDefault();
 
     for (let i = 0; i < files.length; i++) {
       let response = await Object(_services_api_uploadImage__WEBPACK_IMPORTED_MODULE_4__["uploadImage"])(event, files[0], props.cookies['csrftoken']).then(res => res);
       data['pics_list'].push(response.data);
+    }
+
+    for (let i = 0; i < categories.length; i++) {
+      data['tags'].push(categories[i].id);
     }
 
     console.log(data);
@@ -545,7 +562,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 61,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -554,7 +571,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 62,
       columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -563,7 +580,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 63,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtArea"], {
@@ -572,7 +589,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 64,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -581,7 +598,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 65,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
@@ -590,7 +607,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 66,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["IntField"], {
@@ -599,15 +616,18 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 67,
       columnNumber: 17
     }
   }), __jsx(_widgets_category_AddCategory__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "",
+    categories: categories,
+    addCategory: appendCategory,
+    removeCategory: removeCategory,
+    csrftoken: props.cookies['csrftoken'],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 68,
       columnNumber: 17
     }
   }), __jsx(_widgets_image_AddImageGrid__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -617,7 +637,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 69,
       columnNumber: 17
     }
   }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
@@ -627,7 +647,7 @@ const AddProduct = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 70,
       columnNumber: 17
     }
   })));
@@ -821,71 +841,123 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services_api_fetch_getCategories__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/api/fetch/getCategories */ "./services/api/fetch/getCategories.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\category\\SelectCategory.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const SelectCategory = props => {
-  const optionsRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  const selectedRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
-  const options = props.data.map(option => {
-    return __jsx("option", {
-      key: option.id,
-      value: option.value,
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 9,
-        columnNumber: 16
-      }
-    });
-  });
 
-  const getOption = () => {
-    let value = selectedRef.current.value;
-    props.data.map(option => {
-      if (option.value == value) {
-        props.setCategory(option.id, option.value, props.lvl);
-      }
+const SelectCategory = props => {
+  const forceUpdate = react__WEBPACK_IMPORTED_MODULE_0___default.a.useReducer(() => ({}))[1];
+  const selectedRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  const {
+    0: data,
+    1: setData
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
+  let currentLvl = null;
+  let content = null;
+
+  const getData = () => {
+    setData(null);
+    console.log(currentLvl);
+    Object(_services_api_fetch_getCategories__WEBPACK_IMPORTED_MODULE_1__["getCategories"])(currentLvl, props.parent, props.csrftoken).then(res => {
+      console.log(res);
+      setData(JSON.stringify(res));
     });
   };
 
-  let content = __jsx("div", {
-    className: props.className,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 9
-    }
-  }, __jsx("div", {
-    className: "border border-1 p-1",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
-    }
-  }, __jsx("input", {
-    className: "font-sans font-medium text-gray-700 leading-tight hover:outline-none focus:outline-none",
-    ref: selectedRef,
-    list: "data",
-    onChange: getOption,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 17
-    }
-  }), __jsx("datalist", {
-    id: "data",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 17
-    }
-  }, options)));
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    currentLvl = props.lvl;
+    getData();
+  }, []);
+
+  if (data && JSON.parse(data).length > 0) {
+    const options = JSON.parse(data).map(option => {
+      return __jsx("option", {
+        key: option.id,
+        value: option.name,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 20
+        }
+      });
+    });
+
+    const getOption = () => {
+      let value = selectedRef.current.value;
+      JSON.parse(data).map(option => {
+        if (option.name == value) {
+          props.setCategory(option);
+          currentLvl = option.lvl + 1;
+          getData();
+          selectedRef.current.value = '';
+          forceUpdate();
+        }
+      });
+    };
+
+    content = __jsx("div", {
+      className: props.className,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "h-8 flex",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 17
+      }
+    }, __jsx("div", {
+      className: "h-full w-auto content-center mx-auto flex flex-wrap font-sans font-bold",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 17
+      }
+    }, __jsx("b", {
+      className: "text-gray-900 text-sm text-center ml-2 mr-2",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48,
+        columnNumber: 21
+      }
+    }, "\u203A")), __jsx("div", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50,
+        columnNumber: 17
+      }
+    }, __jsx("input", {
+      className: "h-8 w-auto font-sans font-medium border text-gray-700 leading-tight hover:outline-none focus:outline-none p-1",
+      ref: selectedRef,
+      list: "data",
+      onChange: getOption,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51,
+        columnNumber: 17
+      }
+    }), __jsx("datalist", {
+      id: "data",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56,
+        columnNumber: 17
+      }
+    }, options))));
+  }
 
   return content;
 };
@@ -1114,6 +1186,129 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RemovedSquaredImg", function() { return _RemovedSquaredImg__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
 
+
+
+
+/***/ }),
+
+/***/ "./components/graphics/tags/RemovableTag.js":
+/*!**************************************************!*\
+  !*** ./components/graphics/tags/RemovableTag.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\tags\\RemovableTag.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const RemovableTag = props => {
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "h-8 flex",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "h-full w-auto content-center mx-auto flex flex-wrap font-sans font-bold",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }, __jsx("b", {
+    className: "text-gray-900 text-sm text-center ml-2 mr-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 21
+    }
+  }, "\u203A")), __jsx("div", {
+    className: "container h-full w-auto pl-2 pr-2 bg-gray-900 rounded content-center mx-auto flex flex-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: "h-full w-auto content-center mx-auto flex flex-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 21
+    }
+  }, __jsx("h4", {
+    className: "font-sans font-medium text-xw-100 leading-tight mr-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 25
+    }
+  }, props.category.name)), __jsx("div", {
+    className: "h-full w-auto content-center mx-auto flex flex-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 21
+    }
+  }, __jsx("button", {
+    className: "h-4 w-auto bg-xw-100 rounded content-center mx-auto flex flex-wrap focus:outline-none",
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 25
+    }
+  }, __jsx("b", {
+    className: "font-sans font-bold text-gray-900 text-xs text-center ml-1 mr-1",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 29
+    }
+  }, "X"))))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RemovableTag);
+
+/***/ }),
+
+/***/ "./components/graphics/tags/index.js":
+/*!*******************************************!*\
+  !*** ./components/graphics/tags/index.js ***!
+  \*******************************************/
+/*! exports provided: RemovableTag */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RemovableTag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RemovableTag */ "./components/graphics/tags/RemovableTag.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "RemovableTag", function() { return _RemovableTag__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
@@ -1501,29 +1696,68 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/category/SelectCategory */ "./components/graphics/category/SelectCategory.js");
+/* harmony import */ var _graphics_tags__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/tags */ "./components/graphics/tags/index.js");
+/* harmony import */ var _services_hooks_useForceUpdate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/hooks/useForceUpdate */ "./services/hooks/useForceUpdate.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\category\\AddCategory.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 const AddCategory = props => {
+  const select = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  const forceUpdate = react__WEBPACK_IMPORTED_MODULE_0___default.a.useReducer(() => ({}))[1];
   const {
     0: categoriesList,
     1: setCategoriesList
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
-  let data = [{
-    id: 0,
-    value: 'Home'
-  }, {
-    id: 1,
-    value: 'Decoration'
-  }];
-  let categories = [];
-  let lvl = 0;
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const {
+    0: lvl,
+    1: setLvl
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  let currentLvl = 0;
+  let parentId = null;
 
-  const setCategory = (id, value, lvl) => {
-    categories.splice(lvl, 0, id);
-    console.log(value);
+  const setCategory = category => {
+    props.addCategory(category);
+    parentId = category.id;
+    let newLvl = category.lvl + 1;
+    setLvl(newLvl);
+    currentLvl = newLvl;
+    initList();
+  };
+
+  const initSelect = () => {
+    select.current.focus();
+  };
+
+  const initList = () => {
+    if (props.categories.length > 0) {
+      setCategoriesList(props.categories.map(function (category) {
+        if (category.lvl < currentLvl) {
+          return __jsx(_graphics_tags__WEBPACK_IMPORTED_MODULE_2__["RemovableTag"], {
+            key: category.id,
+            category: category,
+            onClick: () => {
+              props.removeCategory(category.lvl);
+              currentLvl = category.lvl;
+              setLvl(category.lvl);
+              initList();
+              forceUpdate();
+            },
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 33,
+              columnNumber: 25
+            }
+          });
+        }
+      }));
+    } else {
+      setCategoriesList(null);
+    }
   };
 
   let content = __jsx("div", {
@@ -1531,7 +1765,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 52,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1539,7 +1773,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 53,
       columnNumber: 13
     }
   }, __jsx("label", {
@@ -1547,28 +1781,37 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 54,
       columnNumber: 17
     }
   }, "Add Product Category"), __jsx("div", {
-    className: "h-auto w-full container flex content-start flex-wrap py-2 px-3",
+    className: "h-auto w-full container content-start content-center mx-auto flex flex-wrap py-2 px-3",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 55,
       columnNumber: 17
     }
+  }, categoriesList, __jsx("div", {
+    ref: select,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 21
+    }
   }, __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: data,
     lvl: lvl,
+    parent: parentId,
+    csrftoken: props.csrftoken,
     setCategory: setCategory,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 21
+      lineNumber: 58,
+      columnNumber: 25
     }
-  }))));
+  })))));
 
   return content;
 };
@@ -2061,6 +2304,47 @@ function addProduct(data, csrttoken) {
 
 /***/ }),
 
+/***/ "./services/api/fetch/getCategories.js":
+/*!*********************************************!*\
+  !*** ./services/api/fetch/getCategories.js ***!
+  \*********************************************/
+/*! exports provided: getCategories */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCategories", function() { return getCategories; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "querystring");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function getCategories(lvl, id, csrttoken) {
+  return new Promise((resolve, reject) => {
+    let axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': csrttoken
+      }
+    };
+    let content = {
+      operation: 'get',
+      lvl: lvl,
+      id: id
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://localhost:8000/categories/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
+      console.log(response.data);
+      resolve(response.data);
+    }).catch(error => {
+      reject(error);
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./services/api/uploadImage.js":
 /*!*************************************!*\
   !*** ./services/api/uploadImage.js ***!
@@ -2189,6 +2473,31 @@ function onClickOutside(ref, handler) {
       document.removeEventListener('keydown', listener);
     };
   }, [ref, handler]);
+}
+
+/***/ }),
+
+/***/ "./services/hooks/useForceUpdate.js":
+/*!******************************************!*\
+  !*** ./services/hooks/useForceUpdate.js ***!
+  \******************************************/
+/*! exports provided: useForceUpdate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useForceUpdate", function() { return useForceUpdate; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function useForceUpdate() {
+  const {
+    1: setTick
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const update = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(() => {
+    setTick(tick => tick + 1);
+  }, []);
+  return update;
 }
 
 /***/ }),

@@ -10,7 +10,9 @@ const AddProduct = props => {
 
     let data = {}
     data['pics_list'] = []
+    data['tags'] = []
     const [files, setFiles] = useState([])
+    const [categories, setCategories] = useState([])
 
     const getValue = (event, access) => {
         if (access == 'name') {
@@ -32,11 +34,22 @@ const AddProduct = props => {
         files.splice(index, 1)
     }
 
+    const appendCategory = (category) => {
+        categories.splice(category.lvl, 0, category)
+    }
+
+    const removeCategory = (index) => {
+        categories.splice(index, (categories.length - index))
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault()
         for (let i = 0; i < files.length; i++) {
             let response = await uploadImage(event, files[0], props.cookies['csrftoken']).then((res) => res)
             data['pics_list'].push(response.data)
+        }
+        for (let i = 0; i < categories.length; i++) {
+            data['tags'].push(categories[i].id)
         }
         console.log(data)
         addProduct(data, props.cookies['csrftoken']).then((res) => {
@@ -52,7 +65,7 @@ const AddProduct = props => {
                 <TxtField label="Product Region" onChange={(event) => getValue(event, 'region')} />
                 <IntField label="Price" onChange={(event) => getValue(event, 'price')} />
                 <IntField label="Quantity" onChange={(event) => getValue(event, 'quantity')} />
-                <AddCategory className=""/>
+                <AddCategory categories={categories} addCategory={appendCategory} removeCategory={removeCategory} csrftoken={props.cookies['csrftoken']}/>
                 <AddImageGrid files={files} addImage={appendFile} removeImage={removeFile}/>
                 <BtnBbw className="w-full h-12 mt-8 mb-4" value="ADD PRODUCT" onClick={handleSubmit} />
             </form>
