@@ -976,23 +976,24 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function ScrollBlocks(_ref) {
-  var children = _ref.children;
+function FrameSlide(_ref) {
+  var children = _ref.children,
+      show = _ref.show;
   return __jsx("div", {
-    className: "flex-row justify-between items-center w-full h-full overflow-scroll",
+    className: "".concat(show ? "transform translate-x-0 transition-all ease-out duration-300" : "transform -translate-x-full transition-all ease-out duration-300", " transform translate-x-0 transition-all ease-out duration-300 h-full w-full border-indigo-400"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
       columnNumber: 9
     }
-  }, " ", children);
+  }, children);
 }
 
-function TitleBlock(_ref2) {
+function ScrollBlocks(_ref2) {
   var children = _ref2.children;
   return __jsx("div", {
-    className: "flex justify-between items-center w-full h-16 border-b border-gray-300 bg-gray-100",
+    className: "flex-row justify-between items-center w-full h-full overflow-scroll",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1002,11 +1003,24 @@ function TitleBlock(_ref2) {
   }, " ", children);
 }
 
-function Block(_ref3) {
-  var children = _ref3.children,
-      changeTitle = _ref3.changeTitle,
-      title = _ref3.title,
-      changeItems = _ref3.changeItems;
+function TitleBlock(_ref3) {
+  var children = _ref3.children;
+  return __jsx("div", {
+    className: "flex justify-between items-center w-full h-16 border-b border-gray-300 bg-gray-100",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 9
+    }
+  }, " ", children);
+}
+
+function Block(_ref4) {
+  var children = _ref4.children,
+      changeTitle = _ref4.changeTitle,
+      title = _ref4.title,
+      changeItems = _ref4.changeItems;
   return __jsx("div", {
     className: "flex justify-between items-center w-full h-20 p-5 border-b border-gray-300 bg-white hover:bg-blue-200 hover:text-gray-900",
     onClick: function onClick() {
@@ -1015,22 +1029,22 @@ function Block(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 31,
       columnNumber: 9
     }
   }, " ", children);
 }
 
-function SideMenu(_ref4) {
+function SideMenu(_ref5) {
   var _this = this;
 
-  var menuClick = _ref4.menuClick,
-      changeMenuClicked = _ref4.changeMenuClicked,
-      currentPage = _ref4.currentPage,
-      changeCurrentPage = _ref4.changeCurrentPage,
-      categories = _ref4.categories,
-      max_shown = _ref4.max_shown,
-      links = _ref4.links;
+  var menuClick = _ref5.menuClick,
+      changeMenuClicked = _ref5.changeMenuClicked,
+      currentPage = _ref5.currentPage,
+      changeCurrentPage = _ref5.changeCurrentPage,
+      categories = _ref5.categories,
+      max_shown = _ref5.max_shown,
+      links = _ref5.links;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(currentPage.page),
       title = _useState[0],
@@ -1049,10 +1063,13 @@ function SideMenu(_ref4) {
     var found = categories.find(function (item) {
       return item.tag === newTitle;
     });
-    if (found) setItems(found.sous_tags);else setItems(categories.reduce(function (acc, item) {
-      acc.push(item.tag);
-      return acc;
-    }, []));
+    if (found) setItems(found.sous_tags);else {
+      setTitle(currentPage.page);
+      setItems(categories.reduce(function (acc, item) {
+        acc.push(item.tag);
+        return acc;
+      }, []));
+    }
   };
 
   var changeItems = function changeItems(title, categories) {
@@ -1066,14 +1083,14 @@ function SideMenu(_ref4) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 66,
       columnNumber: 9
     }
   }, __jsx(TitleBlock, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 67,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1081,7 +1098,7 @@ function SideMenu(_ref4) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 68,
       columnNumber: 17
     }
   }, __jsx("h1", {
@@ -1089,7 +1106,7 @@ function SideMenu(_ref4) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 71,
       columnNumber: 21
     }
   }, title)), __jsx("div", {
@@ -1098,21 +1115,28 @@ function SideMenu(_ref4) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 73,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 77,
       columnNumber: 21
     }
-  }, "close"))), __jsx(ScrollBlocks, {
+  }, "close"))), __jsx(FrameSlide, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 80,
+      columnNumber: 13
+    }
+  }, __jsx(ScrollBlocks, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
       columnNumber: 13
     }
   }, items.map(function (categorie, indx) {
@@ -1123,14 +1147,14 @@ function SideMenu(_ref4) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71,
+        lineNumber: 83,
         columnNumber: 17
       }
     }, __jsx("h1", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 76,
+        lineNumber: 88,
         columnNumber: 21
       }
     }, categorie), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1138,11 +1162,11 @@ function SideMenu(_ref4) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77,
+        lineNumber: 89,
         columnNumber: 21
       }
     }));
-  })));
+  }))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SideMenu);
@@ -14536,7 +14560,7 @@ var hello = function hello(_ref) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5CmormadeWebSite%5Cpages%5Cindex.js ***!
   \********************************************************************************************************************************************/
@@ -14559,5 +14583,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

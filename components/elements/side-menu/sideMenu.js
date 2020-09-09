@@ -3,6 +3,14 @@ import { Icon } from 'react-icons-kit'
 import {arrowRight2} from 'react-icons-kit/icomoon/arrowRight2'
 import { useState } from 'react'
 
+function FrameSlide({children, show}) {
+    return (
+        <div className={`${show ? "transform translate-x-0 transition-all ease-out duration-300" : "transform -translate-x-full transition-all ease-out duration-300"} transform translate-x-0 transition-all ease-out duration-300 h-full w-full border-indigo-400`}>
+            {children}
+        </div>
+    )
+}
+
 function ScrollBlocks({children}){
     return (
         <div className="flex-row justify-between items-center w-full h-full overflow-scroll"> {/* title area*/}
@@ -42,9 +50,12 @@ function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage
         if (found)
             setItems(found.sous_tags)
         else
+        {
+            setTitle(currentPage.page)
             setItems(categories.reduce((acc, item) => {
                 acc.push(item.tag)
                 return acc},[]))
+        }
     }
 
     const changeItems = (title, categories) => {
@@ -66,6 +77,7 @@ function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage
                     <h1>close</h1>
                 </div>
             </TitleBlock>
+            <FrameSlide>
             <ScrollBlocks>
             {items.map((categorie, indx) =>  (
                 <Block
@@ -78,6 +90,7 @@ function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage
                 </Block>
             ))}
             </ScrollBlocks>
+            </FrameSlide>
         </nav>
     )
 }

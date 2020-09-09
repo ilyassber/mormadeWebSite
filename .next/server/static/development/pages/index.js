@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -915,6 +915,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+function FrameSlide({
+  children,
+  show
+}) {
+  return __jsx("div", {
+    className: `${show ? "transform translate-x-0 transition-all ease-out duration-300" : "transform -translate-x-full transition-all ease-out duration-300"} transform translate-x-0 transition-all ease-out duration-300 h-full w-full border-indigo-400`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, children);
+}
+
 function ScrollBlocks({
   children
 }) {
@@ -923,7 +938,7 @@ function ScrollBlocks({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 16,
       columnNumber: 9
     }
   }, " ", children);
@@ -937,7 +952,7 @@ function TitleBlock({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, " ", children);
@@ -955,7 +970,7 @@ function Block({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 31,
       columnNumber: 9
     }
   }, " ", children);
@@ -986,10 +1001,13 @@ function SideMenu({
   const changeTitle = newTitle => {
     setTitle(newTitle);
     const found = categories.find(item => item.tag === newTitle);
-    if (found) setItems(found.sous_tags);else setItems(categories.reduce((acc, item) => {
-      acc.push(item.tag);
-      return acc;
-    }, []));
+    if (found) setItems(found.sous_tags);else {
+      setTitle(currentPage.page);
+      setItems(categories.reduce((acc, item) => {
+        acc.push(item.tag);
+        return acc;
+      }, []));
+    }
   };
 
   const changeItems = (title, categories) => {
@@ -1001,14 +1019,14 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 66,
       columnNumber: 9
     }
   }, __jsx(TitleBlock, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 67,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1016,7 +1034,7 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 68,
       columnNumber: 17
     }
   }, __jsx("h1", {
@@ -1024,7 +1042,7 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 71,
       columnNumber: 21
     }
   }, title)), __jsx("div", {
@@ -1033,21 +1051,28 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 73,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 77,
       columnNumber: 21
     }
-  }, "close"))), __jsx(ScrollBlocks, {
+  }, "close"))), __jsx(FrameSlide, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 80,
+      columnNumber: 13
+    }
+  }, __jsx(ScrollBlocks, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
       columnNumber: 13
     }
   }, items.map((categorie, indx) => __jsx(Block, {
@@ -1057,14 +1082,14 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 83,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 88,
       columnNumber: 21
     }
   }, categorie), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1072,10 +1097,10 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 89,
       columnNumber: 21
     }
-  })))));
+  }))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (SideMenu);
@@ -3022,7 +3047,7 @@ const hello = ({
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
