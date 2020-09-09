@@ -7,7 +7,7 @@ import { display } from 'react-icons-kit/icomoon'
 function SousCategoriesBar({ show, hide, hovredCategorie }) {
 
     return (
-        <div className={hovredCategorie.hovered ? "transform h-96 transition-all ease-out duration-100 flex flex-col items-center w-full bg-white" : "transform h-0 transition-all ease-out duration-100 w-full overflow-hidden bg-white"}
+        <div className={hovredCategorie.hovered ? "transform h-96 transition-all ease-out duration-100 flex flex-col items-center w-full shadow bg-white" : "shadow transform h-0 transition-all ease-out duration-100 w-full overflow-hidden bg-white"}
             onMouseEnter={show}
             onMouseLeave={hide}
         >

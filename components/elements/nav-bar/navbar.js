@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import WelcomeBar from './welcomeBar'
 import CategoriesBar from './categoriesBar'
+import SideMenu from '../side-menu/sideMenu'
 import SousCategoriesBar from './sousCategoriesBar'
 import styles from './styles/navbar.module.css'
 // import './styles/main.css'
 import { Icon } from 'react-icons-kit'
 import {menu, search, user, heart, cart } from 'react-icons-kit/icomoon'
 import {ic_menu} from 'react-icons-kit/md/ic_menu'
+import {cross} from 'react-icons-kit/icomoon/cross'
 
 import Link from 'next/link'
 // import { parseBody } from 'next/dist/next-server/server/api-utils'
@@ -21,10 +23,14 @@ import Link from 'next/link'
 
 */
 
-function NavBar({ categories, max_shown, links, home, logo }) {
+function NavBar({ changeMenuClicked,  categories, max_shown, links, home, logo }) {
 
-
+    // const [menuClicked , setMenuClicked] = useState(false)
     const [searchIconClicked, setSearchIconClicked] = useState(false)
+
+    // const clickMenuIcon = () => {
+    //     setMenuClicked(!menuClicked)
+    // }
 
     const clickSearchIcon = () => {
         setSearchIconClicked(!searchIconClicked) // open/close the search component for small screens
@@ -39,31 +45,28 @@ function NavBar({ categories, max_shown, links, home, logo }) {
     const i_size = 15
 
     return (
-        <nav className="z-10 fixed flex-row w-full  font-sans  bg-white" >
-            <div className="flex flex-col justify-between w-full pl-5 pr-5">
+        <nav className="z-10 fixed flex-row w-full font-sans bg-white" >
+            <div className={`flex flex-col justify-between w-full pl-5 pr-5`}>
                 <div className="flex w-full h-12">
-                    <div className="flex items-center justify-start h-full flex-1"> {/*menu container*/}
-                        <div className="m-1 md:hidden cursor-pointer text-gray-700">
+                    <div className={`${searchIconClicked ? "hidden": ""} flex items-center justify-start h-full flex-1`}> {/*menu container*/}
+                        <div className="m-1 md:hidden cursor-pointer text-gray-700"
+                            onClick={changeMenuClicked}
+                        >
                             <Icon size={25} icon={ic_menu}></Icon>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center flex-1 h-full"><Link href={home} ><a className="text-xl font-bold whitespace-no-wrap text-gray-900">Mor Made</a></Link></div>
-                    <div className="flex flex-1 h-full justify-end items-center">
-                        <div className="md:hidden  flex flex-1 justify-end items-center h-full">
-                            <form className="flex justify-end h-8 w-32">
-                               <div className={`flex justify-center h-full w-8 outline-none focus:outline-none`}
-                                    onClick={clickSearchIcon}
-                               >
-                                   {console.log("search icon : " , searchIconClicked ? "clicked": "not clicked")}
-                                    <Icon  icon={search}></Icon>
-                                </div>
-                                {/* <button className="h-full w-8 outline-none  border-b border-gray-500 focus:outline-none"><Icon icon={search}></Icon></button> */}
-                                <input className={searchIconClicked ? " h-full transform w-24 transition-all ease-out duration-500  outline-none border-b border-gray-500" : "transform w-0 transition-all ease-out duration-500"} type="text" placeholder="search" style={input_style}></input>
-                            </form>
-                        </div>
-                        {/* <div className="m-1 md:hidden cursor-pointer text-gray-700">
-                            <Icon size={i_size} icon={search}></Icon>
-                        </div> */}
+                    <div className={`${searchIconClicked ? "hidden": ""} flex justify-center items-center flex-1 h-full`}><Link href={home} ><a className="text-xl font-bold whitespace-no-wrap text-gray-900">Mor Made</a></Link></div>
+                    <div className="flex flex-1 justify-center md:justify-end items-center  h-full w-full">
+                        <form className="md:hidden flex justify-end h-8 w-full">
+                            <div className={`${searchIconClicked ? "order-last" : "" } flex justify-center h-full w-8 outline-none focus:outline-none`}
+                                onClick={clickSearchIcon}
+                            >
+                               {/* {console.log("search icon : " , searchIconClicked ? "clicked": "not clicked")} */}
+                                <Icon  icon={searchIconClicked ? cross : search}></Icon>
+                            </div>
+                            <button className={searchIconClicked ? "h-full w-8 outline-none focus:outline-none": "hidden"}><Icon icon={search}></Icon></button>
+                            <input className={searchIconClicked ? " h-full transform w-full transition-all ease-out duration-300  outline-none border-b border-gray-500" : "transform w-0 transition-all ease-out duration-300"} type="text" placeholder="search" style={input_style}></input>
+                        </form>
                         <div className="hidden md:inline m-1 md:m-2 cursor-pointer text-gray-700">
                             <Icon size={i_size} icon={user}></Icon>
                         </div>

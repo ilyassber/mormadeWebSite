@@ -1,4 +1,6 @@
+import React, { useState } from 'react'
 import NavBar from './elements/nav-bar/navbar'
+import SideMenu from './elements/side-menu/sideMenu'
 
 // fake data 
 const categories = [
@@ -71,11 +73,58 @@ const links = [
 ]
 
 
+function BlackFocusScreen({display, onClick}) {
+    return (
+        <div 
+            className={display ? "absolute z-20 top-0 left-0 w-full h-full transition ease-out duration-500 bg-gray-900 bg-opacity-50" : "z-20 bg-opacity-0 bg-gray-900"}
+            onClick={onClick}
+        >
+        </div>
+    )
+}
+
+
 function Layout({ children }) {
+    const [menuClicked, setMenuClicked] = useState(false)    
+    const [selectedPage, setSelectedPage] = useState({page : "HOME", path : "/"})
+    
+    const clickMenuIcon = () => {
+        setMenuClicked(!menuClicked)
+    }
+
+    const selectPage = (link) => {
+        setSelectedPage(link)
+    }
+
     return (
         <div>
-            <NavBar logo="/logo.png" categories={categories} max_shown={8} links={links} home="/" />
+
+            <SideMenu
+                menuClick = {menuClicked}
+                changeMenuClicked = {clickMenuIcon}
+                currentPage = {selectedPage}
+                changeCurrentPage = {selectPage}
+                categories={categories}
+                max_shown={8}
+                links={links}
+            />
+
+            <BlackFocusScreen   
+                display={menuClicked}
+                onClick={clickMenuIcon}
+            />
+
+            <NavBar
+                changeMenuClicked={clickMenuIcon}
+                logo="/logo.png"
+                categories={categories}
+                max_shown={8}
+                links={links}
+                home="/"
+            />
+            
             {children}
+
         </div>
     )
 }
