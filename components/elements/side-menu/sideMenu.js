@@ -39,6 +39,7 @@ function Block({children , changeTitle, title, changeItems }){
 
 function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage, categories, max_shown, links}) {
     
+    // const [swep]
     const [title, setTitle] = useState(currentPage.page) // nav title
     const [items, setItems] = useState(categories.reduce((acc, item) => {
                                         acc.push(item.tag)
@@ -77,7 +78,7 @@ function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage
                     <h1>close</h1>
                 </div>
             </TitleBlock>
-            <FrameSlide>
+            {/* <FrameSlide show={} > */}
             <ScrollBlocks>
             {items.map((categorie, indx) =>  (
                 <Block
@@ -90,7 +91,7 @@ function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage
                 </Block>
             ))}
             </ScrollBlocks>
-            </FrameSlide>
+            {/* </FrameSlide> */}
         </nav>
     )
 }
