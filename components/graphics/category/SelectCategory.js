@@ -7,19 +7,19 @@ const SelectCategory = props => {
     const selectedRef = useRef()
     const [data, setData] = useState()
     let currentLvl = null
+    let currentParent = null
     let content = null
 
     const getData = () => {
         setData(null)
-        console.log(currentLvl)
         getCategories(currentLvl, props.parent, props.csrftoken).then((res) => {
-            console.log(res)
             setData(JSON.stringify(res))
         })
     }
 
     useEffect(() => {
         currentLvl = props.lvl
+        currentParent = props.parent
         getData()
     }, [])
 
@@ -35,8 +35,8 @@ const SelectCategory = props => {
                     props.setCategory(option)
                     currentLvl = option.lvl + 1
                     getData()
-                    selectedRef.current.value = ''
-                    forceUpdate()
+                    //selectedRef.current.value = ''
+                    //forceUpdate()
                 }
             })
         }

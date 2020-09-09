@@ -855,19 +855,19 @@ const SelectCategory = props => {
     1: setData
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
   let currentLvl = null;
+  let currentParent = null;
   let content = null;
 
   const getData = () => {
     setData(null);
-    console.log(currentLvl);
     Object(_services_api_fetch_getCategories__WEBPACK_IMPORTED_MODULE_1__["getCategories"])(currentLvl, props.parent, props.csrftoken).then(res => {
-      console.log(res);
       setData(JSON.stringify(res));
     });
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     currentLvl = props.lvl;
+    currentParent = props.parent;
     getData();
   }, []);
 
@@ -891,9 +891,8 @@ const SelectCategory = props => {
         if (option.name == value) {
           props.setCategory(option);
           currentLvl = option.lvl + 1;
-          getData();
-          selectedRef.current.value = '';
-          forceUpdate();
+          getData(); //selectedRef.current.value = ''
+          //forceUpdate()
         }
       });
     };
@@ -1697,10 +1696,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/category/SelectCategory */ "./components/graphics/category/SelectCategory.js");
 /* harmony import */ var _graphics_tags__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/tags */ "./components/graphics/tags/index.js");
-/* harmony import */ var _services_hooks_useForceUpdate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/hooks/useForceUpdate */ "./services/hooks/useForceUpdate.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\category\\AddCategory.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -1716,56 +1713,118 @@ const AddCategory = props => {
     0: lvl,
     1: setLvl
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const {
+    0: parent,
+    1: setParent
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
   let currentLvl = 0;
   let parentId = null;
 
   const setCategory = category => {
     props.addCategory(category);
     parentId = category.id;
+    setParent(parentId);
     let newLvl = category.lvl + 1;
     setLvl(newLvl);
     currentLvl = newLvl;
     initList();
   };
 
-  const initSelect = () => {
-    select.current.focus();
-  };
-
   const initList = () => {
     if (props.categories.length > 0) {
-      setCategoriesList(props.categories.map(function (category) {
+      let ncl = props.categories.map(function (category) {
         if (category.lvl < currentLvl) {
           return __jsx(_graphics_tags__WEBPACK_IMPORTED_MODULE_2__["RemovableTag"], {
             key: category.id,
             category: category,
             onClick: () => {
-              props.removeCategory(category.lvl);
               currentLvl = category.lvl;
               setLvl(category.lvl);
+
+              if (currentLvl == 0) {
+                parentId = null;
+                setParent(parentId);
+              } else {
+                parentId = props.categories[currentLvl - 1].id;
+                setParent(parentId);
+              }
+
+              console.log(lvl);
+              props.removeCategory(category.lvl);
+              console.log(lvl);
               initList();
-              forceUpdate();
             },
             __self: this,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 33,
+              lineNumber: 30,
               columnNumber: 25
             }
           });
         }
+      });
+      ncl.push(__jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        lvl: props.categories[props.categories.length - 1].id,
+        parent: props.categories[props.categories.length - 1],
+        csrftoken: props.csrftoken,
+        setCategory: setCategory,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51,
+          columnNumber: 22
+        }
       }));
+      setCategoriesList(ncl);
     } else {
-      setCategoriesList(null);
+      let select = __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        lvl: 0,
+        parent: null,
+        csrftoken: props.csrftoken,
+        setCategory: setCategory,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54,
+          columnNumber: 27
+        }
+      });
+
+      let d = __jsx("div", {
+        className: "h-auto w-auto bg-gray-300",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 21
+        }
+      }, __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        lvl: 0,
+        parent: null,
+        csrftoken: props.csrftoken,
+        setCategory: setCategory,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 25
+        }
+      }));
+
+      setCategoriesList(d);
     }
   };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    initList();
+  }, []);
 
   let content = __jsx("div", {
     className: props.className,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 69,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1773,7 +1832,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 70,
       columnNumber: 13
     }
   }, __jsx("label", {
@@ -1781,7 +1840,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 71,
       columnNumber: 17
     }
   }, "Add Product Category"), __jsx("div", {
@@ -1789,29 +1848,26 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 72,
       columnNumber: 17
     }
-  }, categoriesList, __jsx("div", {
-    ref: select,
+  }, __jsx("div", {
+    className: "flex",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 73,
       columnNumber: 21
     }
-  }, __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    lvl: lvl,
-    parent: parentId,
-    csrftoken: props.csrftoken,
-    setCategory: setCategory,
+  }, __jsx("div", {
+    className: "h-8",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 74,
       columnNumber: 25
     }
-  })))));
+  }), categoriesList))));
 
   return content;
 };
@@ -2335,7 +2391,6 @@ function getCategories(lvl, id, csrttoken) {
     };
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://localhost:8000/categories/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
-      console.log(response.data);
       resolve(response.data);
     }).catch(error => {
       reject(error);
@@ -2473,31 +2528,6 @@ function onClickOutside(ref, handler) {
       document.removeEventListener('keydown', listener);
     };
   }, [ref, handler]);
-}
-
-/***/ }),
-
-/***/ "./services/hooks/useForceUpdate.js":
-/*!******************************************!*\
-  !*** ./services/hooks/useForceUpdate.js ***!
-  \******************************************/
-/*! exports provided: useForceUpdate */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useForceUpdate", function() { return useForceUpdate; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function useForceUpdate() {
-  const {
-    1: setTick
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
-  const update = Object(react__WEBPACK_IMPORTED_MODULE_0__["useCallback"])(() => {
-    setTick(tick => tick + 1);
-  }, []);
-  return update;
 }
 
 /***/ }),

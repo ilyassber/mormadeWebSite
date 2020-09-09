@@ -17,7 +17,6 @@ export function getCategories(lvl, id, csrttoken) {
         axios.defaults.withCredentials = true
         axios.post('http://localhost:8000/categories/', querystring.stringify(content), axiosConfig)
             .then((response) => {
-                console.log(response.data)
                 resolve(response.data)
             })
             .catch((error) => {
