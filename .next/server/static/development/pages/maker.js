@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1215,7 +1215,7 @@ const RemovableTag = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "h-8 flex",
+    className: "h-8 flex align-middle",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1239,7 +1239,7 @@ const RemovableTag = props => {
       columnNumber: 21
     }
   }, "\u203A")), __jsx("div", {
-    className: "container h-full w-auto pl-2 pr-2 bg-gray-900 rounded content-center mx-auto flex flex-wrap",
+    className: "h-full w-auto pl-2 pr-2 bg-gray-900 rounded mx-auto flex content-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1271,7 +1271,7 @@ const RemovableTag = props => {
       columnNumber: 21
     }
   }, __jsx("button", {
-    className: "h-4 w-auto bg-xw-100 rounded content-center mx-auto flex flex-wrap focus:outline-none",
+    className: "h-4 w-4 bg-xw-100 rounded content-center mx-auto flex focus:outline-none",
     type: "button",
     onClick: props.onClick,
     __self: undefined,
@@ -1735,6 +1735,7 @@ const AddCategory = props => {
       let ncl = props.categories.map(function (category) {
         if (category.lvl < currentLvl) {
           return __jsx(_graphics_tags__WEBPACK_IMPORTED_MODULE_2__["RemovableTag"], {
+            className: "w-auto sm:w-full",
             key: category.id,
             category: category,
             onClick: () => {
@@ -1771,7 +1772,7 @@ const AddCategory = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51,
+          lineNumber: 52,
           columnNumber: 22
         }
       }));
@@ -1785,7 +1786,7 @@ const AddCategory = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 55,
           columnNumber: 27
         }
       });
@@ -1795,7 +1796,7 @@ const AddCategory = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 57,
           columnNumber: 21
         }
       }, __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1806,7 +1807,7 @@ const AddCategory = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 58,
           columnNumber: 25
         }
       }));
@@ -1824,7 +1825,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 70,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1832,7 +1833,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 71,
       columnNumber: 13
     }
   }, __jsx("label", {
@@ -1840,7 +1841,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 72,
       columnNumber: 17
     }
   }, "Add Product Category"), __jsx("div", {
@@ -1848,7 +1849,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 73,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1856,7 +1857,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 74,
       columnNumber: 21
     }
   }, __jsx("div", {
@@ -1864,7 +1865,7 @@ const AddCategory = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 75,
       columnNumber: 25
     }
   }), categoriesList))));
@@ -2532,7 +2533,7 @@ function onClickOutside(ref, handler) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!************************************!*\
   !*** multi ./pages/maker/index.js ***!
   \************************************/

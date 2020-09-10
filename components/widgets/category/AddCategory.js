@@ -28,6 +28,7 @@ const AddCategory = props => {
                 if (category.lvl < currentLvl) {
                     return (
                         <RemovableTag
+                            className="w-auto sm:w-full"
                             key={category.id}
                             category={category}
                             onClick={() => {

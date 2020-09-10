@@ -1199,7 +1199,7 @@ var RemovableTag = function RemovableTag(props) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "h-8 flex",
+    className: "h-8 flex align-middle",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -1223,7 +1223,7 @@ var RemovableTag = function RemovableTag(props) {
       columnNumber: 21
     }
   }, "\u203A")), __jsx("div", {
-    className: "container h-full w-auto pl-2 pr-2 bg-gray-900 rounded content-center mx-auto flex flex-wrap",
+    className: "h-full w-auto pl-2 pr-2 bg-gray-900 rounded mx-auto flex content-center",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -1255,7 +1255,7 @@ var RemovableTag = function RemovableTag(props) {
       columnNumber: 21
     }
   }, __jsx("button", {
-    className: "h-4 w-auto bg-xw-100 rounded content-center mx-auto flex flex-wrap focus:outline-none",
+    className: "h-4 w-4 bg-xw-100 rounded content-center mx-auto flex focus:outline-none",
     type: "button",
     onClick: props.onClick,
     __self: _this,
@@ -1736,6 +1736,7 @@ var AddCategory = function AddCategory(props) {
       var ncl = props.categories.map(function (category) {
         if (category.lvl < currentLvl) {
           return __jsx(_graphics_tags__WEBPACK_IMPORTED_MODULE_2__["RemovableTag"], {
+            className: "w-auto sm:w-full",
             key: category.id,
             category: category,
             onClick: function onClick() {
@@ -1772,7 +1773,7 @@ var AddCategory = function AddCategory(props) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51,
+          lineNumber: 52,
           columnNumber: 22
         }
       }));
@@ -1786,7 +1787,7 @@ var AddCategory = function AddCategory(props) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 55,
           columnNumber: 27
         }
       });
@@ -1796,7 +1797,7 @@ var AddCategory = function AddCategory(props) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 57,
           columnNumber: 21
         }
       }, __jsx(_graphics_category_SelectCategory__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1807,7 +1808,7 @@ var AddCategory = function AddCategory(props) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 58,
           columnNumber: 25
         }
       }));
@@ -1825,7 +1826,7 @@ var AddCategory = function AddCategory(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 70,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1833,7 +1834,7 @@ var AddCategory = function AddCategory(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 71,
       columnNumber: 13
     }
   }, __jsx("label", {
@@ -1841,7 +1842,7 @@ var AddCategory = function AddCategory(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 72,
       columnNumber: 17
     }
   }, "Add Product Category"), __jsx("div", {
@@ -1849,7 +1850,7 @@ var AddCategory = function AddCategory(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 73,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1857,7 +1858,7 @@ var AddCategory = function AddCategory(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 74,
       columnNumber: 21
     }
   }, __jsx("div", {
@@ -1865,7 +1866,7 @@ var AddCategory = function AddCategory(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 75,
       columnNumber: 25
     }
   }), categoriesList))));
@@ -5759,7 +5760,7 @@ function onClickOutside(ref, handler) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!*****************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js ***!
   \*****************************************************************************************************************************************************************************/
@@ -5782,5 +5783,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=maker.js.map
