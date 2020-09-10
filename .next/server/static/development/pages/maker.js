@@ -2346,6 +2346,7 @@ function addProduct(data, csrttoken) {
       }
     };
     data['pics_list'] = querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(data['pics_list']);
+    data['tags'] = querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(data['tags']);
     let content = {
       data: querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(data)
     };

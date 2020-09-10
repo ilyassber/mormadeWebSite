@@ -10,6 +10,7 @@ export function addProduct(data, csrttoken) {
             }
         }
         data['pics_list'] = querystring.stringify(data['pics_list'])
+        data['tags'] = querystring.stringify(data['tags'])
         let content = {
             data: querystring.stringify(data)
         }
