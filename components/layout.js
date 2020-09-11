@@ -99,7 +99,7 @@ function Layout({ children }) {
     return (
         <div>
 
-            <SideMenu
+            {menuClicked && <SideMenu
                 menuClick = {menuClicked}
                 changeMenuClicked = {clickMenuIcon}
                 currentPage = {selectedPage}
@@ -107,12 +107,14 @@ function Layout({ children }) {
                 categories={categories}
                 max_shown={8}
                 links={links}
-            />
+            />}
 
-            <BlackFocusScreen   
+            
+            {menuClicked && <BlackFocusScreen   
                 display={menuClicked}
                 onClick={clickMenuIcon}
             />
+            }
 
             <NavBar
                 changeMenuClicked={clickMenuIcon}
@@ -122,7 +124,7 @@ function Layout({ children }) {
                 links={links}
                 home="/"
             />
-            
+
             {children}
 
         </div>

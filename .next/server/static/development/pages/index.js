@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -318,7 +318,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -326,7 +326,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -334,16 +334,16 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 17
     }
-  }, __jsx("div", {
-    className: `${searchIconClicked ? "hidden" : ""} flex items-center justify-start h-full flex-1`,
+  }, !searchIconClicked && __jsx("div", {
+    className: `flex items-center justify-start h-full flex-1`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 21
+      lineNumber: 52,
+      columnNumber: 44
     }
   }, " ", __jsx("div", {
     className: "m-1 md:hidden cursor-pointer text-gray-700",
@@ -351,7 +351,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 25
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
@@ -360,39 +360,39 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 56,
       columnNumber: 29
     }
-  }))), __jsx("div", {
-    className: `${searchIconClicked ? "hidden" : ""} flex justify-center items-center flex-1 h-full`,
+  }))), !searchIconClicked && __jsx("div", {
+    className: `flex justify-center items-center flex-1 h-full`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 21
+      lineNumber: 59,
+      columnNumber: 44
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
     href: home,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 123
+      lineNumber: 59,
+      columnNumber: 110
     }
   }, __jsx("a", {
     className: "text-xl font-bold whitespace-no-wrap text-gray-900",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 142
+      lineNumber: 59,
+      columnNumber: 129
     }
   }, "Mor Made"))), __jsx("div", {
     className: "flex flex-1 justify-center md:justify-end items-center  h-full w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 21
     }
   }, __jsx("form", {
@@ -400,7 +400,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 25
     }
   }, __jsx("div", {
@@ -409,7 +409,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 29
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
@@ -417,24 +417,24 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 66,
       columnNumber: 33
     }
-  })), __jsx("button", {
-    className: searchIconClicked ? "h-full w-8 outline-none focus:outline-none" : "hidden",
+  })), searchIconClicked && __jsx("button", {
+    className: "h-full w-8 outline-none focus:outline-none",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 29
+      lineNumber: 68,
+      columnNumber: 51
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
     icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_7__["search"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 124
+      lineNumber: 68,
+      columnNumber: 114
     }
   })), __jsx("input", {
     className: searchIconClicked ? " h-full transform w-full transition-all ease-out duration-300  outline-none border-b border-gray-500" : "transform w-0 transition-all ease-out duration-300",
@@ -444,16 +444,16 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 69,
       columnNumber: 29
     }
   })), __jsx("div", {
-    className: "hidden md:inline m-1 md:m-2 cursor-pointer text-gray-700",
+    className: `${searchIconClicked ? "hidden" : ""} inline m-2 md:m-2 cursor-pointer text-gray-700`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
-      columnNumber: 25
+      lineNumber: 71,
+      columnNumber: 28
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
     size: i_size,
@@ -461,7 +461,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 72,
       columnNumber: 29
     }
   })), __jsx("span", {
@@ -469,15 +469,15 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 74,
       columnNumber: 25
     }
   }, "user"), __jsx("div", {
-    className: "hidden md:inline m-1 md:m-2 cursor-pointer text-gray-700",
+    className: `${searchIconClicked ? "hidden" : ""} inline m-2 md:m-2 cursor-pointer text-gray-700`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 75,
       columnNumber: 25
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
@@ -486,7 +486,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 76,
       columnNumber: 29
     }
   })), __jsx("span", {
@@ -494,15 +494,15 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 78,
       columnNumber: 25
     }
   }, "favorites"), __jsx("div", {
-    className: "hidden md:inline m-1 md:m-2 cursor-pointer text-gray-700",
+    className: `${searchIconClicked ? "hidden" : ""}inline m-2 md:m-2 cursor-pointer text-gray-700`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 79,
       columnNumber: 25
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
@@ -511,7 +511,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 80,
       columnNumber: 29
     }
   })), __jsx("span", {
@@ -519,15 +519,15 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 82,
       columnNumber: 25
     }
-  }, "cart"))), __jsx("div", {
+  }, `(${0})`))), __jsx("div", {
     className: "hidden md:flex h-12 w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 85,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -535,7 +535,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 86,
       columnNumber: 21
     }
   }), __jsx("ul", {
@@ -543,7 +543,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 87,
       columnNumber: 21
     }
   }, links.map((link, indx) => __jsx("li", {
@@ -552,7 +552,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 29
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -560,14 +560,14 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 138
     }
   }, __jsx("a", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 161
     }
   }, link.page))))), __jsx("div", {
@@ -575,7 +575,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91,
+      lineNumber: 92,
       columnNumber: 21
     }
   }, __jsx("form", {
@@ -583,7 +583,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 93,
       columnNumber: 25
     }
   }, __jsx("button", {
@@ -591,7 +591,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 94,
       columnNumber: 29
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_6__["Icon"], {
@@ -599,7 +599,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 94,
       columnNumber: 118
     }
   })), __jsx("input", {
@@ -610,7 +610,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 95,
       columnNumber: 29
     }
   }))))), __jsx(_welcomeBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -618,7 +618,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
+      lineNumber: 100,
       columnNumber: 13
     }
   }), __jsx(_categoriesBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -627,7 +627,7 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100,
+      lineNumber: 101,
       columnNumber: 13
     }
   }));
@@ -920,7 +920,7 @@ function FrameSlide({
   show
 }) {
   return __jsx("div", {
-    className: `${show ? "transform translate-x-0 transition-all ease-out duration-300" : "transform -translate-x-full transition-all ease-out duration-300"} transform translate-x-0 transition-all ease-out duration-300 h-full w-full border-indigo-400`,
+    className: `${show ? "transform -translate-x-full transition-all ease-out duration-400" : "transform translate-x-0 transition-all ease-out duration-300"} bg-indigo-400`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -931,10 +931,12 @@ function FrameSlide({
 }
 
 function ScrollBlocks({
-  children
+  children,
+  changeSwap
 }) {
   return __jsx("div", {
     className: "flex-row justify-between items-center w-full h-full overflow-scroll",
+    onClick: changeSwap,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -945,14 +947,16 @@ function ScrollBlocks({
 }
 
 function TitleBlock({
-  children
+  children,
+  color,
+  height
 }) {
   return __jsx("div", {
-    className: "flex justify-between items-center w-full h-16 border-b border-gray-300 bg-gray-100",
+    className: `flex justify-between items-center w-full ${height ? height : "h-16"} border-b ${color ? color : "border-gray-300"} bg-gray-100`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 9
     }
   }, " ", children);
@@ -965,12 +969,12 @@ function Block({
   changeItems
 }) {
   return __jsx("div", {
-    className: "flex justify-between items-center w-full h-20 p-5 border-b border-gray-300 bg-white hover:bg-blue-200 hover:text-gray-900",
+    className: "flex justify-between items-center w-full h-20 p-5 border-b border-gray-300  hover:bg-blue-200 hover:text-gray-900",
     onClick: () => changeTitle(title),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 33,
       columnNumber: 9
     }
   }, " ", children);
@@ -985,11 +989,18 @@ function SideMenu({
   max_shown,
   links
 }) {
-  // const [swep]
+  const {
+    0: initAppearance,
+    1: setInitAppearance
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: swap,
+    1: setSwap
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
   const {
     0: title,
     1: setTitle
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(currentPage.page); // nav title
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("CATEGORIES"); // nav title
 
   const {
     0: items,
@@ -1001,9 +1012,13 @@ function SideMenu({
 
   const changeTitle = newTitle => {
     setTitle(newTitle);
-    const found = categories.find(item => item.tag === newTitle);
-    if (found) setItems(found.sous_tags);else {
-      setTitle(currentPage.page);
+    changeItems(newTitle, categories);
+  };
+
+  const changeItems = (title, categories) => {
+    const listFound = categories.find(item => item.tag === title);
+    if (listFound) setItems(listFound.sous_tags);else {
+      setTitle("CATEGORIES");
       setItems(categories.reduce((acc, item) => {
         acc.push(item.tag);
         return acc;
@@ -1011,23 +1026,23 @@ function SideMenu({
     }
   };
 
-  const changeItems = (title, categories) => {
-    setItems(categories.find(item => item.tag === title).sous_tags);
+  const changeSwap = () => {
+    setSwap(!swap);
   };
 
   return __jsx("nav", {
-    className: `${menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-500 "} fixed flex-row w-11/12 z-30 h-full font-sans bg-white`,
+    className: `${menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 "} fixed top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 73,
       columnNumber: 9
     }
-  }, __jsx(TitleBlock, {
+  }, " ", __jsx(TitleBlock, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 74,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1035,7 +1050,7 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 75,
       columnNumber: 17
     }
   }, __jsx("h1", {
@@ -1043,31 +1058,57 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 78,
       columnNumber: 21
     }
-  }, title)), __jsx("div", {
+  }, currentPage.page)), __jsx("div", {
     className: "flex justify-center items-center p-5 h-full cursor-pointer",
     onClick: changeMenuClicked,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 80,
       columnNumber: 17
     }
   }, __jsx("h1", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 84,
       columnNumber: 21
     }
-  }, "close"))), __jsx(ScrollBlocks, {
+  }, "close"))), __jsx(TitleBlock, {
+    color: "bg-white",
+    height: "h-12",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 87,
       columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flex justify-center items-center h-full w-full p-5 cursor-pointer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88,
+      columnNumber: 17
+    }
+  }, __jsx("h1", {
+    className: "text-xl font-bold",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89,
+      columnNumber: 21
+    }
+  }, title))), __jsx(ScrollBlocks, {
+    changeSwap: changeSwap,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93,
+      columnNumber: 17
     }
   }, items.map((categorie, indx) => __jsx(Block, {
     key: indx,
@@ -1076,23 +1117,23 @@ function SideMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
-      columnNumber: 17
+      lineNumber: 95,
+      columnNumber: 21
     }
   }, __jsx("h1", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89,
-      columnNumber: 21
+      lineNumber: 100,
+      columnNumber: 25
     }
   }, categorie), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
     icon: react_icons_kit_icomoon_arrowRight2__WEBPACK_IMPORTED_MODULE_3__["arrowRight2"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90,
-      columnNumber: 21
+      lineNumber: 101,
+      columnNumber: 25
     }
   })))));
 }
@@ -1232,7 +1273,7 @@ function Layout({
       lineNumber: 100,
       columnNumber: 9
     }
-  }, __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, menuClicked && __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_2__["default"], {
     menuClick: menuClicked,
     changeMenuClicked: clickMenuIcon,
     currentPage: selectedPage,
@@ -1244,16 +1285,16 @@ function Layout({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 102,
-      columnNumber: 13
+      columnNumber: 29
     }
-  }), __jsx(BlackFocusScreen, {
+  }), menuClicked && __jsx(BlackFocusScreen, {
     display: menuClicked,
     onClick: clickMenuIcon,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112,
-      columnNumber: 13
+      lineNumber: 113,
+      columnNumber: 29
     }
   }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     changeMenuClicked: clickMenuIcon,
@@ -1265,7 +1306,7 @@ function Layout({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117,
+      lineNumber: 119,
       columnNumber: 13
     }
   }), children);
@@ -3041,7 +3082,7 @@ const hello = ({
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

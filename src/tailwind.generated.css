@@ -12184,6 +12184,7 @@ video {
   24: 6rem;
   36: 9rem;
   48: 12rem;
+  full: 100%;
 }
 
 .font-hairline{
@@ -43076,6 +43077,7 @@ video {
     24: 6rem;
     36: 9rem;
     48: 12rem;
+    full: 100%;
   }
 
   .sm\:font-hairline{
@@ -73903,6 +73905,7 @@ video {
     24: 6rem;
     36: 9rem;
     48: 12rem;
+    full: 100%;
   }
 
   .md\:font-hairline{
@@ -104730,6 +104733,7 @@ video {
     24: 6rem;
     36: 9rem;
     48: 12rem;
+    full: 100%;
   }
 
   .lg\:font-hairline{
@@ -135557,6 +135561,7 @@ video {
     24: 6rem;
     36: 9rem;
     48: 12rem;
+    full: 100%;
   }
 
   .xl\:font-hairline{

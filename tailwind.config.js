@@ -14,6 +14,7 @@ module.exports = {
         '24': '6rem',
         '36': '9rem',
         '48': '12rem',
+        'full': '100%',
 
       }
 
