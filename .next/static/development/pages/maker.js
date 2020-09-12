@@ -1,5 +1,202 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\maker.js"],{
 
+/***/ "./components/elements/article/AddArticle.js":
+/*!***************************************************!*\
+  !*** ./components/elements/article/AddArticle.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+/* harmony import */ var _services_api_uploadImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/api/uploadImage */ "./services/api/uploadImage.js");
+/* harmony import */ var _widgets_article__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../widgets/article */ "./components/widgets/article/index.js");
+/* harmony import */ var _widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../widgets/image/AddSingleImage */ "./components/widgets/image/AddSingleImage.js");
+
+
+
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\article\\AddArticle.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+
+
+
+
+var AddArticle = function AddArticle(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
+    title: null,
+    description: null,
+    cover: null,
+    text: []
+  }),
+      data = _useState[0],
+      setData = _useState[1];
+
+  var getValue = function getValue(event, access) {
+    if (access == 'title') {
+      setData(_objectSpread({}, data, {
+        title: event.target.value
+      }));
+    } else if (access == 'description') {
+      setData(_objectSpread({}, data, {
+        description: event.target.value
+      }));
+    }
+  };
+
+  var addCover = function addCover(file) {
+    setData(_objectSpread({}, data, {
+      cover: file
+    }));
+  };
+
+  var removeCover = function removeCover() {
+    setData(_objectSpread({}, data, {
+      cover: null
+    }));
+  };
+
+  var appendContent = function appendContent(content) {
+    var contentList = data.text;
+    contentList.push(content);
+    setData(_objectSpread({}, data, {
+      text: contentList
+    }));
+  };
+
+  var editContent = function editContent(index, content) {
+    var contentList = data.text;
+    contentList[index] = content;
+    setData(_objectSpread({}, data, {
+      text: contentList
+    }));
+  };
+
+  var removeContent = function removeContent(index) {
+    var contentList = data.text;
+    contentList.splice(index, 1);
+    setData(_objectSpread({}, data, {
+      text: contentList
+    }));
+  };
+
+  var handleSubmit = function handleSubmit(event) {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function handleSubmit$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, null, null, null, Promise);
+  };
+
+  var content = __jsx("div", {
+    className: "m-4",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 9
+    }
+  }, __jsx("form", {
+    className: "w-full",
+    action: "",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 13
+    }
+  }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtField"], {
+    label: "Title",
+    onChange: function onChange(event) {
+      return getValue(event, 'title');
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 17
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtArea"], {
+    label: "Description",
+    onChange: function onChange(event) {
+      return getValue(event, 'description');
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "h-auto w-full border",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 17
+    }
+  }, data.text.map(function (content, index) {
+    return __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      index: index,
+      className: "h-64 m-2",
+      data: content,
+      editContent: editContent,
+      removeContent: removeContent,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71,
+        columnNumber: 33
+      }
+    });
+  }), __jsx(_widgets_article__WEBPACK_IMPORTED_MODULE_6__["AddContent"], {
+    className: "m-2",
+    appendContent: appendContent,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 21
+    }
+  })), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_4__["BtnBbw"], {
+    className: "w-full h-12 mt-8 mb-4",
+    value: "ADD ARTICLE",
+    onClick: handleSubmit,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 17
+    }
+  })));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddArticle);
+
+/***/ }),
+
 /***/ "./components/elements/bar/NavMenu.js":
 /*!********************************************!*\
   !*** ./components/elements/bar/NavMenu.js ***!
@@ -728,6 +925,59 @@ var BtnBtb = function BtnBtb(props) {
 
 /***/ }),
 
+/***/ "./components/graphics/buttons/BtnIcon.js":
+/*!************************************************!*\
+  !*** ./components/graphics/buttons/BtnIcon.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnIcon.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var BtnIcon = function BtnIcon(props) {
+  var content = __jsx("div", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: "w-full h-full bg-gray-900 hover:bg-gray-700 focus:outline-none focus:border-gray-900 py-2 px-2",
+    type: "button",
+    onClick: props.onClick,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    src: props.src,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 21
+    }
+  })));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnIcon);
+
+/***/ }),
+
 /***/ "./components/graphics/buttons/BtnTtb.js":
 /*!***********************************************!*\
   !*** ./components/graphics/buttons/BtnTtb.js ***!
@@ -783,7 +1033,7 @@ var BtnTtb = function BtnTtb(props) {
 /*!**********************************************!*\
   !*** ./components/graphics/buttons/index.js ***!
   \**********************************************/
-/*! exports provided: BtnBbw, BtnBtb */
+/*! exports provided: BtnBbw, BtnBtb, BtnTtb, BtnIcon */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -793,6 +1043,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _BtnBtb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BtnBtb */ "./components/graphics/buttons/BtnBtb.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnBtb", function() { return _BtnBtb__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _BtnTtb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BtnTtb */ "./components/graphics/buttons/BtnTtb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnTtb", function() { return _BtnTtb__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _BtnIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BtnIcon */ "./components/graphics/buttons/BtnIcon.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnIcon", function() { return _BtnIcon__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+
 
 
 
@@ -1679,6 +1937,105 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/widgets/article/AddContent.js":
+/*!**************************************************!*\
+  !*** ./components/widgets/article/AddContent.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\article\\AddContent.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var AddContent = function AddContent(props) {
+  var content = __jsx("div", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "flex flex-wrap",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 13
+    }
+  }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnIcon"], {
+    className: "h-10 w-10 mr-2",
+    src: "/icons/text.png",
+    onClick: function onClick() {
+      var data = {
+        state: "edit",
+        data: {
+          type: "text",
+          text: null
+        }
+      };
+      props.appendContent(data);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 17
+    }
+  }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnIcon"], {
+    className: "h-10 w-10",
+    src: "/icons/photo.png",
+    onClick: function onClick() {
+      var data = {
+        state: "edit",
+        data: {
+          type: "image",
+          image: null
+        }
+      };
+      props.appendContent(data);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 17
+    }
+  })));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddContent);
+
+/***/ }),
+
+/***/ "./components/widgets/article/index.js":
+/*!*********************************************!*\
+  !*** ./components/widgets/article/index.js ***!
+  \*********************************************/
+/*! exports provided: AddContent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AddContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddContent */ "./components/widgets/article/AddContent.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AddContent", function() { return _AddContent__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
 /***/ "./components/widgets/category/AddCategory.js":
 /*!****************************************************!*\
   !*** ./components/widgets/category/AddCategory.js ***!
@@ -1987,6 +2344,176 @@ var AddImageGrid = function AddImageGrid(props) {
 
 /***/ }),
 
+/***/ "./components/widgets/image/AddSingleImage.js":
+/*!****************************************************!*\
+  !*** ./components/widgets/image/AddSingleImage.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\image\\AddSingleImage.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var AddSingleImage = function AddSingleImage(props) {
+  var inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var uploadBtn = __jsx("div", {
+    className: "relative m-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, __jsx("input", {
+    className: "absolute invisible",
+    ref: inputRef,
+    accept: "image/jpeg, image/jpg, image/png",
+    type: "file",
+    onChange: function onChange(input) {
+      var data = {
+        state: "valid",
+        data: {
+          type: "image",
+          image: input.target.files[0]
+        }
+      };
+      props.editContent(props.index, data);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }), __jsx("div", {
+    className: "container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200",
+    role: "button",
+    onClick: function onClick() {
+      inputRef.current.click();
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 13
+    }
+  }, __jsx("span", {
+    className: "text-center h-auto w-auto m-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 17
+    }
+  }, "Upload Photo")));
+
+  var removeBtn = __jsx("div", {
+    className: "relative m-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200 m-1",
+    role: "button",
+    onClick: function onClick() {
+      var data = {
+        state: "edit",
+        data: {
+          type: "image",
+          image: null
+        }
+      };
+      props.editContent(props.index, data);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 13
+    }
+  }, __jsx("span", {
+    className: "text-center h-auto w-auto m-1",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 17
+    }
+  }, "Remove Photo")));
+
+  var content = __jsx("div", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative h-full w-full bg-gray-300",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "absolute w-full h-full object-cover",
+    src: props.data.state == "valid" ? (window.URL ? URL : webkitURL).createObjectURL(props.data.data.image) : null,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1",
+    role: "button",
+    onClick: function onClick() {
+      return props.removeContent(props.index);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 21
+    }
+  }, "x")), __jsx("div", {
+    className: "absolute bottom-0 left-0 m-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 17
+    }
+  }, props.data.state == 'valid' ? removeBtn : uploadBtn)));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddSingleImage);
+
+/***/ }),
+
 /***/ "./components/widgets/product/ProductGrid.js":
 /*!***************************************************!*\
   !*** ./components/widgets/product/ProductGrid.js ***!
@@ -2126,6 +2653,33 @@ __webpack_require__.r(__webpack_exports__);
 
 function parseCookies(req) {
   return cookie__WEBPACK_IMPORTED_MODULE_0___default.a.parse(req ? req.headers.cookie || "" : document.cookie);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
 }
 
 /***/ }),
@@ -5365,10 +5919,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_widgets_product__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/widgets/product */ "./components/widgets/product/index.js");
 /* harmony import */ var _components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/elements/list/ProductGridList */ "./components/elements/list/ProductGridList.js");
 /* harmony import */ var _components_elements_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/elements/product */ "./components/elements/product/index.js");
+/* harmony import */ var _components_elements_article_AddArticle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/elements/article/AddArticle */ "./components/elements/article/AddArticle.js");
 var _this = undefined,
     _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\pages\\maker\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -5413,7 +5969,7 @@ var UserPage = function UserPage(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 35,
       columnNumber: 17
     }
   }, "Loading characters...");
@@ -5429,7 +5985,7 @@ var UserPage = function UserPage(props) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39,
+          lineNumber: 40,
           columnNumber: 14
         }
       });
@@ -5440,6 +5996,9 @@ var UserPage = function UserPage(props) {
     }, {
       id: 1,
       value: 'Add Product'
+    }, {
+      id: 2,
+      value: 'Add Article'
     }];
 
     var comp1 = __jsx(_components_elements_list_ProductGridList__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -5448,7 +6007,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
+        lineNumber: 44,
         columnNumber: 18
       }
     });
@@ -5458,18 +6017,28 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 18
       }
     });
 
-    var componentsList = [comp1, comp2];
+    var comp3 = __jsx(_components_elements_article_AddArticle__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      cookies: props.cookies,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 18
+      }
+    });
+
+    var componentsList = [comp1, comp2, comp3];
     content = __jsx("div", {
       className: "w-full",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51,
+        lineNumber: 54,
         columnNumber: 7
       }
     }, __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
@@ -5478,7 +6047,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52,
+        lineNumber: 55,
         columnNumber: 9
       }
     }), __jsx("div", {
@@ -5486,7 +6055,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 56,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -5494,7 +6063,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54,
+        lineNumber: 57,
         columnNumber: 11
       }
     }, __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["SideBar"], {
@@ -5507,7 +6076,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55,
+        lineNumber: 58,
         columnNumber: 13
       }
     })), __jsx("div", {
@@ -5515,7 +6084,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57,
+        lineNumber: 60,
         columnNumber: 11
       }
     }, componentsList[clikced])));
@@ -5524,7 +6093,7 @@ var UserPage = function UserPage(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 67,
         columnNumber: 15
       }
     }, "Could not fetch any data.");
@@ -5761,7 +6330,7 @@ function onClickOutside(ref, handler) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!*****************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fmaker&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cmaker%5Cindex.js ***!
   \*****************************************************************************************************************************************************************************/
@@ -5784,5 +6353,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=maker.js.map
