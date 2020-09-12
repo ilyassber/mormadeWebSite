@@ -11,7 +11,7 @@ const AddContent = props => {
                         state: "edit",
                         data: {
                             type: "text",
-                            text: null
+                            text: ""
                         }
                     }
                     props.appendContent(data)

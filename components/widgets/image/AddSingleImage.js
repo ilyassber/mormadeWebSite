@@ -23,7 +23,7 @@ const AddSingleImage = props => {
                 }}
             />
             <div
-                className="container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200"
+                className="container flex content-center flex-wrap text-center h-auto w-auto bg-white bg-opacity-50 border border-1 border-gray-900 hover:bg-opacity-75 m-1"
                 role="button"
                 onClick={() => { inputRef.current.click() }}>
                 <span className="text-center h-auto w-auto m-1">
@@ -36,7 +36,7 @@ const AddSingleImage = props => {
     let removeBtn = (
         <div className="relative m-1">
             <div
-                className="container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200 m-1"
+                className="container flex content-center flex-wrap text-center h-auto w-auto bg-white bg-opacity-50 border border-1 border-gray-900 hover:bg-opacity-75 m-1"
                 role="button"
                 onClick={() => {
                     let data = {
@@ -55,18 +55,22 @@ const AddSingleImage = props => {
         </div>
     )
 
+    let closeBtn = (
+        <div
+            className="absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1"
+            role="button"
+            onClick={() => props.removeContent(props.index)}>
+            <span className="text-center font-sans font-bold text-xw-100 h-auto w-full">
+                x
+                    </span>
+        </div>
+    )
+
     let content = (
         <div className={props.className}>
-            <div className="relative h-full w-full bg-gray-300">
+            <div className="relative w-full bg-gray-300 pb-1/2">
                 <img className="absolute w-full h-full object-cover" src={(props.data.state == "valid") ? ((window.URL ? URL : webkitURL).createObjectURL(props.data.data.image)) : null} />
-                <div
-                    className="absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1"
-                    role="button"
-                    onClick={() => props.removeContent(props.index)}>
-                    <span className="text-center font-sans font-bold text-xw-100 h-auto w-full">
-                        x
-                    </span>
-                </div>
+                {(props.close == "true") ? closeBtn : null }
                 <div className="absolute bottom-0 left-0 m-2">
                     {(props.data.state == 'valid') ? removeBtn : uploadBtn}
                 </div>

@@ -23,6 +23,10 @@
     "/maker": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/maker/auth": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

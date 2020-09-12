@@ -19,6 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_api_uploadImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../services/api/uploadImage */ "./services/api/uploadImage.js");
 /* harmony import */ var _widgets_article__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../widgets/article */ "./components/widgets/article/index.js");
 /* harmony import */ var _widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../widgets/image/AddSingleImage */ "./components/widgets/image/AddSingleImage.js");
+/* harmony import */ var _widgets_article_AddText__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../widgets/article/AddText */ "./components/widgets/article/AddText.js");
 
 
 
@@ -38,11 +39,18 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
+
 var AddArticle = function AddArticle(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
     title: null,
     description: null,
-    cover: null,
+    cover: {
+      state: "edit",
+      data: {
+        type: "image",
+        image: null
+      }
+    },
     text: []
   }),
       data = _useState[0],
@@ -96,6 +104,12 @@ var AddArticle = function AddArticle(props) {
     }));
   };
 
+  var editCoverContent = function editCoverContent(index, content) {
+    setData(_objectSpread({}, data, {
+      cover: content
+    }));
+  };
+
   var handleSubmit = function handleSubmit(event) {
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function handleSubmit$(_context) {
       while (1) {
@@ -113,7 +127,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 76,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -122,7 +136,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 77,
       columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtField"], {
@@ -133,7 +147,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 78,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtArea"], {
@@ -144,48 +158,109 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 79,
       columnNumber: 17
     }
   }), __jsx("div", {
+    className: "pb-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
+      columnNumber: 17
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
+      columnNumber: 21
+    }
+  }, "Add Cover"), __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    index: -1,
+    className: "",
+    data: data.cover,
+    close: "false",
+    editContent: editCoverContent,
+    removeContent: function removeContent() {},
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 21
+    }
+  })), __jsx("div", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 17
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 21
+    }
+  }, "Add Article Content"), __jsx("div", {
     className: "h-auto w-full border",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
-      columnNumber: 17
+      lineNumber: 86,
+      columnNumber: 21
     }
   }, data.text.map(function (content, index) {
-    return __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      index: index,
-      className: "h-64 m-2",
-      data: content,
-      editContent: editContent,
-      removeContent: removeContent,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71,
-        columnNumber: 33
-      }
-    });
+    if (content.data.type == "image") {
+      return __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        index: index,
+        className: "m-2",
+        data: content,
+        close: "true",
+        editContent: editContent,
+        removeContent: removeContent,
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89,
+          columnNumber: 41
+        }
+      });
+    } else {
+      return __jsx(_widgets_article_AddText__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        index: index,
+        className: "m-2",
+        data: content,
+        editContent: editContent,
+        removeContent: removeContent,
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91,
+          columnNumber: 41
+        }
+      });
+    }
   }), __jsx(_widgets_article__WEBPACK_IMPORTED_MODULE_6__["AddContent"], {
     className: "m-2",
     appendContent: appendContent,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
-      columnNumber: 21
+      lineNumber: 94,
+      columnNumber: 25
     }
-  })), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_4__["BtnBbw"], {
+  }))), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_4__["BtnBbw"], {
     className: "w-full h-12 mt-8 mb-4",
     value: "ADD ARTICLE",
     onClick: handleSubmit,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 98,
       columnNumber: 17
     }
   })));
@@ -907,7 +982,7 @@ var BtnBtb = function BtnBtb(props) {
       columnNumber: 9
     }
   }, __jsx("button", {
-    className: "w-full h-full bg-transparent border border-gray-900 hover:text-opacity-75 hover:border-opacity-75 focus:outline-none font-sans font-medium text-gray-900 text-sm py-2 px-4",
+    className: "w-full h-full bg-transparent border border-gray-900 hover:text-opacity-75 hover:border-opacity-75 focus:outline-none font-sans font-medium text-gray-900 text-sm",
     type: "button",
     onClick: props.onClick,
     __self: _this,
@@ -1981,7 +2056,7 @@ var AddContent = function AddContent(props) {
         state: "edit",
         data: {
           type: "text",
-          text: null
+          text: ""
         }
       };
       props.appendContent(data);
@@ -2017,6 +2092,162 @@ var AddContent = function AddContent(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AddContent);
+
+/***/ }),
+
+/***/ "./components/widgets/article/AddText.js":
+/*!***********************************************!*\
+  !*** ./components/widgets/article/AddText.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\article\\AddText.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var AddText = function AddText(props) {
+  var inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  var text = props.data.data.text;
+
+  var saveBtn = __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnBtb"], {
+    className: "h-8 w-auto",
+    onClick: function onClick() {
+      var data = {
+        state: "valid",
+        data: {
+          type: "text",
+          text: text
+        }
+      };
+      props.editContent(props.index, data);
+    },
+    value: "Save Text",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  });
+
+  var editBtn = __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnBtb"], {
+    className: "h-8 w-auto",
+    onClick: function onClick() {
+      var data = {
+        state: "edit",
+        data: {
+          type: "text",
+          text: props.data.data.text
+        }
+      };
+      props.editContent(props.index, data);
+    },
+    value: "Edit Text",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  });
+
+  var content = __jsx("div", {
+    className: props.className,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative h-auto w-full border",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "m-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 17
+    }
+  }, props.data.state == "valid" ? __jsx("div", {
+    className: "m-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 25
+    }
+  }, __jsx("p", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 46
+    }
+  }, props.data.data.text)) : __jsx("textarea", {
+    ref: inputRef,
+    rows: "4",
+    cols: "50",
+    className: "appearance-none border h-full w-full py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black",
+    type: "text",
+    onChange: function onChange(e) {
+      text = e.target.value;
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 29
+    }
+  }, props.data.data.text), __jsx("div", {
+    className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none",
+    role: "button",
+    onClick: function onClick() {
+      return props.removeContent(props.index);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 21
+    }
+  }, __jsx("span", {
+    className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 25
+    }
+  }, "x")), __jsx("div", {
+    className: "h-auto w-auto mt-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 21
+    }
+  }, props.data.state == 'valid' ? editBtn : saveBtn))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddText);
 
 /***/ }),
 
@@ -2394,7 +2625,7 @@ var AddSingleImage = function AddSingleImage(props) {
       columnNumber: 13
     }
   }), __jsx("div", {
-    className: "container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200",
+    className: "container flex content-center flex-wrap text-center h-auto w-auto bg-white bg-opacity-50 border border-1 border-gray-900 hover:bg-opacity-75 m-1",
     role: "button",
     onClick: function onClick() {
       inputRef.current.click();
@@ -2424,7 +2655,7 @@ var AddSingleImage = function AddSingleImage(props) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200 m-1",
+    className: "container flex content-center flex-wrap text-center h-auto w-auto bg-white bg-opacity-50 border border-1 border-gray-900 hover:bg-opacity-75 m-1",
     role: "button",
     onClick: function onClick() {
       var data = {
@@ -2452,32 +2683,7 @@ var AddSingleImage = function AddSingleImage(props) {
     }
   }, "Remove Photo")));
 
-  var content = __jsx("div", {
-    className: props.className,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 9
-    }
-  }, __jsx("div", {
-    className: "relative h-full w-full bg-gray-300",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 13
-    }
-  }, __jsx("img", {
-    className: "absolute w-full h-full object-cover",
-    src: props.data.state == "valid" ? (window.URL ? URL : webkitURL).createObjectURL(props.data.data.image) : null,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 17
-    }
-  }), __jsx("div", {
+  var closeBtn = __jsx("div", {
     className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1",
     role: "button",
     onClick: function onClick() {
@@ -2486,23 +2692,50 @@ var AddSingleImage = function AddSingleImage(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
-      columnNumber: 17
+      lineNumber: 59,
+      columnNumber: 9
     }
   }, __jsx("span", {
     className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
-      columnNumber: 21
+      lineNumber: 63,
+      columnNumber: 13
     }
-  }, "x")), __jsx("div", {
-    className: "absolute bottom-0 left-0 m-2",
+  }, "x"));
+
+  var content = __jsx("div", {
+    className: props.className,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative w-full bg-gray-300 pb-1/2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "absolute w-full h-full object-cover",
+    src: props.data.state == "valid" ? (window.URL ? URL : webkitURL).createObjectURL(props.data.data.image) : null,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 17
+    }
+  }), props.close == "true" ? closeBtn : null, __jsx("div", {
+    className: "absolute bottom-0 left-0 m-2",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
       columnNumber: 17
     }
   }, props.data.state == 'valid' ? removeBtn : uploadBtn)));

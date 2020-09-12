@@ -109,6 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_api_uploadImage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/api/uploadImage */ "./services/api/uploadImage.js");
 /* harmony import */ var _widgets_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../widgets/article */ "./components/widgets/article/index.js");
 /* harmony import */ var _widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../widgets/image/AddSingleImage */ "./components/widgets/image/AddSingleImage.js");
+/* harmony import */ var _widgets_article_AddText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../widgets/article/AddText */ "./components/widgets/article/AddText.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\article\\AddArticle.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -125,6 +126,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 const AddArticle = props => {
   const {
     0: data,
@@ -132,7 +134,13 @@ const AddArticle = props => {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     title: null,
     description: null,
-    cover: null,
+    cover: {
+      state: "edit",
+      data: {
+        type: "image",
+        image: null
+      }
+    },
     text: []
   });
 
@@ -184,6 +192,12 @@ const AddArticle = props => {
     }));
   };
 
+  const editCoverContent = (index, content) => {
+    setData(_objectSpread({}, data, {
+      cover: content
+    }));
+  };
+
   const handleSubmit = async event => {
     /*
     event.preventDefault()
@@ -202,7 +216,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 76,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -211,7 +225,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 77,
       columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -220,7 +234,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 78,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtArea"], {
@@ -229,48 +243,109 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 79,
       columnNumber: 17
     }
   }), __jsx("div", {
+    className: "pb-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
+      columnNumber: 17
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
+      columnNumber: 21
+    }
+  }, "Add Cover"), __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    index: -1,
+    className: "",
+    data: data.cover,
+    close: "false",
+    editContent: editCoverContent,
+    removeContent: () => {},
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 21
+    }
+  })), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 17
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 21
+    }
+  }, "Add Article Content"), __jsx("div", {
     className: "h-auto w-full border",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
-      columnNumber: 17
+      lineNumber: 86,
+      columnNumber: 21
     }
   }, data.text.map((content, index) => {
-    return __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      index: index,
-      className: "h-64 m-2",
-      data: content,
-      editContent: editContent,
-      removeContent: removeContent,
-      __self: undefined,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 71,
-        columnNumber: 33
-      }
-    });
+    if (content.data.type == "image") {
+      return __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        index: index,
+        className: "m-2",
+        data: content,
+        close: "true",
+        editContent: editContent,
+        removeContent: removeContent,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89,
+          columnNumber: 41
+        }
+      });
+    } else {
+      return __jsx(_widgets_article_AddText__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        index: index,
+        className: "m-2",
+        data: content,
+        editContent: editContent,
+        removeContent: removeContent,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91,
+          columnNumber: 41
+        }
+      });
+    }
   }), __jsx(_widgets_article__WEBPACK_IMPORTED_MODULE_4__["AddContent"], {
     className: "m-2",
     appendContent: appendContent,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
-      columnNumber: 21
+      lineNumber: 94,
+      columnNumber: 25
     }
-  })), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
+  }))), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
     className: "w-full h-12 mt-8 mb-4",
     value: "ADD ARTICLE",
     onClick: handleSubmit,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 98,
       columnNumber: 17
     }
   })));
@@ -932,7 +1007,7 @@ const BtnBtb = props => {
       columnNumber: 9
     }
   }, __jsx("button", {
-    className: "w-full h-full bg-transparent border border-gray-900 hover:text-opacity-75 hover:border-opacity-75 focus:outline-none font-sans font-medium text-gray-900 text-sm py-2 px-4",
+    className: "w-full h-full bg-transparent border border-gray-900 hover:text-opacity-75 hover:border-opacity-75 focus:outline-none font-sans font-medium text-gray-900 text-sm",
     type: "button",
     onClick: props.onClick,
     __self: undefined,
@@ -1973,7 +2048,7 @@ const AddContent = props => {
         state: "edit",
         data: {
           type: "text",
-          text: null
+          text: ""
         }
       };
       props.appendContent(data);
@@ -2009,6 +2084,158 @@ const AddContent = props => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AddContent);
+
+/***/ }),
+
+/***/ "./components/widgets/article/AddText.js":
+/*!***********************************************!*\
+  !*** ./components/widgets/article/AddText.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\article\\AddText.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const AddText = props => {
+  const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  let text = props.data.data.text;
+
+  let saveBtn = __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnBtb"], {
+    className: "h-8 w-auto",
+    onClick: () => {
+      let data = {
+        state: "valid",
+        data: {
+          type: "text",
+          text: text
+        }
+      };
+      props.editContent(props.index, data);
+    },
+    value: "Save Text",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  });
+
+  let editBtn = __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnBtb"], {
+    className: "h-8 w-auto",
+    onClick: () => {
+      let data = {
+        state: "edit",
+        data: {
+          type: "text",
+          text: props.data.data.text
+        }
+      };
+      props.editContent(props.index, data);
+    },
+    value: "Edit Text",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  });
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative h-auto w-full border",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "m-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 17
+    }
+  }, props.data.state == "valid" ? __jsx("div", {
+    className: "m-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 25
+    }
+  }, __jsx("p", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 46
+    }
+  }, props.data.data.text)) : __jsx("textarea", {
+    ref: inputRef,
+    rows: "4",
+    cols: "50",
+    className: "appearance-none border h-full w-full py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black",
+    type: "text",
+    onChange: e => {
+      text = e.target.value;
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 29
+    }
+  }, props.data.data.text), __jsx("div", {
+    className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none",
+    role: "button",
+    onClick: () => props.removeContent(props.index),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 21
+    }
+  }, __jsx("span", {
+    className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 25
+    }
+  }, "x")), __jsx("div", {
+    className: "h-auto w-auto mt-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 21
+    }
+  }, props.data.state == 'valid' ? editBtn : saveBtn))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AddText);
 
 /***/ }),
 
@@ -2378,7 +2605,7 @@ const AddSingleImage = props => {
       columnNumber: 13
     }
   }), __jsx("div", {
-    className: "container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200",
+    className: "container flex content-center flex-wrap text-center h-auto w-auto bg-white bg-opacity-50 border border-1 border-gray-900 hover:bg-opacity-75 m-1",
     role: "button",
     onClick: () => {
       inputRef.current.click();
@@ -2408,7 +2635,7 @@ const AddSingleImage = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "container flex content-center flex-wrap text-center h-auto w-auto border border-1 border-gray-900 hover:bg-xw-200 m-1",
+    className: "container flex content-center flex-wrap text-center h-auto w-auto bg-white bg-opacity-50 border border-1 border-gray-900 hover:bg-opacity-75 m-1",
     role: "button",
     onClick: () => {
       let data = {
@@ -2436,20 +2663,40 @@ const AddSingleImage = props => {
     }
   }, "Remove Photo")));
 
-  let content = __jsx("div", {
-    className: props.className,
+  let closeBtn = __jsx("div", {
+    className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1",
+    role: "button",
+    onClick: () => props.removeContent(props.index),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: "relative h-full w-full bg-gray-300",
+  }, __jsx("span", {
+    className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 63,
+      columnNumber: 13
+    }
+  }, "x"));
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative w-full bg-gray-300 pb-1/2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -2458,33 +2705,15 @@ const AddSingleImage = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 72,
       columnNumber: 17
     }
-  }), __jsx("div", {
-    className: "absolute top-0 right-0 container flex content-center flex-wrap text-center h-6 w-6 bg-opacity-50 bg-gray-700 rounded-full hover:bg-gray-900 focus:outline-none m-1",
-    role: "button",
-    onClick: () => props.removeContent(props.index),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62,
-      columnNumber: 17
-    }
-  }, __jsx("span", {
-    className: "text-center font-sans font-bold text-xw-100 h-auto w-full",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66,
-      columnNumber: 21
-    }
-  }, "x")), __jsx("div", {
+  }), props.close == "true" ? closeBtn : null, __jsx("div", {
     className: "absolute bottom-0 left-0 m-2",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 74,
       columnNumber: 17
     }
   }, props.data.state == 'valid' ? removeBtn : uploadBtn)));
