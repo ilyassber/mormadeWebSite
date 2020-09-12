@@ -8,15 +8,18 @@ module.exports = {
       grandstander: ['Grandstander'],
       amiri : ['Amiri'],
       montserrat : ['Montserrat'],
-      
-      inset: {
-        '12': '3rem',
-        '24': '6rem',
-        '36': '9rem',
-        '48': '12rem',
-        'full': '100%',
-
-      }
+    },
+    inset: {
+      '-4': '-1rem',
+      '-8': '-2rem',
+      '-12': '-3rem',
+      '4': '1rem',
+      '8': '2rem',
+      '12': '3rem',
+      '24': '6rem',
+      '36': '9rem',
+      '48': '12rem',
+      'full': '100%',
 
     },
     extend: {
@@ -75,6 +78,11 @@ module.exports = {
         '204': '51rem',
         '216': '54rem',
         '228': '57rem',
+        '240': '60rem',
+        '252': '63rem',
+        '264': '66rem',
+        '276': '69rem',
+        '288': '72rem',
         'wide-1': '72rem',
       }
     },

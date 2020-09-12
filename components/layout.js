@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Wrapper from './widgets/utilities/wrapper'
 import NavBar from './elements/nav-bar/navbar'
 import SideMenu from './elements/side-menu/sideMenu'
 
@@ -97,7 +98,7 @@ function Layout({ children }) {
     }
 
     return (
-        <div>
+        <div className="bg-white">
 
             {menuClicked && <SideMenu
                 menuClick = {menuClicked}
@@ -110,7 +111,7 @@ function Layout({ children }) {
             />}
 
             
-            {menuClicked && <BlackFocusScreen   
+            {menuClicked && <BlackFocusScreen
                 display={menuClicked}
                 onClick={clickMenuIcon}
             />
@@ -124,6 +125,7 @@ function Layout({ children }) {
                 links={links}
                 home="/"
             />
+            <Wrapper style="w-full h-48"/>  {/* top white space*/}
 
             {children}
 
