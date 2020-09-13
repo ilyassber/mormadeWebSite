@@ -110,6 +110,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_article__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../widgets/article */ "./components/widgets/article/index.js");
 /* harmony import */ var _widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../widgets/image/AddSingleImage */ "./components/widgets/image/AddSingleImage.js");
 /* harmony import */ var _widgets_article_AddText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../widgets/article/AddText */ "./components/widgets/article/AddText.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! querystring */ "querystring");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _services_api_post_postRequest__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../services/api/post/postRequest */ "./services/api/post/postRequest.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\article\\AddArticle.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -118,6 +121,8 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -199,16 +204,33 @@ const AddArticle = props => {
   };
 
   const handleSubmit = async event => {
-    /*
-    event.preventDefault()
-    for (let i = 0; i < files.length; i++) {
-        let response = await uploadImage(event, files[0], props.cookies['csrftoken']).then((res) => res)
-        data['pics_list'].push(response.data)
+    event.preventDefault();
+    let coverId = await Object(_services_api_uploadImage__WEBPACK_IMPORTED_MODULE_3__["uploadImage"])(event, data.cover.data.image, props.cookies['csrftoken']).then(res => res.data);
+    let textList = [];
+
+    for (let i = 0; i < data.text.length; i++) {
+      if (data.text[i].data.type == 'image') {
+        let response = await Object(_services_api_uploadImage__WEBPACK_IMPORTED_MODULE_3__["uploadImage"])(event, data.text[i].data.image, props.cookies['csrftoken']).then(res => res);
+        textList.push(querystring__WEBPACK_IMPORTED_MODULE_7___default.a.stringify({
+          type: 'image',
+          image: response.data
+        }));
+      } else {
+        textList.push(querystring__WEBPACK_IMPORTED_MODULE_7___default.a.stringify({
+          type: 'text',
+          text: data.text[i].data.text
+        }));
+      }
     }
-    addProduct(data, props.cookies['csrftoken']).then((res) => {
-        console.log(res)
-    })
-    */
+
+    let newData = _objectSpread({}, data, {
+      cover: coverId,
+      text: querystring__WEBPACK_IMPORTED_MODULE_7___default.a.stringify(textList)
+    });
+
+    Object(_services_api_post_postRequest__WEBPACK_IMPORTED_MODULE_8__["postRequest"])(querystring__WEBPACK_IMPORTED_MODULE_7___default.a.stringify(newData), props.cookies['csrftoken'], 'http://localhost:8000/articles/').then(res => {
+      console.log(res);
+    });
   };
 
   let content = __jsx("div", {
@@ -216,7 +238,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 93,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -225,7 +247,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 94,
       columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
@@ -234,7 +256,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 95,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtArea"], {
@@ -243,7 +265,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 96,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -251,7 +273,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 97,
       columnNumber: 17
     }
   }, __jsx("label", {
@@ -259,7 +281,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 98,
       columnNumber: 21
     }
   }, "Add Cover"), __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -272,14 +294,14 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 99,
       columnNumber: 21
     }
   })), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 101,
       columnNumber: 17
     }
   }, __jsx("label", {
@@ -287,7 +309,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 102,
       columnNumber: 21
     }
   }, "Add Article Content"), __jsx("div", {
@@ -295,7 +317,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 103,
       columnNumber: 21
     }
   }, data.text.map((content, index) => {
@@ -310,7 +332,7 @@ const AddArticle = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89,
+          lineNumber: 106,
           columnNumber: 41
         }
       });
@@ -324,7 +346,7 @@ const AddArticle = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91,
+          lineNumber: 108,
           columnNumber: 41
         }
       });
@@ -335,7 +357,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 111,
       columnNumber: 25
     }
   }))), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
@@ -345,7 +367,7 @@ const AddArticle = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 114,
       columnNumber: 17
     }
   })));
@@ -3148,6 +3170,38 @@ function getCategories(lvl, id, csrttoken) {
     };
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://localhost:8000/categories/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
+      resolve(response.data);
+    }).catch(error => {
+      reject(error);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./services/api/post/postRequest.js":
+/*!******************************************!*\
+  !*** ./services/api/post/postRequest.js ***!
+  \******************************************/
+/*! exports provided: postRequest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postRequest", function() { return postRequest; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+function postRequest(data, csrttoken, url) {
+  return new Promise((resolve, reject) => {
+    let axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': csrttoken
+      }
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, data, axiosConfig).then(response => {
       resolve(response.data);
     }).catch(error => {
       reject(error);

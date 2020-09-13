@@ -20,6 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_article__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../widgets/article */ "./components/widgets/article/index.js");
 /* harmony import */ var _widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../widgets/image/AddSingleImage */ "./components/widgets/image/AddSingleImage.js");
 /* harmony import */ var _widgets_article_AddText__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../widgets/article/AddText */ "./components/widgets/article/AddText.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _services_api_post_postRequest__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../services/api/post/postRequest */ "./services/api/post/postRequest.js");
 
 
 
@@ -31,6 +34,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_1__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
 
 
 
@@ -111,10 +116,68 @@ var AddArticle = function AddArticle(props) {
   };
 
   var handleSubmit = function handleSubmit(event) {
+    var coverId, textList, i, response, newData;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function handleSubmit$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
+            event.preventDefault();
+            _context.next = 3;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_services_api_uploadImage__WEBPACK_IMPORTED_MODULE_5__["uploadImage"])(event, data.cover.data.image, props.cookies['csrftoken']).then(function (res) {
+              return res.data;
+            }));
+
+          case 3:
+            coverId = _context.sent;
+            textList = [];
+            i = 0;
+
+          case 6:
+            if (!(i < data.text.length)) {
+              _context.next = 18;
+              break;
+            }
+
+            if (!(data.text[i].data.type == 'image')) {
+              _context.next = 14;
+              break;
+            }
+
+            _context.next = 10;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_services_api_uploadImage__WEBPACK_IMPORTED_MODULE_5__["uploadImage"])(event, data.text[i].data.image, props.cookies['csrftoken']).then(function (res) {
+              return res;
+            }));
+
+          case 10:
+            response = _context.sent;
+            textList.push(querystring__WEBPACK_IMPORTED_MODULE_9___default.a.stringify({
+              type: 'image',
+              image: response.data
+            }));
+            _context.next = 15;
+            break;
+
+          case 14:
+            textList.push(querystring__WEBPACK_IMPORTED_MODULE_9___default.a.stringify({
+              type: 'text',
+              text: data.text[i].data.text
+            }));
+
+          case 15:
+            i++;
+            _context.next = 6;
+            break;
+
+          case 18:
+            newData = _objectSpread({}, data, {
+              cover: coverId,
+              text: querystring__WEBPACK_IMPORTED_MODULE_9___default.a.stringify(textList)
+            });
+            Object(_services_api_post_postRequest__WEBPACK_IMPORTED_MODULE_10__["postRequest"])(querystring__WEBPACK_IMPORTED_MODULE_9___default.a.stringify(newData), props.cookies['csrftoken'], 'http://localhost:8000/articles/').then(function (res) {
+              console.log(res);
+            });
+
+          case 20:
           case "end":
             return _context.stop();
         }
@@ -127,7 +190,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 93,
       columnNumber: 9
     }
   }, __jsx("form", {
@@ -136,7 +199,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 94,
       columnNumber: 13
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtField"], {
@@ -147,7 +210,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78,
+      lineNumber: 95,
       columnNumber: 17
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtArea"], {
@@ -158,7 +221,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
+      lineNumber: 96,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -166,7 +229,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
+      lineNumber: 97,
       columnNumber: 17
     }
   }, __jsx("label", {
@@ -174,7 +237,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 98,
       columnNumber: 21
     }
   }, "Add Cover"), __jsx(_widgets_image_AddSingleImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -187,14 +250,14 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 99,
       columnNumber: 21
     }
   })), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 101,
       columnNumber: 17
     }
   }, __jsx("label", {
@@ -202,7 +265,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 102,
       columnNumber: 21
     }
   }, "Add Article Content"), __jsx("div", {
@@ -210,7 +273,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 103,
       columnNumber: 21
     }
   }, data.text.map(function (content, index) {
@@ -225,7 +288,7 @@ var AddArticle = function AddArticle(props) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89,
+          lineNumber: 106,
           columnNumber: 41
         }
       });
@@ -239,7 +302,7 @@ var AddArticle = function AddArticle(props) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91,
+          lineNumber: 108,
           columnNumber: 41
         }
       });
@@ -250,7 +313,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 111,
       columnNumber: 25
     }
   }))), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_4__["BtnBbw"], {
@@ -260,7 +323,7 @@ var AddArticle = function AddArticle(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 114,
       columnNumber: 17
     }
   })));
@@ -6420,6 +6483,38 @@ function getCategories(lvl, id, csrttoken) {
     };
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://localhost:8000/categories/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(function (response) {
+      resolve(response.data);
+    })["catch"](function (error) {
+      reject(error);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./services/api/post/postRequest.js":
+/*!******************************************!*\
+  !*** ./services/api/post/postRequest.js ***!
+  \******************************************/
+/*! exports provided: postRequest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postRequest", function() { return postRequest; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+function postRequest(data, csrttoken, url) {
+  return new Promise(function (resolve, reject) {
+    var axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': csrttoken
+      }
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, data, axiosConfig).then(function (response) {
       resolve(response.data);
     })["catch"](function (error) {
       reject(error);

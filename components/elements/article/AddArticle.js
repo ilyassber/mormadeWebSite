@@ -5,6 +5,8 @@ import { uploadImage } from '../../../services/api/uploadImage'
 import { AddContent } from '../../widgets/article'
 import AddSingleImage from '../../widgets/image/AddSingleImage'
 import AddText from '../../widgets/article/AddText'
+import querystring from 'querystring'
+import { postRequest } from '../../../services/api/post/postRequest'
 
 const AddArticle = props => {
 
@@ -60,16 +62,31 @@ const AddArticle = props => {
     }
 
     const handleSubmit = async (event) => {
-        /*
         event.preventDefault()
-        for (let i = 0; i < files.length; i++) {
-            let response = await uploadImage(event, files[0], props.cookies['csrftoken']).then((res) => res)
-            data['pics_list'].push(response.data)
+        let coverId = await uploadImage(event, data.cover.data.image, props.cookies['csrftoken']).then((res) => res.data)
+        let textList = []
+        for (let i = 0; i < data.text.length; i++) {
+            if (data.text[i].data.type == 'image') {
+                let response = await uploadImage(event, data.text[i].data.image, props.cookies['csrftoken']).then((res) => res)
+                textList.push(querystring.stringify({
+                    type: 'image',
+                    image: response.data
+                }))
+            } else {
+                textList.push(querystring.stringify({
+                    type: 'text',
+                    text:  data.text[i].data.text
+                }))
+            }
         }
-        addProduct(data, props.cookies['csrftoken']).then((res) => {
+        let newData = {
+            ...data,
+            cover: coverId,
+            text: querystring.stringify(textList)
+        }
+        postRequest(querystring.stringify(newData), props.cookies['csrftoken'], 'http://localhost:8000/articles/').then((res) => {
             console.log(res)
         })
-        */
     }
 
     let content = (
@@ -94,7 +111,6 @@ const AddArticle = props => {
                         <AddContent className="m-2" appendContent={appendContent} />
                     </div>
                 </div>
-
                 <BtnBbw className="w-full h-12 mt-8 mb-4" value="ADD ARTICLE" onClick={handleSubmit} />
             </form>
         </div>
