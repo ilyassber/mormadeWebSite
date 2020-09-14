@@ -22,95 +22,64 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Article(_ref) {
   var data = _ref.data;
+  var text = "In 1506, the king of Portugal, D. Manuel I, ordered a fortress to be built there, named Castelo Real de Mogador. Altogether, the Portuguese are documented to have seized six Moroccan towns and built six stand-alone fortresses on the Moroccan Atlantic coast, between the river Loukos in the north and the river of Sous in the south. Four of them only had a short duration: Graciosa (1489), São João da Mamora (1515), Castelo Real of Mogador (1506–10) and Aguz (1520–25). Two became permanent urban settlements: Santa Cruz do Cabo de Gué (modern Agadir, founded in 1505–06), and Mazagan, founded in 1514–17. Following the 1541 Fall of Agadir, the Portuguese had to abandon most of their settlements between 1541 and 1550, although they were able to keep Ceuta, Tangier and Mazagan.";
   var description = "It’s perhaps not surprising then that for the H&M fall kidswear collaboration Chen focuses on a fantastical and expressive world of animals, florals and other nature scenarios.";
   return __jsx("div", {
     className: "flex flex-col justify-center w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 10,
       columnNumber: 9
     }
-  }, __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: "images/Articles/cover-4.jpg",
-    title: "Atay o Tmirat",
-    description: description,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
-    }
-  }), __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: "images/Articles/cover-5.jpg",
+  }, __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["ArticleCover"], {
+    image: "images/Articles/cover-9.jpg",
     title: "Article",
-    description: description,
+    description: text,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
       columnNumber: 13
     }
-  }), __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: "images/Articles/cover-6.jpg",
+  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["ArticleContent2"], {
+    image: "images/Articles/cover-5.jpg",
     title: "Article",
-    description: description,
+    text: description,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
       columnNumber: 13
     }
-  }), __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: "images/Articles/cover-9.jpg",
+  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["ArticleContent1"], {
+    image: "images/Articles/cover-6.jpg",
     title: "Article",
-    description: description,
+    text: description,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 13
     }
-  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["ArticleContent"], {
+    image: "images/Articles/cover-6.jpg",
+    title: "Article",
+    text: description,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14,
       columnNumber: 13
     }
-  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["ArticleContent1"], {
+    image: "images/Articles/cover-6.jpg",
+    title: "Article",
+    text: description,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
-      columnNumber: 13
-    }
-  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 13
-    }
-  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 13
-    }
-  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 13
-    }
-  }), __jsx(_article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
       columnNumber: 13
     }
   }));
@@ -124,34 +93,124 @@ function Article(_ref) {
 /*!*************************************************************************!*\
   !*** ./components/elements/Article/article-utilities/ArticleContent.js ***!
   \*************************************************************************/
-/*! exports provided: default */
+/*! exports provided: ArticleContent, ArticleContent1, ArticleContent2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ArticleContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent", function() { return ArticleContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent1", function() { return ArticleContent1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent2", function() { return ArticleContent2; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
+/* harmony import */ var _article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-widgets/Title */ "./components/elements/Article/article-utilities/article-widgets/Title.js");
+/* harmony import */ var _article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article-widgets/Description */ "./components/elements/Article/article-utilities/article-widgets/Description.js");
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\ArticleContent.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-function ArticleContent() {
+// import Cover from './article-widgets/Cover'
+
+
+
+function ArticleContent(_ref) {
+  var image = _ref.image,
+      text = _ref.text,
+      title = _ref.title;
   return __jsx("div", {
-    className: "flex flex-row w-full h-96 bg-white border ",
+    className: "flex flex-col justify-center items-center mt-20 mb-20 w-full ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4,
+      lineNumber: 8,
       columnNumber: 9
     }
-  }, __jsx("h1", {
+  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "flex items-center mr-10 w-180 h-180 rounded-full overflow-hidden shadow",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
+      lineNumber: 9,
       columnNumber: 13
     }
-  }, "Content"));
+  }, __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: text,
+    style: "flex justify-center items-center p-20  w-144 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  })));
+}
+function ArticleContent1(_ref2) {
+  var image = _ref2.image,
+      text = _ref2.text,
+      title = _ref2.title;
+  return __jsx("div", {
+    className: "flex flex-row mt-20 mb-20 w-full h-132 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: text,
+    style: "flex justify-center items-center p-20  w-144 h-144 rounded-full ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }), __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "flex flex-1 items-center w-216 h-132 rounded-sm overflow-hidden shadow",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }));
+}
+function ArticleContent2(_ref3) {
+  var image = _ref3.image,
+      text = _ref3.text,
+      title = _ref3.title;
+  return __jsx("div", {
+    className: "flex flex-row mt-20 mb-20 w-full",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "flex items-center w-180 h-180 rounded-full overflow-hidden shadow",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 13
+    }
+  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: text,
+    style: "flex flex-1 justify-center items-center p-20  w-144 h-180  ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 13
+    }
+  }));
 }
 
 /***/ }),
@@ -160,12 +219,14 @@ function ArticleContent() {
 /*!***********************************************************************!*\
   !*** ./components/elements/Article/article-utilities/ArticleCover.js ***!
   \***********************************************************************/
-/*! exports provided: default */
+/*! exports provided: ArticleCover, ArticleCover1, ArticleCover2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ArticleCover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleCover", function() { return ArticleCover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleCover1", function() { return ArticleCover1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleCover2", function() { return ArticleCover2; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./article-widgets/Cover */ "./components/elements/Article/article-utilities/article-widgets/Cover.js");
@@ -182,11 +243,53 @@ function ArticleCover(_ref) {
       title = _ref.title,
       description = _ref.description;
   return __jsx("div", {
+    className: "flex flex-col justify-start items-center mb-2 w-full  ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 9
+    }
+  }, __jsx(_article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "relative flex flex-col justify-center items-center mt-4 m-16 w-11/12 h-180  bg-gray-400 shadow-sm",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 12
+    }
+  }, __jsx(_article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: title,
+    style: "absolute -bottom-12 flex justify-center items-center w-108 h-32 font-abrilfatface font-bold text-7xl bg-white bg-opacity-50 shadow-lg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }
+  })), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: description,
+    style: "mt-10 p-5 w-9/12 bg-white shadow-sm ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 13
+    }
+  }));
+}
+function ArticleCover1(_ref2) {
+  var image = _ref2.image,
+      title = _ref2.title,
+      description = _ref2.description;
+  return __jsx("div", {
     className: " flex flex-col justify-start items-center w-full  ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 21,
       columnNumber: 9
     }
   }, __jsx(_article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -195,7 +298,7 @@ function ArticleCover(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 22,
       columnNumber: 13
     }
   }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -204,16 +307,17 @@ function ArticleCover(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 23,
       columnNumber: 13
     }
   }), __jsx(_article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
     image: image,
+    height: "h-204",
     style: "w-11/12 h-204 overflow-hidden bg-gray-400 shadow-sm",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 24,
       columnNumber: 12
     }
   }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -222,11 +326,64 @@ function ArticleCover(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 25,
       columnNumber: 13
     }
   }));
 }
+function ArticleCover2(_ref3) {
+  var image = _ref3.image,
+      title = _ref3.title,
+      description = _ref3.description;
+  return __jsx("div", {
+    className: "relative flex flex-col justify-start items-center w-full  ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 9
+    }
+  }, __jsx(_article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: title,
+    style: "absolute top-48 left-24 flex justify-center items-center h-24 font-abrilfatface font-thin text-9xl text-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 13
+    }
+  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: description,
+    style: " p-5 w-6/12 bg-white shadow-sm ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 13
+    }
+  }), __jsx(_article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-288",
+    style: "w-full h-288 overflow-hidden bg-gray-400 shadow-sm",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 12
+    }
+  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: description,
+    style: "absolute bottom-36 right-12 m-10 p-5 w-4/12 text-white shadow-sm bg-gray-900 bg-opacity-50 shadow-md",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 13
+    }
+  }));
+} // export default {
+//     ArticleCover, ArticleCover1, ArticleCover2
+// }
 
 /***/ }),
 
@@ -246,7 +403,9 @@ var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\componen
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Cover(_ref) {
-  var image = _ref.image,
+  var children = _ref.children,
+      image = _ref.image,
+      height = _ref.height,
       style = _ref.style;
   return __jsx("div", {
     className: style,
@@ -256,17 +415,25 @@ function Cover(_ref) {
       lineNumber: 5,
       columnNumber: 9
     }
-  }, __jsx("img", {
-    className: "h-204 w-full object-cover object-center",
-    src: image,
-    alt: "image cover",
+  }, __jsx("div", {
+    className: "w-full h-full overflow-hidden",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6,
       columnNumber: 13
     }
-  }));
+  }, __jsx("img", {
+    className: "".concat(height, " w-full object-cover object-center"),
+    src: image,
+    alt: "image cover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 17
+    }
+  })), children);
 }
 
 /***/ }),
@@ -298,7 +465,7 @@ function Description(_ref) {
       columnNumber: 9
     }
   }, __jsx("p", {
-    className: "text-center",
+    className: "text-justify",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1616,6 +1783,66 @@ if (true) {
 
 /***/ }),
 
+/***/ "./components/graphics/imageCover/Cover.js":
+/*!*************************************************!*\
+  !*** ./components/graphics/imageCover/Cover.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cover; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\imageCover\\Cover.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+function Cover(_ref) {
+  var children = _ref.children,
+      image = _ref.image,
+      height = _ref.height,
+      style = _ref.style,
+      imageStyle = _ref.imageStyle;
+  return __jsx("div", {
+    className: "relative " + style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "z-10 " + style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 13
+    }
+  }, children), __jsx("div", {
+    className: "z-0 absolute top-0 left-0 w-full h-full overflow-hidden ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "".concat(height, " w-full object-cover object-center ").concat(imageStyle),
+    src: image,
+    alt: "image cover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 17
+    }
+  })));
+}
+
+/***/ }),
+
 /***/ "./components/layout.js":
 /*!******************************!*\
   !*** ./components/layout.js ***!
@@ -1727,7 +1954,7 @@ function Layout(_ref2) {
   };
 
   return __jsx("div", {
-    className: "bg-white",
+    className: "bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2316,27 +2543,8 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".navbar_navbar__3Ttjk {\n  z-index: 10;\n  position: fixed;\n  flex-direction: row;\n  width: 100%;\n  font-family: Quicksand;\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n\n.navbar_up_container__2maTi {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%;\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n}\n\n/*  logo styling  */\n\n.navbar_logo_icons_container__275fW {\n  display: flex;\n  width: 100%;\n  height: 3rem;\n}\n\n.navbar_logo_img__D3QGl {\n  width: 8rem;\n  -o-object-fit: contain;\n     object-fit: contain;\n  cursor: pointer;\n}\n\n.navbar_logo_icons_left_space__E80kP {\n  height: 100%;\n  flex: 1 1 0%;\n}\n\n.navbar_logo_container__JGveJ {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex: 1 1 0%;\n  height: 100%;\n}\n\n.navbar_logo_title__3K0GP {\n  font-size: 1.875rem;\n  font-family: Lobster;\n}\n\n/* search bar styling */\n\n.navbar_icons_container__aYlr4 {\n  display: flex;\n  flex: 1 1 0%;\n  height: 100%;\n  justify-content: flex-end;\n  align-items: center;\n}\n\n.navbar_icon__3u1Qf {\n  margin: 0.75rem;\n  cursor: pointer;\n  --text-opacity: 1;\n  color: #a0aec0;\n  color: rgba(160, 174, 192, var(--text-opacity)); /* the div surrounding the icone */\n}\n\n.navbar_links_search_bar_container__3FJai {\n  display: flex;\n  height: 3rem;\n  width: 100%;\n}\n\n.navbar_links_search_bar_left_space__2CHzP {\n  height: 100%;\n  flex: 1 1 0%;\n}\n\n.navbar_link_container__3xIJ1 {\n  display: flex;\n  flex: 1 1 0%;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n\n.navbar_link__1riOV {\n  margin: 2rem;\n  cursor: pointer;\n  font-size: 1.25rem;\n  font-family: Amiri;\n}\n\n.navbar_search_container__3mNgK {\n  display: flex;\n  flex: 1 1 0%;\n  justify-content: flex-end;\n  align-items: center;\n  height: 100%;\n}\n\n.navbar_search_bar__1Zg-s {\n  display: flex;\n  justify-content: flex-end;\n  height: 2rem;\n}\n\n.navbar_search_input__2vdxP{\n  height: 100%;\n  width: 6rem;\n  outline: 0;\n  border-bottom-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n}\n\n.navbar_search_button__3ZJ0R{\n  height: 100%;\n  width: 2rem;\n  outline: 0;\n  border-bottom-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n}\r\n\r\n", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/mormadeWebSite/components/elements/nav-bar/styles/navbar.module.css","C:/Users/Soguma/MorMade_project/mormadeWebSite/<no source>"],"names":[],"mappings":"AAAA;ECAA,WAAA;EAAA,eAAA;EAAA,mBAAA;EAAA,WAAA;EAAA,sBAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADEA;;AAEA;ECJA,aAAA;EAAA,sBAAA;EAAA,8BAAA;EAAA,WAAA;EAAA,qBAAA;EAAA,sBAAA;ADMA;;AAGA,mBAAmB;;AAEnB;ECXA,aAAA;EAAA,WAAA;EAAA,YAAA;ADaA;;AAEA;ECfA,WAAA;EAAA,sBAAA;KAAA,mBAAA;EAAA,eAAA;ADiBA;;AAEA;ECnBA,YAAA;EAAA,YAAA;ADqBA;;AAEA;ECvBA,aAAA;EAAA,uBAAA;EAAA,mBAAA;EAAA,YAAA;EAAA,YAAA;ADyBA;;AACA;EC1BA,mBAAA;EAAA,oBAAA;AD4BA;;AACA,uBAAuB;;AAGvB;EChCA,aAAA;EAAA,YAAA;EAAA,YAAA;EAAA,yBAAA;EAAA,mBAAA;ADmCA;;AACA;ECpCA,eAAA;EAAA,eAAA;EAAA,iBAAA;EAAA,cAAA;EAAA,+CAAA,EDqC8C,kCAAkC;AAChF;;AAGA;ECzCA,aAAA;EAAA,YAAA;EAAA,WAAA;AD4CA;;AAEA;EC9CA,YAAA;EAAA,YAAA;ADgDA;;AAEA;EClDA,aAAA;EAAA,YAAA;EAAA,uBAAA;EAAA,mBAAA;EAAA,YAAA;ADqDA;;AAEA;ECvDA,YAAA;EAAA,eAAA;EAAA,kBAAA;EAAA,kBAAA;ADyDA;;AAEA;EC3DA,aAAA;EAAA,YAAA;EAAA,yBAAA;EAAA,mBAAA;EAAA,YAAA;AD6DA;;AAEA;EC/DA,aAAA;EAAA,yBAAA;EAAA,YAAA;ADiEA;;AAEA;ECnEA,YAAA;EAAA,WAAA;EAAA,UAAA;EAAA,wBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;ADqEA;;AAEA;ECvEA,YAAA;EAAA,WAAA;EAAA,UAAA;EAAA,wBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;ADyEA","file":"navbar.module.css","sourcesContent":[".navbar {\r\n    @apply z-10 fixed flex-row w-full  font-sans bg-white; \r\n}\r\n\r\n.up_container {\r\n    @apply flex flex-col justify-between w-full pl-5 pr-5;\r\n}\r\n\r\n\r\n/*  logo styling  */\r\n\r\n.logo_icons_container {\r\n    @apply flex w-full h-12;\r\n}\r\n\r\n.logo_img {\r\n    @apply  w-32 object-contain cursor-pointer;\r\n}\r\n\r\n.logo_icons_left_space {\r\n    @apply h-full flex-1 ;\r\n}\r\n\r\n.logo_container {\r\n    @apply flex justify-center items-center flex-1 h-full;\r\n}\r\n.logo_title {\r\n    @apply text-3xl font-lobster;\r\n}\r\n/* search bar styling */\r\n\r\n\r\n.icons_container {\r\n    @apply flex flex-1 h-full justify-end items-center;\r\n\r\n}\r\n.icon {\r\n    @apply m-3 cursor-pointer text-gray-500 ; /* the div surrounding the icone */\r\n}\r\n\r\n\r\n.links_search_bar_container {\r\n    @apply flex h-12 w-full ;\r\n\r\n}\r\n\r\n.links_search_bar_left_space {\r\n    @apply h-full flex-1 ;\r\n}\r\n\r\n.link_container {\r\n    @apply flex flex-1 justify-center items-center h-full ;\r\n\r\n}\r\n\r\n.link {\r\n    @apply m-8 cursor-pointer text-xl font-amiri;\r\n}\r\n\r\n.search_container {\r\n    @apply flex flex-1 justify-end items-center h-full ;\r\n}\r\n\r\n.search_bar {\r\n    @apply flex justify-end h-8;\r\n}\r\n\r\n.search_input{\r\n    @apply h-full w-24 outline-none border-b border-gray-500 ;\r\n}\r\n\r\n.search_button{\r\n    @apply  h-full w-8 outline-none  border-b border-gray-500 ;\r\n}\r\n\r\n",null]}]);
-// Exports
-exports.locals = {
-	"navbar": "navbar_navbar__3Ttjk",
-	"up_container": "navbar_up_container__2maTi",
-	"logo_icons_container": "navbar_logo_icons_container__275fW",
-	"logo_img": "navbar_logo_img__D3QGl",
-	"logo_icons_left_space": "navbar_logo_icons_left_space__E80kP",
-	"logo_container": "navbar_logo_container__JGveJ",
-	"logo_title": "navbar_logo_title__3K0GP",
-	"icons_container": "navbar_icons_container__aYlr4",
-	"icon": "navbar_icon__3u1Qf",
-	"links_search_bar_container": "navbar_links_search_bar_container__3FJai",
-	"links_search_bar_left_space": "navbar_links_search_bar_left_space__2CHzP",
-	"link_container": "navbar_link_container__3xIJ1",
-	"link": "navbar_link__1riOV",
-	"search_container": "navbar_search_container__3mNgK",
-	"search_bar": "navbar_search_bar__1Zg-s",
-	"search_input": "navbar_search_input__2vdxP",
-	"search_button": "navbar_search_button__3ZJ0R"
-};
+exports.push([module.i, "/* .navbar {\r\n    @apply z-10 fixed flex-row w-full  font-sans bg-white; \r\n}\r\n\r\n.up_container {\r\n    @apply flex flex-col justify-between w-full pl-5 pr-5;\r\n}\r\n\r\n\r\n logo styling \r\n\r\n.logo_icons_container {\r\n    @apply flex w-full h-12;\r\n}\r\n\r\n.logo_img {\r\n    @apply  w-32 object-contain cursor-pointer;\r\n}\r\n\r\n.logo_icons_left_space {\r\n    @apply h-full flex-1 ;\r\n}\r\n\r\n.logo_container {\r\n    @apply flex justify-center items-center flex-1 h-full;\r\n}\r\n.logo_title {\r\n    @apply text-3xl font-lobster;\r\n}\r\nsearch bar styling\r\n\r\n\r\n.icons_container {\r\n    @apply flex flex-1 h-full justify-end items-center;\r\n\r\n}\r\n.icon {\r\n    @apply m-3 cursor-pointer text-gray-500 ; the div surrounding the icone\r\n}\r\n\r\n\r\n.links_search_bar_container {\r\n    @apply flex h-12 w-full ;\r\n\r\n}\r\n\r\n.links_search_bar_left_space {\r\n    @apply h-full flex-1 ;\r\n}\r\n\r\n.link_container {\r\n    @apply flex flex-1 justify-center items-center h-full ;\r\n\r\n}\r\n\r\n.link {\r\n    @apply m-8 cursor-pointer text-xl font-amiri;\r\n}\r\n\r\n.search_container {\r\n    @apply flex flex-1 justify-end items-center h-full ;\r\n}\r\n\r\n.search_bar {\r\n    @apply flex justify-end h-8;\r\n}\r\n\r\n.search_input{\r\n    @apply h-full w-24 outline-none border-b border-gray-500 ;\r\n}\r\n\r\n.search_button{\r\n    @apply  h-full w-8 outline-none  border-b border-gray-500 ;\r\n}\r\n */\r\n", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/mormadeWebSite/components/elements/nav-bar/styles/navbar.module.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EA0EE","file":"navbar.module.css","sourcesContent":["/* .navbar {\r\n    @apply z-10 fixed flex-row w-full  font-sans bg-white; \r\n}\r\n\r\n.up_container {\r\n    @apply flex flex-col justify-between w-full pl-5 pr-5;\r\n}\r\n\r\n\r\n logo styling \r\n\r\n.logo_icons_container {\r\n    @apply flex w-full h-12;\r\n}\r\n\r\n.logo_img {\r\n    @apply  w-32 object-contain cursor-pointer;\r\n}\r\n\r\n.logo_icons_left_space {\r\n    @apply h-full flex-1 ;\r\n}\r\n\r\n.logo_container {\r\n    @apply flex justify-center items-center flex-1 h-full;\r\n}\r\n.logo_title {\r\n    @apply text-3xl font-lobster;\r\n}\r\nsearch bar styling\r\n\r\n\r\n.icons_container {\r\n    @apply flex flex-1 h-full justify-end items-center;\r\n\r\n}\r\n.icon {\r\n    @apply m-3 cursor-pointer text-gray-500 ; the div surrounding the icone\r\n}\r\n\r\n\r\n.links_search_bar_container {\r\n    @apply flex h-12 w-full ;\r\n\r\n}\r\n\r\n.links_search_bar_left_space {\r\n    @apply h-full flex-1 ;\r\n}\r\n\r\n.link_container {\r\n    @apply flex flex-1 justify-center items-center h-full ;\r\n\r\n}\r\n\r\n.link {\r\n    @apply m-8 cursor-pointer text-xl font-amiri;\r\n}\r\n\r\n.search_container {\r\n    @apply flex flex-1 justify-end items-center h-full ;\r\n}\r\n\r\n.search_bar {\r\n    @apply flex justify-end h-8;\r\n}\r\n\r\n.search_input{\r\n    @apply h-full w-24 outline-none border-b border-gray-500 ;\r\n}\r\n\r\n.search_button{\r\n    @apply  h-full w-8 outline-none  border-b border-gray-500 ;\r\n}\r\n */\r\n"]}]);
+
 
 /***/ }),
 
@@ -14458,7 +14666,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstories&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5CmormadeWebSite%5Cpages%5Cstories.js ***!
   \*****************************************************************************************************************************************************/
@@ -14481,5 +14689,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=stories.js.map

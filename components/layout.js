@@ -98,7 +98,7 @@ function Layout({ children }) {
     }
 
     return (
-        <div className="bg-white">
+        <div className="bg-xw-100">
 
             {menuClicked && <SideMenu
                 menuClick = {menuClicked}

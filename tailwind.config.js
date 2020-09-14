@@ -8,6 +8,16 @@ module.exports = {
       grandstander: ['Grandstander'],
       amiri : ['Amiri'],
       montserrat : ['Montserrat'],
+      abrilfatface: ['Abril Fatface'],
+    },
+    fontSize: {
+      '7xl': '5rem',
+      '8xl': '6rem',
+      '9xl': '7rem',
+      '10xl': '8rem',
+      '11xl': '9rem',
+      '12xl': '10rem',
+      '13xl': '11rem',
     },
     inset: {
       '-4': '-1rem',

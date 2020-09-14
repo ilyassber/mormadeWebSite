@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
     @apply z-10 fixed flex-row w-full  font-sans bg-white; 
 }
 
@@ -7,7 +7,7 @@
 }
 
 
-/*  logo styling  */
+ logo styling 
 
 .logo_icons_container {
     @apply flex w-full h-12;
@@ -27,7 +27,7 @@
 .logo_title {
     @apply text-3xl font-lobster;
 }
-/* search bar styling */
+search bar styling
 
 
 .icons_container {
@@ -35,7 +35,7 @@
 
 }
 .icon {
-    @apply m-3 cursor-pointer text-gray-500 ; /* the div surrounding the icone */
+    @apply m-3 cursor-pointer text-gray-500 ; the div surrounding the icone
 }
 
 
@@ -72,4 +72,4 @@
 .search_button{
     @apply  h-full w-8 outline-none  border-b border-gray-500 ;
 }
-
+ */

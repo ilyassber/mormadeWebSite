@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
-import Article from '../components/elements/Article/Article'
+import StoriesEntry from '../components/elements/StoriesEntry/StoriesEntry'
+import MakersEntry from '../components/elements/MakersEntry/MakersEntry'
+import RegionsEntry from '../components/elements/RegionsEntry/RegionsEntry'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -17,7 +19,12 @@ const hello = ({ cookies = {} }) => {
         <title>MorMade</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      {/* <div className="w-full h-24"></div> */}
+      <StoriesEntry/>
+      <StoriesEntry/>
+      <StoriesEntry/>
+      <StoriesEntry/>
+      <MakersEntry/>
+      <RegionsEntry/>
     </Layout>
   )
 }
