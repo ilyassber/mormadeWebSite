@@ -97,21 +97,13 @@ function StoriesEntry() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 17
+      lineNumber: 34,
+      columnNumber: 13
     }
-  })) // <div className="flex flex-row justify-center w-full h-144 bg-red-100">
-  //     <Cover image={images.cover7} height="h-144" style="flex justify-center items-center w-9/12 h-144 rounded-sm overflow-hidden shadow-xl">
-  //         <div className="absolute flex justify-center items-start right-8 w-96 h-108  shadow-inner bg-white bg-opacity-100 transform hover:scale-110 transition ease-out duration-500">
-  //             <Text text="stories" style="h-24 w-64 font-abrilfatface text-bold text-7xl text-gray-900 opacity-75" />
-  //             <Text> </Text>
-  //         </div>
-  //     </Cover>
-  // </div>
-  ;
+  }));
 }
 
 /***/ })
 
 })
-//# sourceMappingURL=index.js.4b091ee9bf5bd755f1da.hot-update.js.map
+//# sourceMappingURL=index.js.45c5ad15f15ff40c2494.hot-update.js.map

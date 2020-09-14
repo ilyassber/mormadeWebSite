@@ -31,20 +31,7 @@ export default function StoriesEntry() {
 
     return (
         <div className="relative flex justify-center items-center w-full h-192 ">
-            {/* <div className="absolute top-0"> */}
-                <StorieCard height="h-144" width="w-10/12" style="absolute z-40 shadow-xl" />
-
-            {/* </div> */}
-            {/* <StorieCard height="h-120" width="w-7/12" /> */}
-
+            <StorieCard height="h-144" width="w-10/12" style="absolute z-40 shadow-xl" />
         </div>
-        // <div className="flex flex-row justify-center w-full h-144 bg-red-100">
-        //     <Cover image={images.cover7} height="h-144" style="flex justify-center items-center w-9/12 h-144 rounded-sm overflow-hidden shadow-xl">
-        //         <div className="absolute flex justify-center items-start right-8 w-96 h-108  shadow-inner bg-white bg-opacity-100 transform hover:scale-110 transition ease-out duration-500">
-        //             <Text text="stories" style="h-24 w-64 font-abrilfatface text-bold text-7xl text-gray-900 opacity-75" />
-        //             <Text> </Text>
-        //         </div>
-        //     </Cover>
-        // </div>
     )
 }
