@@ -56,6 +56,92 @@ function RegionsEntry() {
 
 /***/ }),
 
+/***/ "./components/elements/alpha-displayer/AlphaDisplayer.js":
+/*!***************************************************************!*\
+  !*** ./components/elements/alpha-displayer/AlphaDisplayer.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AlphaDisplayer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
+/* harmony import */ var _graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/textDisplayer/Text */ "./components/graphics/textDisplayer/Text.js");
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\alpha-displayer\\AlphaDisplayer.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function AlphaDisplayer(_ref) {
+  var children = _ref.children,
+      style = _ref.style,
+      height = _ref.height,
+      width = _ref.width,
+      image = _ref.image,
+      title = _ref.title,
+      description = _ref.description,
+      buttonText = _ref.buttonText,
+      clickAction = _ref.clickAction;
+  var textStyle = {
+    titleStyle: "text-white text-xl font-bold text-center",
+    descriptionStyle: "text-white text-center",
+    buttonStyle: ""
+  };
+  return __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: height,
+    style: "flex flex-col justify-end items-center m-1 sm:m-10 ".concat(height, " ").concat(width),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 13
+    }
+  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: title,
+    style: "m-2",
+    textStyle: textStyle.titleStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 17
+    }
+  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: description,
+    style: "m-1",
+    textStyle: textStyle.descriptionStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 17
+    }
+  }), __jsx("button", {
+    onClick: clickAction,
+    className: "h-10 w-40 m-3 bg-white text-gray-900",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 17
+    }
+  }, buttonText)), children);
+}
+
+/***/ }),
+
 /***/ "./components/elements/nav-bar/categoriesBar.js":
 /*!******************************************************!*\
   !*** ./components/elements/nav-bar/categoriesBar.js ***!
@@ -1323,6 +1409,106 @@ if (true) {
 
 /***/ }),
 
+/***/ "./components/graphics/imageCover/Cover.js":
+/*!*************************************************!*\
+  !*** ./components/graphics/imageCover/Cover.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cover; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\imageCover\\Cover.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+function Cover(_ref) {
+  var children = _ref.children,
+      image = _ref.image,
+      height = _ref.height,
+      style = _ref.style,
+      imageStyle = _ref.imageStyle;
+  return __jsx("div", {
+    className: "relative " + style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "z-10 " + style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 13
+    }
+  }, children), __jsx("div", {
+    className: "z-0 absolute top-0 left-0 w-full h-full overflow-hidden ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "".concat(height, " w-full object-cover object-center ").concat(imageStyle),
+    src: image,
+    alt: "image cover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 17
+    }
+  })));
+}
+
+/***/ }),
+
+/***/ "./components/graphics/textDisplayer/Text.js":
+/*!***************************************************!*\
+  !*** ./components/graphics/textDisplayer/Text.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Text; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\textDisplayer\\Text.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+function Text(_ref) {
+  var text = _ref.text,
+      style = _ref.style,
+      textStyle = _ref.textStyle;
+  return __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 9
+    }
+  }, __jsx("p", {
+    className: textStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 13
+    }
+  }, text));
+}
+
+/***/ }),
+
 /***/ "./components/layout.js":
 /*!******************************!*\
   !*** ./components/layout.js ***!
@@ -1431,11 +1617,10 @@ function Layout(_ref2) {
 
   var selectPage = function selectPage(link) {
     setSelectedPage(link);
-  }; //bg-xw-100ss
-
+  };
 
   return __jsx("div", {
-    className: " bg-white",
+    className: "w-full h-full bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1464,6 +1649,19 @@ function Layout(_ref2) {
       fileName: _jsxFileName,
       lineNumber: 114,
       columnNumber: 29
+    }
+  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    changeMenuClicked: clickMenuIcon,
+    logo: "/logo.png",
+    categories: categories,
+    max_shown: 8,
+    links: links,
+    home: "/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120,
+      columnNumber: 13
     }
   }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
@@ -2097,7 +2295,7 @@ exports.push([module.i, "/* .navbar {\r\n    @apply z-10 fixed flex-row w-full  
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".sousCategoriesBar_sous_categories_bar__1W8OD {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n\n.sousCategoriesBar_hide__2uMgd {\n  display: none;\n}\n\n.sousCategoriesBar_title_container__BTUdJ {\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  width: 100%;\n  height: 1.25rem;\n}\n\n.sousCategoriesBar_sous_categories_container__3OLkb {\n  display: flex;\n  justify-content: space-between;\n  flex-shrink: 0;\n  width: 66.666667%;\n  width: 100%;\n}\n\n.sousCategoriesBar_left_container__3XQQt {\n  display: flex;\n  align-items: flex-start;\n  flex: 1 1 0%;\n  flex-shrink: 0;\n  margin-right: 1.25rem;\n  margin-left: 2.5rem; /*border-l border-gray-500 */\n}\n\n.sousCategoriesBar_sous_tags_container__1iSa8 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: flex-start;\n  width: 100%;\n  padding: 1.25rem;\n}\n\n.sousCategoriesBar_sous_tag__2a6gx {\n  width: 100%;\n  margin-top: 0.25rem;\n  cursor: pointer;\n  text-align: center;\n}\n\n.sousCategoriesBar_line_separator__3r04R {\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n  height: 16rem;\n}\n\n.sousCategoriesBar_middle_container__CZ2Rs {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex: 1 1 0%;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 1.25rem;\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--border-opacity));\n}\n\n.sousCategoriesBar_tag_image_container__OXnWu {\n  height: 16rem;\n  width: 12rem;\n  margin: 2.5rem;\n  border-radius: 9999px;\n  overflow: hidden;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.sousCategoriesBar_tag_image__2352H {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n\n.sousCategoriesBar_right_container__10tXW {\n  display: flex;\n  flex: 1 1 0%;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 2.5rem;\n  border-right-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n}\r\n\r\n", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/mormadeWebSite/components/elements/nav-bar/styles/sousCategoriesBar.module.css","C:/Users/Soguma/MorMade_project/mormadeWebSite/<no source>"],"names":[],"mappings":"AACA;ECDA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,WAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADGA;;AAEA;ECLA,aAAA;ADOA;;AACA;ECRA,aAAA;EAAA,qBAAA;EAAA,uBAAA;EAAA,WAAA;EAAA,eAAA;ADUA;;AAEA;ECZA,aAAA;EAAA,8BAAA;EAAA,cAAA;EAAA,iBAAA;EAAA,WAAA;ADcA;;AAEA;EChBA,aAAA;EAAA,uBAAA;EAAA,YAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,mBAAA,EDiB+D,4BAA4B;AAC3F;;AAEA;ECpBA,aAAA;EAAA,sBAAA;EAAA,uBAAA;EAAA,2BAAA;EAAA,WAAA;EAAA,gBAAA;ADsBA;;AAEA;ECxBA,WAAA;EAAA,mBAAA;EAAA,eAAA;EAAA,kBAAA;AD0BA;;AAEA;EC5BA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;EAAA,aAAA;AD8BA;;AAEA;EChCA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,YAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,qBAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;ADkCA;;AAEA;ECpCA,aAAA;EAAA,YAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,gBAAA;EAAA,iDAAA;ADsCA;;AAEA;ECxCA,sBAAA;KAAA,mBAAA;AD0CA;;AAEA;EC5CA,aAAA;EAAA,YAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,oBAAA;EAAA,uBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;AD8CA","file":"sousCategoriesBar.module.css","sourcesContent":["\r\n.sous_categories_bar {\r\n    @apply flex flex-col items-center w-full bg-white;\r\n}\r\n\r\n.hide {\r\n    @apply hidden;\r\n}\r\n.title_container {\r\n    @apply flex items-end justify-center w-full h-5 ;\r\n}\r\n\r\n.sous_categories_container {\r\n    @apply flex justify-between  flex-shrink-0 w-8/12 w-full ;\r\n}\r\n\r\n.left_container {\r\n    @apply flex items-start  flex-1 flex-shrink-0 mr-5 ml-10 ; /*border-l border-gray-500 */\r\n}\r\n\r\n.sous_tags_container {\r\n    @apply flex flex-col items-start justify-start w-full p-5;\r\n}\r\n\r\n.sous_tag {\r\n    @apply w-full mt-1 cursor-pointer text-center;\r\n}\r\n\r\n.line_separator {\r\n    @apply border-l border-gray-500 h-64 ;\r\n}\r\n\r\n.middle_container {\r\n    @apply flex  flex-col items-center flex-1 flex-shrink-0 ml-5 mr-5 border-l border-gray-200 ;\r\n}\r\n\r\n.tag_image_container {\r\n    @apply   h-64 w-48 m-10 rounded-full overflow-hidden shadow-2xl;\r\n}\r\n\r\n.tag_image {\r\n    @apply object-contain;\r\n}\r\n\r\n.right_container {\r\n    @apply flex flex-1 flex-shrink-0 ml-5 mr-10 border-r border-gray-500;\r\n}\r\n\r\n",null]}]);
+exports.push([module.i, ".sousCategoriesBar_sous_categories_bar__1W8OD {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n\n.sousCategoriesBar_hide__2uMgd {\n  display: none;\n}\n\n.sousCategoriesBar_title_container__BTUdJ {\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  width: 100%;\n  height: 1.25rem;\n}\n\n.sousCategoriesBar_sous_categories_container__3OLkb {\n  display: flex;\n  justify-content: space-between;\n  flex-shrink: 0;\n  width: 66.666667%;\n  width: 100%;\n}\n\n.sousCategoriesBar_left_container__3XQQt {\n  display: flex;\n  align-items: flex-start;\n  flex: 1 1;\n  flex-shrink: 0;\n  margin-right: 1.25rem;\n  margin-left: 2.5rem; /*border-l border-gray-500 */\n}\n\n.sousCategoriesBar_sous_tags_container__1iSa8 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: flex-start;\n  width: 100%;\n  padding: 1.25rem;\n}\n\n.sousCategoriesBar_sous_tag__2a6gx {\n  width: 100%;\n  margin-top: 0.25rem;\n  cursor: pointer;\n  text-align: center;\n}\n\n.sousCategoriesBar_line_separator__3r04R {\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n  height: 16rem;\n}\n\n.sousCategoriesBar_middle_container__CZ2Rs {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex: 1 1;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 1.25rem;\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--border-opacity));\n}\n\n.sousCategoriesBar_tag_image_container__OXnWu {\n  height: 16rem;\n  width: 12rem;\n  margin: 2.5rem;\n  border-radius: 9999px;\n  overflow: hidden;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.sousCategoriesBar_tag_image__2352H {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n\n.sousCategoriesBar_right_container__10tXW {\n  display: flex;\n  flex: 1 1;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 2.5rem;\n  border-right-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n}\r\n\r\n", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/mormadeWebSite/components/elements/nav-bar/styles/sousCategoriesBar.module.css","C:/Users/Soguma/MorMade_project/mormadeWebSite/<no source>"],"names":[],"mappings":"AACA;ECDA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,WAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADGA;;AAEA;ECLA,aAAA;ADOA;;AACA;ECRA,aAAA;EAAA,qBAAA;EAAA,uBAAA;EAAA,WAAA;EAAA,eAAA;ADUA;;AAEA;ECZA,aAAA;EAAA,8BAAA;EAAA,cAAA;EAAA,iBAAA;EAAA,WAAA;ADcA;;AAEA;EChBA,aAAA;EAAA,uBAAA;EAAA,SAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,mBAAA,EDiB+D,4BAA4B;AAC3F;;AAEA;ECpBA,aAAA;EAAA,sBAAA;EAAA,uBAAA;EAAA,2BAAA;EAAA,WAAA;EAAA,gBAAA;ADsBA;;AAEA;ECxBA,WAAA;EAAA,mBAAA;EAAA,eAAA;EAAA,kBAAA;AD0BA;;AAEA;EC5BA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;EAAA,aAAA;AD8BA;;AAEA;EChCA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,SAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,qBAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;ADkCA;;AAEA;ECpCA,aAAA;EAAA,YAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,gBAAA;EAAA,iDAAA;ADsCA;;AAEA;ECxCA,sBAAA;KAAA,mBAAA;AD0CA;;AAEA;EC5CA,aAAA;EAAA,SAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,oBAAA;EAAA,uBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;AD8CA","file":"sousCategoriesBar.module.css","sourcesContent":["\r\n.sous_categories_bar {\r\n    @apply flex flex-col items-center w-full bg-white;\r\n}\r\n\r\n.hide {\r\n    @apply hidden;\r\n}\r\n.title_container {\r\n    @apply flex items-end justify-center w-full h-5 ;\r\n}\r\n\r\n.sous_categories_container {\r\n    @apply flex justify-between  flex-shrink-0 w-8/12 w-full ;\r\n}\r\n\r\n.left_container {\r\n    @apply flex items-start  flex-1 flex-shrink-0 mr-5 ml-10 ; /*border-l border-gray-500 */\r\n}\r\n\r\n.sous_tags_container {\r\n    @apply flex flex-col items-start justify-start w-full p-5;\r\n}\r\n\r\n.sous_tag {\r\n    @apply w-full mt-1 cursor-pointer text-center;\r\n}\r\n\r\n.line_separator {\r\n    @apply border-l border-gray-500 h-64 ;\r\n}\r\n\r\n.middle_container {\r\n    @apply flex  flex-col items-center flex-1 flex-shrink-0 ml-5 mr-5 border-l border-gray-200 ;\r\n}\r\n\r\n.tag_image_container {\r\n    @apply   h-64 w-48 m-10 rounded-full overflow-hidden shadow-2xl;\r\n}\r\n\r\n.tag_image {\r\n    @apply object-contain;\r\n}\r\n\r\n.right_container {\r\n    @apply flex flex-1 flex-shrink-0 ml-5 mr-10 border-r border-gray-500;\r\n}\r\n\r\n",null]}]);
 // Exports
 exports.locals = {
 	"sous_categories_bar": "sousCategoriesBar_sous_categories_bar__1W8OD",
@@ -14575,12 +14773,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/MakersEntry/MakersEntry */ "./components/elements/MakersEntry/MakersEntry.js");
-/* harmony import */ var _components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/RegionsEntry/RegionsEntry */ "./components/elements/RegionsEntry/RegionsEntry.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
+/* harmony import */ var _components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/MakersEntry/MakersEntry */ "./components/elements/MakersEntry/MakersEntry.js");
+/* harmony import */ var _components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/elements/RegionsEntry/RegionsEntry */ "./components/elements/RegionsEntry/RegionsEntry.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "./node_modules/next/dist/next-server/lib/head.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
 var _this = undefined,
     _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\pages\\index.js";
 
@@ -14592,6 +14791,18 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+var images = {
+  cover1: "images/Articles/cover-1.jpg",
+  cover2: "images/Articles/cover-2.jpg",
+  cover3: "images/Articles/cover-3.jpg",
+  cover4: "images/Articles/cover-4.jpg",
+  cover5: "images/Articles/cover-5.jpg",
+  cover6: "images/Articles/cover-6.jpg",
+  cover7: "images/Articles/cover-7.jpg",
+  cover8: "images/Articles/cover-8.jpg",
+  cover9: "images/Articles/cover-9.jpg"
+};
+
 var hello = function hello(_ref) {
   var _ref$cookies = _ref.cookies,
       cookies = _ref$cookies === void 0 ? {} : _ref$cookies;
@@ -14601,7 +14812,7 @@ var hello = function hello(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 25,
       columnNumber: 5
     }
   }, "HELLO");
@@ -14610,21 +14821,21 @@ var hello = function hello(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 29,
       columnNumber: 5
     }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 30,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 31,
       columnNumber: 9
     }
   }, "MorMade"), __jsx("link", {
@@ -14633,21 +14844,35 @@ var hello = function hello(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 32,
       columnNumber: 9
     }
-  })), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  })), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    style: "flex justify-center w-full",
+    height: "h-96 md:h-288",
+    width: "w-11/12 max-w-4xl",
+    image: images.cover7,
+    title: "Dresses made to last",
+    description: "Timeless designs made from recycled materials",
+    buttonText: "SHOP NOW",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 34,
       columnNumber: 7
     }
-  }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 45,
+      columnNumber: 7
+    }
+  }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
       columnNumber: 7
     }
   }));

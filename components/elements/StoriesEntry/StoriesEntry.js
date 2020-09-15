@@ -7,22 +7,23 @@ import { ic_arrow_forward } from 'react-icons-kit/md/ic_arrow_forward'
 function CentredCard({ image, title, description, link, width, imageHeight, descriptionHeight, style }) {
 
     const styleFont = {
-        titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-center break-words",
+        titleStyle: "font-kumbhsans font-bold  md:text-xl hover:underline cursor-pointer text-center break-words",
         descriptionStyle: "font-amiri text-base text-center",
         linkStyle: "font-yantramanav text-sm font-bold"
     }
 
     return (
-        <div className={`${style} flex flex-col justify-center  ${width}`}>
-            <Cover image={image} height={imageHeight} style={`flex justify-center items-center ${imageHeight} ${width}  overflow-hidden`} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
+        <div className={`${style} flex flex-col justify-center ${width}`}>
+            <Cover image={image} height={imageHeight} style={`flex justify-center items-end ${imageHeight} w-full  overflow-hidden`} imageStyle="">
+                <Text text={title} style={`m-5 w-9/12 md:hidden md:mb-1 text-white`} textStyle={styleFont.titleStyle} />
             </Cover>
-            <div className={`flex flex-col justify-start items-center p-16 ${descriptionHeight} w-full bg-white`}>
+            <div className={`flex flex-col justify-start items-center p-5 pr-10 md:p-16 ${descriptionHeight} w-full bg-white`}>
 
-                <Text text={title} style={`mb-1 text-gray-900 `} textStyle={styleFont.titleStyle} />
+                <Text text={title} style={`hidden md:block md:mb-1 text-gray-900`} textStyle={styleFont.titleStyle} />
 
-                <Text text={description} style={`mt-2 mb-2  text-gray-900 `} textStyle={styleFont.descriptionStyle} />
+                <Text text={description} style={`md:mb-2  text-gray-900 `} textStyle={styleFont.descriptionStyle} />
 
-                <div className="mt-1">
+                <div className="md:mt-1">
                     <Link href={link.path}><a className="flex items-center justify-start hover:text-green-600"><Text text={link.text} style={`mr-2 text-gray-90`} textStyle={styleFont.linkStyle} /><Icon icon={ic_arrow_forward} /></a></Link>
                 </div>
             </div>
@@ -38,7 +39,7 @@ function LeftCard({ image, title, description, link, height, imageWidth, descrip
         linkStyle: "font-yantramanav text-sm font-bold"
     }
     return (
-        <div className={`${style} flex flex-row justify-center  ${height}`}>
+        <div className={`${style} flex flex-row justify-start  w-full ${height}`}>
             <Cover image={image} height={height} style={`flex justify-center items-center ${imageWidth} ${height}  overflow-hidden`} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
             </Cover>
             <div className={`flex flex-col justify-center items-start p-16 ${descriptionWidth} h-full bg-white`}>
@@ -93,7 +94,7 @@ export function LeftStoryEntry({ image, title, description, link, height, imageW
                 height={height}
                 imageWidth={imageWidth}
                 descriptionWidth={descriptionWidth}
-                style="m-5 shadow-xl" />
+                style="" />
         </div>
     )
 }
@@ -110,7 +111,7 @@ export function RightStoryEntry({ image, title, description, link, height, image
                 height={height}
                 imageWidth={imageWidth}
                 descriptionWidth={descriptionWidth}
-                style="m-5" />
+                style="" />
         </div>
     )
 }
@@ -128,7 +129,7 @@ export function CentredStoryEntry({ image, title, description, link, width, imag
                 width={width}
                 imageHeight={imageHeight}
                 descriptionHeight={descriptionHeight}
-                style="m-5" />
+                style="" />
         </div>
     )
 }

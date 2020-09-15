@@ -342,12 +342,12 @@ function CentredCard(_ref) {
       descriptionHeight = _ref.descriptionHeight,
       style = _ref.style;
   var styleFont = {
-    titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-center break-words",
+    titleStyle: "font-kumbhsans font-bold  md:text-xl hover:underline cursor-pointer text-center break-words",
     descriptionStyle: "font-amiri text-base text-center",
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: "".concat(style, " flex flex-col justify-center  ").concat(width),
+    className: "".concat(style, " flex flex-col justify-center ").concat(width),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -357,48 +357,58 @@ function CentredCard(_ref) {
   }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
     image: image,
     height: imageHeight,
-    style: "flex justify-center items-center ".concat(imageHeight, " ").concat(width, "  overflow-hidden"),
-    imageStyle: "transform hover:scale-105 translate-all ease-out duration-700",
+    style: "flex justify-center items-end ".concat(imageHeight, " w-full  overflow-hidden"),
+    imageStyle: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
       columnNumber: 13
     }
-  }), __jsx("div", {
-    className: "flex flex-col justify-start items-center p-16 ".concat(descriptionHeight, " w-full bg-white"),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 13
-    }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: title,
-    style: "mb-1 text-gray-900 ",
+    style: "m-5 w-9/12 md:hidden md:mb-1 text-white",
     textStyle: styleFont.titleStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 18,
+      columnNumber: 17
+    }
+  })), __jsx("div", {
+    className: "flex flex-col justify-start items-center p-5 pr-10 md:p-16 ".concat(descriptionHeight, " w-full bg-white"),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: title,
+    style: "hidden md:block md:mb-1 text-gray-900",
+    textStyle: styleFont.titleStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
       columnNumber: 17
     }
   }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: description,
-    style: "mt-2 mb-2  text-gray-900 ",
+    style: "md:mb-2  text-gray-900 ",
     textStyle: styleFont.descriptionStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 17
     }
   }), __jsx("div", {
-    className: "mt-1",
+    className: "md:mt-1",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -406,7 +416,7 @@ function CentredCard(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -414,7 +424,7 @@ function CentredCard(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -424,7 +434,7 @@ function CentredCard(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -432,7 +442,7 @@ function CentredCard(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 197
     }
   }))))));
@@ -453,11 +463,11 @@ function LeftCard(_ref2) {
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: "".concat(style, " flex flex-row justify-center  ").concat(height),
+    className: "".concat(style, " flex flex-row justify-start  w-full ").concat(height),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 42,
       columnNumber: 9
     }
   }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -468,7 +478,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 43,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -476,7 +486,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 13
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -486,7 +496,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 17
     }
   }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -496,7 +506,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -504,7 +514,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -512,7 +522,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -520,7 +530,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -530,7 +540,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -538,7 +548,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 197
     }
   }))))));
@@ -563,7 +573,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 67,
       columnNumber: 9
     }
   }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -574,7 +584,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 68,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -582,7 +592,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 70,
       columnNumber: 13
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -592,7 +602,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 72,
       columnNumber: 17
     }
   }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -602,7 +612,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 74,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -610,7 +620,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 76,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -618,7 +628,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -626,7 +636,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -636,7 +646,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -644,7 +654,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 197
     }
   }))))));
@@ -664,7 +674,7 @@ function LeftStoryEntry(_ref4) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 88,
       columnNumber: 9
     }
   }, __jsx(LeftCard, {
@@ -675,11 +685,11 @@ function LeftStoryEntry(_ref4) {
     height: height,
     imageWidth: imageWidth,
     descriptionWidth: descriptionWidth,
-    style: "m-5 shadow-xl",
+    style: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 13
     }
   }));
@@ -698,7 +708,7 @@ function RightStoryEntry(_ref5) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104,
+      lineNumber: 105,
       columnNumber: 9
     }
   }, __jsx(RightCard, {
@@ -709,11 +719,11 @@ function RightStoryEntry(_ref5) {
     height: height,
     imageWidth: imageWidth,
     descriptionWidth: descriptionWidth,
-    style: "m-5",
+    style: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105,
+      lineNumber: 106,
       columnNumber: 13
     }
   }));
@@ -732,7 +742,7 @@ function CentredStoryEntry(_ref6) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122,
+      lineNumber: 123,
       columnNumber: 9
     }
   }, __jsx(CentredCard, {
@@ -743,11 +753,11 @@ function CentredStoryEntry(_ref6) {
     width: width,
     imageHeight: imageHeight,
     descriptionHeight: descriptionHeight,
-    style: "m-5",
+    style: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123,
+      lineNumber: 124,
       columnNumber: 13
     }
   }));
@@ -2230,11 +2240,10 @@ function Layout(_ref2) {
 
   var selectPage = function selectPage(link) {
     setSelectedPage(link);
-  }; //bg-xw-100ss
-
+  };
 
   return __jsx("div", {
-    className: " bg-white",
+    className: "w-full h-full bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2263,6 +2272,19 @@ function Layout(_ref2) {
       fileName: _jsxFileName,
       lineNumber: 114,
       columnNumber: 29
+    }
+  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    changeMenuClicked: clickMenuIcon,
+    logo: "/logo.png",
+    categories: categories,
+    max_shown: 8,
+    links: links,
+    home: "/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120,
+      columnNumber: 13
     }
   }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
@@ -2824,7 +2846,7 @@ exports.push([module.i, "/* .navbar {\r\n    @apply z-10 fixed flex-row w-full  
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".sousCategoriesBar_sous_categories_bar__1W8OD {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n\n.sousCategoriesBar_hide__2uMgd {\n  display: none;\n}\n\n.sousCategoriesBar_title_container__BTUdJ {\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  width: 100%;\n  height: 1.25rem;\n}\n\n.sousCategoriesBar_sous_categories_container__3OLkb {\n  display: flex;\n  justify-content: space-between;\n  flex-shrink: 0;\n  width: 66.666667%;\n  width: 100%;\n}\n\n.sousCategoriesBar_left_container__3XQQt {\n  display: flex;\n  align-items: flex-start;\n  flex: 1 1 0%;\n  flex-shrink: 0;\n  margin-right: 1.25rem;\n  margin-left: 2.5rem; /*border-l border-gray-500 */\n}\n\n.sousCategoriesBar_sous_tags_container__1iSa8 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: flex-start;\n  width: 100%;\n  padding: 1.25rem;\n}\n\n.sousCategoriesBar_sous_tag__2a6gx {\n  width: 100%;\n  margin-top: 0.25rem;\n  cursor: pointer;\n  text-align: center;\n}\n\n.sousCategoriesBar_line_separator__3r04R {\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n  height: 16rem;\n}\n\n.sousCategoriesBar_middle_container__CZ2Rs {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex: 1 1 0%;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 1.25rem;\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--border-opacity));\n}\n\n.sousCategoriesBar_tag_image_container__OXnWu {\n  height: 16rem;\n  width: 12rem;\n  margin: 2.5rem;\n  border-radius: 9999px;\n  overflow: hidden;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.sousCategoriesBar_tag_image__2352H {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n\n.sousCategoriesBar_right_container__10tXW {\n  display: flex;\n  flex: 1 1 0%;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 2.5rem;\n  border-right-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n}\r\n\r\n", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/mormadeWebSite/components/elements/nav-bar/styles/sousCategoriesBar.module.css","C:/Users/Soguma/MorMade_project/mormadeWebSite/<no source>"],"names":[],"mappings":"AACA;ECDA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,WAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADGA;;AAEA;ECLA,aAAA;ADOA;;AACA;ECRA,aAAA;EAAA,qBAAA;EAAA,uBAAA;EAAA,WAAA;EAAA,eAAA;ADUA;;AAEA;ECZA,aAAA;EAAA,8BAAA;EAAA,cAAA;EAAA,iBAAA;EAAA,WAAA;ADcA;;AAEA;EChBA,aAAA;EAAA,uBAAA;EAAA,YAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,mBAAA,EDiB+D,4BAA4B;AAC3F;;AAEA;ECpBA,aAAA;EAAA,sBAAA;EAAA,uBAAA;EAAA,2BAAA;EAAA,WAAA;EAAA,gBAAA;ADsBA;;AAEA;ECxBA,WAAA;EAAA,mBAAA;EAAA,eAAA;EAAA,kBAAA;AD0BA;;AAEA;EC5BA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;EAAA,aAAA;AD8BA;;AAEA;EChCA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,YAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,qBAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;ADkCA;;AAEA;ECpCA,aAAA;EAAA,YAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,gBAAA;EAAA,iDAAA;ADsCA;;AAEA;ECxCA,sBAAA;KAAA,mBAAA;AD0CA;;AAEA;EC5CA,aAAA;EAAA,YAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,oBAAA;EAAA,uBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;AD8CA","file":"sousCategoriesBar.module.css","sourcesContent":["\r\n.sous_categories_bar {\r\n    @apply flex flex-col items-center w-full bg-white;\r\n}\r\n\r\n.hide {\r\n    @apply hidden;\r\n}\r\n.title_container {\r\n    @apply flex items-end justify-center w-full h-5 ;\r\n}\r\n\r\n.sous_categories_container {\r\n    @apply flex justify-between  flex-shrink-0 w-8/12 w-full ;\r\n}\r\n\r\n.left_container {\r\n    @apply flex items-start  flex-1 flex-shrink-0 mr-5 ml-10 ; /*border-l border-gray-500 */\r\n}\r\n\r\n.sous_tags_container {\r\n    @apply flex flex-col items-start justify-start w-full p-5;\r\n}\r\n\r\n.sous_tag {\r\n    @apply w-full mt-1 cursor-pointer text-center;\r\n}\r\n\r\n.line_separator {\r\n    @apply border-l border-gray-500 h-64 ;\r\n}\r\n\r\n.middle_container {\r\n    @apply flex  flex-col items-center flex-1 flex-shrink-0 ml-5 mr-5 border-l border-gray-200 ;\r\n}\r\n\r\n.tag_image_container {\r\n    @apply   h-64 w-48 m-10 rounded-full overflow-hidden shadow-2xl;\r\n}\r\n\r\n.tag_image {\r\n    @apply object-contain;\r\n}\r\n\r\n.right_container {\r\n    @apply flex flex-1 flex-shrink-0 ml-5 mr-10 border-r border-gray-500;\r\n}\r\n\r\n",null]}]);
+exports.push([module.i, ".sousCategoriesBar_sous_categories_bar__1W8OD {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}\n\n.sousCategoriesBar_hide__2uMgd {\n  display: none;\n}\n\n.sousCategoriesBar_title_container__BTUdJ {\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  width: 100%;\n  height: 1.25rem;\n}\n\n.sousCategoriesBar_sous_categories_container__3OLkb {\n  display: flex;\n  justify-content: space-between;\n  flex-shrink: 0;\n  width: 66.666667%;\n  width: 100%;\n}\n\n.sousCategoriesBar_left_container__3XQQt {\n  display: flex;\n  align-items: flex-start;\n  flex: 1 1;\n  flex-shrink: 0;\n  margin-right: 1.25rem;\n  margin-left: 2.5rem; /*border-l border-gray-500 */\n}\n\n.sousCategoriesBar_sous_tags_container__1iSa8 {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: flex-start;\n  width: 100%;\n  padding: 1.25rem;\n}\n\n.sousCategoriesBar_sous_tag__2a6gx {\n  width: 100%;\n  margin-top: 0.25rem;\n  cursor: pointer;\n  text-align: center;\n}\n\n.sousCategoriesBar_line_separator__3r04R {\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n  height: 16rem;\n}\n\n.sousCategoriesBar_middle_container__CZ2Rs {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  flex: 1 1;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 1.25rem;\n  border-left-width: 1px;\n  --border-opacity: 1;\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--border-opacity));\n}\n\n.sousCategoriesBar_tag_image_container__OXnWu {\n  height: 16rem;\n  width: 12rem;\n  margin: 2.5rem;\n  border-radius: 9999px;\n  overflow: hidden;\n  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);\n}\n\n.sousCategoriesBar_tag_image__2352H {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n\n.sousCategoriesBar_right_container__10tXW {\n  display: flex;\n  flex: 1 1;\n  flex-shrink: 0;\n  margin-left: 1.25rem;\n  margin-right: 2.5rem;\n  border-right-width: 1px;\n  --border-opacity: 1;\n  border-color: #a0aec0;\n  border-color: rgba(160, 174, 192, var(--border-opacity));\n}\r\n\r\n", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/mormadeWebSite/components/elements/nav-bar/styles/sousCategoriesBar.module.css","C:/Users/Soguma/MorMade_project/mormadeWebSite/<no source>"],"names":[],"mappings":"AACA;ECDA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,WAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADGA;;AAEA;ECLA,aAAA;ADOA;;AACA;ECRA,aAAA;EAAA,qBAAA;EAAA,uBAAA;EAAA,WAAA;EAAA,eAAA;ADUA;;AAEA;ECZA,aAAA;EAAA,8BAAA;EAAA,cAAA;EAAA,iBAAA;EAAA,WAAA;ADcA;;AAEA;EChBA,aAAA;EAAA,uBAAA;EAAA,SAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,mBAAA,EDiB+D,4BAA4B;AAC3F;;AAEA;ECpBA,aAAA;EAAA,sBAAA;EAAA,uBAAA;EAAA,2BAAA;EAAA,WAAA;EAAA,gBAAA;ADsBA;;AAEA;ECxBA,WAAA;EAAA,mBAAA;EAAA,eAAA;EAAA,kBAAA;AD0BA;;AAEA;EC5BA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;EAAA,aAAA;AD8BA;;AAEA;EChCA,aAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,SAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,qBAAA;EAAA,sBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;ADkCA;;AAEA;ECpCA,aAAA;EAAA,YAAA;EAAA,cAAA;EAAA,qBAAA;EAAA,gBAAA;EAAA,iDAAA;ADsCA;;AAEA;ECxCA,sBAAA;KAAA,mBAAA;AD0CA;;AAEA;EC5CA,aAAA;EAAA,SAAA;EAAA,cAAA;EAAA,oBAAA;EAAA,oBAAA;EAAA,uBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;AD8CA","file":"sousCategoriesBar.module.css","sourcesContent":["\r\n.sous_categories_bar {\r\n    @apply flex flex-col items-center w-full bg-white;\r\n}\r\n\r\n.hide {\r\n    @apply hidden;\r\n}\r\n.title_container {\r\n    @apply flex items-end justify-center w-full h-5 ;\r\n}\r\n\r\n.sous_categories_container {\r\n    @apply flex justify-between  flex-shrink-0 w-8/12 w-full ;\r\n}\r\n\r\n.left_container {\r\n    @apply flex items-start  flex-1 flex-shrink-0 mr-5 ml-10 ; /*border-l border-gray-500 */\r\n}\r\n\r\n.sous_tags_container {\r\n    @apply flex flex-col items-start justify-start w-full p-5;\r\n}\r\n\r\n.sous_tag {\r\n    @apply w-full mt-1 cursor-pointer text-center;\r\n}\r\n\r\n.line_separator {\r\n    @apply border-l border-gray-500 h-64 ;\r\n}\r\n\r\n.middle_container {\r\n    @apply flex  flex-col items-center flex-1 flex-shrink-0 ml-5 mr-5 border-l border-gray-200 ;\r\n}\r\n\r\n.tag_image_container {\r\n    @apply   h-64 w-48 m-10 rounded-full overflow-hidden shadow-2xl;\r\n}\r\n\r\n.tag_image {\r\n    @apply object-contain;\r\n}\r\n\r\n.right_container {\r\n    @apply flex flex-1 flex-shrink-0 ml-5 mr-10 border-r border-gray-500;\r\n}\r\n\r\n",null]}]);
 // Exports
 exports.locals = {
 	"sous_categories_bar": "sousCategoriesBar_sous_categories_bar__1W8OD",
@@ -14955,7 +14977,7 @@ var images = {
 };
 
 function Stories() {
-  var componentMargin = "pt-24 pb-18";
+  var componentMargin = "pt-0 md:pt-24 pb-18";
   var storyEntryStyle = "flex justify-start items-center w-full";
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
@@ -14964,59 +14986,23 @@ function Stories() {
       lineNumber: 28,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["LeftStoryEntry"], {
+  }, __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
     image: images.cover9,
-    title: "Innovation in every detail",
+    title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
     description: "With significant initiatives and amazing innovations, we can design clothes",
     link: {
       path: "/article",
       text: "Read The Story"
     },
-    height: "h-132",
-    imageWidth: "w-204",
-    descriptionWidth: "w-120",
-    style: "flex justify-start items-center w-full ".concat(componentMargin),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["RightStoryEntry"], {
-    image: images.cover9,
-    title: "Innovation in every detail",
-    description: "With significant initiatives and amazing innovations, we can design clothes",
-    link: {
-      path: "/article",
-      text: "Read The Story"
-    },
-    height: "h-132",
-    imageWidth: "w-204",
-    descriptionWidth: "w-120",
-    style: "flex justify-end items-center w-full ".concat(componentMargin),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 13
-    }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
-    image: images.cover9,
-    title: "Innovation in every detail",
-    description: "With significant initiatives and amazing innovations, we can design clothes",
-    link: {
-      path: "/article",
-      text: "Read The Story"
-    },
-    width: "w-264",
-    imageHeight: "h-180",
-    descriptionHeight: "h-64",
+    width: "w-full md:w-11/12 max-w-6xl",
+    imageHeight: "h-72 md:h-132",
+    descriptionHeight: "h-auto md:h-64",
     style: "flex justify-center items-center w-full ".concat(componentMargin),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
-      columnNumber: 13
+      lineNumber: 50,
+      columnNumber: 1
     }
   }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
     image: images.cover9,
@@ -15026,14 +15012,32 @@ function Stories() {
       path: "/article",
       text: "Read The Story"
     },
-    width: "w-204",
-    imageHeight: "h-132",
-    descriptionHeight: "h-64",
+    width: "w-full md:w-11/12 max-w-6xl",
+    imageHeight: "h-72 md:h-132",
+    descriptionHeight: "h-auto md:h-64",
     style: "flex justify-center items-center w-full ".concat(componentMargin),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59,
+      columnNumber: 1
+    }
+  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
+    image: images.cover8,
+    title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
+    description: "With significant initiatives and amazing innovations, we can design clothes",
+    link: {
+      path: "/article",
+      text: "Read The Story"
+    },
+    width: "w-full md:w-8/12 max-w-4xl",
+    imageHeight: "h-72 md:h-192",
+    descriptionHeight: "h-auto md:h-64",
+    style: "flex justify-center items-center w-full ".concat(componentMargin),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
       columnNumber: 1
     }
   }));

@@ -21,19 +21,19 @@ const images = {
 
 function Stories(){
     
-    const componentMargin = "pt-24 pb-18"
+    const componentMargin = "pt-0 md:pt-24 pb-18"
     const storyEntryStyle = "flex justify-start items-center w-full"
 
     return (
         <Layout>
-            <LeftStoryEntry
+            {/* <LeftStoryEntry
                 image={images.cover9}
                 title="Innovation in every detail"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
                 height="h-132"
-                imageWidth="w-204"
-                descriptionWidth="w-120"
+                imageWidth="w-64 md:w-5/12"
+                descriptionWidth="w-12 md:w-120"
                 style={`flex justify-start items-center w-full ${componentMargin}`}/>
 
             <RightStoryEntry
@@ -42,29 +42,38 @@ function Stories(){
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
                 height="h-132"
-                imageWidth="w-204"
-                descriptionWidth="w-120"
-                style={`flex justify-end items-center w-full ${componentMargin}`}/>
+                imageWidth="w-10/12"
+                descriptionWidth="w-5/12 max-w-4xl"
+                style={`flex justify-end items-center w-full ${componentMargin}`}/> */}
 
-            <CentredStoryEntry
-                image={images.cover9}
-                title="Innovation in every detail"
-                description="With significant initiatives and amazing innovations, we can design clothes"
-                link={{path :"/article", text : "Read The Story"}}                
-                width="w-264"
-                imageHeight="h-180"
-                descriptionHeight="h-64"                
-                style={`flex justify-center items-center w-full ${componentMargin}`}/>
 
 <CentredStoryEntry
                 image={images.cover9}
                 title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
-                width="w-204"
-                imageHeight="h-132"
-                descriptionHeight="h-64"
+                width="w-full md:w-11/12 max-w-6xl"
+                imageHeight="h-72 md:h-132"
+                descriptionHeight="h-auto md:h-64"
                 style={`flex justify-center items-center w-full ${componentMargin}`}/>
+<CentredStoryEntry
+                image={images.cover9}
+                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{path :"/article", text : "Read The Story"}}                
+                width="w-full md:w-11/12 max-w-6xl"
+                imageHeight="h-72 md:h-132"
+                descriptionHeight="h-auto md:h-64"
+                style={`flex justify-center items-center w-full ${componentMargin}`}/>
+<CentredStoryEntry
+                image={images.cover8}
+                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{path :"/article", text : "Read The Story"}}                
+                width="w-full md:w-8/12 max-w-4xl"
+                imageHeight="h-72 md:h-192"
+                descriptionHeight="h-auto md:h-64"
+                style={`flex justify-center items-center w-full ${componentMargin}`}/>        
         </Layout>
     )
 }

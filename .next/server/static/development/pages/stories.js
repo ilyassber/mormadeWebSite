@@ -464,12 +464,12 @@ function CentredCard({
   style
 }) {
   const styleFont = {
-    titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-center break-words",
+    titleStyle: "font-kumbhsans font-bold  md:text-xl hover:underline cursor-pointer text-center break-words",
     descriptionStyle: "font-amiri text-base text-center",
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: `${style} flex flex-col justify-center  ${width}`,
+    className: `${style} flex flex-col justify-center ${width}`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -479,48 +479,58 @@ function CentredCard({
   }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
     image: image,
     height: imageHeight,
-    style: `flex justify-center items-center ${imageHeight} ${width}  overflow-hidden`,
-    imageStyle: "transform hover:scale-105 translate-all ease-out duration-700",
+    style: `flex justify-center items-end ${imageHeight} w-full  overflow-hidden`,
+    imageStyle: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
       columnNumber: 13
     }
-  }), __jsx("div", {
-    className: `flex flex-col justify-start items-center p-16 ${descriptionHeight} w-full bg-white`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 13
-    }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: title,
-    style: `mb-1 text-gray-900 `,
+    style: `m-5 w-9/12 md:hidden md:mb-1 text-white`,
     textStyle: styleFont.titleStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 18,
+      columnNumber: 17
+    }
+  })), __jsx("div", {
+    className: `flex flex-col justify-start items-center p-5 pr-10 md:p-16 ${descriptionHeight} w-full bg-white`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: title,
+    style: `hidden md:block md:mb-1 text-gray-900`,
+    textStyle: styleFont.titleStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
       columnNumber: 17
     }
   }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: description,
-    style: `mt-2 mb-2  text-gray-900 `,
+    style: `md:mb-2  text-gray-900 `,
     textStyle: styleFont.descriptionStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 17
     }
   }), __jsx("div", {
-    className: "mt-1",
+    className: "md:mt-1",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 26,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -528,7 +538,7 @@ function CentredCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -536,7 +546,7 @@ function CentredCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -546,7 +556,7 @@ function CentredCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -554,7 +564,7 @@ function CentredCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 197
     }
   }))))));
@@ -576,11 +586,11 @@ function LeftCard({
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: `${style} flex flex-row justify-center  ${height}`,
+    className: `${style} flex flex-row justify-start  w-full ${height}`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 42,
       columnNumber: 9
     }
   }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -591,7 +601,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 43,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -599,7 +609,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 13
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -609,7 +619,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 17
     }
   }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -619,7 +629,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -627,7 +637,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -635,7 +645,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -643,7 +653,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -653,7 +663,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -661,7 +671,7 @@ function LeftCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 197
     }
   }))))));
@@ -687,7 +697,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 67,
       columnNumber: 9
     }
   }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -698,7 +708,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 68,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -706,7 +716,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 70,
       columnNumber: 13
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -716,7 +726,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 72,
       columnNumber: 17
     }
   }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -726,7 +736,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 74,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -734,7 +744,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 76,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -742,7 +752,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -750,7 +760,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -760,7 +770,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -768,7 +778,7 @@ function RightCard({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 197
     }
   }))))));
@@ -789,7 +799,7 @@ function LeftStoryEntry({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 88,
       columnNumber: 9
     }
   }, __jsx(LeftCard, {
@@ -800,11 +810,11 @@ function LeftStoryEntry({
     height: height,
     imageWidth: imageWidth,
     descriptionWidth: descriptionWidth,
-    style: "m-5 shadow-xl",
+    style: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 13
     }
   }));
@@ -824,7 +834,7 @@ function RightStoryEntry({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104,
+      lineNumber: 105,
       columnNumber: 9
     }
   }, __jsx(RightCard, {
@@ -835,11 +845,11 @@ function RightStoryEntry({
     height: height,
     imageWidth: imageWidth,
     descriptionWidth: descriptionWidth,
-    style: "m-5",
+    style: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105,
+      lineNumber: 106,
       columnNumber: 13
     }
   }));
@@ -859,7 +869,7 @@ function CentredStoryEntry({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122,
+      lineNumber: 123,
       columnNumber: 9
     }
   }, __jsx(CentredCard, {
@@ -870,11 +880,11 @@ function CentredStoryEntry({
     width: width,
     imageHeight: imageHeight,
     descriptionHeight: descriptionHeight,
-    style: "m-5",
+    style: "",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123,
+      lineNumber: 124,
       columnNumber: 13
     }
   }));
@@ -2116,11 +2126,10 @@ function Layout({
 
   const selectPage = link => {
     setSelectedPage(link);
-  }; //bg-xw-100ss
-
+  };
 
   return __jsx("div", {
-    className: " bg-white",
+    className: "w-full h-full bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2149,6 +2158,19 @@ function Layout({
       fileName: _jsxFileName,
       lineNumber: 114,
       columnNumber: 29
+    }
+  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    changeMenuClicked: clickMenuIcon,
+    logo: "/logo.png",
+    categories: categories,
+    max_shown: 8,
+    links: links,
+    home: "/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120,
+      columnNumber: 13
     }
   }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
@@ -3907,7 +3929,7 @@ const images = {
 };
 
 function Stories() {
-  const componentMargin = "pt-24 pb-18";
+  const componentMargin = "pt-0 md:pt-24 pb-18";
   const storyEntryStyle = "flex justify-start items-center w-full";
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
@@ -3916,59 +3938,23 @@ function Stories() {
       lineNumber: 28,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["LeftStoryEntry"], {
+  }, __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
     image: images.cover9,
-    title: "Innovation in every detail",
+    title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
     description: "With significant initiatives and amazing innovations, we can design clothes",
     link: {
       path: "/article",
       text: "Read The Story"
     },
-    height: "h-132",
-    imageWidth: "w-204",
-    descriptionWidth: "w-120",
-    style: `flex justify-start items-center w-full ${componentMargin}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["RightStoryEntry"], {
-    image: images.cover9,
-    title: "Innovation in every detail",
-    description: "With significant initiatives and amazing innovations, we can design clothes",
-    link: {
-      path: "/article",
-      text: "Read The Story"
-    },
-    height: "h-132",
-    imageWidth: "w-204",
-    descriptionWidth: "w-120",
-    style: `flex justify-end items-center w-full ${componentMargin}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 13
-    }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
-    image: images.cover9,
-    title: "Innovation in every detail",
-    description: "With significant initiatives and amazing innovations, we can design clothes",
-    link: {
-      path: "/article",
-      text: "Read The Story"
-    },
-    width: "w-264",
-    imageHeight: "h-180",
-    descriptionHeight: "h-64",
+    width: "w-full md:w-11/12 max-w-6xl",
+    imageHeight: "h-72 md:h-132",
+    descriptionHeight: "h-auto md:h-64",
     style: `flex justify-center items-center w-full ${componentMargin}`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
-      columnNumber: 13
+      lineNumber: 50,
+      columnNumber: 1
     }
   }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
     image: images.cover9,
@@ -3978,14 +3964,32 @@ function Stories() {
       path: "/article",
       text: "Read The Story"
     },
-    width: "w-204",
-    imageHeight: "h-132",
-    descriptionHeight: "h-64",
+    width: "w-full md:w-11/12 max-w-6xl",
+    imageHeight: "h-72 md:h-132",
+    descriptionHeight: "h-auto md:h-64",
     style: `flex justify-center items-center w-full ${componentMargin}`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59,
+      columnNumber: 1
+    }
+  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
+    image: images.cover8,
+    title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
+    description: "With significant initiatives and amazing innovations, we can design clothes",
+    link: {
+      path: "/article",
+      text: "Read The Story"
+    },
+    width: "w-full md:w-8/12 max-w-4xl",
+    imageHeight: "h-72 md:h-192",
+    descriptionHeight: "h-auto md:h-64",
+    style: `flex justify-center items-center w-full ${componentMargin}`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
       columnNumber: 1
     }
   }));
