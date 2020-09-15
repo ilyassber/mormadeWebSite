@@ -4,10 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:tailwind": "postcss src/tailwind.css -o src/tailwind.generated.css",
-    "watch:tailwind": "postcss -w src/tailwind.css -o src/tailwind.generated.css",
-    "prestart": "npm run watch:tailwind ",
-    "prebuild": "npm run build:tailwind",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -22,6 +18,7 @@
     "next": "9.3.5",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.2",
+    "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-purgecss": "^2.0.3",
     "querystring": "^0.2.0",

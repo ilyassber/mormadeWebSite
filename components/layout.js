@@ -96,9 +96,9 @@ function Layout({ children }) {
     const selectPage = (link) => {
         setSelectedPage(link)
     }
-
+//bg-xw-100ss
     return (
-        <div className="bg-xw-100">
+        <div className=" bg-white">
 
             {menuClicked && <SideMenu
                 menuClick = {menuClicked}
@@ -117,14 +117,14 @@ function Layout({ children }) {
             />
             }
 
-            <NavBar
+            {/* <NavBar
                 changeMenuClicked={clickMenuIcon}
                 logo="/logo.png"
                 categories={categories}
                 max_shown={8}
                 links={links}
                 home="/"
-            />
+            /> */}
             <Wrapper style="w-full h-48"/>  {/* top white space*/}
 
             {children}

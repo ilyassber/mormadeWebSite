@@ -93,7 +93,7 @@ export function LeftStoryEntry({ image, title, description, link, height, imageW
                 height={height}
                 imageWidth={imageWidth}
                 descriptionWidth={descriptionWidth}
-                style="m-5" />
+                style="m-5 shadow-xl" />
         </div>
     )
 }

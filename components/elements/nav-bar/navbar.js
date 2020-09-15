@@ -97,7 +97,7 @@ function NavBar({ changeMenuClicked,  categories, max_shown, links, home, logo }
                     </div>
                 </div>
             </div>
-            <WelcomeBar textToDisplay="welcome fockers" />
+            <WelcomeBar textToDisplay="welcome" />
             <CategoriesBar  max_shown={max_shown} categories={categories} />
         </nav>
     )

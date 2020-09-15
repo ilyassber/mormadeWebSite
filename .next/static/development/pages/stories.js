@@ -675,7 +675,7 @@ function LeftStoryEntry(_ref4) {
     height: height,
     imageWidth: imageWidth,
     descriptionWidth: descriptionWidth,
-    style: "m-5",
+    style: "m-5 shadow-xl",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1271,7 +1271,7 @@ function NavBar(_ref) {
       columnNumber: 29
     }
   }))))), __jsx(_welcomeBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    textToDisplay: "welcome fockers",
+    textToDisplay: "welcome",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2230,10 +2230,11 @@ function Layout(_ref2) {
 
   var selectPage = function selectPage(link) {
     setSelectedPage(link);
-  };
+  }; //bg-xw-100ss
+
 
   return __jsx("div", {
-    className: "bg-xw-100",
+    className: " bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2262,19 +2263,6 @@ function Layout(_ref2) {
       fileName: _jsxFileName,
       lineNumber: 114,
       columnNumber: 29
-    }
-  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    changeMenuClicked: clickMenuIcon,
-    logo: "/logo.png",
-    categories: categories,
-    max_shown: 8,
-    links: links,
-    home: "/",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120,
-      columnNumber: 13
     }
   }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
@@ -15055,7 +15043,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstories&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5CmormadeWebSite%5Cpages%5Cstories.js ***!
   \*****************************************************************************************************************************************************/
@@ -15078,5 +15066,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=stories.js.map

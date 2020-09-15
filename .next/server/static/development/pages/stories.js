@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -800,7 +800,7 @@ function LeftStoryEntry({
     height: height,
     imageWidth: imageWidth,
     descriptionWidth: descriptionWidth,
-    style: "m-5",
+    style: "m-5 shadow-xl",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1381,7 +1381,7 @@ function NavBar({
       columnNumber: 29
     }
   }))))), __jsx(_welcomeBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    textToDisplay: "welcome fockers",
+    textToDisplay: "welcome",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2116,10 +2116,11 @@ function Layout({
 
   const selectPage = link => {
     setSelectedPage(link);
-  };
+  }; //bg-xw-100ss
+
 
   return __jsx("div", {
-    className: "bg-xw-100",
+    className: " bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2148,19 +2149,6 @@ function Layout({
       fileName: _jsxFileName,
       lineNumber: 114,
       columnNumber: 29
-    }
-  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    changeMenuClicked: clickMenuIcon,
-    logo: "/logo.png",
-    categories: categories,
-    max_shown: 8,
-    links: links,
-    home: "/",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 120,
-      columnNumber: 13
     }
   }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
@@ -4007,7 +3995,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!********************************!*\
   !*** multi ./pages/stories.js ***!
   \********************************/
