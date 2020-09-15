@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -112,6 +112,185 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/utils.js");
+
+/***/ }),
+
+/***/ "./components/elements/Article/Article.js":
+/*!************************************************!*\
+  !*** ./components/elements/Article/Article.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./article-utilities/ArticleContent */ "./components/elements/Article/article-utilities/ArticleContent.js");
+/* harmony import */ var _article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-utilities/ArticleCover */ "./components/elements/Article/article-utilities/ArticleCover.js");
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\Article.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+function Article({
+  data
+}) {
+  const text = "In 1506, the king of Portugal, D. Manuel I, ordered a fortress to be built there, named Castelo Real de Mogador. Altogether, the Portuguese are documented to have seized six Moroccan towns and built six stand-alone fortresses on the Moroccan Atlantic coast, between the river Loukos in the north and the river of Sous in the south. Four of them only had a short duration: Graciosa (1489), São João da Mamora (1515), Castelo Real of Mogador (1506–10) and Aguz (1520–25). Two became permanent urban settlements: Santa Cruz do Cabo de Gué (modern Agadir, founded in 1505–06), and Mazagan, founded in 1514–17. Following the 1541 Fall of Agadir, the Portuguese had to abandon most of their settlements between 1541 and 1550, although they were able to keep Ceuta, Tangier and Mazagan.";
+  const description = "It’s perhaps not surprising then that for the H&M fall kidswear collaboration Chen focuses on a fantastical and expressive world of animals, florals and other nature scenarios.";
+  return __jsx("div", {
+    className: "flex flex-col justify-center items-center w-full",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 9
+    }
+  }, __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["ArticleCover"], {
+    image: "images/Articles/cover-9.jpg",
+    title: "Article",
+    description: text,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Article);
+
+/***/ }),
+
+/***/ "./components/elements/Article/article-utilities/ArticleContent.js":
+/*!*************************************************************************!*\
+  !*** ./components/elements/Article/article-utilities/ArticleContent.js ***!
+  \*************************************************************************/
+/*! exports provided: ArticleContent, ArticleContent1, ArticleContent2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent", function() { return ArticleContent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent1", function() { return ArticleContent1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent2", function() { return ArticleContent2; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
+/* harmony import */ var _article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-widgets/Title */ "./components/elements/Article/article-utilities/article-widgets/Title.js");
+/* harmony import */ var _article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article-widgets/Description */ "./components/elements/Article/article-utilities/article-widgets/Description.js");
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\ArticleContent.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// import Cover from './article-widgets/Cover'
+
+
+
+function ArticleContent({
+  image,
+  text,
+  title
+}) {
+  return __jsx("div", {
+    className: "flex flex-col justify-center items-center mt-20 mb-20 w-full ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "flex items-center mr-10 w-180 h-180 rounded-full overflow-hidden shadow",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }, __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: text,
+    style: "flex justify-center items-center p-20  w-144 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  })));
+}
+function ArticleContent1({
+  image,
+  text,
+  title
+}) {
+  return __jsx("div", {
+    className: "flex flex-row mt-20 mb-20 w-full h-132 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: text,
+    style: "flex justify-center items-center p-20  w-144 h-144 rounded-full ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }), __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "flex flex-1 items-center w-216 h-132 rounded-sm overflow-hidden shadow",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }));
+}
+function ArticleContent2({
+  image,
+  text,
+  title
+}) {
+  return __jsx("div", {
+    className: "flex flex-row mt-20 mb-20 w-full",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: image,
+    height: "h-180",
+    style: "flex items-center w-180 h-180 rounded-full overflow-hidden shadow",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 13
+    }
+  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: text,
+    style: "flex flex-1 justify-center items-center p-20  w-144 h-180  ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 13
+    }
+  }));
+}
 
 /***/ }),
 
@@ -3890,9 +4069,9 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/stories.js":
+/***/ "./pages/article.js":
 /*!**************************!*\
-  !*** ./pages/stories.js ***!
+  !*** ./pages/article.js ***!
   \**************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -3902,16 +4081,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_elements_Article_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/Article/article-utilities/ArticleCover */ "./components/elements/Article/article-utilities/ArticleCover.js");
+/* harmony import */ var _components_elements_Article_Article__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/Article/Article */ "./components/elements/Article/Article.js");
 /* harmony import */ var _components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/StoriesEntry/StoriesEntry */ "./components/elements/StoriesEntry/StoriesEntry.js");
-/* harmony import */ var _components_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/graphics/textDisplayer/Text */ "./components/graphics/textDisplayer/Text.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\pages\\stories.js";
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\pages\\article.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- // import StoriesEntry from '../components/elements/StoriesEntry/StoriesEntry'
 
 
 
@@ -3929,49 +4105,18 @@ const images = {
 };
 
 function Stories() {
-  const componentMargin = "pt-0 md:pt-24 pb-18";
-  const storyEntryStyle = "flex justify-start items-center w-full";
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 21,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["LeftStoryEntry"], {
-    image: images.cover9,
-    title: "Innovation in every detail",
-    description: "With significant initiatives and amazing innovations, we can design clothes",
-    link: {
-      path: "/article",
-      text: "Read The Story"
-    },
-    height: "h-132",
-    imageWidth: "w-64 md:w-5/12",
-    descriptionWidth: "w-12 md:w-120",
-    style: `flex justify-start items-center w-full ${componentMargin}`,
+  }, __jsx(_components_elements_Article_Article__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["RightStoryEntry"], {
-    image: images.cover9,
-    title: "Innovation in every detail",
-    description: "With significant initiatives and amazing innovations, we can design clothes",
-    link: {
-      path: "/article",
-      text: "Read The Story"
-    },
-    height: "h-132",
-    imageWidth: "w-64 md:w-5/12",
-    descriptionWidth: "w-12 md:w-120",
-    style: `flex justify-end items-center w-full ${componentMargin}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 22,
       columnNumber: 13
     }
   }));
@@ -3981,14 +4126,14 @@ function Stories() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!********************************!*\
-  !*** multi ./pages/stories.js ***!
+  !*** multi ./pages/article.js ***!
   \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Soguma\MorMade_project\mormadeWebSite\pages\stories.js */"./pages/stories.js");
+module.exports = __webpack_require__(/*! C:\Users\Soguma\MorMade_project\mormadeWebSite\pages\article.js */"./pages/article.js");
 
 
 /***/ }),
@@ -4115,4 +4260,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=stories.js.map
+//# sourceMappingURL=article.js.map

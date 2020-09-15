@@ -6,11 +6,11 @@ import Description from './article-widgets/Description'
 export function ArticleCover ({image, title, description}) {
 
     return (
-        <div className="flex flex-col justify-start items-center mb-2 w-full  ">
-           <Cover image={image} height="h-180" style="relative flex flex-col justify-center items-center mt-4 m-16 w-11/12 h-180  bg-gray-400 shadow-sm">
+        <div className="flex flex-col justify-start items-center mb-2 w-11/12">
+           <Cover image={image} height="h-180" style="relative flex flex-col justify-center items-center mt-4 w-full h-180  bg-gray-400 shadow-sm">
             <Title title={title} style="absolute -bottom-12 flex justify-center items-center w-108 h-32 font-abrilfatface font-bold text-7xl bg-white bg-opacity-50 shadow-lg"/>               
             </Cover>
-            <Description text={description} style="mt-10 p-5 w-9/12 bg-white shadow-sm " />
+            <Description text={description} style="mt-10 p-5 w-full bg-white shadow-sm " />
         </div>
     )
 }

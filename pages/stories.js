@@ -26,7 +26,7 @@ function Stories(){
 
     return (
         <Layout>
-            {/* <LeftStoryEntry
+            <LeftStoryEntry
                 image={images.cover9}
                 title="Innovation in every detail"
                 description="With significant initiatives and amazing innovations, we can design clothes"
@@ -42,17 +42,17 @@ function Stories(){
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
                 height="h-132"
-                imageWidth="w-10/12"
-                descriptionWidth="w-5/12 max-w-4xl"
-                style={`flex justify-end items-center w-full ${componentMargin}`}/> */}
+                imageWidth="w-64 md:w-5/12"
+                descriptionWidth="w-12 md:w-120"
+                style={`flex justify-end items-center w-full ${componentMargin}`}/>
 
 
-<CentredStoryEntry
+{/* <CentredStoryEntry
                 image={images.cover9}
                 title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
-                width="w-full md:w-11/12 max-w-6xl"
+                width="w-11/12 md:w-11/12 max-w-6xl"
                 imageHeight="h-72 md:h-132"
                 descriptionHeight="h-auto md:h-64"
                 style={`flex justify-center items-center w-full ${componentMargin}`}/>
@@ -61,7 +61,7 @@ function Stories(){
                 title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
-                width="w-full md:w-11/12 max-w-6xl"
+                width="w-11/12 md:w-11/12 max-w-6xl"
                 imageHeight="h-72 md:h-132"
                 descriptionHeight="h-auto md:h-64"
                 style={`flex justify-center items-center w-full ${componentMargin}`}/>
@@ -70,10 +70,10 @@ function Stories(){
                 title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{path :"/article", text : "Read The Story"}}                
-                width="w-full md:w-8/12 max-w-4xl"
+                width="w-11/12 md:w-8/12 max-w-4xl"
                 imageHeight="h-72 md:h-192"
                 descriptionHeight="h-auto md:h-64"
-                style={`flex justify-center items-center w-full ${componentMargin}`}/>        
+                style={`flex justify-center items-center w-full ${componentMargin}`}/>         */}
         </Layout>
     )
 }
