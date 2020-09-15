@@ -6,11 +6,23 @@ module.exports = {
       roboto: ['Roboto'],
       lobster: ['Lobster'],
       grandstander: ['Grandstander'],
-      amiri : ['Amiri'],
       montserrat : ['Montserrat'],
       abrilfatface: ['Abril Fatface'],
+      worksans: ['Work Sans', 'sans-serif'], // for title
+      kumbhsans:['Kumbh Sans', 'sans-serif'], // desc title
+      amiri : ['Amiri'], // desc text
+      raleway:['Raleway', 'sans-serif'], // desc text
+      zillaslab:['Zilla Slab', 'serif'], // desc text
+      yantramanav:['Yantramanav', 'sans-serif'], // link text
     },
     fontSize: {
+      sm: ['14px', '20px'],
+      base: ['16px', '24px'],
+      lg: ['20px', '28px'],
+      xl: ['24px', '32px'],
+      '2xl': ['32px', '32px'],
+      '3xl': ['40px', '32px'],
+      '4xl': ['64px', '32px'],
       '7xl': '5rem',
       '8xl': '6rem',
       '9xl': '7rem',

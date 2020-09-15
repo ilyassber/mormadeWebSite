@@ -1,37 +1,134 @@
 import Cover from '../../graphics/imageCover/Cover'
 import Text from '../../graphics/textDisplayer/Text'
+import Link from 'next/link'
+import { Icon } from 'react-icons-kit'
+import { ic_arrow_forward } from 'react-icons-kit/md/ic_arrow_forward'
 
-const images = {
-    cover1: "images/Articles/cover-1.jpg",
-    cover2: "images/Articles/cover-2.jpg",
-    cover3: "images/Articles/cover-3.jpg",
-    cover4: "images/Articles/cover-4.jpg",
-    cover5: "images/Articles/cover-5.jpg",
-    cover6: "images/Articles/cover-6.jpg",
-    cover7: "images/Articles/cover-7.jpg",
-    cover8: "images/Articles/cover-8.jpg",
-    cover9: "images/Articles/cover-9.jpg",
-}
+function CentredCard({ image, title, description, link, width, imageHeight, descriptionHeight, style }) {
 
-function StorieCard({height, width, style}) {
+    const styleFont = {
+        titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-center break-words",
+        descriptionStyle: "font-amiri text-base text-center",
+        linkStyle: "font-yantramanav text-sm font-bold"
+    }
+
     return (
-        <div className={`${style} flex flex-row justify-center ${width} ${height} bg-red-100`}>
-            <Cover image={images.cover7} height={height} style={`flex justify-center items-center w-full ${height} rounded-sm overflow-hidden shadow-xl `} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
-                <div className="absolute flex justify-center items-start right-8 w-96 h-108 shadow-inner bg-white bg-opacity-100 transform hover:scale-105 transition ease-out duration-700">
-                    <Text text="stories" style="h-24 w-64 font-abrilfatface text-bold text-7xl text-gray-900 opacity-75" />
-                    <Text> </Text>
-                </div>
+        <div className={`${style} flex flex-col justify-center  ${width}`}>
+            <Cover image={image} height={imageHeight} style={`flex justify-center items-center ${imageHeight} ${width}  overflow-hidden`} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
             </Cover>
+            <div className={`flex flex-col justify-start items-center p-16 ${descriptionHeight} w-full bg-white`}>
+
+                <Text text={title} style={`mb-1 text-gray-900 `} textStyle={styleFont.titleStyle} />
+
+                <Text text={description} style={`mt-2 mb-2  text-gray-900 `} textStyle={styleFont.descriptionStyle} />
+
+                <div className="mt-1">
+                    <Link href={link.path}><a className="flex items-center justify-start hover:text-green-600"><Text text={link.text} style={`mr-2 text-gray-90`} textStyle={styleFont.linkStyle} /><Icon icon={ic_arrow_forward} /></a></Link>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default function StoriesEntry() {
+function LeftCard({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
+
+    const styleFont = {
+        titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer ",
+        descriptionStyle: "font-amiri text-base",
+        linkStyle: "font-yantramanav text-sm font-bold"
+    }
+    return (
+        <div className={`${style} flex flex-row justify-center  ${height}`}>
+            <Cover image={image} height={height} style={`flex justify-center items-center ${imageWidth} ${height}  overflow-hidden`} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
+            </Cover>
+            <div className={`flex flex-col justify-center items-start p-16 ${descriptionWidth} h-full bg-white`}>
+
+                <Text text={title} style={`mb-1 text-gray-900 `} textStyle={styleFont.titleStyle} />
+
+                <Text text={description} style={`mt-2 mb-2  text-gray-900 `} textStyle={styleFont.descriptionStyle} />
+
+                <div className="mt-1 ">
+                    <Link href={link.path}><a className="flex items-center justify-start hover:text-green-600"><Text text={link.text} style={`mr-2 text-gray-90`} textStyle={styleFont.linkStyle} /><Icon icon={ic_arrow_forward} /></a></Link>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function RightCard({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
+
+    const styleFont = {
+        titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-right",
+        descriptionStyle: "font-amiri text-base text-right",
+        linkStyle: "font-yantramanav text-sm font-bold"
+    }
+    return (
+        <div className={`${style} flex flex-row-reverse justify-center  ${height}`}>
+            <Cover image={image} height={height} style={`flex justify-center items-center ${imageWidth} ${height}  overflow-hidden`} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
+            </Cover>
+            <div className={`flex flex-col justify-center items-end p-16 ${descriptionWidth} h-full bg-white`}>
+
+                <Text text={title} style={`mb-1 text-gray-900 `} textStyle={styleFont.titleStyle} />
+
+                <Text text={description} style={`mt-2 mb-2  text-gray-900 `} textStyle={styleFont.descriptionStyle} />
+
+                <div className="mt-1 ">
+                    <Link href={link.path}><a className="flex items-center justify-start hover:text-green-600"><Text text={link.text} style={`mr-2 text-gray-90`} textStyle={styleFont.linkStyle} /><Icon icon={ic_arrow_forward} /></a></Link>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export function LeftStoryEntry({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
 
 
     return (
-        <div className="relative flex justify-center items-center w-full h-192 ">
-            <StorieCard height="h-144" width="w-10/12" style="absolute z-40 shadow-xl" />
+        <div className={style}>
+            <LeftCard
+                image={image}
+                title={title}
+                description={description}
+                link={link}
+                height={height}
+                imageWidth={imageWidth}
+                descriptionWidth={descriptionWidth}
+                style="m-5" />
+        </div>
+    )
+}
+export function RightStoryEntry({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
+
+
+    return (
+        <div className={style}>
+            <RightCard
+                image={image}
+                title={title}
+                description={description}
+                link={link}
+                height={height}
+                imageWidth={imageWidth}
+                descriptionWidth={descriptionWidth}
+                style="m-5" />
+        </div>
+    )
+}
+
+export function CentredStoryEntry({ image, title, description, link, width, imageHeight, descriptionHeight, style }) {
+
+
+    return (
+        <div className={style}>
+            <CentredCard
+                image={image}
+                title={title}
+                description={description}
+                link={link}
+                width={width}
+                imageHeight={imageHeight}
+                descriptionHeight={descriptionHeight}
+                style="m-5" />
         </div>
     )
 }

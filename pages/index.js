@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout'
-import StoriesEntry from '../components/elements/StoriesEntry/StoriesEntry'
 import MakersEntry from '../components/elements/MakersEntry/MakersEntry'
 import RegionsEntry from '../components/elements/RegionsEntry/RegionsEntry'
 import Link from 'next/link'
