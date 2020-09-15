@@ -1250,7 +1250,7 @@ function NavBar(_ref) {
       columnNumber: 110
     }
   }, __jsx("a", {
-    className: "text-xl font-bold whitespace-no-wrap text-gray-900",
+    className: "text-lg font-bold whitespace-no-wrap text-gray-900",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1418,7 +1418,7 @@ function NavBar(_ref) {
     }
   }, links.map(function (link, indx) {
     return __jsx("li", {
-      className: "m-8 cursor-pointer text-sm md:text-xl font-bold text-gray-700 hover:text-gray-500",
+      className: "m-8 cursor-pointer text-base md:text-2xl font-worksans  text-gray-900 hover:text-gray-700",
       key: indx,
       __self: _this,
       __source: {
@@ -1432,14 +1432,14 @@ function NavBar(_ref) {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 89,
-        columnNumber: 138
+        columnNumber: 146
       }
     }, __jsx("a", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 89,
-        columnNumber: 161
+        columnNumber: 169
       }
     }, link.page)));
   })), __jsx("div", {
@@ -15200,7 +15200,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 5:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Farticle&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5CmormadeWebSite%5Cpages%5Carticle.js ***!
   \*****************************************************************************************************************************************************/
@@ -15223,5 +15223,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[5,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=article.js.map

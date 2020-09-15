@@ -56,7 +56,7 @@ function NavBar({ changeMenuClicked,  categories, max_shown, links, home, logo }
                             <Icon size={25} icon={ic_menu}></Icon>
                         </div>
                     </div>}
-                    {!searchIconClicked && <div className={`flex justify-center items-center flex-1 h-full`}><Link href={home} ><a className="text-xl font-bold whitespace-no-wrap text-gray-900">Mor Made</a></Link></div>}
+                    {!searchIconClicked && <div className={`flex justify-center items-center flex-1 h-full`}><Link href={home} ><a className="text-lg font-bold whitespace-no-wrap text-gray-900">Mor Made</a></Link></div>}
                     <div className="flex flex-1 justify-center md:justify-end items-center  h-full w-full">
                         <form className="md:hidden flex justify-end h-8 w-full">
                             <div className={`${searchIconClicked ? "order-last" : "" } flex justify-center h-full w-8 outline-none focus:outline-none`}
@@ -86,7 +86,7 @@ function NavBar({ changeMenuClicked,  categories, max_shown, links, home, logo }
                     <div className="h-full flex-1"></div>
                     <ul className="flex flex-1 justify-center items-center h-full">
                         {links.map((link, indx) =>
-                            <li className="m-8 cursor-pointer text-sm md:text-xl font-bold text-gray-700 hover:text-gray-500" key={indx}><Link href={link.path}><a>{link.page}</a></Link></li>
+                            <li className="m-8 cursor-pointer text-base md:text-2xl font-worksans  text-gray-900 hover:text-gray-700" key={indx}><Link href={link.path}><a>{link.page}</a></Link></li>
                         )}
                     </ul>
                     <div className="flex flex-1 justify-end items-center h-full">

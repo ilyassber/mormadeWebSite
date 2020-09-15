@@ -18,10 +18,6 @@ const hello = ({ cookies = {} }) => {
         <title>MorMade</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <StoriesEntry/>
-      <StoriesEntry/>
-      <StoriesEntry/>
-      <StoriesEntry/>
       <MakersEntry/>
       <RegionsEntry/>
     </Layout>

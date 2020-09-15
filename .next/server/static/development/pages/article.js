@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1366,7 +1366,7 @@ function NavBar({
       columnNumber: 110
     }
   }, __jsx("a", {
-    className: "text-xl font-bold whitespace-no-wrap text-gray-900",
+    className: "text-lg font-bold whitespace-no-wrap text-gray-900",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1533,7 +1533,7 @@ function NavBar({
       columnNumber: 21
     }
   }, links.map((link, indx) => __jsx("li", {
-    className: "m-8 cursor-pointer text-sm md:text-xl font-bold text-gray-700 hover:text-gray-500",
+    className: "m-8 cursor-pointer text-base md:text-2xl font-worksans  text-gray-900 hover:text-gray-700",
     key: indx,
     __self: this,
     __source: {
@@ -1547,14 +1547,14 @@ function NavBar({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 89,
-      columnNumber: 138
+      columnNumber: 146
     }
   }, __jsx("a", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 89,
-      columnNumber: 161
+      columnNumber: 169
     }
   }, link.page))))), __jsx("div", {
     className: "flex flex-1 justify-end items-center h-full",
@@ -4156,7 +4156,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 7:
 /*!********************************!*\
   !*** multi ./pages/article.js ***!
   \********************************/
