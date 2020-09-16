@@ -98,7 +98,7 @@ function Layout({ children }) {
     }
 
     return (
-        <div className="w-full h-full bg-xw-100">
+        <div className="flex flex-col items-center w-full bg-xw-100">
 
             {menuClicked && <SideMenu
                 menuClick = {menuClicked}
@@ -125,7 +125,7 @@ function Layout({ children }) {
                 links={links}
                 home="/"
             />
-            <Wrapper style="w-full h-48"/>  {/* top white space*/}
+            <Wrapper style="w-full h-48"/> 
 
             {children}
 

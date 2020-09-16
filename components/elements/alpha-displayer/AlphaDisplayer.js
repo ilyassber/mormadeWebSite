@@ -1,22 +1,22 @@
-import Cover from '../../graphics/imageCover/Cover'
+import {Cover1} from '../../graphics/imageCover/Cover'
 import Text from '../../graphics/textDisplayer/Text'
 
-export default function AlphaDisplayer({children, style, height, width, image, title, description, buttonText, clickAction}) {
+export default function AlphaDisplayer({image, title, description, buttonText, clickAction}) {
     
     const textStyle = {
-        titleStyle : "text-white text-xl font-bold text-center",
-        descriptionStyle : "text-white text-center",
-        buttonStyle : "",
+        titleStyle: "font-kumbhsans font-bold text-lg md:text-2xl  text-center break-words text-white",
+        descriptionStyle: "mb-2 md:m-2 tracking-tight md:tracking-widest font-medium md:font-extrabold text-xs md:text-base text-center text-white",
+        buttonStyle: "tracking-widest font-yantramanav text-sm font-bold "
     }
     
     return (
-        <div className={style}>
-            <Cover image={image} height={height} style={`flex flex-col justify-end items-center m-1 sm:m-10 ${height} ${width}`}>
-                <Text text={title} style="m-2" textStyle={textStyle.titleStyle}/>
-                <Text text={description} style="m-1" textStyle={textStyle.descriptionStyle}/>
-                <button onClick={clickAction} className="h-10 w-40 m-3 bg-white text-gray-900">{buttonText}</button>
-            </Cover>
-            {children}
+        <div onClick={clickAction} className="relative flex justify-center overflow-hidden my-5 mx-5 cursor-pointer">
+            <img className="w-full object-cover object-center" src={image} alt="image cover" />
+            <div className="absolute flex flex-col justify-end items-center p-2 w-full h-full ">
+                    <h2 className={textStyle.titleStyle}>{title}</h2>
+                    <p className={textStyle.descriptionStyle}>{description}</p>
+                    <div className="hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white "><p className={textStyle.buttonStyle}>{buttonText}</p></div>                
+            </div>
         </div>
     )
-} 
+}   

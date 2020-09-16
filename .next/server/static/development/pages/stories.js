@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -487,17 +487,7 @@ function CentredCard({
       lineNumber: 17,
       columnNumber: 13
     }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: `m-5 w-9/12 md:hidden md:mb-1 text-white`,
-    textStyle: styleFont.titleStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 17
-    }
-  })), __jsx("div", {
+  }), __jsx("div", {
     className: `flex flex-col justify-start items-center p-5 pr-10 md:p-16 h-auto md:${descriptionHeight} w-full bg-white`,
     __self: this,
     __source: {
@@ -507,7 +497,7 @@ function CentredCard({
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
     text: title,
-    style: `hidden md:block md:mb-1 text-gray-900`,
+    style: ` md:mb-1 text-gray-900`,
     textStyle: styleFont.titleStyle,
     __self: this,
     __source: {
@@ -1918,12 +1908,13 @@ module.exports = {
 /*!*************************************************!*\
   !*** ./components/graphics/imageCover/Cover.js ***!
   \*************************************************/
-/*! exports provided: default */
+/*! exports provided: default, Cover1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cover1", function() { return Cover1; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\imageCover\\Cover.js";
@@ -1971,6 +1962,79 @@ function Cover({
       columnNumber: 17
     }
   })));
+}
+function Cover1({
+  image,
+  title,
+  description,
+  buttonText
+}) {
+  return __jsx("div", {
+    className: "relative flex overflow-hidden my-4 mx-4 bg-gray-900",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx("img", {
+    className: "object-cover object-center",
+    src: image,
+    alt: "image cover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }), __jsx("div", {
+    className: "absolute flex justify-center items-end w-full h-full b",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flex flex-col justify-center items-center  w-10/12 h-4/12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 17
+    }
+  }, __jsx("h2", {
+    className: "text-white text-7xl font-bold",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 21
+    }
+  }, title), __jsx("p", {
+    className: "text-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 21
+    }
+  }, description), __jsx("div", {
+    className: "flex justify-center items-center m-5 bg-white w-4/12 h-2/12 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 21
+    }
+  }, __jsx("p", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 99
+    }
+  }, buttonText)))));
 }
 
 /***/ }),
@@ -2129,7 +2193,7 @@ function Layout({
   };
 
   return __jsx("div", {
-    className: "w-full h-full bg-xw-100",
+    className: "flex flex-col items-center w-full bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2180,7 +2244,7 @@ function Layout({
       lineNumber: 128,
       columnNumber: 13
     }
-  }), "  ", children);
+  }), children);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -3999,7 +4063,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!********************************!*\
   !*** multi ./pages/stories.js ***!
   \********************************/

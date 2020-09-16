@@ -3,10 +3,14 @@ import Layout from '../components/layout'
 import AlphaDisplayer from '../components/elements/alpha-displayer/AlphaDisplayer'
 import MakersEntry from '../components/elements/MakersEntry/MakersEntry'
 import RegionsEntry from '../components/elements/RegionsEntry/RegionsEntry'
+import { Cover1 } from '../components/graphics/imageCover/Cover'
 import Link from 'next/link'
 import Head from 'next/head'
+import ProductGrid from '../components/widgets/product/ProductGrid'
 
 const images = {
+  cover01: "images/Articles/cover-01.jpg",
+  cover02: "images/Articles/cover-02.jpg",
   cover1: "images/Articles/cover-1.jpg",
   cover2: "images/Articles/cover-2.jpg",
   cover3: "images/Articles/cover-3.jpg",
@@ -31,20 +35,31 @@ const hello = ({ cookies = {} }) => {
         <title>MorMade</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <AlphaDisplayer
-        style="flex justify-center w-full"
-        height="h-96 md:h-288"
-        width="w-11/12 max-w-4xl"
-        image={images.cover7}
-        title="Dresses made to last"
-        description="Timeless designs made from recycled materials"
-        buttonText="SHOP NOW"
-      >
 
-      </AlphaDisplayer>
-      <MakersEntry/>
-      <RegionsEntry/>
+        <div className="max-w-5xl">
+          
+          <AlphaDisplayer
+            image={images.cover01}
+            title="Dresses made to last"
+            description="Timeless designs made from recycled materials"
+            buttonText="SHOP NOW"
+          />
+          <AlphaDisplayer
+            image={images.cover02}
+            title="Dresses made to last"
+            description="Timeless designs made from recycled materials"
+            buttonText="SHOP NOW"
+          />
+          
+        </div>
+
+
+      <MakersEntry />
+      <RegionsEntry />
     </Layout>
+
+
+
   )
 }
 

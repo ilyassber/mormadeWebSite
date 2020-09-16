@@ -15,11 +15,11 @@ function CentredCard({ image, title, description, link, width, imageHeight, desc
     return (
         <div className={`${style} flex flex-col justify-center w-11/12 md:${width}`}>
             <Cover image={image} height={`h-72 md:${imageHeight}`} style={`flex justify-center items-end h-72 md:${imageHeight} w-full  overflow-hidden`} imageStyle="">
-                <Text text={title} style={`m-5 w-9/12 md:hidden md:mb-1 text-white`} textStyle={styleFont.titleStyle} />
+                {/* <Text text={title} style={`m-5 w-9/12 md:hidden md:mb-1 text-white`} textStyle={styleFont.titleStyle} /> */}
             </Cover>
             <div className={`flex flex-col justify-start items-center p-5 pr-10 md:p-16 h-auto md:${descriptionHeight} w-full bg-white`}>
 
-                <Text text={title} style={`hidden md:block md:mb-1 text-gray-900`} textStyle={styleFont.titleStyle} />
+                <Text text={title} style={` md:mb-1 text-gray-900`} textStyle={styleFont.titleStyle} />
 
                 <Text text={description} style={`md:mb-2  text-gray-900 `} textStyle={styleFont.descriptionStyle} />
 

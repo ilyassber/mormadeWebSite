@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -191,10 +191,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 function AlphaDisplayer({
-  children,
-  style,
-  height,
-  width,
   image,
   title,
   description,
@@ -202,58 +198,70 @@ function AlphaDisplayer({
   clickAction
 }) {
   const textStyle = {
-    titleStyle: "text-white text-xl font-bold text-center",
-    descriptionStyle: "text-white text-center",
-    buttonStyle: ""
+    titleStyle: "font-kumbhsans font-bold text-lg md:text-2xl  text-center break-words text-white",
+    descriptionStyle: "mb-2 md:m-2 tracking-tight md:tracking-widest font-medium md:font-extrabold text-xs md:text-base text-center text-white",
+    buttonStyle: "tracking-widest font-yantramanav text-sm font-bold "
   };
   return __jsx("div", {
-    className: style,
+    onClick: clickAction,
+    className: "relative flex justify-center overflow-hidden my-5 mx-5 cursor-pointer",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 9
     }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: height,
-    style: `flex flex-col justify-end items-center m-1 sm:m-10 ${height} ${width}`,
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: image,
+    alt: "image cover",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14,
       columnNumber: 13
     }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: "m-2",
-    textStyle: textStyle.titleStyle,
+  }), __jsx("div", {
+    className: "absolute flex flex-col justify-end items-center p-2 w-full h-full ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
-      columnNumber: 17
+      columnNumber: 13
     }
-  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: description,
-    style: "m-1",
-    textStyle: textStyle.descriptionStyle,
+  }, __jsx("h2", {
+    className: textStyle.titleStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
-      columnNumber: 17
+      columnNumber: 21
     }
-  }), __jsx("button", {
-    onClick: clickAction,
-    className: "h-10 w-40 m-3 bg-white text-gray-900",
+  }, title), __jsx("p", {
+    className: textStyle.descriptionStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
-      columnNumber: 17
+      columnNumber: 21
     }
-  }, buttonText)), children);
+  }, description), __jsx("div", {
+    className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 21
+    }
+  }, __jsx("p", {
+    className: textStyle.buttonStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 112
+    }
+  }, buttonText))));
 }
 
 /***/ }),
@@ -1284,12 +1292,13 @@ module.exports = {
 /*!*************************************************!*\
   !*** ./components/graphics/imageCover/Cover.js ***!
   \*************************************************/
-/*! exports provided: default */
+/*! exports provided: default, Cover1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cover; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cover1", function() { return Cover1; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\imageCover\\Cover.js";
@@ -1337,6 +1346,79 @@ function Cover({
       columnNumber: 17
     }
   })));
+}
+function Cover1({
+  image,
+  title,
+  description,
+  buttonText
+}) {
+  return __jsx("div", {
+    className: "relative flex overflow-hidden my-4 mx-4 bg-gray-900",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, __jsx("img", {
+    className: "object-cover object-center",
+    src: image,
+    alt: "image cover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }), __jsx("div", {
+    className: "absolute flex justify-center items-end w-full h-full b",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flex flex-col justify-center items-center  w-10/12 h-4/12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 17
+    }
+  }, __jsx("h2", {
+    className: "text-white text-7xl font-bold",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 21
+    }
+  }, title), __jsx("p", {
+    className: "text-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 21
+    }
+  }, description), __jsx("div", {
+    className: "flex justify-center items-center m-5 bg-white w-4/12 h-2/12 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 21
+    }
+  }, __jsx("p", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 99
+    }
+  }, buttonText)))));
 }
 
 /***/ }),
@@ -1495,7 +1577,7 @@ function Layout({
   };
 
   return __jsx("div", {
-    className: "w-full h-full bg-xw-100",
+    className: "flex flex-col items-center w-full bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1546,10 +1628,116 @@ function Layout({
       lineNumber: 128,
       columnNumber: 13
     }
-  }), "  ", children);
+  }), children);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/widgets/product/ProductGrid.js":
+/*!***************************************************!*\
+  !*** ./components/widgets/product/ProductGrid.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\widgets\\product\\ProductGrid.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const ProductGrid = props => {
+  let content = __jsx("article", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "container h-auto w-full content-center",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "relative w-full bg-yellow-300 pb-1/1",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }, __jsx("img", {
+    className: "absolute w-full h-full object-cover",
+    src: props.image,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 21
+    }
+  }), __jsx("button", {
+    className: "absolute top-0 right-0 h-10 w-10 m-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 21
+    }
+  }, __jsx("img", {
+    src: "/heart-white.png",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 78
+    }
+  }))), __jsx("div", {
+    className: "h-auto w-full",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 17
+    }
+  }, __jsx("h3", {
+    className: "leading-tight font-sans font-medium text-base text-gray-900 pt-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 21
+    }
+  }, props.title), __jsx("strong", {
+    className: "leading-tight font-sans font-normal text-sm text-gray-800",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 21
+    }
+  }, props.description), __jsx("p", {
+    className: "leading-tight font-sans font-semibold text-lg text-gray-900",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 21
+    }
+  }, "MAD " + props.buttonText))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductGrid);
 
 /***/ }),
 
@@ -3271,10 +3459,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
 /* harmony import */ var _components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/MakersEntry/MakersEntry */ "./components/elements/MakersEntry/MakersEntry.js");
 /* harmony import */ var _components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/elements/RegionsEntry/RegionsEntry */ "./components/elements/RegionsEntry/RegionsEntry.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_widgets_product_ProductGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/widgets/product/ProductGrid */ "./components/widgets/product/ProductGrid.js");
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3284,7 +3474,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 const images = {
+  cover01: "images/Articles/cover-01.jpg",
+  cover02: "images/Articles/cover-02.jpg",
   cover1: "images/Articles/cover-1.jpg",
   cover2: "images/Articles/cover-2.jpg",
   cover3: "images/Articles/cover-3.jpg",
@@ -3305,7 +3499,7 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 29,
       columnNumber: 5
     }
   }, "HELLO");
@@ -3314,21 +3508,21 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
+      lineNumber: 33,
       columnNumber: 5
     }
-  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 34,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 35,
       columnNumber: 9
     }
   }, "MorMade"), __jsx("link", {
@@ -3337,35 +3531,51 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 36,
       columnNumber: 9
     }
-  })), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    style: "flex justify-center w-full",
-    height: "h-96 md:h-288",
-    width: "w-11/12 max-w-4xl",
-    image: images.cover7,
+  })), __jsx("div", {
+    className: "max-w-5xl",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 9
+    }
+  }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: images.cover01,
     title: "Dresses made to last",
     description: "Timeless designs made from recycled materials",
     buttonText: "SHOP NOW",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 7
+      lineNumber: 41,
+      columnNumber: 11
     }
-  }), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: images.cover02,
+    title: "Dresses made to last",
+    description: "Timeless designs made from recycled materials",
+    buttonText: "SHOP NOW",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 47,
+      columnNumber: 11
+    }
+  })), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
       columnNumber: 7
     }
   }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 58,
       columnNumber: 7
     }
   }));
@@ -3375,7 +3585,7 @@ const hello = ({
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
