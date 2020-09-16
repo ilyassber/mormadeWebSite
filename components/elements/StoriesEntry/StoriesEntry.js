@@ -13,11 +13,11 @@ function CentredCard({ image, title, description, link, width, imageHeight, desc
     }
 
     return (
-        <div className={`${style} flex flex-col justify-center ${width}`}>
-            <Cover image={image} height={imageHeight} style={`flex justify-center items-end ${imageHeight} w-full  overflow-hidden`} imageStyle="">
+        <div className={`${style} flex flex-col justify-center w-11/12 md:${width}`}>
+            <Cover image={image} height={`h-72 md:${imageHeight}`} style={`flex justify-center items-end h-72 md:${imageHeight} w-full  overflow-hidden`} imageStyle="">
                 <Text text={title} style={`m-5 w-9/12 md:hidden md:mb-1 text-white`} textStyle={styleFont.titleStyle} />
             </Cover>
-            <div className={`flex flex-col justify-start items-center p-5 pr-10 md:p-16 ${descriptionHeight} w-full bg-white`}>
+            <div className={`flex flex-col justify-start items-center p-5 pr-10 md:p-16 h-auto md:${descriptionHeight} w-full bg-white`}>
 
                 <Text text={title} style={`hidden md:block md:mb-1 text-gray-900`} textStyle={styleFont.titleStyle} />
 
@@ -39,7 +39,7 @@ function LeftCard({ image, title, description, link, height, imageWidth, descrip
         linkStyle: "font-yantramanav text-sm font-bold"
     }
     return (
-        <div className={`${style} flex flex-row justify-start  w-full ${height}`}>
+        <div className={`${style} flex flex-row justify-start w-full ${height}`}>
             <Cover image={image} height={height} style={`flex justify-center items-center ${imageWidth} ${height}  overflow-hidden`} imageStyle="transform hover:scale-105 translate-all ease-out duration-700">
             </Cover>
             <div className={`flex flex-col justify-center items-start p-16 ${descriptionWidth} h-full bg-white`}>
