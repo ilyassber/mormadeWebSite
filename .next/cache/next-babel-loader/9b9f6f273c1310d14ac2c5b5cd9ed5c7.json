@@ -1,0 +1,1 @@
+{"ast":null,"code":"import cookie from 'cookie';\nexport function parseCookies(req) {\n  return cookie.parse(req ? req.headers.cookie || \"\" : document.cookie);\n}","map":null,"metadata":{},"sourceType":"module"}

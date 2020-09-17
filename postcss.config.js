@@ -1,26 +1,25 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
+const plugins = {
+  'tailwindcss': {},
+  'autoprefixer': {},
+}
 
-    // Specify the paths to all of the template files in your project
+if (process.env.NODE_ENV === 'production') {
+  
+  plugins['@fullhuman/postcss-purgecss'] = {
     content: [
-      './public/**/*.html',
-      './src/**/*.js',
-      './pages/*.js',
-      // etc.
+      'pages/**/*.js',
+      'pages/*.js',
+      'components/**/**/*.js',
+      'components/**/*.js',
+      'components/*.js',
     ],
-  
-    // Include any special characters you're using in this regular expression
-    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-  })
-  
-  module.exports = {
-    plugins: [
-      'tailwindcss',
-      'autoprefixer',
-      ...process.env.NODE_ENV === 'production'
-        ? [purgecss]
-        : []
-    ]
+    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
   }
+}
+  
+module.exports = {
+  plugins,
+}
 
   /*
   require("tailwindcss"),
