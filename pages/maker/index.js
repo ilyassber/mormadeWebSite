@@ -21,7 +21,7 @@ const UserPage = props => {
     setIsLoading(true);
     axios.defaults.withCredentials = true
     if (props.cookies.utoken != null) {
-      axios.get('http://localhost:8000/products/')
+      axios.get('https://www.mormade.com/api/products/')
         .then(res => {
           console.log(res.data)
           setData(JSON.stringify(res.data));
