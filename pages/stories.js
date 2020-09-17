@@ -16,6 +16,12 @@ const images = {
     cover7: "images/Articles/cover-7.jpg",
     cover8: "images/Articles/cover-8.jpg",
     cover9: "images/Articles/cover-9.jpg",
+    cover01: "images/Articles/cover-01.jpg",
+    cover02: "images/Articles/cover-02.jpg",
+    cover03: "images/Articles/cover-03.jpg",
+    cover04: "images/Articles/cover-04.jpg",
+    cover05: "images/Articles/cover-05.jpg",
+    cover06: "images/Articles/cover-06.jpg",
 }
 
 
@@ -49,31 +55,53 @@ function Stories() {
 
             <StoryEntry
                 type={1}
+                image={images.cover03}
+                title="Innovation in every detail"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{ path: "/article", text: "Read The Story" }}
+                />
+            <StoryEntry
+                type={2}
+                image={images.cover04}
+                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{ path: "/article", text: "Read The Story" }}
+              />
+            <StoryEntry
+                type={2}
+                image={images.cover05}
+                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{ path: "/article", text: "Read The Story" }}
+             />
+            <StoryEntry
+                type={1}
+                image={images.cover06}
+                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{ path: "/article", text: "Read The Story" }}
+             />
+            <StoryEntry
+                type={2}
+                image={images.cover7}
+                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
+                description="With significant initiatives and amazing innovations, we can design clothes"
+                link={{ path: "/article", text: "Read The Story" }}
+             />
+            <StoryEntry
+                type={1}
                 image={images.cover3}
                 title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{ path: "/article", text: "Read The Story" }}
-                descriptionHeight=""
-                width="w-11/12 md:w-10/12"
-                style={`flex justify-center items-center w-full ${componentMargin}`} />
+             />
             <StoryEntry
-                type={1}
-                image={images.cover9}
+                type={3}
+                image={images.cover04}
                 title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
                 description="With significant initiatives and amazing innovations, we can design clothes"
                 link={{ path: "/article", text: "Read The Story" }}
-                descriptionHeight=""
-                width="w-11/12 md:w-8/12"
-                style={`flex justify-center items-center w-full ${componentMargin}`} />
-            <StoryEntry
-                type={1}
-                image={images.cover8}
-                title="Kangol x H&M feat Mabel: A streetwear collab for the self-made generation"
-                description="With significant initiatives and amazing innovations, we can design clothes"
-                link={{ path: "/article", text: "Read The Story" }}
-                descriptionHeight=""
-                width="w-11/12 md:w-10/12"
-                style={`flex justify-center items-center w-full ${componentMargin}`} />
+             />
         </Layout>
     )
 }
