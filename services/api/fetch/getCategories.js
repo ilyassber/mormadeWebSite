@@ -15,7 +15,7 @@ export function getCategories(lvl, id, csrttoken) {
             id: id
         }
         axios.defaults.withCredentials = true
-        axios.post('https://mormade.com/api/categories/', querystring.stringify(content), axiosConfig)
+        axios.post('https://www.mormade.com/api/categories/', querystring.stringify(content), axiosConfig)
             .then((response) => {
                 resolve(response.data)
             })
