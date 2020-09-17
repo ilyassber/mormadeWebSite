@@ -16,7 +16,7 @@ export function addProduct(data, csrttoken) {
         }
         console.log(content)
         axios.defaults.withCredentials = true
-        axios.post('http://localhost:8000/products/', querystring.stringify(content), axiosConfig)
+        axios.post('https://mormade.com/api/products/', querystring.stringify(content), axiosConfig)
             .then((response) => {
                 resolve(response.data)
             })
