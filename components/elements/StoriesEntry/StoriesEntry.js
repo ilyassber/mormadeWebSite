@@ -81,7 +81,7 @@ function RightCard({ image, title, description, link, height, imageWidth, descri
     )
 }
 
-export function LeftStoryEntry({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
+export function LeftStoryEntry1({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
 
 
     return (
@@ -98,7 +98,7 @@ export function LeftStoryEntry({ image, title, description, link, height, imageW
         </div>
     )
 }
-export function RightStoryEntry({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
+export function RightStoryEntry1({ image, title, description, link, height, imageWidth, descriptionWidth, style }) {
 
 
     return (
@@ -116,7 +116,7 @@ export function RightStoryEntry({ image, title, description, link, height, image
     )
 }
 
-export function CentredStoryEntry({ image, title, description, link, width, imageHeight, descriptionHeight, style }) {
+export function CentredStoryEntry1({ image, title, description, link, width, imageHeight, descriptionHeight, style }) {
 
 
     return (

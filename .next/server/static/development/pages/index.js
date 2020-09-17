@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -184,11 +184,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
-/* harmony import */ var _graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/textDisplayer/Text */ "./components/graphics/textDisplayer/Text.js");
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\alpha-displayer\\AlphaDisplayer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 function AlphaDisplayer({
   image,
@@ -208,7 +206,7 @@ function AlphaDisplayer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 9
     }
   }, __jsx("img", {
@@ -218,7 +216,7 @@ function AlphaDisplayer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 13,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -226,7 +224,7 @@ function AlphaDisplayer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 14,
       columnNumber: 13
     }
   }, __jsx("h2", {
@@ -234,7 +232,7 @@ function AlphaDisplayer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 15,
       columnNumber: 21
     }
   }, title), __jsx("p", {
@@ -242,15 +240,15 @@ function AlphaDisplayer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 16,
       columnNumber: 21
     }
   }, description), __jsx("div", {
-    className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white ",
+    className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white opacity-75",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 17,
       columnNumber: 21
     }
   }, __jsx("p", {
@@ -258,8 +256,8 @@ function AlphaDisplayer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 112
+      lineNumber: 17,
+      columnNumber: 122
     }
   }, buttonText))));
 }
@@ -1419,47 +1417,6 @@ function Cover1({
       columnNumber: 99
     }
   }, buttonText)))));
-}
-
-/***/ }),
-
-/***/ "./components/graphics/textDisplayer/Text.js":
-/*!***************************************************!*\
-  !*** ./components/graphics/textDisplayer/Text.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Text; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\textDisplayer\\Text.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-function Text({
-  text,
-  style,
-  textStyle
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 9
-    }
-  }, __jsx("p", {
-    className: textStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 13
-    }
-  }, text));
 }
 
 /***/ }),
@@ -3543,7 +3500,7 @@ const hello = ({
       columnNumber: 9
     }
   }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover01,
+    image: images.cover7,
     title: "Dresses made to last",
     description: "Timeless designs made from recycled materials",
     buttonText: "SHOP NOW",
@@ -3554,7 +3511,7 @@ const hello = ({
       columnNumber: 11
     }
   }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover02,
+    image: images.cover8,
     title: "Dresses made to last",
     description: "Timeless designs made from recycled materials",
     buttonText: "SHOP NOW",
@@ -3585,7 +3542,7 @@ const hello = ({
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

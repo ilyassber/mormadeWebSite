@@ -301,18 +301,16 @@ function Title(_ref) {
 
 /***/ }),
 
-/***/ "./components/elements/StoriesEntry/StoriesEntry.js":
-/*!**********************************************************!*\
-  !*** ./components/elements/StoriesEntry/StoriesEntry.js ***!
-  \**********************************************************/
-/*! exports provided: LeftStoryEntry, RightStoryEntry, CentredStoryEntry */
+/***/ "./components/elements/StoriesEntry/StoriesEntryRes.js":
+/*!*************************************************************!*\
+  !*** ./components/elements/StoriesEntry/StoriesEntryRes.js ***!
+  \*************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftStoryEntry", function() { return LeftStoryEntry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightStoryEntry", function() { return RightStoryEntry; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CentredStoryEntry", function() { return CentredStoryEntry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StoryEntry; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
@@ -323,7 +321,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit/md/ic_arrow_forward */ "./node_modules/react-icons-kit/md/ic_arrow_forward.js");
 /* harmony import */ var react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\StoriesEntry\\StoriesEntry.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\StoriesEntry\\StoriesEntryRes.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -338,7 +336,6 @@ function CentredCard(_ref) {
       description = _ref.description,
       link = _ref.link,
       width = _ref.width,
-      imageHeight = _ref.imageHeight,
       descriptionHeight = _ref.descriptionHeight,
       style = _ref.style;
   var styleFont = {
@@ -347,26 +344,33 @@ function CentredCard(_ref) {
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: "".concat(style, " flex flex-col justify-center w-11/12 md:").concat(width),
+    className: "".concat(width, " flex flex-col justify-center"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
       columnNumber: 9
     }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-72 md:".concat(imageHeight),
-    style: "flex justify-center items-end h-72 md:".concat(imageHeight, " w-full  overflow-hidden"),
-    imageStyle: "",
+  }, __jsx("div", {
+    className: "w-full flex justify-center overflow-hidden",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
       columnNumber: 13
     }
-  }), __jsx("div", {
-    className: "flex flex-col justify-start items-center p-5 pr-10 md:p-16 h-auto md:".concat(descriptionHeight, " w-full bg-white"),
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: image,
+    alt: "image cover",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 17
+    }
+  })), __jsx("div", {
+    className: "flex flex-col justify-start items-center p-5 pr-10 md:p-16 ".concat(descriptionHeight, " bg-white"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -443,68 +447,74 @@ function LeftCard(_ref2) {
       title = _ref2.title,
       description = _ref2.description,
       link = _ref2.link,
-      height = _ref2.height,
-      imageWidth = _ref2.imageWidth,
-      descriptionWidth = _ref2.descriptionWidth,
+      width = _ref2.width,
+      descriptionHeight = _ref2.descriptionHeight,
       style = _ref2.style;
   var styleFont = {
-    titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer ",
-    descriptionStyle: "font-amiri text-base",
+    titleStyle: "font-kumbhsans font-bold  md:text-xl hover:underline cursor-pointer text-center break-words",
+    descriptionStyle: "font-amiri text-base text-center",
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: "".concat(style, " flex flex-row justify-start w-full ").concat(height),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 9
-    }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: height,
-    style: "flex justify-center items-center ".concat(imageWidth, " ").concat(height, "  overflow-hidden"),
-    imageStyle: "transform hover:scale-105 translate-all ease-out duration-700",
+    className: "".concat(width, " flex flex-col justify-center"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "w-full flex justify-center overflow-hidden",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
       columnNumber: 13
     }
-  }), __jsx("div", {
-    className: "flex flex-col justify-center items-start p-16 ".concat(descriptionWidth, " h-full bg-white"),
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: image,
+    alt: "image cover",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45,
-      columnNumber: 13
+      columnNumber: 17
     }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: "mb-1 text-gray-900 ",
-    textStyle: styleFont.titleStyle,
+  })), __jsx("div", {
+    className: "flex flex-col justify-start items-center p-5 pr-10 md:p-16 ".concat(descriptionHeight, " bg-white"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47,
-      columnNumber: 17
+      columnNumber: 13
     }
-  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: description,
-    style: "mt-2 mb-2  text-gray-900 ",
-    textStyle: styleFont.descriptionStyle,
+  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: title,
+    style: " md:mb-1 text-gray-900",
+    textStyle: styleFont.titleStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49,
       columnNumber: 17
     }
-  }), __jsx("div", {
-    className: "mt-1 ",
+  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: description,
+    style: "md:mb-2  text-gray-900 ",
+    textStyle: styleFont.descriptionStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "md:mt-1",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -512,7 +522,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -520,7 +530,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -530,7 +540,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -538,7 +548,7 @@ function LeftCard(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 54,
       columnNumber: 197
     }
   }))))));
@@ -549,68 +559,74 @@ function RightCard(_ref3) {
       title = _ref3.title,
       description = _ref3.description,
       link = _ref3.link,
-      height = _ref3.height,
-      imageWidth = _ref3.imageWidth,
-      descriptionWidth = _ref3.descriptionWidth,
+      width = _ref3.width,
+      descriptionHeight = _ref3.descriptionHeight,
       style = _ref3.style;
   var styleFont = {
-    titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-right",
-    descriptionStyle: "font-amiri text-base text-right",
+    titleStyle: "font-kumbhsans font-bold  md:text-xl hover:underline cursor-pointer text-center break-words",
+    descriptionStyle: "font-amiri text-base text-center",
     linkStyle: "font-yantramanav text-sm font-bold"
   };
   return __jsx("div", {
-    className: "".concat(style, " flex flex-row-reverse justify-center  ").concat(height),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 9
-    }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: height,
-    style: "flex justify-center items-center ".concat(imageWidth, " ").concat(height, "  overflow-hidden"),
-    imageStyle: "transform hover:scale-105 translate-all ease-out duration-700",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
-    className: "flex flex-col justify-center items-end p-16 ".concat(descriptionWidth, " h-full bg-white"),
+    className: "".concat(width, " flex flex-col justify-center"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "w-full flex justify-center overflow-hidden",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
       columnNumber: 13
     }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: "mb-1 text-gray-900 ",
-    textStyle: styleFont.titleStyle,
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: image,
+    alt: "image cover",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72,
       columnNumber: 17
     }
-  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: description,
-    style: "mt-2 mb-2  text-gray-900 ",
-    textStyle: styleFont.descriptionStyle,
+  })), __jsx("div", {
+    className: "flex flex-col justify-start items-center p-5 pr-10 md:p-16 ".concat(descriptionHeight, " bg-white"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 74,
-      columnNumber: 17
+      columnNumber: 13
     }
-  }), __jsx("div", {
-    className: "mt-1 ",
+  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: title,
+    style: " md:mb-1 text-gray-900",
+    textStyle: styleFont.titleStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76,
+      columnNumber: 17
+    }
+  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    text: description,
+    style: "md:mb-2  text-gray-900 ",
+    textStyle: styleFont.descriptionStyle,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "md:mt-1",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
       columnNumber: 17
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -618,7 +634,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 81,
       columnNumber: 21
     }
   }, __jsx("a", {
@@ -626,7 +642,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 81,
       columnNumber: 44
     }
   }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -636,7 +652,7 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 81,
       columnNumber: 112
     }
   }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
@@ -644,98 +660,31 @@ function RightCard(_ref3) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 81,
       columnNumber: 197
     }
   }))))));
 }
 
-function LeftStoryEntry(_ref4) {
-  var image = _ref4.image,
+function StoryEntry(_ref4) {
+  var type = _ref4.type,
+      image = _ref4.image,
       title = _ref4.title,
       description = _ref4.description,
       link = _ref4.link,
-      height = _ref4.height,
-      imageWidth = _ref4.imageWidth,
-      descriptionWidth = _ref4.descriptionWidth,
+      width = _ref4.width,
+      imageHeight = _ref4.imageHeight,
+      descriptionHeight = _ref4.descriptionHeight,
       style = _ref4.style;
   return __jsx("div", {
     className: style,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 92,
       columnNumber: 9
     }
-  }, __jsx(LeftCard, {
-    image: image,
-    title: title,
-    description: description,
-    link: link,
-    height: height,
-    imageWidth: imageWidth,
-    descriptionWidth: descriptionWidth,
-    style: "",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89,
-      columnNumber: 13
-    }
-  }));
-}
-function RightStoryEntry(_ref5) {
-  var image = _ref5.image,
-      title = _ref5.title,
-      description = _ref5.description,
-      link = _ref5.link,
-      height = _ref5.height,
-      imageWidth = _ref5.imageWidth,
-      descriptionWidth = _ref5.descriptionWidth,
-      style = _ref5.style;
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105,
-      columnNumber: 9
-    }
-  }, __jsx(RightCard, {
-    image: image,
-    title: title,
-    description: description,
-    link: link,
-    height: height,
-    imageWidth: imageWidth,
-    descriptionWidth: descriptionWidth,
-    style: "",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106,
-      columnNumber: 13
-    }
-  }));
-}
-function CentredStoryEntry(_ref6) {
-  var image = _ref6.image,
-      title = _ref6.title,
-      description = _ref6.description,
-      link = _ref6.link,
-      width = _ref6.width,
-      imageHeight = _ref6.imageHeight,
-      descriptionHeight = _ref6.descriptionHeight,
-      style = _ref6.style;
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 123,
-      columnNumber: 9
-    }
-  }, __jsx(CentredCard, {
+  }, type === 1 && __jsx(CentredCard, {
     image: image,
     title: title,
     description: description,
@@ -747,8 +696,38 @@ function CentredStoryEntry(_ref6) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124,
-      columnNumber: 13
+      lineNumber: 93,
+      columnNumber: 28
+    }
+  }), type === 2 && __jsx(LeftCard, {
+    image: image,
+    title: title,
+    description: description,
+    link: link,
+    width: width,
+    imageHeight: imageHeight,
+    descriptionHeight: descriptionHeight,
+    style: "",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102,
+      columnNumber: 28
+    }
+  }), type === 2 && __jsx(RightCard, {
+    image: image,
+    title: title,
+    description: description,
+    link: link,
+    width: width,
+    imageHeight: imageHeight,
+    descriptionHeight: descriptionHeight,
+    style: "",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111,
+      columnNumber: 28
     }
   }));
 }
@@ -15014,7 +14993,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
 /* harmony import */ var _components_elements_Article_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/Article/article-utilities/ArticleCover */ "./components/elements/Article/article-utilities/ArticleCover.js");
-/* harmony import */ var _components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/StoriesEntry/StoriesEntry */ "./components/elements/StoriesEntry/StoriesEntry.js");
+/* harmony import */ var _components_elements_StoriesEntry_StoriesEntryRes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/StoriesEntry/StoriesEntryRes */ "./components/elements/StoriesEntry/StoriesEntryRes.js");
 /* harmony import */ var _components_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/graphics/textDisplayer/Text */ "./components/graphics/textDisplayer/Text.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
@@ -15049,25 +15028,26 @@ function Stories() {
       lineNumber: 28,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
-    image: images.cover9,
+  }, __jsx(_components_elements_StoriesEntry_StoriesEntryRes__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    type: 1,
+    image: images.cover3,
     title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
     description: "With significant initiatives and amazing innovations, we can design clothes",
     link: {
       path: "/article",
       text: "Read The Story"
     },
-    width: "w-11/12 max-w-6xl",
-    imageHeight: "h-132",
-    descriptionHeight: "h-64",
+    descriptionHeight: "",
+    width: "w-11/12 md:w-10/12",
     style: "flex justify-center items-center w-full ".concat(componentMargin),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50,
-      columnNumber: 1
+      columnNumber: 13
     }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
+  }), __jsx(_components_elements_StoriesEntry_StoriesEntryRes__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    type: 1,
     image: images.cover9,
     title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
     description: "With significant initiatives and amazing innovations, we can design clothes",
@@ -15075,17 +15055,17 @@ function Stories() {
       path: "/article",
       text: "Read The Story"
     },
-    width: "w-11/12 max-w-6xl",
-    imageHeight: "h-132",
-    descriptionHeight: "h-64",
+    descriptionHeight: "",
+    width: "w-11/12 md:w-8/12",
     style: "flex justify-center items-center w-full ".concat(componentMargin),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59,
-      columnNumber: 1
+      columnNumber: 13
     }
-  }), __jsx(_components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__["CentredStoryEntry"], {
+  }), __jsx(_components_elements_StoriesEntry_StoriesEntryRes__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    type: 1,
     image: images.cover8,
     title: "Kangol x H&M feat Mabel: A streetwear collab for the self-made generation",
     description: "With significant initiatives and amazing innovations, we can design clothes",
@@ -15093,15 +15073,14 @@ function Stories() {
       path: "/article",
       text: "Read The Story"
     },
-    width: "w-8/12 max-w-4xl",
-    imageHeight: "h-192",
-    descriptionHeight: "h-64",
+    descriptionHeight: "",
+    width: "w-11/12 md:w-10/12",
     style: "flex justify-center items-center w-full ".concat(componentMargin),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 68,
-      columnNumber: 1
+      columnNumber: 13
     }
   }));
 }
@@ -15110,7 +15089,7 @@ function Stories() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstories&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5CmormadeWebSite%5Cpages%5Cstories.js ***!
   \*****************************************************************************************************************************************************/
@@ -15133,5 +15112,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=stories.js.map
