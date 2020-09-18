@@ -47,12 +47,25 @@ module.exports = {
         '9/12': '75%',
         '10/12': '83.333333%',
         '11/12': '91.666667%',
+      },
+      keyframes: {
+        ticker: {
+          '0%': { transform: 'translate3d(0, 0, 0)' },
+          '100%': { transform: 'translate3d(-100%, 0, 0)' },
+        }
+      },
+      animation: {
+        ticker: 'ticker 30s linear infinite',
       }
     },
   },
   variants: {
     borderWidth: ['responsive', 'hover', 'focus'],
     visibility: ['responsive', 'hover', 'focus'],
+    animation: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
+  corePlugins: {
+    animation: true,
+  }
 }

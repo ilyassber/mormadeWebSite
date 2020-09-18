@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { parseCookies } from '../../lib/parseCookies'
-import { Navbar, SideBar } from '../../components/elements/bar'
+import { Navbar, SideBar, WelcomeBar } from '../../components/elements/bar'
 import { ProductGrid } from '../../components/widgets/product'
 import ProductGridList from '../../components/elements/list/ProductGridList'
 import { AddProduct } from '../../components/elements/product'
@@ -21,7 +21,7 @@ const UserPage = props => {
     setIsLoading(true);
     axios.defaults.withCredentials = true
     if (props.cookies.utoken != null) {
-      axios.get('https://www.mormade.com/api/products/')
+      axios.get(process.env.domain + '/api/products/')
         .then(res => {
           console.log(res.data)
           setData(JSON.stringify(res.data));
@@ -53,6 +53,7 @@ const UserPage = props => {
     content = (
       <div className="w-full">
         <Navbar cookies={props.cookies} className="w-full" />
+        <WelcomeBar className="h-auto w-full pt-10" />
         <div className="w-full flex pt-10">
           <div className="w-64 h-full">
             <SideBar className="w-full h-full" clicked={clikced} data={sideBarData} onClick={(x) => setClicked(x)} />
