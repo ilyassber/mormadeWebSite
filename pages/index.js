@@ -39,18 +39,29 @@ const hello = ({ cookies = {} }) => {
         <div className="max-w-5xl">
           
           <AlphaDisplayer
-            image={images.cover7}
+            image={images.cover01}
             title="Dresses made to last"
             description="Timeless designs made from recycled materials"
             buttonText="SHOP NOW"
           />
           <AlphaDisplayer
-            image={images.cover8}
+            image={images.cover02}
             title="Dresses made to last"
             description="Timeless designs made from recycled materials"
             buttonText="SHOP NOW"
           />
-          
+          <AlphaDisplayer
+            image={images.cover02}
+            title="Dresses made to last"
+            description="Timeless designs made from recycled materials"
+            buttonText="SHOP NOW"
+          />
+          <AlphaDisplayer
+            image={images.cover7}
+            title="Dresses made to last"
+            description="Timeless designs made from recycled materials"
+            buttonText="SHOP NOW"
+          />       
         </div>
 
 

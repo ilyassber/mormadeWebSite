@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -115,948 +115,151 @@ module.exports = require("next/dist/next-server/lib/utils.js");
 
 /***/ }),
 
-/***/ "./components/elements/Article/Article.js":
-/*!************************************************!*\
-  !*** ./components/elements/Article/Article.js ***!
-  \************************************************/
+/***/ "./components/elements/MakersEntry/MakersEntry.js":
+/*!********************************************************!*\
+  !*** ./components/elements/MakersEntry/MakersEntry.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MakersEntry; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _article_utilities_ArticleContent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./article-utilities/ArticleContent */ "./components/elements/Article/article-utilities/ArticleContent.js");
-/* harmony import */ var _article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-utilities/ArticleCover */ "./components/elements/Article/article-utilities/ArticleCover.js");
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\Article.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\MakersEntry\\MakersEntry.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-function Article({
-  data
-}) {
-  const text = "In 1506, the king of Portugal, D. Manuel I, ordered a fortress to be built there, named Castelo Real de Mogador. Altogether, the Portuguese are documented to have seized six Moroccan towns and built six stand-alone fortresses on the Moroccan Atlantic coast, between the river Loukos in the north and the river of Sous in the south. Four of them only had a short duration: Graciosa (1489), São João da Mamora (1515), Castelo Real of Mogador (1506–10) and Aguz (1520–25). Two became permanent urban settlements: Santa Cruz do Cabo de Gué (modern Agadir, founded in 1505–06), and Mazagan, founded in 1514–17. Following the 1541 Fall of Agadir, the Portuguese had to abandon most of their settlements between 1541 and 1550, although they were able to keep Ceuta, Tangier and Mazagan.";
-  const description = "It’s perhaps not surprising then that for the H&M fall kidswear collaboration Chen focuses on a fantastical and expressive world of animals, florals and other nature scenarios.";
+function MakersEntry() {
   return __jsx("div", {
-    className: "flex flex-col justify-center items-center w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 5,
       columnNumber: 9
     }
-  }, __jsx(_article_utilities_ArticleCover__WEBPACK_IMPORTED_MODULE_2__["ArticleCover"], {
-    image: "images/Articles/cover-9.jpg",
-    title: "Article",
-    description: text,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 13
-    }
-  }));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Article);
-
-/***/ }),
-
-/***/ "./components/elements/Article/article-utilities/ArticleContent.js":
-/*!*************************************************************************!*\
-  !*** ./components/elements/Article/article-utilities/ArticleContent.js ***!
-  \*************************************************************************/
-/*! exports provided: ArticleContent, ArticleContent1, ArticleContent2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent", function() { return ArticleContent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent1", function() { return ArticleContent1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleContent2", function() { return ArticleContent2; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
-/* harmony import */ var _article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-widgets/Title */ "./components/elements/Article/article-utilities/article-widgets/Title.js");
-/* harmony import */ var _article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article-widgets/Description */ "./components/elements/Article/article-utilities/article-widgets/Description.js");
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\ArticleContent.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-// import Cover from './article-widgets/Cover'
-
-
-
-function ArticleContent({
-  image,
-  text,
-  title
-}) {
-  return __jsx("div", {
-    className: "flex flex-col justify-center items-center mt-20 mb-20 w-full ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 9
-    }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-180",
-    style: "flex items-center mr-10 w-180 h-180 rounded-full overflow-hidden shadow",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 13
-    }
-  }, __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: text,
-    style: "flex justify-center items-center p-20  w-144 ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 13
-    }
-  })));
-}
-function ArticleContent1({
-  image,
-  text,
-  title
-}) {
-  return __jsx("div", {
-    className: "flex flex-row mt-20 mb-20 w-full h-132 ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 9
-    }
-  }, __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: text,
-    style: "flex justify-center items-center p-20  w-144 h-144 rounded-full ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 13
-    }
-  }), __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-180",
-    style: "flex flex-1 items-center w-216 h-132 rounded-sm overflow-hidden shadow",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 13
-    }
-  }));
-}
-function ArticleContent2({
-  image,
-  text,
-  title
-}) {
-  return __jsx("div", {
-    className: "flex flex-row mt-20 mb-20 w-full",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 9
-    }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-180",
-    style: "flex items-center w-180 h-180 rounded-full overflow-hidden shadow",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: text,
-    style: "flex flex-1 justify-center items-center p-20  w-144 h-180  ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 13
-    }
-  }));
+  }, "Makers Entry");
 }
 
 /***/ }),
 
-/***/ "./components/elements/Article/article-utilities/ArticleCover.js":
-/*!***********************************************************************!*\
-  !*** ./components/elements/Article/article-utilities/ArticleCover.js ***!
-  \***********************************************************************/
-/*! exports provided: ArticleCover, ArticleCover1, ArticleCover2 */
+/***/ "./components/elements/RegionsEntry/RegionsEntry.js":
+/*!**********************************************************!*\
+  !*** ./components/elements/RegionsEntry/RegionsEntry.js ***!
+  \**********************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleCover", function() { return ArticleCover; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleCover1", function() { return ArticleCover1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ArticleCover2", function() { return ArticleCover2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RegionsEntry; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./article-widgets/Cover */ "./components/elements/Article/article-utilities/article-widgets/Cover.js");
-/* harmony import */ var _article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./article-widgets/Title */ "./components/elements/Article/article-utilities/article-widgets/Title.js");
-/* harmony import */ var _article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./article-widgets/Description */ "./components/elements/Article/article-utilities/article-widgets/Description.js");
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\ArticleCover.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\RegionsEntry\\RegionsEntry.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+function RegionsEntry() {
+  return __jsx("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 9
+    }
+  }, "Regions Entry");
+}
+
+/***/ }),
+
+/***/ "./components/elements/alpha-displayer/AlphaDisplayer.js":
+/*!***************************************************************!*\
+  !*** ./components/elements/alpha-displayer/AlphaDisplayer.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AlphaDisplayer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\alpha-displayer\\AlphaDisplayer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-
-
-function ArticleCover({
+function AlphaDisplayer({
   image,
   title,
-  description
+  description,
+  buttonText,
+  clickAction
 }) {
+  const textStyle = {
+    titleStyle: "font-kumbhsans font-bold text-lg md:text-2xl  text-center break-words text-white",
+    descriptionStyle: "mb-2 md:m-2 tracking-tight md:tracking-widest font-medium md:font-extrabold text-xs md:text-base text-center text-white",
+    buttonStyle: "tracking-widest font-yantramanav text-sm font-bold "
+  };
   return __jsx("div", {
-    className: "flex flex-col justify-start items-center mb-2 w-11/12",
+    onClick: clickAction,
+    className: "relative flex justify-center overflow-hidden my-5 mx-5 cursor-pointer",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 12,
       columnNumber: 9
     }
-  }, __jsx(_article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-180",
-    style: "relative flex flex-col justify-center items-center mt-4 w-full h-180  bg-gray-400 shadow-sm",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 12
-    }
-  }, __jsx(_article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: title,
-    style: "absolute -bottom-12 flex justify-center items-center w-108 h-32 font-abrilfatface font-bold text-7xl bg-white bg-opacity-50 shadow-lg",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 13
-    }
-  })), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: description,
-    style: "mt-10 p-5 w-full bg-white shadow-sm ",
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: image,
+    alt: "image cover",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 13
     }
-  }));
-}
-function ArticleCover1({
-  image,
-  title,
-  description
-}) {
-  return __jsx("div", {
-    className: " flex flex-col justify-start items-center w-full  ",
+  }), __jsx("div", {
+    className: "absolute flex flex-col justify-end items-center p-2 w-full h-full ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 9
-    }
-  }, __jsx(_article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: title,
-    style: "flex justify-center items-center w-64 h-24 font-bold text-3xl",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 14,
       columnNumber: 13
     }
-  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: description,
-    style: " p-5 w-6/12 bg-white shadow-sm ",
+  }, __jsx("h2", {
+    className: textStyle.titleStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
+      lineNumber: 15,
+      columnNumber: 21
     }
-  }), __jsx(_article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-204",
-    style: "w-11/12 h-204 overflow-hidden bg-gray-400 shadow-sm",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 12
-    }
-  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: description,
-    style: "m-10 p-5 w-6/12 bg-white shadow-sm ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 13
-    }
-  }));
-}
-function ArticleCover2({
-  image,
-  title,
-  description
-}) {
-  return __jsx("div", {
-    className: "relative flex flex-col justify-start items-center w-full  ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 9
-    }
-  }, __jsx(_article_widgets_Title__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: title,
-    style: "absolute top-48 left-24 flex justify-center items-center h-24 font-abrilfatface font-thin text-9xl text-white",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 13
-    }
-  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: description,
-    style: " p-5 w-6/12 bg-white shadow-sm ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 13
-    }
-  }), __jsx(_article_widgets_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: "h-288",
-    style: "w-full h-288 overflow-hidden bg-gray-400 shadow-sm",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 12
-    }
-  }), __jsx(_article_widgets_Description__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    text: description,
-    style: "absolute bottom-36 right-12 m-10 p-5 w-4/12 text-white shadow-sm bg-gray-900 bg-opacity-50 shadow-md",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 13
-    }
-  }));
-} // export default {
-//     ArticleCover, ArticleCover1, ArticleCover2
-// }
-
-/***/ }),
-
-/***/ "./components/elements/Article/article-utilities/article-widgets/Cover.js":
-/*!********************************************************************************!*\
-  !*** ./components/elements/Article/article-utilities/article-widgets/Cover.js ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cover; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\article-widgets\\Cover.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-function Cover({
-  children,
-  image,
-  height,
-  style
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 9
-    }
-  }, __jsx("div", {
-    className: "w-full h-full overflow-hidden",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 13
-    }
-  }, __jsx("img", {
-    className: `${height} w-full object-cover object-center`,
-    src: image,
-    alt: "image cover",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 17
-    }
-  })), children);
-}
-
-/***/ }),
-
-/***/ "./components/elements/Article/article-utilities/article-widgets/Description.js":
-/*!**************************************************************************************!*\
-  !*** ./components/elements/Article/article-utilities/article-widgets/Description.js ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Description; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\article-widgets\\Description.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-function Description({
-  text,
-  style
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 9
-    }
-  }, __jsx("p", {
-    className: "text-justify",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 13
-    }
-  }, text));
-}
-
-/***/ }),
-
-/***/ "./components/elements/Article/article-utilities/article-widgets/Title.js":
-/*!********************************************************************************!*\
-  !*** ./components/elements/Article/article-utilities/article-widgets/Title.js ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Title; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\Article\\article-utilities\\article-widgets\\Title.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-function Title({
-  title,
-  style
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 9
-    }
-  }, __jsx("h1", {
-    className: "text-center",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 13
-    }
-  }, title));
-}
-
-/***/ }),
-
-/***/ "./components/elements/StoriesEntry/StoriesEntry.js":
-/*!**********************************************************!*\
-  !*** ./components/elements/StoriesEntry/StoriesEntry.js ***!
-  \**********************************************************/
-/*! exports provided: LeftStoryEntry1, RightStoryEntry1, CentredStoryEntry1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeftStoryEntry1", function() { return LeftStoryEntry1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RightStoryEntry1", function() { return RightStoryEntry1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CentredStoryEntry1", function() { return CentredStoryEntry1; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
-/* harmony import */ var _graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/textDisplayer/Text */ "./components/graphics/textDisplayer/Text.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit */ "react-icons-kit");
-/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit/md/ic_arrow_forward */ "react-icons-kit/md/ic_arrow_forward");
-/* harmony import */ var react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\elements\\StoriesEntry\\StoriesEntry.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-function CentredCard({
-  image,
-  title,
-  description,
-  link,
-  width,
-  imageHeight,
-  descriptionHeight,
-  style
-}) {
-  const styleFont = {
-    titleStyle: "font-kumbhsans font-bold  md:text-xl hover:underline cursor-pointer text-center break-words",
-    descriptionStyle: "font-amiri text-base text-center",
-    linkStyle: "font-yantramanav text-sm font-bold"
-  };
-  return __jsx("div", {
-    className: `${style} flex flex-col justify-center w-11/12 md:${width}`,
+  }, title), __jsx("p", {
+    className: textStyle.descriptionStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
-      columnNumber: 9
+      columnNumber: 21
     }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: `h-72 md:${imageHeight}`,
-    style: `flex justify-center items-end h-72 md:${imageHeight} w-full  overflow-hidden`,
-    imageStyle: "",
+  }, description), __jsx("div", {
+    className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
-    className: `flex flex-col justify-start items-center p-5 pr-10 md:p-16 h-auto md:${descriptionHeight} w-full bg-white`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 13
-    }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: ` md:mb-1 text-gray-900`,
-    textStyle: styleFont.titleStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 17
-    }
-  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: description,
-    style: `md:mb-2  text-gray-900 `,
-    textStyle: styleFont.descriptionStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 17
-    }
-  }), __jsx("div", {
-    className: "md:mt-1",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 17
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: link.path,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
       columnNumber: 21
     }
-  }, __jsx("a", {
-    className: "flex items-center justify-start hover:text-green-600",
+  }, __jsx("p", {
+    className: textStyle.buttonStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 44
+      lineNumber: 17,
+      columnNumber: 111
     }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: link.text,
-    style: `mr-2 text-gray-90`,
-    textStyle: styleFont.linkStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 112
-    }
-  }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
-    icon: react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__["ic_arrow_forward"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 197
-    }
-  }))))));
-}
-
-function LeftCard({
-  image,
-  title,
-  description,
-  link,
-  height,
-  imageWidth,
-  descriptionWidth,
-  style
-}) {
-  const styleFont = {
-    titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer ",
-    descriptionStyle: "font-amiri text-base",
-    linkStyle: "font-yantramanav text-sm font-bold"
-  };
-  return __jsx("div", {
-    className: `${style} flex flex-row justify-start w-full ${height}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 9
-    }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: height,
-    style: `flex justify-center items-center ${imageWidth} ${height}  overflow-hidden`,
-    imageStyle: "transform hover:scale-105 translate-all ease-out duration-700",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
-    className: `flex flex-col justify-center items-start p-16 ${descriptionWidth} h-full bg-white`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 13
-    }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: `mb-1 text-gray-900 `,
-    textStyle: styleFont.titleStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
-      columnNumber: 17
-    }
-  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: description,
-    style: `mt-2 mb-2  text-gray-900 `,
-    textStyle: styleFont.descriptionStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49,
-      columnNumber: 17
-    }
-  }), __jsx("div", {
-    className: "mt-1 ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 17
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: link.path,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 21
-    }
-  }, __jsx("a", {
-    className: "flex items-center justify-start hover:text-green-600",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 44
-    }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: link.text,
-    style: `mr-2 text-gray-90`,
-    textStyle: styleFont.linkStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 112
-    }
-  }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
-    icon: react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__["ic_arrow_forward"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 197
-    }
-  }))))));
-}
-
-function RightCard({
-  image,
-  title,
-  description,
-  link,
-  height,
-  imageWidth,
-  descriptionWidth,
-  style
-}) {
-  const styleFont = {
-    titleStyle: "font-kumbhsans font-bold text-xl hover:underline cursor-pointer text-right",
-    descriptionStyle: "font-amiri text-base text-right",
-    linkStyle: "font-yantramanav text-sm font-bold"
-  };
-  return __jsx("div", {
-    className: `${style} flex flex-row-reverse justify-center  ${height}`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 9
-    }
-  }, __jsx(_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    image: image,
-    height: height,
-    style: `flex justify-center items-center ${imageWidth} ${height}  overflow-hidden`,
-    imageStyle: "transform hover:scale-105 translate-all ease-out duration-700",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
-    className: `flex flex-col justify-center items-end p-16 ${descriptionWidth} h-full bg-white`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70,
-      columnNumber: 13
-    }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: title,
-    style: `mb-1 text-gray-900 `,
-    textStyle: styleFont.titleStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72,
-      columnNumber: 17
-    }
-  }), __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: description,
-    style: `mt-2 mb-2  text-gray-900 `,
-    textStyle: styleFont.descriptionStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74,
-      columnNumber: 17
-    }
-  }), __jsx("div", {
-    className: "mt-1 ",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 76,
-      columnNumber: 17
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: link.path,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77,
-      columnNumber: 21
-    }
-  }, __jsx("a", {
-    className: "flex items-center justify-start hover:text-green-600",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77,
-      columnNumber: 44
-    }
-  }, __jsx(_graphics_textDisplayer_Text__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    text: link.text,
-    style: `mr-2 text-gray-90`,
-    textStyle: styleFont.linkStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77,
-      columnNumber: 112
-    }
-  }), __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
-    icon: react_icons_kit_md_ic_arrow_forward__WEBPACK_IMPORTED_MODULE_5__["ic_arrow_forward"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77,
-      columnNumber: 197
-    }
-  }))))));
-}
-
-function LeftStoryEntry1({
-  image,
-  title,
-  description,
-  link,
-  height,
-  imageWidth,
-  descriptionWidth,
-  style
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88,
-      columnNumber: 9
-    }
-  }, __jsx(LeftCard, {
-    image: image,
-    title: title,
-    description: description,
-    link: link,
-    height: height,
-    imageWidth: imageWidth,
-    descriptionWidth: descriptionWidth,
-    style: "",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 89,
-      columnNumber: 13
-    }
-  }));
-}
-function RightStoryEntry1({
-  image,
-  title,
-  description,
-  link,
-  height,
-  imageWidth,
-  descriptionWidth,
-  style
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105,
-      columnNumber: 9
-    }
-  }, __jsx(RightCard, {
-    image: image,
-    title: title,
-    description: description,
-    link: link,
-    height: height,
-    imageWidth: imageWidth,
-    descriptionWidth: descriptionWidth,
-    style: "",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106,
-      columnNumber: 13
-    }
-  }));
-}
-function CentredStoryEntry1({
-  image,
-  title,
-  description,
-  link,
-  width,
-  imageHeight,
-  descriptionHeight,
-  style
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 123,
-      columnNumber: 9
-    }
-  }, __jsx(CentredCard, {
-    image: image,
-    title: title,
-    description: description,
-    link: link,
-    width: width,
-    imageHeight: imageHeight,
-    descriptionHeight: descriptionHeight,
-    style: "",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 124,
-      columnNumber: 13
-    }
-  }));
+  }, buttonText))));
 }
 
 /***/ }),
@@ -2218,47 +1421,6 @@ function Cover1({
 
 /***/ }),
 
-/***/ "./components/graphics/textDisplayer/Text.js":
-/*!***************************************************!*\
-  !*** ./components/graphics/textDisplayer/Text.js ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Text; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\graphics\\textDisplayer\\Text.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-function Text({
-  text,
-  style,
-  textStyle
-}) {
-  return __jsx("div", {
-    className: style,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 9
-    }
-  }, __jsx("p", {
-    className: textStyle,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 13
-    }
-  }, text));
-}
-
-/***/ }),
-
 /***/ "./components/layout.js":
 /*!******************************!*\
   !*** ./components/layout.js ***!
@@ -2427,6 +1589,112 @@ function Layout({
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/widgets/product/ProductGrid.js":
+/*!***************************************************!*\
+  !*** ./components/widgets/product/ProductGrid.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\components\\widgets\\product\\ProductGrid.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const ProductGrid = props => {
+  let content = __jsx("article", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "container h-auto w-full content-center",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "relative w-full bg-yellow-300 pb-1/1",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }, __jsx("img", {
+    className: "absolute w-full h-full object-cover",
+    src: props.image,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 21
+    }
+  }), __jsx("button", {
+    className: "absolute top-0 right-0 h-10 w-10 m-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 21
+    }
+  }, __jsx("img", {
+    src: "/heart-white.png",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 78
+    }
+  }))), __jsx("div", {
+    className: "h-auto w-full",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 17
+    }
+  }, __jsx("h3", {
+    className: "leading-tight font-sans font-medium text-base text-gray-900 pt-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 21
+    }
+  }, props.title), __jsx("strong", {
+    className: "leading-tight font-sans font-normal text-sm text-gray-800",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 21
+    }
+  }, props.description), __jsx("p", {
+    className: "leading-tight font-sans font-semibold text-lg text-gray-900",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 21
+    }
+  }, "MAD " + props.buttonText))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductGrid);
 
 /***/ }),
 
@@ -4133,10 +3401,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/article.js":
-/*!**************************!*\
-  !*** ./pages/article.js ***!
-  \**************************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4145,18 +3413,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _components_elements_Article_Article__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/Article/Article */ "./components/elements/Article/Article.js");
-/* harmony import */ var _components_elements_StoriesEntry_StoriesEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/StoriesEntry/StoriesEntry */ "./components/elements/StoriesEntry/StoriesEntry.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\pages\\article.js";
-
+/* harmony import */ var _components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/elements/alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
+/* harmony import */ var _components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/elements/MakersEntry/MakersEntry */ "./components/elements/MakersEntry/MakersEntry.js");
+/* harmony import */ var _components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/elements/RegionsEntry/RegionsEntry */ "./components/elements/RegionsEntry/RegionsEntry.js");
+/* harmony import */ var _components_graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_widgets_product_ProductGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/widgets/product/ProductGrid */ "./components/widgets/product/ProductGrid.js");
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\mormadeWebSite\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+
+
+
+
+
 const images = {
+  cover01: "images/Articles/cover-01.jpg",
+  cover02: "images/Articles/cover-02.jpg",
   cover1: "images/Articles/cover-1.jpg",
   cover2: "images/Articles/cover-2.jpg",
   cover3: "images/Articles/cover-3.jpg",
@@ -4168,37 +3447,143 @@ const images = {
   cover9: "images/Articles/cover-9.jpg"
 };
 
-function Stories() {
-  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
+const hello = ({
+  cookies = {}
+}) => {
+  console.log(cookies);
+
+  let contentDOM = __jsx("h1", {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 29,
+      columnNumber: 5
+    }
+  }, "HELLO");
+
+  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 5
+    }
+  }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 7
+    }
+  }, __jsx("title", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_Article_Article__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __self: this,
+  }, "MorMade"), __jsx("link", {
+    rel: "icon",
+    href: "/logo.png",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 13
+      lineNumber: 36,
+      columnNumber: 9
+    }
+  })), __jsx("div", {
+    className: "max-w-5xl",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 9
+    }
+  }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: images.cover01,
+    title: "Dresses made to last",
+    description: "Timeless designs made from recycled materials",
+    buttonText: "SHOP NOW",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 11
+    }
+  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: images.cover02,
+    title: "Dresses made to last",
+    description: "Timeless designs made from recycled materials",
+    buttonText: "SHOP NOW",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 11
+    }
+  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: images.cover02,
+    title: "Dresses made to last",
+    description: "Timeless designs made from recycled materials",
+    buttonText: "SHOP NOW",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 11
+    }
+  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    image: images.cover7,
+    title: "Dresses made to last",
+    description: "Timeless designs made from recycled materials",
+    buttonText: "SHOP NOW",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 11
+    }
+  })), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 7
+    }
+  }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 7
     }
   }));
-}
+};
 
-/* harmony default export */ __webpack_exports__["default"] = (Stories);
+/* harmony default export */ __webpack_exports__["default"] = (hello);
 
 /***/ }),
 
-/***/ 7:
-/*!********************************!*\
-  !*** multi ./pages/article.js ***!
-  \********************************/
+/***/ 3:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Soguma\MorMade_project\mormadeWebSite\pages\article.js */"./pages/article.js");
+module.exports = __webpack_require__(/*! C:\Users\Soguma\MorMade_project\mormadeWebSite\pages\index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 
@@ -4279,17 +3664,6 @@ module.exports = require("react-icons-kit/icomoon/cross");
 
 /***/ }),
 
-/***/ "react-icons-kit/md/ic_arrow_forward":
-/*!******************************************************!*\
-  !*** external "react-icons-kit/md/ic_arrow_forward" ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-icons-kit/md/ic_arrow_forward");
-
-/***/ }),
-
 /***/ "react-icons-kit/md/ic_menu":
 /*!*********************************************!*\
   !*** external "react-icons-kit/md/ic_menu" ***!
@@ -4324,4 +3698,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=article.js.map
+//# sourceMappingURL=index.js.map

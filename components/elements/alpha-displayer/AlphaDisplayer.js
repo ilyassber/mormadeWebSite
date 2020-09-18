@@ -14,7 +14,7 @@ export default function AlphaDisplayer({image, title, description, buttonText, c
             <div className="absolute flex flex-col justify-end items-center p-2 w-full h-full ">
                     <h2 className={textStyle.titleStyle}>{title}</h2>
                     <p className={textStyle.descriptionStyle}>{description}</p>
-                    <div className="hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white opacity-75"><p className={textStyle.buttonStyle}>{buttonText}</p></div>                
+                    <div className="hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white"><p className={textStyle.buttonStyle}>{buttonText}</p></div>                
             </div>
         </div>
     )
