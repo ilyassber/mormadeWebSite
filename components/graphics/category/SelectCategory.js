@@ -24,6 +24,7 @@ const SelectCategory = props => {
     }, [])
 
     if (data && JSON.parse(data).length > 0) {
+
         const options = JSON.parse(data).map((option) => {
             return <option key={option.id} value={option.name} />
         })

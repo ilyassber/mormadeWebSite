@@ -5,7 +5,7 @@ const Brand = props => {
     let content = (
         <div className={props.className}>
             <div className="container h-full w-auto content-center mx-auto flex flex-wrap">
-                <h2 className="font-sans font-bold text-gray-900">MORMADE</h2>
+                <strong className="font-lato font-black text-3xl text-gray-900">MORMADE</strong>
             </div>
         </div>
     )

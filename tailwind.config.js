@@ -4,6 +4,7 @@ module.exports = {
     fontFamily: {
       sans: ['Quicksand'],
       roboto: ['Roboto'],
+      lato: ['Lato'],
     },
     extend: {
       colors: {
@@ -55,17 +56,13 @@ module.exports = {
         }
       },
       animation: {
-        ticker: 'ticker 30s linear infinite',
+        ticker: 'ticker 22s linear infinite',
       }
     },
   },
   variants: {
     borderWidth: ['responsive', 'hover', 'focus'],
     visibility: ['responsive', 'hover', 'focus'],
-    animation: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
-  corePlugins: {
-    animation: true,
-  }
 }

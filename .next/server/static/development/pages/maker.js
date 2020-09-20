@@ -546,7 +546,7 @@ const Navbar = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "fixed z-50 h-10 w-full flex bg-white",
+    className: "fixed z-50 h-12 w-full flex bg-white",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -717,7 +717,7 @@ const WelcomeBar = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    class: "border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto",
+    className: "w-full h-auto bg-gradient-to-r from-orange-200 to-yellow-200 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -725,62 +725,222 @@ const WelcomeBar = props => {
       columnNumber: 13
     }
   }, __jsx("div", {
-    class: "animate-pulse flex space-x-4",
+    className: "animate-ticker w-auto h-auto box-content flex felx-wrap",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8,
       columnNumber: 17
     }
-  }, __jsx("div", {
-    class: "rounded-full bg-gray-400 h-12 w-12",
+  }, __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9,
       columnNumber: 21
     }
-  }), __jsx("div", {
-    class: "flex-1 space-y-4 py-1",
+  }, ". \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
       columnNumber: 21
     }
-  }, __jsx("div", {
-    class: "h-4 bg-gray-400 rounded w-3/4",
+  }, ". \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
-      columnNumber: 25
+      columnNumber: 21
     }
-  }), __jsx("div", {
-    class: "space-y-2",
+  }, ". \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
-      columnNumber: 25
+      columnNumber: 21
     }
-  }, __jsx("div", {
-    class: "h-4 bg-gray-400 rounded",
+  }, ". \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
-      columnNumber: 29
+      columnNumber: 21
     }
-  }), __jsx("div", {
-    class: "h-4 bg-gray-400 rounded w-5/6",
+  }, ". \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14,
-      columnNumber: 29
+      columnNumber: 21
     }
-  }))))));
+  }, ". \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 ")), __jsx("div", {
+    className: "animate-ticker w-auto h-auto box-content flex felx-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 17
+    }
+  }, __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 ")), __jsx("div", {
+    className: "animate-ticker w-auto h-auto box-content flex felx-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 17
+    }
+  }, __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
+    className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 21
+    }
+  }, ". \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 "))));
 
   return content;
 };
@@ -1325,7 +1485,7 @@ const SelectCategory = props => {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 29,
           columnNumber: 20
         }
       });
@@ -1348,7 +1508,7 @@ const SelectCategory = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 46,
         columnNumber: 13
       }
     }, __jsx("div", {
@@ -1356,7 +1516,7 @@ const SelectCategory = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 47,
         columnNumber: 17
       }
     }, __jsx("div", {
@@ -1364,7 +1524,7 @@ const SelectCategory = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 48,
         columnNumber: 17
       }
     }, __jsx("b", {
@@ -1372,14 +1532,14 @@ const SelectCategory = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 49,
         columnNumber: 21
       }
     }, "\u203A")), __jsx("div", {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 17
       }
     }, __jsx("input", {
@@ -1390,7 +1550,7 @@ const SelectCategory = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51,
+        lineNumber: 52,
         columnNumber: 17
       }
     }), __jsx("datalist", {
@@ -1398,7 +1558,7 @@ const SelectCategory = props => {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56,
+        lineNumber: 57,
         columnNumber: 17
       }
     }, options))));
@@ -2026,8 +2186,8 @@ const Brand = props => {
       lineNumber: 7,
       columnNumber: 13
     }
-  }, __jsx("h2", {
-    className: "font-sans font-bold text-gray-900",
+  }, __jsx("strong", {
+    className: "font-lato font-black text-3xl text-gray-900",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3098,6 +3258,7 @@ const UserPage = props => {
     });
 
     let comp2 = __jsx(_components_elements_product__WEBPACK_IMPORTED_MODULE_6__["AddProduct"], {
+      className: "p-2",
       cookies: props.cookies,
       __self: undefined,
       __source: {
@@ -3108,6 +3269,7 @@ const UserPage = props => {
     });
 
     let comp3 = __jsx(_components_elements_article_AddArticle__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      className: "p-2",
       cookies: props.cookies,
       __self: undefined,
       __source: {
@@ -3136,7 +3298,7 @@ const UserPage = props => {
         columnNumber: 9
       }
     }), __jsx(_components_elements_bar__WEBPACK_IMPORTED_MODULE_3__["WelcomeBar"], {
-      className: "h-auto w-full pt-10",
+      className: "pt-12",
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
@@ -3278,7 +3440,7 @@ function getCategories(lvl, id, csrttoken) {
       id: id
     };
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('https://www.mormade.com/api/categories/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("http://localhost:8000" + '/api/categories/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
       resolve(response.data);
     }).catch(error => {
       reject(error);
@@ -3347,7 +3509,7 @@ function uploadImage(e, file, csrttoken) {
     let form_data = new FormData();
     form_data.append('name', file.name);
     form_data.append('image', file, file.name);
-    const url = 'https://www.mormade.com/api/images/';
+    const url = "http://localhost:8000" + '/api/images/';
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, form_data, {
       headers: {
         'content-type': 'multipart/form-data',

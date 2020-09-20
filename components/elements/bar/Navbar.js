@@ -30,7 +30,7 @@ const Navbar = props => {
 
     let content = (
         <div className={props.className}>
-            <div className="fixed z-50 h-10 w-full flex bg-white">
+            <div className="fixed z-50 h-12 w-full flex bg-white">
                 <div className="flex flex-row">
                     <Brand className="h-full w-auto ml-6" />
                 </div>

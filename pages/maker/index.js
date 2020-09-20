@@ -42,8 +42,8 @@ const UserPage = props => {
 
     const sideBarData = [{ id: 0, value: 'Products' }, { id: 1, value: 'Add Product' }, { id: 2, value: 'Add Article' }]
     let comp1 = (<ProductGridList className="p-2" data={productsList} />)
-    let comp2 = (<AddProduct cookies={props.cookies} />)
-    let comp3 = (<AddArticle cookies={props.cookies} />)
+    let comp2 = (<AddProduct className="p-2" cookies={props.cookies} />)
+    let comp3 = (<AddArticle  className="p-2" cookies={props.cookies} />)
     const componentsList = [
       comp1,
       comp2,
@@ -53,7 +53,7 @@ const UserPage = props => {
     content = (
       <div className="w-full">
         <Navbar cookies={props.cookies} className="w-full" />
-        <WelcomeBar className="h-auto w-full pt-10" />
+        <WelcomeBar className="pt-12" />
         <div className="w-full flex pt-10">
           <div className="w-64 h-full">
             <SideBar className="w-full h-full" clicked={clikced} data={sideBarData} onClick={(x) => setClicked(x)} />
