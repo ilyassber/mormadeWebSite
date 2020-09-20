@@ -39,12 +39,12 @@ function UpperNav({style, changeMenuClicked, home, logo }) {
         <div className={style}>
 
             <MenuContainer
-                style={`${openSearch ? "hidden" : "flex"} flex items-center justify-start h-full flex-1 h-full`}
+                style={`${openSearch ? "hidden" : "flex"} flex items-center justify-start h-full md:flex-1 h-full`}
             />
             <SiteNameContainer 
-                style={`${openSearch ? "hidden" : "flex"} md:flex  justify-center items-center flex-1 h-full`}
+                style={`${openSearch ? "hidden" : "flex"} md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full`}
             />
-            <IconsContainer style="flex flex-row flex-1 justify-center md:justify-end items-center h-full"
+            <IconsContainer style="flex flex-row md:flex-1 justify-center md:justify-end items-center w-full h-full"
                 openSearch={openSearch}
                 openSearchClickHandler={openSearchClickHandler}
             />

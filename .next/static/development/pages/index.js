@@ -86,11 +86,11 @@ function AlphaDisplayer(_ref) {
   };
   return __jsx("div", {
     onClick: clickAction,
-    className: "relative flex justify-center overflow-hidden my-5 mx-5 cursor-pointer",
+    className: "relative flex justify-center my-5 mx-5 cursor-pointer overflow-hidden",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 9
     }
   }, __jsx("img", {
@@ -100,7 +100,7 @@ function AlphaDisplayer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 15,
       columnNumber: 13
     }
   }), __jsx("div", {
@@ -108,7 +108,7 @@ function AlphaDisplayer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 16,
       columnNumber: 13
     }
   }, __jsx("h2", {
@@ -116,32 +116,32 @@ function AlphaDisplayer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 21
+      lineNumber: 17,
+      columnNumber: 17
     }
   }, title), __jsx("p", {
     className: textStyle.descriptionStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 21
+      lineNumber: 18,
+      columnNumber: 17
     }
   }, description), __jsx("div", {
     className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 21
+      lineNumber: 19,
+      columnNumber: 17
     }
   }, __jsx("p", {
     className: textStyle.buttonStyle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 111
+      lineNumber: 19,
+      columnNumber: 107
     }
   }, buttonText))));
 }
@@ -469,7 +469,7 @@ function SearchWidget() {
       columnNumber: 17
     }
   })), __jsx("input", {
-    className: "h-full w-24 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56",
+    className: "h-full w-12 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56",
     type: "text",
     placeholder: "search",
     __self: this,
@@ -512,7 +512,7 @@ function MiddleNav(_ref) {
     }
   }, links.map(function (link, indx) {
     return __jsx("li", {
-      className: "m-8 cursor-pointer text-base md:text-2xl font-worksans  text-gray-900 hover:text-gray-700",
+      className: "m-8 cursor-pointer text-base font-bold md:text-xl font-relway tracking-wide  text-gray-900 hover:text-gray-700",
       key: indx,
       __self: _this,
       __source: {
@@ -588,7 +588,7 @@ function NavBar(_ref) {
       links = _ref.links,
       home = _ref.home;
   return __jsx("nav", {
-    className: "fixed flex flex-col w-full bg-white",
+    className: "z-10 fixed flex flex-col w-full bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -752,7 +752,7 @@ function UpperNav(_ref) {
       columnNumber: 9
     }
   }, __jsx(MenuContainer, {
-    style: "".concat(openSearch ? "hidden" : "flex", " flex items-center justify-start h-full flex-1 h-full"),
+    style: "".concat(openSearch ? "hidden" : "flex", " flex items-center justify-start h-full md:flex-1 h-full"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -760,7 +760,7 @@ function UpperNav(_ref) {
       columnNumber: 13
     }
   }), __jsx(SiteNameContainer, {
-    style: "".concat(openSearch ? "hidden" : "flex", " md:flex  justify-center items-center flex-1 h-full"),
+    style: "".concat(openSearch ? "hidden" : "flex", " md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -768,7 +768,7 @@ function UpperNav(_ref) {
       columnNumber: 13
     }
   }), __jsx(_iconsContainer_iconsContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    style: "flex flex-row flex-1 justify-center md:justify-end items-center h-full",
+    style: "flex flex-row md:flex-1 justify-center md:justify-end items-center w-full h-full",
     openSearch: openSearch,
     openSearchClickHandler: openSearchClickHandler,
     __self: this,
@@ -1187,7 +1187,7 @@ function SideMenu(_ref5) {
   };
 
   return __jsx("nav", {
-    className: "".concat(menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 ", " fixed top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white"),
+    className: "".concat(menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 ", " absolute top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -14874,7 +14874,7 @@ var hello = function hello(_ref) {
       lineNumber: 39,
       columnNumber: 9
     }
-  }, __jsx(_components_widgets_product_ProductGrid__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
     image: images.cover01,
     title: "Dresses made to last",
     description: "Timeless designs made from recycled materials",
@@ -14886,7 +14886,7 @@ var hello = function hello(_ref) {
       columnNumber: 11
     }
   }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover01,
+    image: images.cover02,
     title: "Dresses made to last",
     description: "Timeless designs made from recycled materials",
     buttonText: "SHOP NOW",
@@ -14908,7 +14908,7 @@ var hello = function hello(_ref) {
       columnNumber: 11
     }
   }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover02,
+    image: images.cover7,
     title: "Dresses made to last",
     description: "Timeless designs made from recycled materials",
     buttonText: "SHOP NOW",
@@ -14918,29 +14918,18 @@ var hello = function hello(_ref) {
       lineNumber: 58,
       columnNumber: 11
     }
-  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover7,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64,
-      columnNumber: 11
-    }
   })), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 67,
       columnNumber: 7
     }
   }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 68,
       columnNumber: 7
     }
   }));
@@ -14950,7 +14939,7 @@ var hello = function hello(_ref) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5CmormadeWebSite%5Cpages%5Cindex.js ***!
   \********************************************************************************************************************************************/
@@ -14973,5 +14962,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

@@ -37,12 +37,6 @@ const hello = ({ cookies = {} }) => {
       </Head>
 
         <div className="max-w-5xl">
-          <ProductGrid
-                      image={images.cover01}
-                      title="Dresses made to last"
-                      description="Timeless designs made from recycled materials"
-                      buttonText="SHOP NOW"
-          />
           <AlphaDisplayer
             image={images.cover01}
             title="Dresses made to last"

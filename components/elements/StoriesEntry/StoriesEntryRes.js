@@ -64,7 +64,7 @@ function RightCard({ image, title, description, link, width, descriptionHeight, 
     return (
         <div className={` flex flex-col md:flex-row-reverse justify-center bg-white`}>
             <div className={`${width} flex justify-center overflow-hidden`}>
-                <img className="w-full object-cover object-center" src={image} alt="image cover" />
+                <img className="w-full  object-cover object-center" src={image} alt="image cover" />
             </div>
             <div className="flex justify-center">
                 <div className={`flex flex-col justify-center items-center md:${descriptionHeight} px-12 md:items-end `}>

@@ -573,7 +573,7 @@ function RightCard(_ref3) {
       columnNumber: 13
     }
   }, __jsx("img", {
-    className: "w-full object-cover object-center",
+    className: "w-full  object-cover object-center",
     src: image,
     alt: "image cover",
     __self: this,
@@ -1051,7 +1051,7 @@ function SearchWidget() {
       columnNumber: 17
     }
   })), __jsx("input", {
-    className: "h-full w-24 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56",
+    className: "h-full w-12 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56",
     type: "text",
     placeholder: "search",
     __self: this,
@@ -1094,7 +1094,7 @@ function MiddleNav(_ref) {
     }
   }, links.map(function (link, indx) {
     return __jsx("li", {
-      className: "m-8 cursor-pointer text-base md:text-2xl font-worksans  text-gray-900 hover:text-gray-700",
+      className: "m-8 cursor-pointer text-base font-bold md:text-xl font-relway tracking-wide  text-gray-900 hover:text-gray-700",
       key: indx,
       __self: _this,
       __source: {
@@ -1170,7 +1170,7 @@ function NavBar(_ref) {
       links = _ref.links,
       home = _ref.home;
   return __jsx("nav", {
-    className: "fixed flex flex-col w-full bg-white",
+    className: "z-10 fixed flex flex-col w-full bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1334,7 +1334,7 @@ function UpperNav(_ref) {
       columnNumber: 9
     }
   }, __jsx(MenuContainer, {
-    style: "".concat(openSearch ? "hidden" : "flex", " flex items-center justify-start h-full flex-1 h-full"),
+    style: "".concat(openSearch ? "hidden" : "flex", " flex items-center justify-start h-full md:flex-1 h-full"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1342,7 +1342,7 @@ function UpperNav(_ref) {
       columnNumber: 13
     }
   }), __jsx(SiteNameContainer, {
-    style: "".concat(openSearch ? "hidden" : "flex", " md:flex  justify-center items-center flex-1 h-full"),
+    style: "".concat(openSearch ? "hidden" : "flex", " md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1350,7 +1350,7 @@ function UpperNav(_ref) {
       columnNumber: 13
     }
   }), __jsx(_iconsContainer_iconsContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    style: "flex flex-row flex-1 justify-center md:justify-end items-center h-full",
+    style: "flex flex-row md:flex-1 justify-center md:justify-end items-center w-full h-full",
     openSearch: openSearch,
     openSearchClickHandler: openSearchClickHandler,
     __self: this,
@@ -1769,7 +1769,7 @@ function SideMenu(_ref5) {
   };
 
   return __jsx("nav", {
-    className: "".concat(menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 ", " fixed top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white"),
+    className: "".concat(menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 ", " absolute top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
