@@ -6,11 +6,14 @@ import Link from 'next/link'
 
 function SearchWidget() {
     return (
-        <form className="flex justify-end h-8">
-            <button className="h-full w-8 outline-none  border-b border-gray-500 focus:outline-none">
+        <form className="flex justify-end h-8 px-2">
+            <button 
+                className="h-full w-8 outline-none  border-gray-500 focus:outline-none"
+                onClick={(e) => { e.preventDefault()}}
+            >
                 <Icon icon={search}></Icon>
             </button>
-            <input className="h-full w-12 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56" type="text" placeholder="search"></input>
+            <input className="h-full w-16 lg:w-24 outline-none border-b text-gray-900 border-gray-500 text-lg text-center transform transition-all ease-out duration-500 lg:focus:w-40" type="text" placeholder="search"></input>
         </form>
     )
 }

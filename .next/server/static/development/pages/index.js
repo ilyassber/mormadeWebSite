@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -542,7 +542,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function SearchWidget() {
   return __jsx("form", {
-    className: "flex justify-end h-8",
+    className: "flex justify-end h-8 px-2",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -550,7 +550,10 @@ function SearchWidget() {
       columnNumber: 9
     }
   }, __jsx("button", {
-    className: "h-full w-8 outline-none  border-b border-gray-500 focus:outline-none",
+    className: "h-full w-8 outline-none  border-gray-500 focus:outline-none",
+    onClick: e => {
+      e.preventDefault();
+    },
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -562,17 +565,17 @@ function SearchWidget() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 14,
       columnNumber: 17
     }
   })), __jsx("input", {
-    className: "h-full w-12 outline-none border-b border-gray-500  transform transition-all ease-out duration-500 lg:focus:w-56",
+    className: "h-full w-16 lg:w-24 outline-none border-b text-gray-900 border-gray-500 text-lg text-center transform transition-all ease-out duration-500 lg:focus:w-40",
     type: "text",
     placeholder: "search",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 16,
       columnNumber: 13
     }
   }));
@@ -587,7 +590,7 @@ function MiddleNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -595,7 +598,7 @@ function MiddleNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 25,
       columnNumber: 13
     }
   }), " ", __jsx("ul", {
@@ -603,7 +606,7 @@ function MiddleNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 26,
       columnNumber: 13
     }
   }, links.map((link, indx) => __jsx("li", {
@@ -612,7 +615,7 @@ function MiddleNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 28,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -620,14 +623,14 @@ function MiddleNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 29,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 29,
       columnNumber: 48
     }
   }, link.page))))), __jsx("div", {
@@ -635,14 +638,14 @@ function MiddleNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 34,
       columnNumber: 13
     }
   }, __jsx(SearchWidget, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 35,
       columnNumber: 17
     }
   })));
@@ -1274,7 +1277,7 @@ function SideMenu({
   };
 
   return __jsx("nav", {
-    className: `${menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 "} absolute top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white`,
+    className: `${menuClick ? "transform translate-x-0 transition-all ease-out duration-500" : "transform -translate-x-full transition-all ease-out duration-0 "} fixed top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1647,7 +1650,7 @@ function Layout({
   };
 
   return __jsx("div", {
-    className: "flex flex-col items-center w-full bg-xw-100",
+    className: "flex flex-col w-full bg-xw-100",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -3605,11 +3608,19 @@ const hello = ({
       columnNumber: 9
     }
   })), __jsx("div", {
-    className: "max-w-5xl",
+    className: "w-full flex flex-col items-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39,
+      columnNumber: 7
+    }
+  }, __jsx("div", {
+    className: "max-w-5xl",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
       columnNumber: 9
     }
   }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3620,7 +3631,7 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 41,
       columnNumber: 11
     }
   }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3631,7 +3642,7 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 11
     }
   }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3642,7 +3653,7 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 11
     }
   }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3653,21 +3664,21 @@ const hello = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 11
     }
-  })), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }))), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 69,
       columnNumber: 7
     }
   }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 70,
       columnNumber: 7
     }
   }));
@@ -3677,7 +3688,7 @@ const hello = ({
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

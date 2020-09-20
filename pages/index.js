@@ -30,12 +30,13 @@ const hello = ({ cookies = {} }) => {
   )
 
   return (
-    <Layout>  
+    <Layout>
       <Head>
         <title>MorMade</title>
         <link rel="icon" href="/logo.png" />
       </Head>
 
+      <div className="w-full flex flex-col items-center">
         <div className="max-w-5xl">
           <AlphaDisplayer
             image={images.cover01}
@@ -60,8 +61,9 @@ const hello = ({ cookies = {} }) => {
             title="Dresses made to last"
             description="Timeless designs made from recycled materials"
             buttonText="SHOP NOW"
-          />       
+          />
         </div>
+      </div>
 
 
       <MakersEntry />
