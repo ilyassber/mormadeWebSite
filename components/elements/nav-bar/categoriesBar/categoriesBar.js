@@ -21,7 +21,7 @@ export default function CategoriesBar({ max_shown, categories }) {
                 <ul className="flex justify-center items-center h-12 " >
                     {categories.map((categorie, index) =>
                         (index < max_shown || moreCategorie) && <li key={ index }
-                            className="flex-shrink p-4 cursor-pointer text-md hover:text-gray-500"
+                            className="flex-shrink p-4 cursor-pointer font-lato text-base font-black hover:text-gray-500"
                             onMouseEnter={() => setHovredCategorie({ hovered: true, categorie: categorie })}
                             onMouseLeave={() => setHovredCategorie({ hovered: false, categorie: categorie })}
                         >{categorie.tag.toUpperCase()}</li>

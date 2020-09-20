@@ -3,6 +3,7 @@ import IconsContainer from './iconsContainer/iconsContainer'
 import { Icon } from 'react-icons-kit'
 import { ic_menu } from 'react-icons-kit/md/ic_menu'
 import Link from 'next/link'
+import { Brand } from '../../../logo'
 
 
 function UpperNav({style, changeMenuClicked, home, logo }) {
@@ -28,9 +29,7 @@ function UpperNav({style, changeMenuClicked, home, logo }) {
     const SiteNameContainer = ({style}) => (
         
         <div className={style}>
-                <Link href={home}>
-                    <a className="text-lg font-bold whitespace-no-wrap text-gray-900">Mor Made</a>
-                </Link>
+            <Brand />
         </div>
     
     )

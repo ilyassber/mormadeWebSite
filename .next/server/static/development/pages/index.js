@@ -599,7 +599,7 @@ function CategoriesBar({
     }
   }, categories.map((categorie, index) => (index < max_shown || moreCategorie) && __jsx("li", {
     key: index,
-    className: "flex-shrink p-4 cursor-pointer text-md hover:text-gray-500",
+    className: "flex-shrink p-4 cursor-pointer font-lato text-base font-black hover:text-gray-500",
     onMouseEnter: () => setHovredCategorie({
       hovered: true,
       categorie: categorie
@@ -867,7 +867,7 @@ function MiddleNav({
       columnNumber: 13
     }
   }, links.map((link, indx) => __jsx("li", {
-    className: "m-8 cursor-pointer text-base font-bold md:text-xl font-relway tracking-wide  text-gray-900 hover:text-gray-700",
+    className: "m-8 cursor-pointer font-lato text-sm font-bold tracking-wide text-gray-900 hover:text-gray-700",
     key: indx,
     __self: this,
     __source: {
@@ -1012,8 +1012,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit_md_ic_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_md_ic_menu__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../logo */ "./components/logo/index.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\upperNav\\UpperNav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -1042,7 +1044,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1051,7 +1053,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1060,7 +1062,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 17
     }
   })));
@@ -1072,33 +1074,24 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 9
     }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    href: home,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 17
-    }
-  }, __jsx("a", {
-    className: "text-lg font-bold whitespace-no-wrap text-gray-900",
+  }, __jsx(_logo__WEBPACK_IMPORTED_MODULE_5__["Brand"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32,
-      columnNumber: 21
+      columnNumber: 13
     }
-  }, "Mor Made")));
+  }));
 
   return __jsx("div", {
     className: style,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 38,
       columnNumber: 9
     }
   }, __jsx(MenuContainer, {
@@ -1106,7 +1099,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 40,
       columnNumber: 13
     }
   }), __jsx(SiteNameContainer, {
@@ -1114,7 +1107,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 43,
       columnNumber: 13
     }
   }), __jsx(_iconsContainer_iconsContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1124,7 +1117,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 46,
       columnNumber: 13
     }
   }));
@@ -1897,6 +1890,71 @@ function Layout({
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/logo/Brand.js":
+/*!**********************************!*\
+  !*** ./components/logo/Brand.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\Brand.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Brand = props => {
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "container h-full w-auto content-center mx-auto flex flex-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("strong", {
+    className: "font-lato font-black text-xl text-gray-900",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }, "MORMADE")));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Brand);
+
+/***/ }),
+
+/***/ "./components/logo/index.js":
+/*!**********************************!*\
+  !*** ./components/logo/index.js ***!
+  \**********************************/
+/*! exports provided: Brand */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Brand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Brand */ "./components/logo/Brand.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Brand", function() { return _Brand__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
 
 /***/ }),
 

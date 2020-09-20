@@ -25,7 +25,7 @@ function MiddleNav({ style, links }) {
             <div className="h-full flex-1"></div> {/*white space container  raleway*/}
             <ul className="flex flex-1 justify-center items-center h-full">
                 {links.map((link, indx) =>
-                    <li className="m-8 cursor-pointer text-base font-bold md:text-xl font-relway tracking-wide  text-gray-900 hover:text-gray-700" key={indx}>
+                    <li className="m-8 cursor-pointer font-lato text-sm font-bold tracking-wide text-gray-900 hover:text-gray-700" key={indx}>
                         <Link href={link.path}><a>{link.page}</a></Link>
                     </li>
                 )}
