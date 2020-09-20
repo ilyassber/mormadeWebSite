@@ -5,8 +5,47 @@ module.exports = {
       sans: ['Quicksand'],
       roboto: ['Roboto'],
       lato: ['Lato'],
+      lobster: ['Lobster'],
+      grandstander: ['Grandstander'],
+      montserrat: ['Montserrat'],
+      abrilfatface: ['Abril Fatface'],
+      worksans: ['Work Sans', 'sans-serif'], // for title
+      kumbhsans: ['Kumbh Sans', 'sans-serif'], // desc title 
+      amiri: ['Amiri'], // desc text
+      raleway: ['Raleway', 'sans-serif'], // desc text
+      zillaslab: ['Zilla Slab', 'serif'], // desc text
+      yantramanav: ['Yantramanav', 'sans-serif'],
     },
     extend: {
+      fontSize: {
+        sm: ['14px', '20px'],
+        base: ['16px', '24px'],
+        lg: ['20px', '28px'],
+        xl: ['24px', '32px'],
+        '2xl': ['32px', '32px'],
+        '3xl': ['40px', '32px'],
+        '4xl': ['64px', '32px'],
+        '7xl': '5rem',
+        '8xl': '6rem',
+        '9xl': '7rem',
+        '10xl': '8rem',
+        '11xl': '9rem',
+        '12xl': '10rem',
+        '13xl': '11rem',
+      },
+      inset: {
+        '-4': '-1rem',
+        '-8': '-2rem',
+        '-12': '-3rem',
+        '4': '1rem',
+        '8': '2rem',
+        '12': '3rem',
+        '24': '6rem',
+        '36': '9rem',
+        '48': '12rem',
+        'full': '100%',
+
+      },
       colors: {
         'xw': {
           '100': '#faf9f8',
@@ -48,6 +87,33 @@ module.exports = {
         '9/12': '75%',
         '10/12': '83.333333%',
         '11/12': '91.666667%',
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+        '108': '27rem',
+        '120': '30rem',
+        '132': '33rem',
+        '144': '36rem',
+        '156': '39rem',
+        '168': '42rem',
+        '180': '45rem',
+        '192': '48rem',
+        '204': '51rem',
+        '216': '54rem',
+        '228': '57rem',
+        '240': '60rem',
+        '252': '63rem',
+        '264': '66rem',
+        '276': '69rem',
+        '288': '72rem',
+        'wide-1': '72rem',
+      },
+      minHeight: {
+        '0': '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '100%',
       },
       keyframes: {
         ticker: {
@@ -63,6 +129,8 @@ module.exports = {
   variants: {
     borderWidth: ['responsive', 'hover', 'focus'],
     visibility: ['responsive', 'hover', 'focus'],
+    width: ['responsive', 'hover', 'focus'],
+    inset: ['responsive', 'hover', 'focus'],
   },
   plugins: [],
 }
