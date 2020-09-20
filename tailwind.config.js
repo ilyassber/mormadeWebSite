@@ -1,6 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
+    // extend: {
+    //   backgroundImage: theme => ({
+    //     'hero-pattern': "url('/images/Styles/style')",
+    //     'footer-texture': "url('/img/footer-texture.png')",
+    //   })
+    // },
     fontFamily: {
       sans: ['Quicksand'],
       roboto: ['Roboto'],
@@ -9,7 +15,7 @@ module.exports = {
       montserrat : ['Montserrat'],
       abrilfatface: ['Abril Fatface'],
       worksans: ['Work Sans', 'sans-serif'], // for title
-      kumbhsans:['Kumbh Sans', 'sans-serif'], // desc title
+      kumbhsans:['Kumbh Sans', 'sans-serif'], // desc title 
       amiri : ['Amiri'], // desc text
       raleway:['Raleway', 'sans-serif'], // desc text
       zillaslab:['Zilla Slab', 'serif'], // desc text
@@ -114,7 +120,7 @@ module.exports = {
       '1/2': '50%',
       '3/4': '75%',
       'full': '100%',
-    },
+    }
   },
   variants: {
     width: ['responsive', 'hover', 'focus'],

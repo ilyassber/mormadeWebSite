@@ -98,8 +98,7 @@ function Layout({ children }) {
     }
 
     return (
-        <div className="flex flex-col items-center w-full bg-xw-100">
-
+        <div className="flex flex-col items-center w-full bg-xw-100" >
             {menuClicked && <SideMenu
                 menuClick = {menuClicked}
                 changeMenuClicked = {clickMenuIcon}
