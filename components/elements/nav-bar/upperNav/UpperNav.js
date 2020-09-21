@@ -4,6 +4,7 @@ import { Icon } from 'react-icons-kit'
 import { ic_menu } from 'react-icons-kit/md/ic_menu'
 import Link from 'next/link'
 import { Brand } from '../../../logo'
+import Intro from '../../../logo/intro'
 
 
 function UpperNav({style, changeMenuClicked, home, logo }) {
@@ -36,6 +37,12 @@ function UpperNav({style, changeMenuClicked, home, logo }) {
 
     return (
         <div className={style}>
+
+            <div className="absolute h-full flex flex-wrap content-center">
+                <div className="h-auto">
+                    <Intro className="invisible md:visible"/>
+                </div>
+            </div>
 
             <MenuContainer
                 style={`${openSearch ? "hidden" : "flex"} flex items-center justify-start h-full md:flex-1 h-full`}

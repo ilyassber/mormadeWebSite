@@ -10,7 +10,7 @@ function NavBar({ changeMenuClicked, categories, max_shown, links, home }) {
         <nav className="z-10 fixed flex flex-col w-full bg-white" >
             
             <UpperNav
-                style="flex w-4/5 mx-auto content-center h-12 px-2 mt-4 mb-2"
+                style="relative flex w-4/5 mx-auto content-center h-12 px-2 mt-4 mb-2"
                 changeMenuClicked={changeMenuClicked}
                 home={home}
                 links={links}
