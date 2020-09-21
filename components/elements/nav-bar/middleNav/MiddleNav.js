@@ -22,7 +22,7 @@ function MiddleNav({ style, links }) {
 
     return (
         <div className={style}>
-            <div className="h-full flex-1"></div> {/*white space container  raleway*/}
+            <div className="h-full flex content-center"></div> {/*white space container  raleway*/}
             <ul className="flex flex-1 justify-center items-center h-full">
                 {links.map((link, indx) =>
                     <li className="m-8 cursor-pointer font-lato text-sm font-bold tracking-wide text-gray-900 hover:text-gray-700" key={indx}>
@@ -30,10 +30,6 @@ function MiddleNav({ style, links }) {
                     </li>
                 )}
             </ul>
-            
-            <div className="flex flex-1 justify-end items-center h-full">
-                <SearchWidget />
-            </div>
 
         </div>
     )

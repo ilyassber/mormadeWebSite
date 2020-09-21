@@ -5,6 +5,7 @@ module.exports = {
       sans: ['Quicksand'],
       roboto: ['Roboto'],
       lato: ['Lato'],
+      raleway: ['Raleway'],
       lobster: ['Lobster'],
       grandstander: ['Grandstander'],
       montserrat: ['Montserrat'],

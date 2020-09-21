@@ -757,7 +757,7 @@ function MiddleNav(_ref) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "h-full flex-1",
+    className: "h-full flex content-center",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -798,21 +798,6 @@ function MiddleNav(_ref) {
         columnNumber: 48
       }
     }, link.page)));
-  })), __jsx("div", {
-    className: "flex flex-1 justify-end items-center h-full",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 13
-    }
-  }, __jsx(SearchWidget, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 17
-    }
   })));
 }
 
@@ -858,7 +843,7 @@ function NavBar(_ref) {
       columnNumber: 9
     }
   }, __jsx(_upperNav_UpperNav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    style: "flex w-full h-12 px-2",
+    style: "flex w-4/5 mx-auto content-center h-12 px-2 mt-4 mb-2",
     changeMenuClicked: changeMenuClicked,
     home: home,
     links: links,
@@ -1133,26 +1118,41 @@ function IconsContainer(_ref) {
   };
 
   var NewIcon = function NewIcon(_ref2) {
-    var size = _ref2.size,
-        icon = _ref2.icon;
+    var className = _ref2.className,
+        src = _ref2.src;
     return __jsx("div", {
-      className: "inline m-2 md:m-2 cursor-pointer text-gray-700",
+      className: "inline m-2 md:m-2 flex flex-wrap content-center cursor-pointer text-gray-700",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 34,
         columnNumber: 9
       }
-    }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-      size: size,
-      icon: icon,
+    }, __jsx("div", {
+      className: className,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 35,
         columnNumber: 13
       }
-    }));
+    }, __jsx("div", {
+      className: "h-full w-full flex items-center justify-center",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36,
+        columnNumber: 17
+      }
+    }, __jsx("img", {
+      src: src,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 21
+      }
+    }))));
   };
 
   return __jsx("div", {
@@ -1160,76 +1160,61 @@ function IconsContainer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, __jsx(SearchIcon, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 17
+      lineNumber: 46,
+      columnNumber: 13
     }
   }), __jsx("div", {
     className: "".concat(!openSearch ? "flex" : "hidden", " flex-row h-full"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 47,
       columnNumber: 13
     }
   }, __jsx(NewIcon, {
-    size: 15,
-    icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["user"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 17
-    }
-  }), __jsx("span", {
-    className: "hidden lg:inline my-2",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 17
-    }
-  }, "user"), __jsx(NewIcon, {
-    size: 15,
-    icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["heart"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 17
-    }
-  }), __jsx("span", {
-    className: "hidden lg:inline my-2",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
-      columnNumber: 17
-    }
-  }, "favorites"), __jsx(NewIcon, {
-    size: 15,
-    icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["cart"],
+    className: "h-5 w-5",
+    src: "icons/loop.svg",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48,
       columnNumber: 17
     }
-  }), __jsx("span", {
-    className: "hidden lg:inline my-2",
+  }), __jsx(NewIcon, {
+    className: "h-5 w-5",
+    src: "icons/avatar.svg",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49,
       columnNumber: 17
     }
-  }, "(".concat(0, ")"))));
+  }), __jsx(NewIcon, {
+    className: "h-5 w-5",
+    src: "icons/heart.svg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 17
+    }
+  }), __jsx(NewIcon, {
+    className: "h-5 w-5",
+    src: "icons/cart.svg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 17
+    }
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (IconsContainer);
@@ -1889,7 +1874,7 @@ var Brand = function Brand(props) {
       columnNumber: 13
     }
   }, __jsx("strong", {
-    className: "font-lato font-black text-xl text-gray-900",
+    className: "font-raleway font-bold text-2xl text-gray-900",
     __self: _this,
     __source: {
       fileName: _jsxFileName,

@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato:wght@100..900');
 
+@import url('https://fonts.googleapis.com/css?family=Raleway:wght@100..900');
+
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* for site logo */
 
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,200;1,900&display=swap');
@@ -12303,6 +12305,10 @@ video {
   font-family: Lato;
 }
 
+.font-raleway{
+  font-family: Raleway, sans-serif;
+}
+
 .font-lobster{
   font-family: Lobster;
 }
@@ -12329,10 +12335,6 @@ video {
 
 .font-amiri{
   font-family: Amiri;
-}
-
-.font-raleway{
-  font-family: Raleway, sans-serif;
 }
 
 .font-zillaslab{
@@ -46571,6 +46573,10 @@ video {
     font-family: Lato;
   }
 
+  .sm\:font-raleway{
+    font-family: Raleway, sans-serif;
+  }
+
   .sm\:font-lobster{
     font-family: Lobster;
   }
@@ -46597,10 +46603,6 @@ video {
 
   .sm\:font-amiri{
     font-family: Amiri;
-  }
-
-  .sm\:font-raleway{
-    font-family: Raleway, sans-serif;
   }
 
   .sm\:font-zillaslab{
@@ -80754,6 +80756,10 @@ video {
     font-family: Lato;
   }
 
+  .md\:font-raleway{
+    font-family: Raleway, sans-serif;
+  }
+
   .md\:font-lobster{
     font-family: Lobster;
   }
@@ -80780,10 +80786,6 @@ video {
 
   .md\:font-amiri{
     font-family: Amiri;
-  }
-
-  .md\:font-raleway{
-    font-family: Raleway, sans-serif;
   }
 
   .md\:font-zillaslab{
@@ -114937,6 +114939,10 @@ video {
     font-family: Lato;
   }
 
+  .lg\:font-raleway{
+    font-family: Raleway, sans-serif;
+  }
+
   .lg\:font-lobster{
     font-family: Lobster;
   }
@@ -114963,10 +114969,6 @@ video {
 
   .lg\:font-amiri{
     font-family: Amiri;
-  }
-
-  .lg\:font-raleway{
-    font-family: Raleway, sans-serif;
   }
 
   .lg\:font-zillaslab{
@@ -149120,6 +149122,10 @@ video {
     font-family: Lato;
   }
 
+  .xl\:font-raleway{
+    font-family: Raleway, sans-serif;
+  }
+
   .xl\:font-lobster{
     font-family: Lobster;
   }
@@ -149146,10 +149152,6 @@ video {
 
   .xl\:font-amiri{
     font-family: Amiri;
-  }
-
-  .xl\:font-raleway{
-    font-family: Raleway, sans-serif;
   }
 
   .xl\:font-zillaslab{
