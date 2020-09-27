@@ -312,7 +312,7 @@ const WelcomeBar = props => {
       lineNumber: 9,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -320,7 +320,7 @@ const WelcomeBar = props => {
       lineNumber: 10,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -328,7 +328,7 @@ const WelcomeBar = props => {
       lineNumber: 11,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -336,7 +336,7 @@ const WelcomeBar = props => {
       lineNumber: 12,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -344,7 +344,7 @@ const WelcomeBar = props => {
       lineNumber: 13,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -352,7 +352,7 @@ const WelcomeBar = props => {
       lineNumber: 14,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -360,7 +360,7 @@ const WelcomeBar = props => {
       lineNumber: 15,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -368,7 +368,7 @@ const WelcomeBar = props => {
       lineNumber: 16,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 ")), __jsx("div", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 ")), __jsx("div", {
     className: "animate-ticker w-auto h-auto box-content flex felx-wrap",
     __self: undefined,
     __source: {
@@ -384,7 +384,7 @@ const WelcomeBar = props => {
       lineNumber: 19,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -392,7 +392,7 @@ const WelcomeBar = props => {
       lineNumber: 20,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -400,7 +400,7 @@ const WelcomeBar = props => {
       lineNumber: 21,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -408,7 +408,7 @@ const WelcomeBar = props => {
       lineNumber: 22,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -416,7 +416,7 @@ const WelcomeBar = props => {
       lineNumber: 23,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -424,7 +424,7 @@ const WelcomeBar = props => {
       lineNumber: 24,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -432,7 +432,7 @@ const WelcomeBar = props => {
       lineNumber: 25,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -440,7 +440,7 @@ const WelcomeBar = props => {
       lineNumber: 26,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 ")), __jsx("div", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 ")), __jsx("div", {
     className: "animate-ticker w-auto h-auto box-content flex felx-wrap",
     __self: undefined,
     __source: {
@@ -456,7 +456,7 @@ const WelcomeBar = props => {
       lineNumber: 29,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u0645\u0631\u062D\u0628\u0627 \u0628\u0643 \u0641\u064A \u0627\u0644\u0645\u063A\u0631\u0628 \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -464,7 +464,7 @@ const WelcomeBar = props => {
       lineNumber: 30,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Welcome to Morocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -472,7 +472,7 @@ const WelcomeBar = props => {
       lineNumber: 31,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Bienvenue au Maroc \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -480,7 +480,7 @@ const WelcomeBar = props => {
       lineNumber: 32,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Bienvenido a marruecos \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -488,7 +488,7 @@ const WelcomeBar = props => {
       lineNumber: 33,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u6B61\u8FCE\u4F86\u5230\u6469\u6D1B\u54E5 \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -496,7 +496,7 @@ const WelcomeBar = props => {
       lineNumber: 34,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Benvenuto in Marocco \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -504,7 +504,7 @@ const WelcomeBar = props => {
       lineNumber: 35,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
+  }, "\u22C5 \u2009\u2009\u2009\u2009 Welkom in Marokko \u2009\u2009\u2009\u2009 "), __jsx("label", {
     className: "h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none",
     __self: undefined,
     __source: {
@@ -512,7 +512,7 @@ const WelcomeBar = props => {
       lineNumber: 36,
       columnNumber: 21
     }
-  }, ". \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 "))));
+  }, "\u22C5 \u2009\u2009\u2009\u2009 \u092E\u094B\u0930\u0915\u094D\u0915\u094B \u092E\u0947\u0902 \u0906\u092A\u0915\u093E \u0938\u094D\u0935\u093E\u0917\u0924 \u0939\u0948 \u2009\u2009\u2009\u2009 "))));
 
   return content;
 };
@@ -2496,17 +2496,144 @@ const Brand = props => {
 
 /***/ }),
 
+/***/ "./components/logo/Intro.js":
+/*!**********************************!*\
+  !*** ./components/logo/Intro.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\Intro.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Intro = props => {
+  if (props.type == 'white') {
+    return __jsx("div", {
+      className: props.className,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "container rounded h-full w-auto flex flex-row content-center mx-auto leading-none inline-block whitespace-no-wrap bg-white",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 17
+      }
+    }, __jsx("span", {
+      className: "h-auto font-sans font-light text-xs align-middle text-gray-900 m-1",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 21
+      }
+    }, "from "), __jsx("div", {
+      className: "h-auto w-4 flex flex-wrap content-center items-center justify-center m-1",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 21
+      }
+    }, __jsx("img", {
+      src: "icons/morocco.png",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12,
+        columnNumber: 25
+      }
+    })), __jsx("span", {
+      className: "h-auto font-sans font-light text-xs align-middle text-gray-900 m-1",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 21
+      }
+    }, " to world wide")));
+  } else {
+    return __jsx("div", {
+      className: props.className,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "container rounded h-full w-auto flex flex-row content-center mx-auto leading-none inline-block whitespace-no-wrap bg-gray-900",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 17
+      }
+    }, __jsx("span", {
+      className: "h-auto font-sans font-light text-xs align-middle text-white m-1",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 21
+      }
+    }, "from "), __jsx("div", {
+      className: "h-auto w-4 flex flex-wrap content-center items-center justify-center m-1",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 21
+      }
+    }, __jsx("img", {
+      src: "icons/morocco.png",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 25
+      }
+    })), __jsx("span", {
+      className: "h-auto font-sans font-light text-xs align-middle text-white m-1",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 21
+      }
+    }, " to world wide")));
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Intro);
+
+/***/ }),
+
 /***/ "./components/logo/index.js":
 /*!**********************************!*\
   !*** ./components/logo/index.js ***!
   \**********************************/
-/*! exports provided: Brand */
+/*! exports provided: Brand, Intro */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Brand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Brand */ "./components/logo/Brand.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Brand", function() { return _Brand__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _Intro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Intro */ "./components/logo/Intro.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Intro", function() { return _Intro__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
 
 
 
