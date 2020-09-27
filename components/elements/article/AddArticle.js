@@ -63,7 +63,9 @@ const AddArticle = props => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        let coverId = await uploadImage(event, data.cover.data.image, props.cookies['csrftoken']).then((res) => res.data)
+        let coverId = -1
+        if (data.cover.data.image != null)
+            coverId = await uploadImage(event, data.cover.data.image, props.cookies['csrftoken']).then((res) => res.data)
         let textList = []
         for (let i = 0; i < data.text.length; i++) {
             if (data.text[i].data.type == 'image') {
@@ -84,7 +86,10 @@ const AddArticle = props => {
             cover: coverId,
             text: querystring.stringify(textList)
         }
-        postRequest(querystring.stringify(newData), props.cookies['csrftoken'], 'http://localhost:8000/articles/').then((res) => {
+        postRequest(querystring.stringify({
+            operation: "register",
+            data: querystring.stringify(newData)
+        }), props.cookies['csrftoken'], process.env.domain + '/api/articles/').then((res) => {
             console.log(res)
         })
     }

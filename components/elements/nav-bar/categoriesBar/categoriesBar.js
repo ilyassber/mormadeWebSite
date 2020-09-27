@@ -3,7 +3,7 @@ import SousCategoriesBar from './sousCategoriesBar'
 
 
 
-export default function CategoriesBar({ max_shown, categories }) {
+export default function CategoriesBar({ style ,max_shown, categories }) {
 
     const [hovredCategorie, setHovredCategorie] = useState({ hovered: false, categorie: null })
     const [moreCategorie, setmoreCategorie] = useState(true)
@@ -16,8 +16,8 @@ export default function CategoriesBar({ max_shown, categories }) {
 
 
     return (
-        <div className="hidden md:block z-50 w-full">
-            <div className="flex justify-center w-full shadow-sm bg-white">
+        <div className={style}>
+            <div className="flex justify-center w-full shadow-sm">
                 <ul className="flex justify-center items-center h-12 " >
                     {categories.map((categorie, index) =>
                         (index < max_shown || moreCategorie) && <li key={ index }

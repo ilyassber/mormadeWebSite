@@ -1,3 +1,5 @@
 export { default as ImgRound } from './ImgRound'
 export { default as AddImage } from './AddImage'
 export { default as RemovedSquaredImg } from './RemovedSquaredImg'
+export { default as ImgFreeDisp } from './ImgFreeDisp'
+export { default as ImgDimDisp } from './ImgDimDisp'

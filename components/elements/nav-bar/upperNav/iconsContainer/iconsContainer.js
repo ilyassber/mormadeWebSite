@@ -15,24 +15,9 @@ function IconsContainer({ openSearch, openSearchClickHandler, style }) {
         closeStyle: "transform w-0 transition-all ease-out duration-300",
     }
 
-    const SearchIcon = () => (
-        <form className="md:hidden flex justify-end h-8 w-full">
-            <div
-                className={openSearch ? searchIconStyle.openStyle : searchIconStyle.closeStyle}
-                onClick={openSearchClickHandler}
-            >
-                <Icon icon={openSearch ? cross : search}></Icon>
-            </div>
-
-            {openSearch && <button className="h-full w-8 outline-none focus:outline-none"><Icon icon={search}></Icon></button>}
-
-            <input className={openSearch ? inputStyle.openStyle : inputStyle.closeStyle} type="text" placeholder="search" ></input>
-        </form>
-    )
-
-    const NewIcon = ({ className, src }) => (
+    const NewIcon = ({ className, src, clickHandler }) => (
         <div className={`inline m-2 md:m-2 flex flex-wrap content-center cursor-pointer text-gray-700`}>
-            <div className={className}>
+            <div className={className} onClick={clickHandler}>
                 <div
                     className="h-full w-full flex items-center justify-center">
                     <img src={src} />
@@ -43,9 +28,8 @@ function IconsContainer({ openSearch, openSearchClickHandler, style }) {
 
     return (
         <div className={style}>
-            <SearchIcon />
             <div className={`${!openSearch ? "flex" : "hidden"} flex-row h-full`}>
-                <NewIcon className="h-5 w-5" src='icons/loop.svg' />
+                <NewIcon className="h-5 w-5" src='icons/loop.svg' clickHandler={openSearchClickHandler} />
                 <NewIcon className="h-5 w-5" src='icons/avatar.svg' />
                 <NewIcon className="h-5 w-5" src='icons/heart.svg' />
                 <NewIcon className="h-5 w-5" src='icons/cart.svg' />

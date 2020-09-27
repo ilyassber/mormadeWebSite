@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Wrapper from './widgets/utilities/wrapper'
 import NavBar from './elements/nav-bar/navbar'
 import SideMenu from './elements/side-menu/sideMenu'
+import SearchGate from './elements/searchGate/searchGate'
+import BlackFocusScreen from './elements/blackFocusScreen/BlackFocusScreen'
 
 // fake data 
 const categories = [
@@ -74,60 +76,106 @@ const links = [
 ]
 
 
-function BlackFocusScreen({display, onClick}) {
-    return (
-        <div 
-            className={display ? "absolute z-20 top-0 left-0 w-full h-full transition ease-out duration-500 bg-gray-900 bg-opacity-50" : "z-20 bg-opacity-0 bg-gray-900"}
-            onClick={onClick}
-        >
-        </div>
-    )
-}
+
+
+
 
 
 function Layout({ children }) {
-    const [menuClicked, setMenuClicked] = useState(false)    
-    const [selectedPage, setSelectedPage] = useState({page : "HOME", path : "/"})
     
-    const clickMenuIcon = () => {
-        setMenuClicked(!menuClicked)
+// GLOBAL STATES
+    
+    const [openMenu, setOpenMenu]           = useState(false)   // menu open/close state
+    const [selectedPage, setSelectedPage]   = useState({ page: "HOME", path: "/" }) // current selected page
+    const [openSearch, setOpenSearch]       = useState(true)   // search open/close state
+    const [searchData, setSearchData]       = useState({
+                                                searchHistory : [],
+                                                searchTarget : "",
+                                                searchTrackedInputText : "",
+                                            })  // saved search DATA 
+
+
+
+// STATE CALLBACKS
+
+    
+    // openSearch callBacks
+    
+    const changeOpenSearch = () => {
+        setOpenSearch(!openSearch)
     }
 
-    const selectPage = (link) => {
+    // openMenu callBacks
+    
+    const changeOpenMenu = () => {
+        setOpenMenu(!openMenu)
+    }
+
+    // selectedPage callBacks
+    
+    const changeSelectedPage = (link) => {
         setSelectedPage(link)
     }
 
-    return (
-        <div className="flex flex-col w-full bg-xw-100" >
-            {menuClicked && <SideMenu
-                menuClick = {menuClicked}
-                changeMenuClicked = {clickMenuIcon}
-                currentPage = {selectedPage}
-                changeCurrentPage = {selectPage}
-                categories={categories}
-                max_shown={8}
-                links={links}
-            />}
+    
+// DISPLAYED CONTENT 
 
-            
-            {menuClicked && <BlackFocusScreen
-                display={menuClicked}
-                onClick={clickMenuIcon}
-            />
-            }
+    const Page = () => (
+        !openSearch && children 
+    )
+    
+    const Menu = () => (
+        openMenu && <SideMenu   menuClick={openMenu}
+                                    changeMenuClicked={changeOpenMenu}
+                                    currentPage={selectedPage}
+                                    changeCurrentPage={changeSelectedPage}
+                                    categories={categories}
+                                    max_shown={8}
+                                    links={links}
+                        />
+    )
 
-            <NavBar
-                changeMenuClicked={clickMenuIcon}
+    const NavigationBar = () => (
+        <NavBar changeMenuClicked={changeOpenMenu}
+                openSearch={openSearch}
+                openSearchClickHandler={changeOpenSearch}
                 logo="/logo.png"
                 categories={categories}
                 max_shown={8}
                 links={links}
                 home="/"
-            />
-            <Wrapper style="w-full h-48"/> 
-            {children}
+        />
+    )
+    
+    const SearchPage = () => (
+        openSearch  &&  <SearchGate changeOpenSearch={ changeOpenSearch }
+                                    searchData={searchData}
+                                    setSearchData={(data) => setSearchData(data)}
+                        />
+    )
 
-        </div>
+    const BlackFocusOff = () => (
+        (openMenu ) &&  <BlackFocusScreen onClick={changeOpenMenu}/>
+    )
+
+    const SpacingTop = () => (
+        openSearch ? <Wrapper style=" w-full bg-blue-600" /> : <Wrapper style="w-full h-48" />
+    )
+
+
+// RENDER THAT SHIT
+
+    return (
+        <div className="flex flex-col w-full bg-xw-100 bg-scroll" >
+
+            <Menu />
+            <BlackFocusOff/>
+            <NavigationBar/>
+            <SpacingTop/>
+            <SearchPage/>
+            <Page/>
+
+        </div>    
     )
 }
 

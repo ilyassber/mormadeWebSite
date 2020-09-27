@@ -1,11 +1,11 @@
 import axios from 'axios'
 
-export function postRequest(data, csrttoken, url) {
+export function postRequest(data, csrftoken, url) {
     return new Promise((resolve, reject) => {
         let axiosConfig = {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'X-CSRFToken': csrttoken
+                'X-CSRFToken': csrftoken
             }
         }
         axios.defaults.withCredentials = true

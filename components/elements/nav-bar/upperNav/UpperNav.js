@@ -4,16 +4,9 @@ import { Icon } from 'react-icons-kit'
 import { ic_menu } from 'react-icons-kit/md/ic_menu'
 import Link from 'next/link'
 import { Brand } from '../../../logo'
-import Intro from '../../../logo/intro'
 
 
-function UpperNav({style, changeMenuClicked, home, logo }) {
-
-    const [openSearch, setOpenSearch] = useState(false) // search icon for small screens -> expanded or closed
-
-    const openSearchClickHandler = () => {
-        setOpenSearch(!openSearch) // open/close the search component for small screens
-    }
+function UpperNav({style, changeMenuClicked, openSearch, openSearchClickHandler, home, logo }) {
 
     const MenuContainer = ({style}) => (
     
@@ -38,17 +31,11 @@ function UpperNav({style, changeMenuClicked, home, logo }) {
     return (
         <div className={style}>
 
-            <div className="absolute h-full flex flex-wrap content-center">
-                <div className="h-auto">
-                    <Intro className="invisible md:visible"/>
-                </div>
-            </div>
-
             <MenuContainer
-                style={`${openSearch ? "hidden" : "flex"} flex items-center justify-start h-full md:flex-1 h-full`}
+                style={`flex items-center justify-start h-full md:flex-1 h-full`}
             />
             <SiteNameContainer 
-                style={`${openSearch ? "hidden" : "flex"} md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full`}
+                style={`flex md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full`}
             />
             <IconsContainer style="flex flex-row md:flex-1 justify-center md:justify-end items-center w-full h-full"
                 openSearch={openSearch}

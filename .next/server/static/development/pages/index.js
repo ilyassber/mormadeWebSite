@@ -243,13 +243,13 @@ function AlphaDisplayer({
       lineNumber: 18,
       columnNumber: 17
     }
-  }, description), __jsx("div", {
+  }, description), buttonText && buttonText !== "" && __jsx("div", {
     className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 17
+      columnNumber: 53
     }
   }, __jsx("p", {
     className: textStyle.buttonStyle,
@@ -257,7 +257,7 @@ function AlphaDisplayer({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 107
+      columnNumber: 143
     }
   }, buttonText))));
 }
@@ -521,6 +521,38 @@ const WelcomeBar = props => {
 
 /***/ }),
 
+/***/ "./components/elements/blackFocusScreen/BlackFocusScreen.js":
+/*!******************************************************************!*\
+  !*** ./components/elements/blackFocusScreen/BlackFocusScreen.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlackFocusScreen; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\blackFocusScreen\\BlackFocusScreen.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+function BlackFocusScreen({
+  onClick
+}) {
+  return __jsx("div", {
+    className: "absolute z-20 top-0 left-0 w-full h-full  bg-gray-900 bg-opacity-50",
+    onClick: onClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 9
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./components/elements/nav-bar/categoriesBar/categoriesBar.js":
 /*!********************************************************************!*\
   !*** ./components/elements/nav-bar/categoriesBar/categoriesBar.js ***!
@@ -546,6 +578,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 function CategoriesBar({
+  style,
   max_shown,
   categories
 }) {
@@ -574,7 +607,7 @@ function CategoriesBar({
   };
 
   return __jsx("div", {
-    className: "hidden md:block z-50 w-full",
+    className: style,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -582,7 +615,7 @@ function CategoriesBar({
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "flex justify-center w-full shadow-sm bg-white",
+    className: "flex justify-center w-full shadow-sm",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -922,22 +955,34 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function NavBar({
   changeMenuClicked,
+  openSearch,
+  openSearchClickHandler,
   categories,
   max_shown,
   links,
   home
 }) {
   return __jsx("nav", {
-    className: "z-10 fixed flex flex-col w-full bg-white",
+    className: "z-10 fixed flex flex-col w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
       columnNumber: 9
     }
+  }, __jsx("div", {
+    className: "z-10 w-full bg-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }
   }, __jsx(_upperNav_UpperNav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    style: "relative flex w-4/5 mx-auto content-center h-12 px-2 mt-4 mb-2",
+    style: "flex w-4/5 mx-auto content-center h-12 py-5/12  pt-4 pb-2 bg-white",
     changeMenuClicked: changeMenuClicked,
+    openSearch: openSearch,
+    openSearchClickHandler: openSearchClickHandler,
     home: home,
     links: links,
     __self: this,
@@ -946,13 +991,21 @@ function NavBar({
       lineNumber: 12,
       columnNumber: 13
     }
-  }), __jsx(_middleNav_MiddleNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    style: "hidden md:flex h-12 w-full px-2",
+  })), __jsx("div", {
+    className: `${openSearch ? "" : ""} flex flex-col w-full transition-all ease-out duration-500`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, __jsx(_middleNav_MiddleNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    style: ` hidden md:flex h-12 w-full px-2 bg-white`,
     links: links,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 22,
       columnNumber: 13
     }
   }), __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -960,19 +1013,20 @@ function NavBar({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 27,
       columnNumber: 13
     }
   }), __jsx(_categoriesBar_categoriesBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    style: "hidden md:block w-full bg-white",
     max_shown: max_shown,
     categories: categories,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 29,
       columnNumber: 13
     }
-  }));
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBar);
@@ -998,10 +1052,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../logo */ "./components/logo/index.js");
-/* harmony import */ var _logo_intro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../logo/intro */ "./components/logo/intro.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\upperNav\\UpperNav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -1012,18 +1064,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function UpperNav({
   style,
   changeMenuClicked,
+  openSearch,
+  openSearchClickHandler,
   home,
   logo
 }) {
-  const {
-    0: openSearch,
-    1: setOpenSearch
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false); // search icon for small screens -> expanded or closed
-
-  const openSearchClickHandler = () => {
-    setOpenSearch(!openSearch); // open/close the search component for small screens
-  };
-
   const MenuContainer = ({
     style
   }) => __jsx("div", {
@@ -1031,7 +1076,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 13,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1040,7 +1085,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 14,
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1049,7 +1094,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 17,
       columnNumber: 17
     }
   })));
@@ -1061,14 +1106,14 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 25,
       columnNumber: 9
     }
   }, __jsx(_logo__WEBPACK_IMPORTED_MODULE_5__["Brand"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 26,
       columnNumber: 13
     }
   }));
@@ -1078,47 +1123,23 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 32,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: "absolute h-full flex flex-wrap content-center",
+  }, __jsx(MenuContainer, {
+    style: `flex items-center justify-start h-full md:flex-1 h-full`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 13
-    }
-  }, __jsx("div", {
-    className: "h-auto",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 17
-    }
-  }, __jsx(_logo_intro__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "invisible md:visible",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 21
-    }
-  }))), __jsx(MenuContainer, {
-    style: `${openSearch ? "hidden" : "flex"} flex items-center justify-start h-full md:flex-1 h-full`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 34,
       columnNumber: 13
     }
   }), __jsx(SiteNameContainer, {
-    style: `${openSearch ? "hidden" : "flex"} md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full`,
+    style: `flex md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 37,
       columnNumber: 13
     }
   }), __jsx(_iconsContainer_iconsContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1128,7 +1149,7 @@ function UpperNav({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 40,
       columnNumber: 13
     }
   }));
@@ -1176,8 +1197,12 @@ function IconsContainer({
     closeStyle: "transform w-0 transition-all ease-out duration-300"
   };
 
-  const SearchIcon = () => __jsx("form", {
-    className: "md:hidden flex justify-end h-8 w-full",
+  const NewIcon = ({
+    className,
+    src,
+    clickHandler
+  }) => __jsx("div", {
+    className: `inline m-2 md:m-2 flex flex-wrap content-center cursor-pointer text-gray-700`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1185,67 +1210,12 @@ function IconsContainer({
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: openSearch ? searchIconStyle.openStyle : searchIconStyle.closeStyle,
-    onClick: openSearchClickHandler,
+    className: className,
+    onClick: clickHandler,
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20,
-      columnNumber: 13
-    }
-  }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-    icon: openSearch ? react_icons_kit_icomoon_cross__WEBPACK_IMPORTED_MODULE_3__["cross"] : react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["search"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 17
-    }
-  })), openSearch && __jsx("button", {
-    className: "h-full w-8 outline-none focus:outline-none",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 28
-    }
-  }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-    icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["search"],
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 91
-    }
-  })), __jsx("input", {
-    className: openSearch ? inputStyle.openStyle : inputStyle.closeStyle,
-    type: "text",
-    placeholder: "search",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }));
-
-  const NewIcon = ({
-    className,
-    src
-  }) => __jsx("div", {
-    className: `inline m-2 md:m-2 flex flex-wrap content-center cursor-pointer text-gray-700`,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 9
-    }
-  }, __jsx("div", {
-    className: className,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1253,7 +1223,7 @@ function IconsContainer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 21,
       columnNumber: 17
     }
   }, __jsx("img", {
@@ -1261,7 +1231,7 @@ function IconsContainer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 23,
       columnNumber: 21
     }
   }))));
@@ -1271,31 +1241,25 @@ function IconsContainer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 30,
       columnNumber: 9
     }
-  }, __jsx(SearchIcon, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
+  }, __jsx("div", {
     className: `${!openSearch ? "flex" : "hidden"} flex-row h-full`,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 31,
       columnNumber: 13
     }
   }, __jsx(NewIcon, {
     className: "h-5 w-5",
     src: "icons/loop.svg",
+    clickHandler: openSearchClickHandler,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 32,
       columnNumber: 17
     }
   }), __jsx(NewIcon, {
@@ -1304,7 +1268,7 @@ function IconsContainer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 33,
       columnNumber: 17
     }
   }), __jsx(NewIcon, {
@@ -1313,7 +1277,7 @@ function IconsContainer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 34,
       columnNumber: 17
     }
   }), __jsx(NewIcon, {
@@ -1322,13 +1286,505 @@ function IconsContainer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 35,
       columnNumber: 17
     }
   })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (IconsContainer);
+
+/***/ }),
+
+/***/ "./components/elements/searchGate/searchGate.js":
+/*!******************************************************!*\
+  !*** ./components/elements/searchGate/searchGate.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchGate; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
+/* harmony import */ var _widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../widgets/search/searchWidget */ "./components/widgets/search/searchWidget.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons-kit */ "react-icons-kit");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "react-icons-kit/ikons/close");
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\searchGate\\searchGate.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+ // history widget : used inside the history component 
+
+function NewHistoryItem({
+  title,
+  deleteOneHistory
+}) {
+  const text = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  return __jsx("div", {
+    className: "flex flex-row items-center justify-start",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, __jsx("p", {
+    ref: text,
+    className: " text-md ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 13
+    }
+  }, title));
+}
+
+function SearchGate({
+  changeOpenSearch,
+  searchData,
+  setSearchData
+}) {
+  const {
+    0: data,
+    1: setData
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_objectSpread({}, searchData, {}, {
+    inputFocus: true
+  })); // searchGate data --> check searchData state in "layout.js"
+  // STATE CALLBACKS
+  // turn search input focus OFF
+
+  const InputFocusOff = () => {
+    setData(_objectSpread({}, data, {
+      inputFocus: false
+    }));
+  }; // submit new target to search for + add to search history + turn off input focus
+
+
+  const changeSearchTarget = searchTarget => {
+    if (searchTarget !== "") {
+      setData(_objectSpread({}, data, {
+        searchTarget: searchTarget
+      }));
+      addSearchHistoryItem(searchTarget);
+      InputFocusOff();
+    }
+  }; // track text on search input  "not used for now" 
+
+
+  const updateTrackInputText = trackedInputText => {
+    if (trackedInputText !== "") setData(_objectSpread({}, data, {
+      searchTrackedInputText: trackedInputText
+    }));
+  }; // add item to search history
+
+
+  const addSearchHistoryItem = historyItem => {
+    if (historyItem !== "") {
+      let newSearchHistory = data.searchHistory;
+      newSearchHistory.push(historyItem);
+      setData(_objectSpread({}, data, {
+        searchHistory: newSearchHistory
+      }));
+    }
+  }; // delete item from search history
+
+
+  const deleteSearchHistoryItem = historyItem => {
+    let newSearchHistory = [];
+    data.searchHistory.forEach(item => {
+      if (item !== historyItem) newSearchHistory.push(item);
+    });
+    setData(_objectSpread({}, data, {
+      searchHistory: newSearchHistory
+    }));
+  }; // clear search history
+
+
+  const clearSearchHistory = () => {
+    setData(_objectSpread({}, data, {
+      searchHistory: []
+    }));
+  }; // saves search data and exit -> updates searchData state in "layout.js" 
+
+
+  const UpdateAndExit = () => {
+    setSearchData(data);
+    changeOpenSearch();
+  }; // UTILITIES
+  // close icon
+
+
+  const CloseIcon = () => __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    className: "cursor-pointer text-gray-600 hover:text-gray-700",
+    onClick: UpdateAndExit,
+    size: 40,
+    icon: react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__["close"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 9
+    }
+  }); // history search component
+
+
+  const RecentSearchCard = ({
+    style,
+    maxResultNumber
+  }) => __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 9
+    }
+  }, __jsx("h2", {
+    className: "font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95,
+      columnNumber: 13
+    }
+  }, "Recent Search"), __jsx("ul", {
+    className: "w-full flex flex-col justify-start",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96,
+      columnNumber: 13
+    }
+  }, data.searchHistory.map((item, indx) => indx < maxResultNumber && __jsx("li", {
+    key: indx,
+    className: "cursor-pointer whitespace-no-wrap text-md hover:underline",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98,
+      columnNumber: 47
+    }
+  }, __jsx(NewHistoryItem, {
+    title: item,
+    deleteOneHistory: deleteSearchHistoryItem,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 25
+    }
+  })))), data.searchHistory.length > 0 && __jsx("label", {
+    className: " text-sm text-gray-600 hover:text-gray-900 whitespace-no-wrap cursor-pointer my-2",
+    onClick: clearSearchHistory,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105,
+      columnNumber: 53
+    }
+  }, "Delete History"), "        ");
+
+  const AnnouceCard = ({
+    style,
+    cardTitle,
+    titleLinks
+  }) => __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113,
+      columnNumber: 9
+    }
+  }, __jsx("h2", {
+    className: "font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115,
+      columnNumber: 13
+    }
+  }, cardTitle), __jsx("ul", {
+    className: "flex flex-col justify-start",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117,
+      columnNumber: 13
+    }
+  }, titleLinks.map((title, indx) => __jsx("li", {
+    key: indx,
+    className: "cursor-pointer whitespace-no-wrap text-md hover:underline text-justify",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119,
+      columnNumber: 21
+    }
+  }, title)))); // left part
+
+
+  const LeftContentCard = ({
+    style
+  }) => __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130,
+      columnNumber: 9
+    }
+  }, __jsx(RecentSearchCard, {
+    style: "w-full flex flex-col items-start cursor-default",
+    maxResultNumber: 8,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132,
+      columnNumber: 13
+    }
+  }), __jsx(AnnouceCard, {
+    style: "w-full flex flex-col items-start mt-8 cursor-default",
+    cardTitle: "Products",
+    titleLinks: ["Leatest products", "Best selling products", "Season products"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134,
+      columnNumber: 13
+    }
+  }), __jsx(AnnouceCard, {
+    style: "w-full flex flex-col items-start mt-8 cursor-default",
+    cardTitle: "Stories",
+    titleLinks: ["every stitch.. stitched with love", "braid from atlas mountains", "desert music"],
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 138,
+      columnNumber: 13
+    }
+  })); // default content displayed in case there is no word to search for  
+
+
+  const DefaultContentCard = () => __jsx("div", {
+    className: "flex flex-row justify-start items-start mt-16 w-full",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 148,
+      columnNumber: 9
+    }
+  }, __jsx(LeftContentCard, {
+    style: "flex flex-col justify-center w-4/12 px-4 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 149,
+      columnNumber: 13
+    }
+  }), __jsx("div", {
+    className: "flex flex-row justify-start w-8/12 h-full ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 150,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "flex flex-col justify-start items-start w-2/12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "flex flex-col justify-start items-start w-10/12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154,
+      columnNumber: 17
+    }
+  }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    image: "images/Articles/cover-04.jpg",
+    title: "The Lovely Place",
+    description: "have u ever been in a place where .. .",
+    buttonText: "",
+    clickAction: () => console.log(" SHIT CLICKED "),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155,
+      columnNumber: 17
+    }
+  })))); // content displayed to show search result
+
+
+  const ResultContentCard = () => __jsx("div", {
+    className: "flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start mt-16 w-full h-180 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "flex justify-center w-8/12 h-full ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 170,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "w-5/12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 171,
+      columnNumber: 17
+    }
+  }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    title: "",
+    description: "",
+    buttonText: "",
+    image: "images/Articles/cover-5.jpg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 172,
+      columnNumber: 21
+    }
+  })))); // the entire default search displayed
+
+
+  const DefaultBody = () => __jsx("div", {
+    className: "flex flex-col items-center justify-start w-9/12",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 183,
+      columnNumber: 9
+    }
+  }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    style: "w-full h-12 mt-4",
+    clickHandler: changeSearchTarget,
+    inputFocus: data.inputFocus,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 184,
+      columnNumber: 13
+    }
+  }), __jsx(DefaultContentCard, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 189,
+      columnNumber: 13
+    }
+  })); // the entire search result displayed
+
+
+  const ResultBody = () => __jsx("div", {
+    className: "flex flex-col items-center justify-start w-10/12 bg-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 195,
+      columnNumber: 9
+    }
+  }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    style: "w-full h-12 my-0 bg-white ",
+    clickHandler: submitInputText,
+    inputFocus: data.inputFocus,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 196,
+      columnNumber: 13
+    }
+  }), __jsx(ResultContentCard, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 200,
+      columnNumber: 13
+    }
+  })); // CONPONENTS
+  // upper bar : contains exit button
+
+
+  const TopBar = () => __jsx("div", {
+    className: "flex justify-end w-full p-5 ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 209,
+      columnNumber: 9
+    }
+  }, __jsx(CloseIcon, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 210,
+      columnNumber: 13
+    }
+  })); // search body : switch between search and default mode
+
+
+  const MainBody = () => __jsx(DefaultBody, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 217,
+      columnNumber: 9
+    }
+  }) // <SearchResultBody/>
+  ; // RENDER THAT SHIT
+
+
+  return __jsx("div", {
+    className: `z-50 w-full flex flex-col items-center justify-start bg-white`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 225,
+      columnNumber: 9
+    }
+  }, __jsx(TopBar, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 227,
+      columnNumber: 13
+    }
+  }), __jsx(MainBody, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 228,
+      columnNumber: 13
+    }
+  }));
+}
 
 /***/ }),
 
@@ -1747,8 +2203,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widgets/utilities/wrapper */ "./components/widgets/utilities/wrapper.js");
 /* harmony import */ var _elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/nav-bar/navbar */ "./components/elements/nav-bar/navbar.js");
 /* harmony import */ var _elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/side-menu/sideMenu */ "./components/elements/side-menu/sideMenu.js");
+/* harmony import */ var _elements_searchGate_searchGate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/searchGate/searchGate */ "./components/elements/searchGate/searchGate.js");
+/* harmony import */ var _elements_blackFocusScreen_BlackFocusScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/blackFocusScreen/BlackFocusScreen */ "./components/elements/blackFocusScreen/BlackFocusScreen.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -1806,78 +2266,76 @@ const links = [{
   path: '/stories'
 }];
 
-function BlackFocusScreen({
-  display,
-  onClick
-}) {
-  return __jsx("div", {
-    className: display ? "absolute z-20 top-0 left-0 w-full h-full transition ease-out duration-500 bg-gray-900 bg-opacity-50" : "z-20 bg-opacity-0 bg-gray-900",
-    onClick: onClick,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79,
-      columnNumber: 9
-    }
-  });
-}
-
 function Layout({
   children
 }) {
+  // GLOBAL STATES
   const {
-    0: menuClicked,
-    1: setMenuClicked
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+    0: openMenu,
+    1: setOpenMenu
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false); // menu open/close state
+
   const {
     0: selectedPage,
     1: setSelectedPage
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     page: "HOME",
     path: "/"
-  });
+  }); // current selected page
 
-  const clickMenuIcon = () => {
-    setMenuClicked(!menuClicked);
-  };
+  const {
+    0: openSearch,
+    1: setOpenSearch
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true); // search open/close state
 
-  const selectPage = link => {
+  const {
+    0: searchData,
+    1: setSearchData
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    searchHistory: [],
+    searchTarget: "",
+    searchTrackedInputText: ""
+  }); // saved search DATA 
+  // STATE CALLBACKS
+  // openSearch callBacks
+
+  const changeOpenSearch = () => {
+    setOpenSearch(!openSearch);
+  }; // openMenu callBacks
+
+
+  const changeOpenMenu = () => {
+    setOpenMenu(!openMenu);
+  }; // selectedPage callBacks
+
+
+  const changeSelectedPage = link => {
     setSelectedPage(link);
-  };
+  }; // DISPLAYED CONTENT 
 
-  return __jsx("div", {
-    className: "flex flex-col w-full bg-xw-100",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 101,
-      columnNumber: 9
-    }
-  }, menuClicked && __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    menuClick: menuClicked,
-    changeMenuClicked: clickMenuIcon,
+
+  const Page = () => !openSearch && children;
+
+  const Menu = () => openMenu && __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    menuClick: openMenu,
+    changeMenuClicked: changeOpenMenu,
     currentPage: selectedPage,
-    changeCurrentPage: selectPage,
+    changeCurrentPage: changeSelectedPage,
     categories: categories,
     max_shown: 8,
     links: links,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
-      columnNumber: 29
+      lineNumber: 128,
+      columnNumber: 21
     }
-  }), menuClicked && __jsx(BlackFocusScreen, {
-    display: menuClicked,
-    onClick: clickMenuIcon,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113,
-      columnNumber: 29
-    }
-  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    changeMenuClicked: clickMenuIcon,
+  });
+
+  const NavigationBar = () => __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    changeMenuClicked: changeOpenMenu,
+    openSearch: openSearch,
+    openSearchClickHandler: changeOpenSearch,
     logo: "/logo.png",
     categories: categories,
     max_shown: 8,
@@ -1886,18 +2344,103 @@ function Layout({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119,
-      columnNumber: 13
+      lineNumber: 139,
+      columnNumber: 9
     }
-  }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  });
+
+  const SearchPage = () => openSearch && __jsx(_elements_searchGate_searchGate__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    changeOpenSearch: changeOpenSearch,
+    searchData: searchData,
+    setSearchData: data => setSearchData(data),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151,
+      columnNumber: 25
+    }
+  });
+
+  const BlackFocusOff = () => openMenu && __jsx(_elements_blackFocusScreen_BlackFocusScreen__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    onClick: changeOpenMenu,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158,
+      columnNumber: 25
+    }
+  });
+
+  const SpacingTop = () => openSearch ? __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    style: " w-full bg-blue-600",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162,
+      columnNumber: 22
+    }
+  }) : __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127,
+      lineNumber: 162,
+      columnNumber: 64
+    }
+  }); // RENDER THAT SHIT
+
+
+  return __jsx("div", {
+    className: "flex flex-col w-full bg-xw-100 bg-scroll",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 169,
+      columnNumber: 9
+    }
+  }, __jsx(Menu, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 171,
       columnNumber: 13
     }
-  }), children);
+  }), __jsx(BlackFocusOff, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 172,
+      columnNumber: 13
+    }
+  }), __jsx(NavigationBar, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 173,
+      columnNumber: 13
+    }
+  }), __jsx(SpacingTop, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174,
+      columnNumber: 13
+    }
+  }), __jsx(SearchPage, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175,
+      columnNumber: 13
+    }
+  }), __jsx(Page, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176,
+      columnNumber: 13
+    }
+  }));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -1966,79 +2509,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Brand", function() { return _Brand__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
-
-/***/ }),
-
-/***/ "./components/logo/intro.js":
-/*!**********************************!*\
-  !*** ./components/logo/intro.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\intro.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const Intro = props => {
-  let content = __jsx("div", {
-    className: props.className,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 9
-    }
-  }, __jsx("div", {
-    className: "container h-full w-auto content-center mx-auto flex flex-wrap",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 13
-    }
-  }, __jsx("strong", {
-    className: "h-5 font-amiri font-regular italic text-base text-gray-900",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 17
-    }
-  }, "FROM "), __jsx("div", {
-    className: "h-5 w-5 flex items-center justify-center ml-1 mr-1",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 17
-    }
-  }, __jsx("img", {
-    src: "icons/morocco.png",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 21
-    }
-  })), __jsx("strong", {
-    className: "h-5 font-amiri font-regular italic text-base text-gray-900",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 17
-    }
-  }, " TO WORLD WIDE")));
-
-  return content;
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Intro);
 
 /***/ }),
 
@@ -2145,6 +2615,109 @@ const ProductGrid = props => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ProductGrid);
+
+/***/ }),
+
+/***/ "./components/widgets/search/searchWidget.js":
+/*!***************************************************!*\
+  !*** ./components/widgets/search/searchWidget.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchWidget; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\search\\searchWidget.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function SearchWidget({
+  style,
+  clickHandler,
+  inputFocus
+}) {
+  const {
+    0: data,
+    1: setData
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""); // ref for input
+
+  const formInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // after every render apply input focus if needed 
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (inputFocus) formInput.current.focus();
+  }, []); // traked text
+
+  const writeData = event => {
+    setData(event.target.value);
+  }; // submit tracked text
+
+
+  const submitdata = () => {
+    setData("");
+    clickHandler(data);
+    event.preventDefault();
+  };
+
+  return __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 9
+    }
+  }, __jsx("form", {
+    className: "flex justify-center items-center border-gray-800 border-b-2",
+    onSubmit: submitdata,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "w-8 h-8 mx-2",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    ref: formInput,
+    className: " h-full w-full trasform transition-all ease-out duration-700 focus:placeholder-gray-500 placeholder-gray-600 text-3xl  text-center outline-none ",
+    value: data,
+    onChange: writeData,
+    type: "text",
+    placeholder: "SEARCH",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 17
+    }
+  }), __jsx("button", {
+    className: "flex justify-center items-center h-8 w-8 mx-2 overflow-hidden focus:outline-none cursor-pointer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 17
+    }
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: "icons/loop.svg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 21
+    }
+  }))));
+}
 
 /***/ }),
 
@@ -4119,6 +4692,17 @@ module.exports = require("react-icons-kit/icomoon/arrowRight2");
 /***/ (function(module, exports) {
 
 module.exports = require("react-icons-kit/icomoon/cross");
+
+/***/ }),
+
+/***/ "react-icons-kit/ikons/close":
+/*!**********************************************!*\
+  !*** external "react-icons-kit/ikons/close" ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-icons-kit/ikons/close");
 
 /***/ }),
 

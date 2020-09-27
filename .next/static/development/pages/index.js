@@ -127,13 +127,13 @@ function AlphaDisplayer(_ref) {
       lineNumber: 18,
       columnNumber: 17
     }
-  }, description), __jsx("div", {
+  }, description), buttonText && buttonText !== "" && __jsx("div", {
     className: "hidden md:flex justify-center items-center px-5 py-2 mb-10 mt-2 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 17
+      columnNumber: 53
     }
   }, __jsx("p", {
     className: textStyle.buttonStyle,
@@ -141,7 +141,7 @@ function AlphaDisplayer(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 107
+      columnNumber: 143
     }
   }, buttonText))));
 }
@@ -407,6 +407,37 @@ var WelcomeBar = function WelcomeBar(props) {
 
 /***/ }),
 
+/***/ "./components/elements/blackFocusScreen/BlackFocusScreen.js":
+/*!******************************************************************!*\
+  !*** ./components/elements/blackFocusScreen/BlackFocusScreen.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlackFocusScreen; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\blackFocusScreen\\BlackFocusScreen.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+function BlackFocusScreen(_ref) {
+  var onClick = _ref.onClick;
+  return __jsx("div", {
+    className: "absolute z-20 top-0 left-0 w-full h-full  bg-gray-900 bg-opacity-50",
+    onClick: onClick,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 9
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./components/elements/nav-bar/categoriesBar/categoriesBar.js":
 /*!********************************************************************!*\
   !*** ./components/elements/nav-bar/categoriesBar/categoriesBar.js ***!
@@ -434,7 +465,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function CategoriesBar(_ref) {
   var _this = this;
 
-  var max_shown = _ref.max_shown,
+  var style = _ref.style,
+      max_shown = _ref.max_shown,
       categories = _ref.categories;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
@@ -465,7 +497,7 @@ function CategoriesBar(_ref) {
   };
 
   return __jsx("div", {
-    className: "hidden md:block z-50 w-full",
+    className: style,
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -473,7 +505,7 @@ function CategoriesBar(_ref) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "flex justify-center w-full shadow-sm bg-white",
+    className: "flex justify-center w-full shadow-sm",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -830,21 +862,33 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function NavBar(_ref) {
   var changeMenuClicked = _ref.changeMenuClicked,
+      openSearch = _ref.openSearch,
+      openSearchClickHandler = _ref.openSearchClickHandler,
       categories = _ref.categories,
       max_shown = _ref.max_shown,
       links = _ref.links,
       home = _ref.home;
   return __jsx("nav", {
-    className: "z-10 fixed flex flex-col w-full bg-white",
+    className: "z-10 fixed flex flex-col w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
       columnNumber: 9
     }
+  }, __jsx("div", {
+    className: "z-10 w-full bg-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 13
+    }
   }, __jsx(_upperNav_UpperNav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    style: "relative flex w-4/5 mx-auto content-center h-12 px-2 mt-4 mb-2",
+    style: "flex w-4/5 mx-auto content-center h-12 py-5/12  pt-4 pb-2 bg-white",
     changeMenuClicked: changeMenuClicked,
+    openSearch: openSearch,
+    openSearchClickHandler: openSearchClickHandler,
     home: home,
     links: links,
     __self: this,
@@ -853,13 +897,21 @@ function NavBar(_ref) {
       lineNumber: 12,
       columnNumber: 13
     }
-  }), __jsx(_middleNav_MiddleNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    style: "hidden md:flex h-12 w-full px-2",
+  })), __jsx("div", {
+    className: "".concat(openSearch ? "" : "", " flex flex-col w-full transition-all ease-out duration-500"),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, __jsx(_middleNav_MiddleNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    style: " hidden md:flex h-12 w-full px-2 bg-white",
     links: links,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 22,
       columnNumber: 13
     }
   }), __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -867,19 +919,20 @@ function NavBar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 27,
       columnNumber: 13
     }
   }), __jsx(_categoriesBar_categoriesBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    style: "hidden md:block w-full bg-white",
     max_shown: max_shown,
     categories: categories,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 29,
       columnNumber: 13
     }
-  }));
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBar);
@@ -905,10 +958,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../logo */ "./components/logo/index.js");
-/* harmony import */ var _logo_intro__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../logo/intro */ "./components/logo/intro.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\upperNav\\UpperNav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
 
 
 
@@ -921,17 +972,10 @@ function UpperNav(_ref) {
 
   var style = _ref.style,
       changeMenuClicked = _ref.changeMenuClicked,
+      openSearch = _ref.openSearch,
+      openSearchClickHandler = _ref.openSearchClickHandler,
       home = _ref.home,
       logo = _ref.logo;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      openSearch = _useState[0],
-      setOpenSearch = _useState[1]; // search icon for small screens -> expanded or closed
-
-
-  var openSearchClickHandler = function openSearchClickHandler() {
-    setOpenSearch(!openSearch); // open/close the search component for small screens
-  };
 
   var MenuContainer = function MenuContainer(_ref2) {
     var style = _ref2.style;
@@ -940,7 +984,7 @@ function UpperNav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 13,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -949,7 +993,7 @@ function UpperNav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 14,
         columnNumber: 13
       }
     }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -958,7 +1002,7 @@ function UpperNav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 17,
         columnNumber: 17
       }
     })));
@@ -971,14 +1015,14 @@ function UpperNav(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32,
+        lineNumber: 25,
         columnNumber: 9
       }
     }, __jsx(_logo__WEBPACK_IMPORTED_MODULE_5__["Brand"], {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33,
+        lineNumber: 26,
         columnNumber: 13
       }
     }));
@@ -989,47 +1033,23 @@ function UpperNav(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 32,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: "absolute h-full flex flex-wrap content-center",
+  }, __jsx(MenuContainer, {
+    style: "flex items-center justify-start h-full md:flex-1 h-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 13
-    }
-  }, __jsx("div", {
-    className: "h-auto",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 17
-    }
-  }, __jsx(_logo_intro__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "invisible md:visible",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 21
-    }
-  }))), __jsx(MenuContainer, {
-    style: "".concat(openSearch ? "hidden" : "flex", " flex items-center justify-start h-full md:flex-1 h-full"),
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 34,
       columnNumber: 13
     }
   }), __jsx(SiteNameContainer, {
-    style: "".concat(openSearch ? "hidden" : "flex", " md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full"),
+    style: "flex md:flex  justify-start md:justify-center items-center  w-full md:flex-1 h-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 37,
       columnNumber: 13
     }
   }), __jsx(_iconsContainer_iconsContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -1039,7 +1059,7 @@ function UpperNav(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 40,
       columnNumber: 13
     }
   }));
@@ -1088,9 +1108,12 @@ function IconsContainer(_ref) {
     closeStyle: "transform w-0 transition-all ease-out duration-300"
   };
 
-  var SearchIcon = function SearchIcon() {
-    return __jsx("form", {
-      className: "md:hidden flex justify-end h-8 w-full",
+  var NewIcon = function NewIcon(_ref2) {
+    var className = _ref2.className,
+        src = _ref2.src,
+        clickHandler = _ref2.clickHandler;
+    return __jsx("div", {
+      className: "inline m-2 md:m-2 flex flex-wrap content-center cursor-pointer text-gray-700",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -1098,68 +1121,12 @@ function IconsContainer(_ref) {
         columnNumber: 9
       }
     }, __jsx("div", {
-      className: openSearch ? searchIconStyle.openStyle : searchIconStyle.closeStyle,
-      onClick: openSearchClickHandler,
+      className: className,
+      onClick: clickHandler,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 20,
-        columnNumber: 13
-      }
-    }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-      icon: openSearch ? react_icons_kit_icomoon_cross__WEBPACK_IMPORTED_MODULE_3__["cross"] : react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["search"],
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 17
-      }
-    })), openSearch && __jsx("button", {
-      className: "h-full w-8 outline-none focus:outline-none",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27,
-        columnNumber: 28
-      }
-    }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-      icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__["search"],
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27,
-        columnNumber: 91
-      }
-    })), __jsx("input", {
-      className: openSearch ? inputStyle.openStyle : inputStyle.closeStyle,
-      type: "text",
-      placeholder: "search",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 29,
-        columnNumber: 13
-      }
-    }));
-  };
-
-  var NewIcon = function NewIcon(_ref2) {
-    var className = _ref2.className,
-        src = _ref2.src;
-    return __jsx("div", {
-      className: "inline m-2 md:m-2 flex flex-wrap content-center cursor-pointer text-gray-700",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34,
-        columnNumber: 9
-      }
-    }, __jsx("div", {
-      className: className,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 35,
         columnNumber: 13
       }
     }, __jsx("div", {
@@ -1167,7 +1134,7 @@ function IconsContainer(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 21,
         columnNumber: 17
       }
     }, __jsx("img", {
@@ -1175,7 +1142,7 @@ function IconsContainer(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38,
+        lineNumber: 23,
         columnNumber: 21
       }
     }))));
@@ -1186,31 +1153,25 @@ function IconsContainer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 30,
       columnNumber: 9
     }
-  }, __jsx(SearchIcon, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 13
-    }
-  }), __jsx("div", {
+  }, __jsx("div", {
     className: "".concat(!openSearch ? "flex" : "hidden", " flex-row h-full"),
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 31,
       columnNumber: 13
     }
   }, __jsx(NewIcon, {
     className: "h-5 w-5",
     src: "icons/loop.svg",
+    clickHandler: openSearchClickHandler,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 32,
       columnNumber: 17
     }
   }), __jsx(NewIcon, {
@@ -1219,7 +1180,7 @@ function IconsContainer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 33,
       columnNumber: 17
     }
   }), __jsx(NewIcon, {
@@ -1228,7 +1189,7 @@ function IconsContainer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 34,
       columnNumber: 17
     }
   }), __jsx(NewIcon, {
@@ -1237,13 +1198,529 @@ function IconsContainer(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 35,
       columnNumber: 17
     }
   })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (IconsContainer);
+
+/***/ }),
+
+/***/ "./components/elements/searchGate/searchGate.js":
+/*!******************************************************!*\
+  !*** ./components/elements/searchGate/searchGate.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchGate; });
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
+/* harmony import */ var _widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../widgets/search/searchWidget */ "./components/widgets/search/searchWidget.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit */ "./node_modules/react-icons-kit/index.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__);
+
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\searchGate\\searchGate.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+
+ // history widget : used inside the history component 
+
+function NewHistoryItem(_ref) {
+  var title = _ref.title,
+      deleteOneHistory = _ref.deleteOneHistory;
+  var text = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
+  return __jsx("div", {
+    className: "flex flex-row items-center justify-start",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, __jsx("p", {
+    ref: text,
+    className: " text-md ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 13
+    }
+  }, title));
+}
+
+function SearchGate(_ref2) {
+  var _this = this;
+
+  var changeOpenSearch = _ref2.changeOpenSearch,
+      searchData = _ref2.searchData,
+      setSearchData = _ref2.setSearchData;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(_objectSpread({}, searchData, {}, {
+    inputFocus: true
+  })),
+      data = _useState[0],
+      setData = _useState[1]; // searchGate data --> check searchData state in "layout.js"
+  // STATE CALLBACKS
+  // turn search input focus OFF
+
+
+  var InputFocusOff = function InputFocusOff() {
+    setData(_objectSpread({}, data, {
+      inputFocus: false
+    }));
+  }; // submit new target to search for + add to search history + turn off input focus
+
+
+  var changeSearchTarget = function changeSearchTarget(searchTarget) {
+    if (searchTarget !== "") {
+      setData(_objectSpread({}, data, {
+        searchTarget: searchTarget
+      }));
+      addSearchHistoryItem(searchTarget);
+      InputFocusOff();
+    }
+  }; // track text on search input  "not used for now" 
+
+
+  var updateTrackInputText = function updateTrackInputText(trackedInputText) {
+    if (trackedInputText !== "") setData(_objectSpread({}, data, {
+      searchTrackedInputText: trackedInputText
+    }));
+  }; // add item to search history
+
+
+  var addSearchHistoryItem = function addSearchHistoryItem(historyItem) {
+    if (historyItem !== "") {
+      var newSearchHistory = data.searchHistory;
+      newSearchHistory.push(historyItem);
+      setData(_objectSpread({}, data, {
+        searchHistory: newSearchHistory
+      }));
+    }
+  }; // delete item from search history
+
+
+  var deleteSearchHistoryItem = function deleteSearchHistoryItem(historyItem) {
+    var newSearchHistory = [];
+    data.searchHistory.forEach(function (item) {
+      if (item !== historyItem) newSearchHistory.push(item);
+    });
+    setData(_objectSpread({}, data, {
+      searchHistory: newSearchHistory
+    }));
+  }; // clear search history
+
+
+  var clearSearchHistory = function clearSearchHistory() {
+    setData(_objectSpread({}, data, {
+      searchHistory: []
+    }));
+  }; // saves search data and exit -> updates searchData state in "layout.js" 
+
+
+  var UpdateAndExit = function UpdateAndExit() {
+    setSearchData(data);
+    changeOpenSearch();
+  }; // UTILITIES
+  // close icon
+
+
+  var CloseIcon = function CloseIcon() {
+    return __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
+      className: "cursor-pointer text-gray-600 hover:text-gray-700",
+      onClick: UpdateAndExit,
+      size: 40,
+      icon: react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__["close"],
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86,
+        columnNumber: 9
+      }
+    });
+  }; // history search component
+
+
+  var RecentSearchCard = function RecentSearchCard(_ref3) {
+    var style = _ref3.style,
+        maxResultNumber = _ref3.maxResultNumber;
+    return __jsx("div", {
+      className: style,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 94,
+        columnNumber: 9
+      }
+    }, __jsx("h2", {
+      className: "font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95,
+        columnNumber: 13
+      }
+    }, "Recent Search"), __jsx("ul", {
+      className: "w-full flex flex-col justify-start",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 96,
+        columnNumber: 13
+      }
+    }, data.searchHistory.map(function (item, indx) {
+      return indx < maxResultNumber && __jsx("li", {
+        key: indx,
+        className: "cursor-pointer whitespace-no-wrap text-md hover:underline",
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98,
+          columnNumber: 47
+        }
+      }, __jsx(NewHistoryItem, {
+        title: item,
+        deleteOneHistory: deleteSearchHistoryItem,
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99,
+          columnNumber: 25
+        }
+      }));
+    })), data.searchHistory.length > 0 && __jsx("label", {
+      className: " text-sm text-gray-600 hover:text-gray-900 whitespace-no-wrap cursor-pointer my-2",
+      onClick: clearSearchHistory,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105,
+        columnNumber: 53
+      }
+    }, "Delete History"), "        ");
+  };
+
+  var AnnouceCard = function AnnouceCard(_ref4) {
+    var style = _ref4.style,
+        cardTitle = _ref4.cardTitle,
+        titleLinks = _ref4.titleLinks;
+    return __jsx("div", {
+      className: style,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 113,
+        columnNumber: 9
+      }
+    }, __jsx("h2", {
+      className: "font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 115,
+        columnNumber: 13
+      }
+    }, cardTitle), __jsx("ul", {
+      className: "flex flex-col justify-start",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117,
+        columnNumber: 13
+      }
+    }, titleLinks.map(function (title, indx) {
+      return __jsx("li", {
+        key: indx,
+        className: "cursor-pointer whitespace-no-wrap text-md hover:underline text-justify",
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119,
+          columnNumber: 21
+        }
+      }, title);
+    })));
+  }; // left part
+
+
+  var LeftContentCard = function LeftContentCard(_ref5) {
+    var style = _ref5.style;
+    return __jsx("div", {
+      className: style,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 130,
+        columnNumber: 9
+      }
+    }, __jsx(RecentSearchCard, {
+      style: "w-full flex flex-col items-start cursor-default",
+      maxResultNumber: 8,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132,
+        columnNumber: 13
+      }
+    }), __jsx(AnnouceCard, {
+      style: "w-full flex flex-col items-start mt-8 cursor-default",
+      cardTitle: "Products",
+      titleLinks: ["Leatest products", "Best selling products", "Season products"],
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 134,
+        columnNumber: 13
+      }
+    }), __jsx(AnnouceCard, {
+      style: "w-full flex flex-col items-start mt-8 cursor-default",
+      cardTitle: "Stories",
+      titleLinks: ["every stitch.. stitched with love", "braid from atlas mountains", "desert music"],
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138,
+        columnNumber: 13
+      }
+    }));
+  }; // default content displayed in case there is no word to search for  
+
+
+  var DefaultContentCard = function DefaultContentCard() {
+    return __jsx("div", {
+      className: "flex flex-row justify-start items-start mt-16 w-full",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 148,
+        columnNumber: 9
+      }
+    }, __jsx(LeftContentCard, {
+      style: "flex flex-col justify-center w-4/12 px-4 ",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 149,
+        columnNumber: 13
+      }
+    }), __jsx("div", {
+      className: "flex flex-row justify-start w-8/12 h-full ",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 150,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "flex flex-col justify-start items-start w-2/12",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 151,
+        columnNumber: 17
+      }
+    }), __jsx("div", {
+      className: "flex flex-col justify-start items-start w-10/12",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 154,
+        columnNumber: 17
+      }
+    }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      image: "images/Articles/cover-04.jpg",
+      title: "The Lovely Place",
+      description: "have u ever been in a place where .. .",
+      buttonText: "",
+      clickAction: function clickAction() {
+        return console.log(" SHIT CLICKED ");
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 155,
+        columnNumber: 17
+      }
+    }))));
+  }; // content displayed to show search result
+
+
+  var ResultContentCard = function ResultContentCard() {
+    return __jsx("div", {
+      className: "flex flex-col md:flex-row justify-start md:justify-center items-center md:items-start mt-16 w-full h-180 ",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 168,
+        columnNumber: 9
+      }
+    }, __jsx("div", {
+      className: "flex justify-center w-8/12 h-full ",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 170,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "w-5/12",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 171,
+        columnNumber: 17
+      }
+    }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: "",
+      description: "",
+      buttonText: "",
+      image: "images/Articles/cover-5.jpg",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 172,
+        columnNumber: 21
+      }
+    }))));
+  }; // the entire default search displayed
+
+
+  var DefaultBody = function DefaultBody() {
+    return __jsx("div", {
+      className: "flex flex-col items-center justify-start w-9/12",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 183,
+        columnNumber: 9
+      }
+    }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      style: "w-full h-12 mt-4",
+      clickHandler: changeSearchTarget,
+      inputFocus: data.inputFocus,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 184,
+        columnNumber: 13
+      }
+    }), __jsx(DefaultContentCard, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 189,
+        columnNumber: 13
+      }
+    }));
+  }; // the entire search result displayed
+
+
+  var ResultBody = function ResultBody() {
+    return __jsx("div", {
+      className: "flex flex-col items-center justify-start w-10/12 bg-white",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 195,
+        columnNumber: 9
+      }
+    }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      style: "w-full h-12 my-0 bg-white ",
+      clickHandler: submitInputText,
+      inputFocus: data.inputFocus,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 196,
+        columnNumber: 13
+      }
+    }), __jsx(ResultContentCard, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 200,
+        columnNumber: 13
+      }
+    }));
+  }; // CONPONENTS
+  // upper bar : contains exit button
+
+
+  var TopBar = function TopBar() {
+    return __jsx("div", {
+      className: "flex justify-end w-full p-5 ",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 209,
+        columnNumber: 9
+      }
+    }, __jsx(CloseIcon, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 210,
+        columnNumber: 13
+      }
+    }));
+  }; // search body : switch between search and default mode
+
+
+  var MainBody = function MainBody() {
+    return __jsx(DefaultBody, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 217,
+        columnNumber: 9
+      }
+    }) // <SearchResultBody/>
+    ;
+  }; // RENDER THAT SHIT
+
+
+  return __jsx("div", {
+    className: "z-50 w-full flex flex-col items-center justify-start bg-white",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 225,
+      columnNumber: 9
+    }
+  }, __jsx(TopBar, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 227,
+      columnNumber: 13
+    }
+  }), __jsx(MainBody, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 228,
+      columnNumber: 13
+    }
+  }));
+}
 
 /***/ }),
 
@@ -1710,8 +2187,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widgets/utilities/wrapper */ "./components/widgets/utilities/wrapper.js");
 /* harmony import */ var _elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./elements/nav-bar/navbar */ "./components/elements/nav-bar/navbar.js");
 /* harmony import */ var _elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/side-menu/sideMenu */ "./components/elements/side-menu/sideMenu.js");
+/* harmony import */ var _elements_searchGate_searchGate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/searchGate/searchGate */ "./components/elements/searchGate/searchGate.js");
+/* harmony import */ var _elements_blackFocusScreen_BlackFocusScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/blackFocusScreen/BlackFocusScreen */ "./components/elements/blackFocusScreen/BlackFocusScreen.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -1769,96 +2250,197 @@ var links = [{
   path: '/stories'
 }];
 
-function BlackFocusScreen(_ref) {
-  var display = _ref.display,
-      onClick = _ref.onClick;
-  return __jsx("div", {
-    className: display ? "absolute z-20 top-0 left-0 w-full h-full transition ease-out duration-500 bg-gray-900 bg-opacity-50" : "z-20 bg-opacity-0 bg-gray-900",
-    onClick: onClick,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79,
-      columnNumber: 9
-    }
-  });
-}
+function Layout(_ref) {
+  var _this = this;
 
-function Layout(_ref2) {
-  var children = _ref2.children;
+  var children = _ref.children;
 
+  // GLOBAL STATES
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      menuClicked = _useState[0],
-      setMenuClicked = _useState[1];
+      openMenu = _useState[0],
+      setOpenMenu = _useState[1]; // menu open/close state
+
 
   var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     page: "HOME",
     path: "/"
   }),
       selectedPage = _useState2[0],
-      setSelectedPage = _useState2[1];
+      setSelectedPage = _useState2[1]; // current selected page
 
-  var clickMenuIcon = function clickMenuIcon() {
-    setMenuClicked(!menuClicked);
-  };
 
-  var selectPage = function selectPage(link) {
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      openSearch = _useState3[0],
+      setOpenSearch = _useState3[1]; // search open/close state
+
+
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    searchHistory: [],
+    searchTarget: "",
+    searchTrackedInputText: ""
+  }),
+      searchData = _useState4[0],
+      _setSearchData = _useState4[1]; // saved search DATA 
+  // STATE CALLBACKS
+  // openSearch callBacks
+
+
+  var changeOpenSearch = function changeOpenSearch() {
+    setOpenSearch(!openSearch);
+  }; // openMenu callBacks
+
+
+  var changeOpenMenu = function changeOpenMenu() {
+    setOpenMenu(!openMenu);
+  }; // selectedPage callBacks
+
+
+  var changeSelectedPage = function changeSelectedPage(link) {
     setSelectedPage(link);
+  }; // DISPLAYED CONTENT 
+
+
+  var Page = function Page() {
+    return !openSearch && children;
   };
+
+  var Menu = function Menu() {
+    return openMenu && __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      menuClick: openMenu,
+      changeMenuClicked: changeOpenMenu,
+      currentPage: selectedPage,
+      changeCurrentPage: changeSelectedPage,
+      categories: categories,
+      max_shown: 8,
+      links: links,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 128,
+        columnNumber: 21
+      }
+    });
+  };
+
+  var NavigationBar = function NavigationBar() {
+    return __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      changeMenuClicked: changeOpenMenu,
+      openSearch: openSearch,
+      openSearchClickHandler: changeOpenSearch,
+      logo: "/logo.png",
+      categories: categories,
+      max_shown: 8,
+      links: links,
+      home: "/",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 139,
+        columnNumber: 9
+      }
+    });
+  };
+
+  var SearchPage = function SearchPage() {
+    return openSearch && __jsx(_elements_searchGate_searchGate__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      changeOpenSearch: changeOpenSearch,
+      searchData: searchData,
+      setSearchData: function setSearchData(data) {
+        return _setSearchData(data);
+      },
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 151,
+        columnNumber: 25
+      }
+    });
+  };
+
+  var BlackFocusOff = function BlackFocusOff() {
+    return openMenu && __jsx(_elements_blackFocusScreen_BlackFocusScreen__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      onClick: changeOpenMenu,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 158,
+        columnNumber: 25
+      }
+    });
+  };
+
+  var SpacingTop = function SpacingTop() {
+    return openSearch ? __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      style: " w-full bg-blue-600",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 162,
+        columnNumber: 22
+      }
+    }) : __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      style: "w-full h-48",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 162,
+        columnNumber: 64
+      }
+    });
+  }; // RENDER THAT SHIT
+
 
   return __jsx("div", {
-    className: "flex flex-col w-full bg-xw-100",
+    className: "flex flex-col w-full bg-xw-100 bg-scroll",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
+      lineNumber: 169,
       columnNumber: 9
     }
-  }, menuClicked && __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    menuClick: menuClicked,
-    changeMenuClicked: clickMenuIcon,
-    currentPage: selectedPage,
-    changeCurrentPage: selectPage,
-    categories: categories,
-    max_shown: 8,
-    links: links,
+  }, __jsx(Menu, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
-      columnNumber: 29
-    }
-  }), menuClicked && __jsx(BlackFocusScreen, {
-    display: menuClicked,
-    onClick: clickMenuIcon,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 113,
-      columnNumber: 29
-    }
-  }), __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    changeMenuClicked: clickMenuIcon,
-    logo: "/logo.png",
-    categories: categories,
-    max_shown: 8,
-    links: links,
-    home: "/",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 119,
+      lineNumber: 171,
       columnNumber: 13
     }
-  }), __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    style: "w-full h-48",
+  }), __jsx(BlackFocusOff, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127,
+      lineNumber: 172,
       columnNumber: 13
     }
-  }), children);
+  }), __jsx(NavigationBar, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 173,
+      columnNumber: 13
+    }
+  }), __jsx(SpacingTop, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174,
+      columnNumber: 13
+    }
+  }), __jsx(SearchPage, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175,
+      columnNumber: 13
+    }
+  }), __jsx(Page, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176,
+      columnNumber: 13
+    }
+  }));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -1929,81 +2511,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Brand", function() { return _Brand__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
-
-/***/ }),
-
-/***/ "./components/logo/intro.js":
-/*!**********************************!*\
-  !*** ./components/logo/intro.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\intro.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-var Intro = function Intro(props) {
-  var content = __jsx("div", {
-    className: props.className,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 9
-    }
-  }, __jsx("div", {
-    className: "container h-full w-auto content-center mx-auto flex flex-wrap",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 13
-    }
-  }, __jsx("strong", {
-    className: "h-5 font-amiri font-regular italic text-base text-gray-900",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 17
-    }
-  }, "FROM "), __jsx("div", {
-    className: "h-5 w-5 flex items-center justify-center ml-1 mr-1",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 17
-    }
-  }, __jsx("img", {
-    src: "icons/morocco.png",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 21
-    }
-  })), __jsx("strong", {
-    className: "h-5 font-amiri font-regular italic text-base text-gray-900",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 17
-    }
-  }, " TO WORLD WIDE")));
-
-  return content;
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Intro);
 
 /***/ }),
 
@@ -2112,6 +2619,109 @@ var ProductGrid = function ProductGrid(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ProductGrid);
+
+/***/ }),
+
+/***/ "./components/widgets/search/searchWidget.js":
+/*!***************************************************!*\
+  !*** ./components/widgets/search/searchWidget.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchWidget; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\search\\searchWidget.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function SearchWidget(_ref) {
+  var style = _ref.style,
+      clickHandler = _ref.clickHandler,
+      inputFocus = _ref.inputFocus;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      data = _useState[0],
+      setData = _useState[1]; // ref for input
+
+
+  var formInput = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // after every render apply input focus if needed 
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (inputFocus) formInput.current.focus();
+  }, []); // traked text
+
+  var writeData = function writeData(event) {
+    setData(event.target.value);
+  }; // submit tracked text
+
+
+  var submitdata = function submitdata() {
+    setData("");
+    clickHandler(data);
+    event.preventDefault();
+  };
+
+  return __jsx("div", {
+    className: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 9
+    }
+  }, __jsx("form", {
+    className: "flex justify-center items-center border-gray-800 border-b-2",
+    onSubmit: submitdata,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "w-8 h-8 mx-2",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 17
+    }
+  }), __jsx("input", {
+    ref: formInput,
+    className: " h-full w-full trasform transition-all ease-out duration-700 focus:placeholder-gray-500 placeholder-gray-600 text-3xl  text-center outline-none ",
+    value: data,
+    onChange: writeData,
+    type: "text",
+    placeholder: "SEARCH",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 17
+    }
+  }), __jsx("button", {
+    className: "flex justify-center items-center h-8 w-8 mx-2 overflow-hidden focus:outline-none cursor-pointer",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 17
+    }
+  }, __jsx("img", {
+    className: "w-full object-cover object-center",
+    src: "icons/loop.svg",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 21
+    }
+  }))));
+}
 
 /***/ }),
 
@@ -13685,6 +14295,67 @@ var IcoMoon = {
   }]
 };
 exports.IcoMoon = IcoMoon;
+
+/***/ }),
+
+/***/ "./node_modules/react-icons-kit/ikons/close.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-icons-kit/ikons/close.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.close = void 0;
+var close = {
+  "viewBox": "0 0 64 64",
+  "children": [{
+    "name": "g",
+    "attribs": {
+      "id": "CLOSE_1_",
+      "enable-background": "new    "
+    },
+    "children": [{
+      "name": "g",
+      "attribs": {
+        "id": "CLOSE"
+      },
+      "children": [{
+        "name": "g",
+        "attribs": {
+          "id": "CLOSE"
+        },
+        "children": [{
+          "name": "g",
+          "attribs": {},
+          "children": [{
+            "name": "g",
+            "attribs": {},
+            "children": [{
+              "name": "path",
+              "attribs": {
+                "d": "M36.243,32l11.879-11.879C48.664,19.579,49,18.828,49,18c0-1.657-1.343-3-3-3c-0.828,0-1.578,0.336-2.121,0.879\r\n\t\t\t\tL32,27.757L20.121,15.879C19.578,15.336,18.828,15,18,15c-1.657,0-3,1.343-3,3c0,0.828,0.336,1.578,0.879,2.121L27.757,32\r\n\t\t\t\tL15.879,43.879C15.336,44.422,15,45.172,15,46c0,1.657,1.343,3,3,3c0.828,0,1.578-0.336,2.121-0.879L32,36.243l11.879,11.879\r\n\t\t\t\tC44.422,48.664,45.172,49,46,49c1.657,0,3-1.343,3-3c0-0.828-0.336-1.578-0.879-2.121L36.243,32z"
+              },
+              "children": [{
+                "name": "path",
+                "attribs": {
+                  "d": "M36.243,32l11.879-11.879C48.664,19.579,49,18.828,49,18c0-1.657-1.343-3-3-3c-0.828,0-1.578,0.336-2.121,0.879\r\n\t\t\t\tL32,27.757L20.121,15.879C19.578,15.336,18.828,15,18,15c-1.657,0-3,1.343-3,3c0,0.828,0.336,1.578,0.879,2.121L27.757,32\r\n\t\t\t\tL15.879,43.879C15.336,44.422,15,45.172,15,46c0,1.657,1.343,3,3,3c0.828,0,1.578-0.336,2.121-0.879L32,36.243l11.879,11.879\r\n\t\t\t\tC44.422,48.664,45.172,49,46,49c1.657,0,3-1.343,3-3c0-0.828-0.336-1.578-0.879-2.121L36.243,32z"
+                },
+                "children": []
+              }]
+            }]
+          }]
+        }]
+      }]
+    }]
+  }]
+};
+exports.close = close;
 
 /***/ }),
 
