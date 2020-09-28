@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layout'
 import AlphaDisplayer from '../components/elements/alpha-displayer/AlphaDisplayer'
 import MakersEntry from '../components/elements/MakersEntry/MakersEntry'
@@ -7,6 +7,11 @@ import { Cover1 } from '../components/graphics/imageCover/Cover'
 import Link from 'next/link'
 import Head from 'next/head'
 import ProductGrid from '../components/widgets/product/ProductGrid'
+import { parseCookies } from '../lib/parseCookies'
+import { getRequest } from '../services/api/get/getRequest'
+import { authenticate } from '../services/authentication/authentication'
+import { checkUser } from '../services/authentication/checkUser'
+import { MakerRegist } from '../components/elements/authentication'
 
 const images = {
   cover01: "images/Articles/cover-01.jpg",
@@ -22,22 +27,17 @@ const images = {
   cover9: "images/Articles/cover-9.jpg",
 }
 
-const hello = ({ cookies = {} }) => {
-  console.log(cookies)
-
-  let contentDOM = (
-    <h1>HELLO</h1>
-  )
+const Hello = (props) => {
 
   return (
-    <Layout>
+    <Layout tags={props.tags}>
       <Head>
         <title>MorMade</title>
         <link rel="icon" href="/logo.png" />
       </Head>
 
       <div className="w-full flex flex-col items-center">
-        <div className="max-w-5xl">
+        <div className="max-w-screen-md">
           <AlphaDisplayer
             image={images.cover01}
             title="Dresses made to last"
@@ -62,12 +62,9 @@ const hello = ({ cookies = {} }) => {
             description="Timeless designs made from recycled materials"
             buttonText="SHOP NOW"
           />
+          <MakerRegist className="my-4"/>
         </div>
       </div>
-
-
-      <MakersEntry />
-      <RegionsEntry />
     </Layout>
 
 
@@ -75,4 +72,19 @@ const hello = ({ cookies = {} }) => {
   )
 }
 
-export default hello
+Hello.getInitialProps = async ({ req }) => {
+  const cookies = parseCookies(req)
+
+  console.log(cookies)
+
+  const tags = await getRequest(process.env.domain + '/api/categories/').then((res) => {
+    return (res)
+  })
+
+  return {
+    cookies: cookies,
+    tags: tags
+  }
+}
+
+export default Hello

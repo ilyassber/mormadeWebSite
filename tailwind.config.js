@@ -18,6 +18,12 @@ module.exports = {
       yantramanav: ['Yantramanav', 'sans-serif'],
     },
     extend: {
+      flex: {
+        '2': '2 2 0%',
+      },
+      backgroundImage: theme => ({
+        'wheel-pot': "url('/wheel-pot.jpg')",
+      }),
       fontSize: {
         sm: ['14px', '20px'],
         base: ['16px', '24px'],

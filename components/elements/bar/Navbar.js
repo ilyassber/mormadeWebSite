@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Brand from '../../logo/Brand'
 import { Menu } from '../../user'
 import { NavMenu } from '.'
@@ -6,8 +6,15 @@ import { NavMenu } from '.'
 const Navbar = props => {
 
     const [menuDrop, setMenuDrop] = useState(false)
+    const [user, setUser] = useState(null)
     
     let status = false
+
+    useEffect(() => {
+        let userData = localStorage.getItem('_user')
+        console.log(userData)
+        setUser(userData)
+    }, [])
 
     const dropMenuOn = () => {
         status = true
@@ -38,7 +45,7 @@ const Navbar = props => {
                     <Menu className="h-full w-auto mr-6" username="ilyass" onClick={dropMenuOn}/>
                 </div>
             </div>
-            <NavMenu className="z-50" cookies={props.cookies} drop={menuDrop} callBack={dropMenuOff}/>
+            <NavMenu className="z-50" user={user} cookies={props.cookies} drop={menuDrop} callBack={dropMenuOff}/>
         </div>
     )
 

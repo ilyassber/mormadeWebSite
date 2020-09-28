@@ -13,20 +13,17 @@ import querystring from 'querystring'
 
 const UserPage = props => {
 
-  console.log(props.cookies)
-  console.log(props.data)
-
   const [data, setData] = useState({ products: null, articles: null });
   const [isLoading, setIsLoading] = useState(false);
   const [clikced, setClicked] = useState(0)
 
   useEffect(() => {
-    console.log('useEffect runs');
-    setIsLoading(true);
+    let user = localStorage.getItem('_user')
+    console.log(user)
+    setIsLoading(true)
     if (props.cookies.utoken != null) {
       getRequest(process.env.domain + '/api/products/')
         .then(res => {
-          console.log(res)
           let products = res
           //setData({...data , products: JSON.stringify(res)});
           //setIsLoading(false);
@@ -34,27 +31,25 @@ const UserPage = props => {
             operation: "all"
           }), props.cookies['csrftoken'], process.env.domain + '/api/articles/')
             .then(res => {
-              console.log(res)
               setData({ products: JSON.stringify(products), articles: JSON.stringify(res) });
-              setIsLoading(false);
+              setIsLoading(false)
             })
         })
     } else {
       window.location = '/maker/auth'
     }
-  }, []);
+  }, [])
 
   let content = <p>Loading characters...</p>;
 
   if (!isLoading) {
-    console.log(data)
     const productsList = (data.products) ? JSON.parse(data.products).map(function (product) {
       return <ProductGrid className="h-auto w-auto m-2" key={product.id} data={product} owner="ilyass" />
     }) : null
 
     const articlesList = (data.articles) ? JSON.parse(data.articles).map(function (article) {
       localStorage.setItem(article.url, JSON.stringify(article))
-      return <ArticleBanner className="h-auto w-auto m-4" key={article.id} data={article} />
+      return <ArticleBanner className="h-auto w-full max-w-screen-md m-4" key={article.id} data={article} />
     }) : null
 
     const sideBarData = [{ id: 0, value: 'Products' }, { id: 1, value: 'Stories' }, { id: 2, value: 'Add Product' }, { id: 3, value: 'Add Story' }]
@@ -82,20 +77,20 @@ const UserPage = props => {
           </div>
         </div>
       </div>
-    );
+    )
   } else if (!isLoading && (!data || data.length === 0)) {
-    content = <p>Could not fetch any data.</p>;
+    content = <p>Could not fetch any data.</p>
   }
-  return content;
-};
+  return content
+}
 
-UserPage.getInitialProps = ({ req }) => {
-  const cookies = parseCookies(req);
+UserPage.getInitialProps = async ({ req }) => {
+  const cookies = parseCookies(req)
 
   return {
     cookies: cookies,
     data: req.data
-  };
-};
+  }
+}
 
 export default UserPage;

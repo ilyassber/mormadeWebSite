@@ -4,6 +4,7 @@ import NavBar from './elements/nav-bar/navbar'
 import SideMenu from './elements/side-menu/sideMenu'
 import SearchGate from './elements/searchGate/searchGate'
 import BlackFocusScreen from './elements/blackFocusScreen/BlackFocusScreen'
+import { getRequest } from '../services/api/get/getRequest'
 
 // fake data 
 const categories = [
@@ -81,13 +82,13 @@ const links = [
 
 
 
-function Layout({ children }) {
+const Layout = (props) => {
     
 // GLOBAL STATES
     
     const [openMenu, setOpenMenu]           = useState(false)   // menu open/close state
     const [selectedPage, setSelectedPage]   = useState({ page: "HOME", path: "/" }) // current selected page
-    const [openSearch, setOpenSearch]       = useState(true)   // search open/close state
+    const [openSearch, setOpenSearch]       = useState(false)   // search open/close state
     const [searchData, setSearchData]       = useState({
                                                 searchHistory : [],
                                                 searchTarget : "",
@@ -121,7 +122,7 @@ function Layout({ children }) {
 // DISPLAYED CONTENT 
 
     const Page = () => (
-        !openSearch && children 
+        !openSearch && props.children
     )
     
     const Menu = () => (
@@ -140,7 +141,7 @@ function Layout({ children }) {
                 openSearch={openSearch}
                 openSearchClickHandler={changeOpenSearch}
                 logo="/logo.png"
-                categories={categories}
+                categories={props.tags}
                 max_shown={8}
                 links={links}
                 home="/"

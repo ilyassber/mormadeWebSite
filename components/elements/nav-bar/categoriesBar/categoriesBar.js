@@ -24,7 +24,7 @@ export default function CategoriesBar({ style ,max_shown, categories }) {
                             className="flex-shrink p-4 cursor-pointer font-lato text-base font-black hover:text-gray-500"
                             onMouseEnter={() => setHovredCategorie({ hovered: true, categorie: categorie })}
                             onMouseLeave={() => setHovredCategorie({ hovered: false, categorie: categorie })}
-                        >{categorie.tag.toUpperCase()}</li>
+                        >{categorie.name.toUpperCase()}</li>
                     )}
                     {categories.length >= max_shown && <li className="flex-shrink p-4 cursor-pointer font-bold font-amiri" key={ max_shown }
                         onMouseDown={() => setmoreCategorie(!moreCategorie)}

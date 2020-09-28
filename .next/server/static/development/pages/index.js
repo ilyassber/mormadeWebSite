@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -202,7 +202,7 @@ function AlphaDisplayer({
   };
   return __jsx("div", {
     onClick: clickAction,
-    className: "relative flex justify-center my-5 mx-5 cursor-pointer overflow-hidden",
+    className: "relative flex justify-center my-5 cursor-pointer overflow-hidden",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -261,6 +261,605 @@ function AlphaDisplayer({
     }
   }, buttonText))));
 }
+
+/***/ }),
+
+/***/ "./components/elements/authentication/Authentication.js":
+/*!**************************************************************!*\
+  !*** ./components/elements/authentication/Authentication.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./components/elements/authentication/index.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\Authentication.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Authentication = props => {
+  const {
+    0: box,
+    1: setBox
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
+
+  let attr1 = __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  });
+
+  let attr2 = __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 17
+    }
+  });
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    console.log(props.cookies['csrftoken']);
+    attr1 = __jsx(___WEBPACK_IMPORTED_MODULE_1__["Login"], {
+      csrf: props.cookies['csrftoken'],
+      switch: () => setBox(attr2),
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 18
+      }
+    });
+    attr2 = __jsx(___WEBPACK_IMPORTED_MODULE_1__["SignUp"], {
+      csrf: props.cookies['csrftoken'],
+      switch: () => setBox(attr1),
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 18
+      }
+    });
+    setBox(attr1);
+  }, []);
+
+  const content = __jsx("div", {
+    className: "bg-xw-500 w-full h-screen flex content-center flex-wrap",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 9
+    }
+  }, box);
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Authentication);
+
+/***/ }),
+
+/***/ "./components/elements/authentication/Login.js":
+/*!*****************************************************!*\
+  !*** ./components/elements/authentication/Login.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/authentication/authentication */ "./services/authentication/authentication.js");
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+/* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\Login.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Login = props => {
+  console.log('enter login');
+  let email;
+  let password;
+
+  const handleEmailChange = event => {
+    email = event.target.value;
+  };
+
+  const handlePasswordChange = event => {
+    password = event.target.value;
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log('********');
+    const data = {
+      email: email,
+      password: password
+    };
+    console.log('__________');
+    Object(_services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__["authenticate"])(data, "login", props.csrf).then(response => {
+      if (response.status === "error") {
+        console.log('error');
+      } else {
+        console.log('success');
+      }
+    }).catch(error => {
+      console.log(error);
+    });
+  };
+
+  let content = __jsx("div", {
+    className: "container mx-auto w-full max-w-lg bg-xw-100",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "p-12 w-full",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 13
+    }
+  }, __jsx("h3", {
+    className: "w-full font-sans font-bold text-xl text-gray-900 text-center mb-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 17
+    }
+  }, "Sign in"), __jsx("h4", {
+    className: "w-full font-sans font-medium text-sm text-gray-800 text-center mt-3 mb-10",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 17
+    }
+  }, "Welcome dear maker"), __jsx("div", {
+    className: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 17
+    }
+  }, __jsx("form", {
+    className: "",
+    action: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 21
+    }
+  }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtField"], {
+    className: "mb-3 mt-2",
+    label: "Email",
+    onChange: handleEmailChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["PwdField"], {
+    className: "mb-3 mt-2",
+    label: "Password",
+    onChange: handlePasswordChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
+    className: "w-full h-12 mt-8 mb-4",
+    value: "SIGN IN",
+    onClick: handleSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBtb"], {
+    className: "w-full h-12 mt-8 mb-4",
+    value: "REGISTER AS MAKER",
+    onClick: props.switch,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 25
+    }
+  })))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Login);
+
+/***/ }),
+
+/***/ "./components/elements/authentication/MakerRegist.js":
+/*!***********************************************************!*\
+  !*** ./components/elements/authentication/MakerRegist.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\MakerRegist.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const MakerRegist = props => {
+  let email;
+  let num;
+
+  const handleEmailChange = event => {
+    email = event.target.value;
+  };
+
+  const handleNumChange = event => {
+    num = event.target.value;
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log('********');
+    const data = {
+      email: email,
+      password: password
+    };
+    console.log('__________');
+    authenticate(data, "login", props.csrf).then(response => {
+      if (response.status === "error") {
+        console.log('error');
+      } else {
+        console.log('success');
+      }
+    }).catch(error => {
+      console.log(error);
+    });
+  };
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative w-full h-auto overflow-hidden",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "absolute h-full w-full object-cover",
+    src: "/wheel-pot.jpg",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "relative w-full h-auto p-6 justify-end",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 17
+    }
+  }, __jsx("h3", {
+    className: "h-auto w-full text-white text-xl text-right align-right mb-6",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44,
+      columnNumber: 21
+    }
+  }, "\u0635\u0627\u0646\u0639 \u061F \u0625\u0646\u0636\u0645 \u0625\u0644\u064A\u0646\u0627"), __jsx("div", {
+    className: "w-full h-auto flex flex-wrap flex-col md:flex-row-reverse items-end",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 21
+    }
+  }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    align: "right",
+    color: "white",
+    className: "w-full flex-2 mt-2",
+    label: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641",
+    onChange: handleNumChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    align: "right",
+    color: "white",
+    className: "w-full flex-2 mt-2 md:mr-2",
+    label: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    onChange: handleEmailChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 25
+    }
+  }), __jsx("div", {
+    className: "w-full h-full flex-1 content-end flex-wrap mt-4 md:mr-2 md:mt-0",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 25
+    }
+  }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
+    className: "w-full h-12",
+    weight: "bold",
+    value: "\u0625\u0646\u0636\u0645",
+    onClick: handleSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 29
+    }
+  }))))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MakerRegist);
+
+/***/ }),
+
+/***/ "./components/elements/authentication/SignUp.js":
+/*!******************************************************!*\
+  !*** ./components/elements/authentication/SignUp.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../services/authentication/authentication */ "./services/authentication/authentication.js");
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+/* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\SignUp.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const SignUp = props => {
+  console.log('enter sign up');
+  let username;
+  let email;
+  let password;
+  let rePassword;
+
+  const handleUsernameChange = event => {
+    username = event.target.value;
+    console.log(username);
+  };
+
+  const handleEmailChange = event => {
+    email = event.target.value;
+  };
+
+  const handlePasswordChange = event => {
+    password = event.target.value;
+  };
+
+  const handleRePasswordChange = event => {
+    rePassword = event.target.value;
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log('********');
+
+    if (password === rePassword) {
+      const data = {
+        username: username,
+        email: email,
+        password: password
+      };
+      console.log('__________');
+      Object(_services_authentication_authentication__WEBPACK_IMPORTED_MODULE_1__["authenticate"])(data, "signup", props.csrf).then(response => {
+        if (response.status === "error") {
+          console.log('error');
+        } else {
+          console.log('success');
+        }
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+  };
+
+  let content = __jsx("div", {
+    className: "container mx-auto w-full max-w-lg bg-xw-100",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "p-12 w-full",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 13
+    }
+  }, __jsx("h3", {
+    className: "w-full font-sans font-bold text-xl text-gray-900 text-center mb-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 17
+    }
+  }, "Sign up"), __jsx("h4", {
+    className: "w-full font-sans font-medium text-sm text-gray-800 text-center mt-3 mb-10",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 17
+    }
+  }, "Welcome dear maker"), __jsx("div", {
+    className: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 17
+    }
+  }, __jsx("form", {
+    className: "",
+    action: "",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 21
+    }
+  }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtField"], {
+    className: "mb-3 mt-2",
+    label: "Username",
+    onChange: handleUsernameChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["TxtField"], {
+    className: "mb-3 mt-2",
+    label: "Email",
+    onChange: handleEmailChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["PwdField"], {
+    className: "mb-3 mt-2",
+    label: "Password",
+    onChange: handlePasswordChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_3__["PwdField"], {
+    className: "mb-3 mt-2",
+    label: "Retype password",
+    onChange: handleRePasswordChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
+    className: "w-full h-12 mt-8 mb-4",
+    value: "SIGN UP",
+    onClick: handleSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 25
+    }
+  }), __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBtb"], {
+    className: "w-full h-12 mt-8 mb-4",
+    value: "BACK TO SIGN IN",
+    onClick: props.switch,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 25
+    }
+  })))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SignUp);
+
+/***/ }),
+
+/***/ "./components/elements/authentication/index.js":
+/*!*****************************************************!*\
+  !*** ./components/elements/authentication/index.js ***!
+  \*****************************************************/
+/*! exports provided: Login, SignUp, Authentication, MakerRegist */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login */ "./components/elements/authentication/Login.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return _Login__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _SignUp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SignUp */ "./components/elements/authentication/SignUp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SignUp", function() { return _SignUp__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _Authentication__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Authentication */ "./components/elements/authentication/Authentication.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Authentication", function() { return _Authentication__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _MakerRegist__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MakerRegist */ "./components/elements/authentication/MakerRegist.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MakerRegist", function() { return _MakerRegist__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+
+
+
+
 
 /***/ }),
 
@@ -647,7 +1246,7 @@ function CategoriesBar({
       lineNumber: 23,
       columnNumber: 65
     }
-  }, categorie.tag.toUpperCase())), categories.length >= max_shown && __jsx("li", {
+  }, categorie.name.toUpperCase())), categories.length >= max_shown && __jsx("li", {
     className: "flex-shrink p-4 cursor-pointer font-bold font-amiri",
     key: max_shown,
     onMouseDown: () => setmoreCategorie(!moreCategorie),
@@ -2054,6 +2653,226 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./components/graphics/buttons/BtnBbw.js":
+/*!***********************************************!*\
+  !*** ./components/graphics/buttons/BtnBbw.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnBbw.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnBbw = props => {
+  let weight = 'medium';
+
+  if (props.weight != null) {
+    weight = props.weight;
+  }
+
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: 'w-full h-full bg-gray-900 hover:bg-gray-700 focus:outline-none focus:border-gray-900 font-roboto font-' + weight + ' text-white text-sm py-2 px-4',
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnBbw);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/BtnBtb.js":
+/*!***********************************************!*\
+  !*** ./components/graphics/buttons/BtnBtb.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnBtb.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnBtb = props => {
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: "w-full h-full bg-transparent border border-gray-900 hover:text-opacity-75 hover:border-opacity-75 focus:outline-none font-sans font-medium text-gray-900 text-sm",
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnBtb);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/BtnIcon.js":
+/*!************************************************!*\
+  !*** ./components/graphics/buttons/BtnIcon.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnIcon.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnIcon = props => {
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: "w-full h-full bg-gray-900 hover:bg-gray-700 focus:outline-none focus:border-gray-900 py-2 px-2",
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    src: props.src,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 21
+    }
+  })));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnIcon);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/BtnTtb.js":
+/*!***********************************************!*\
+  !*** ./components/graphics/buttons/BtnTtb.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnTtb.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const BtnTtb = props => {
+  let style = "w-full h-full bg-transparent text-left hover:text-opacity-75 focus:outline-none font-sans font-bold text-gray-900 text-sm py-2 px-4";
+
+  if (props.clicked == 'true') {
+    style = "w-full h-full bg-transparent text-left focus:outline-none font-sans font-bold text-red-700 text-sm py-2 px-4";
+  }
+
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: style,
+    type: "button",
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnTtb);
+
+/***/ }),
+
+/***/ "./components/graphics/buttons/index.js":
+/*!**********************************************!*\
+  !*** ./components/graphics/buttons/index.js ***!
+  \**********************************************/
+/*! exports provided: BtnBbw, BtnBtb, BtnTtb, BtnIcon */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BtnBbw__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BtnBbw */ "./components/graphics/buttons/BtnBbw.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnBbw", function() { return _BtnBbw__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _BtnBtb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BtnBtb */ "./components/graphics/buttons/BtnBtb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnBtb", function() { return _BtnBtb__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _BtnTtb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BtnTtb */ "./components/graphics/buttons/BtnTtb.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnTtb", function() { return _BtnTtb__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _BtnIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BtnIcon */ "./components/graphics/buttons/BtnIcon.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnIcon", function() { return _BtnIcon__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./components/graphics/imageCover/Cover.js":
 /*!*************************************************!*\
   !*** ./components/graphics/imageCover/Cover.js ***!
@@ -2189,6 +3008,303 @@ function Cover1({
 
 /***/ }),
 
+/***/ "./components/graphics/textFields/IntField.js":
+/*!****************************************************!*\
+  !*** ./components/graphics/textFields/IntField.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\IntField.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const IntField = props => {
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3,
+      columnNumber: 9
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 13
+    }
+  }, props.label), __jsx("input", {
+    min: "0",
+    className: "appearance-none border w-32 h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black",
+    type: "number",
+    onChange: props.onChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 13
+    }
+  }));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (IntField);
+
+/***/ }),
+
+/***/ "./components/graphics/textFields/PwdField.js":
+/*!****************************************************!*\
+  !*** ./components/graphics/textFields/PwdField.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\PwdField.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const PwdField = props => {
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3,
+      columnNumber: 9
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 13
+    }
+  }, props.label), __jsx("input", {
+    className: "appearance-none border w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black",
+    type: "password",
+    onChange: props.onChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 13
+    }
+  }));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PwdField);
+
+/***/ }),
+
+/***/ "./components/graphics/textFields/TextDisp.js":
+/*!****************************************************!*\
+  !*** ./components/graphics/textFields/TextDisp.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TextDisp.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const TextDisp = props => {
+  let align = "left";
+
+  if (props.align != null) {
+    align = props.align;
+  }
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 9
+    }
+  }, __jsx("span", {
+    className: 'font-sans text-base text-gray-900 align-' + align,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  }, props.text));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TextDisp);
+
+/***/ }),
+
+/***/ "./components/graphics/textFields/TxtArea.js":
+/*!***************************************************!*\
+  !*** ./components/graphics/textFields/TxtArea.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TxtArea.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const TxtArea = props => {
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3,
+      columnNumber: 9
+    }
+  }, __jsx("label", {
+    className: "block mb-1 font-sans font-medium",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4,
+      columnNumber: 13
+    }
+  }, props.label), __jsx("textarea", {
+    rows: "4",
+    cols: "50",
+    className: "appearance-none border w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black",
+    type: "text",
+    onChange: props.onChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5,
+      columnNumber: 13
+    }
+  }));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TxtArea);
+
+/***/ }),
+
+/***/ "./components/graphics/textFields/TxtField.js":
+/*!****************************************************!*\
+  !*** ./components/graphics/textFields/TxtField.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TxtField.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const TxtField = props => {
+  let align = 'left';
+  let color = 'gray-900';
+
+  if (props.align != null) {
+    align = props.align;
+  }
+
+  if (props.color != null) {
+    color = props.color;
+  }
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, __jsx("label", {
+    className: 'w-full block mb-1 font-sans font-medium' + ' text-' + color + ' text-' + align,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 13
+    }
+  }, props.label), __jsx("input", {
+    className: "appearance-none border w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black",
+    type: "text",
+    onChange: props.onChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 13
+    }
+  }));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TxtField);
+
+/***/ }),
+
+/***/ "./components/graphics/textFields/index.js":
+/*!*************************************************!*\
+  !*** ./components/graphics/textFields/index.js ***!
+  \*************************************************/
+/*! exports provided: TxtField, PwdField, TxtArea, IntField, TextDisp */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TxtField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TxtField */ "./components/graphics/textFields/TxtField.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TxtField", function() { return _TxtField__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _PwdField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PwdField */ "./components/graphics/textFields/PwdField.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PwdField", function() { return _PwdField__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _TxtArea__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TxtArea */ "./components/graphics/textFields/TxtArea.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TxtArea", function() { return _TxtArea__WEBPACK_IMPORTED_MODULE_2__["default"]; });
+
+/* harmony import */ var _IntField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./IntField */ "./components/graphics/textFields/IntField.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IntField", function() { return _IntField__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _TextDisp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TextDisp */ "./components/graphics/textFields/TextDisp.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TextDisp", function() { return _TextDisp__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
+
+
+
+
+
+
+/***/ }),
+
 /***/ "./components/layout.js":
 /*!******************************!*\
   !*** ./components/layout.js ***!
@@ -2205,8 +3321,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./elements/side-menu/sideMenu */ "./components/elements/side-menu/sideMenu.js");
 /* harmony import */ var _elements_searchGate_searchGate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./elements/searchGate/searchGate */ "./components/elements/searchGate/searchGate.js");
 /* harmony import */ var _elements_blackFocusScreen_BlackFocusScreen__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./elements/blackFocusScreen/BlackFocusScreen */ "./components/elements/blackFocusScreen/BlackFocusScreen.js");
+/* harmony import */ var _services_api_get_getRequest__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/api/get/getRequest */ "./services/api/get/getRequest.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\layout.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2266,9 +3384,7 @@ const links = [{
   path: '/stories'
 }];
 
-function Layout({
-  children
-}) {
+const Layout = props => {
   // GLOBAL STATES
   const {
     0: openMenu,
@@ -2286,7 +3402,7 @@ function Layout({
   const {
     0: openSearch,
     1: setOpenSearch
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true); // search open/close state
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false); // search open/close state
 
   const {
     0: searchData,
@@ -2314,7 +3430,7 @@ function Layout({
   }; // DISPLAYED CONTENT 
 
 
-  const Page = () => !openSearch && children;
+  const Page = () => !openSearch && props.children;
 
   const Menu = () => openMenu && __jsx(_elements_side_menu_sideMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
     menuClick: openMenu,
@@ -2324,10 +3440,10 @@ function Layout({
     categories: categories,
     max_shown: 8,
     links: links,
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128,
+      lineNumber: 129,
       columnNumber: 21
     }
   });
@@ -2337,14 +3453,14 @@ function Layout({
     openSearch: openSearch,
     openSearchClickHandler: changeOpenSearch,
     logo: "/logo.png",
-    categories: categories,
+    categories: props.tags,
     max_shown: 8,
     links: links,
     home: "/",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139,
+      lineNumber: 140,
       columnNumber: 9
     }
   });
@@ -2353,38 +3469,38 @@ function Layout({
     changeOpenSearch: changeOpenSearch,
     searchData: searchData,
     setSearchData: data => setSearchData(data),
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151,
+      lineNumber: 152,
       columnNumber: 25
     }
   });
 
   const BlackFocusOff = () => openMenu && __jsx(_elements_blackFocusScreen_BlackFocusScreen__WEBPACK_IMPORTED_MODULE_5__["default"], {
     onClick: changeOpenMenu,
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158,
+      lineNumber: 159,
       columnNumber: 25
     }
   });
 
   const SpacingTop = () => openSearch ? __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: " w-full bg-blue-600",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162,
+      lineNumber: 163,
       columnNumber: 22
     }
   }) : __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: "w-full h-48",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162,
+      lineNumber: 163,
       columnNumber: 64
     }
   }); // RENDER THAT SHIT
@@ -2392,56 +3508,56 @@ function Layout({
 
   return __jsx("div", {
     className: "flex flex-col w-full bg-xw-100 bg-scroll",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169,
+      lineNumber: 170,
       columnNumber: 9
     }
   }, __jsx(Menu, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 171,
-      columnNumber: 13
-    }
-  }), __jsx(BlackFocusOff, {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 172,
       columnNumber: 13
     }
-  }), __jsx(NavigationBar, {
-    __self: this,
+  }), __jsx(BlackFocusOff, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 173,
       columnNumber: 13
     }
-  }), __jsx(SpacingTop, {
-    __self: this,
+  }), __jsx(NavigationBar, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 174,
       columnNumber: 13
     }
-  }), __jsx(SearchPage, {
-    __self: this,
+  }), __jsx(SpacingTop, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 175,
       columnNumber: 13
     }
-  }), __jsx(Page, {
-    __self: this,
+  }), __jsx(SearchPage, {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 176,
       columnNumber: 13
     }
+  }), __jsx(Page, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177,
+      columnNumber: 13
+    }
   }));
-}
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -2878,6 +3994,25 @@ function Wrapper({
       columnNumber: 9
     }
   }, children);
+}
+
+/***/ }),
+
+/***/ "./lib/parseCookies.js":
+/*!*****************************!*\
+  !*** ./lib/parseCookies.js ***!
+  \*****************************/
+/*! exports provided: parseCookies */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseCookies", function() { return parseCookies; });
+/* harmony import */ var cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cookie */ "cookie");
+/* harmony import */ var cookie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cookie__WEBPACK_IMPORTED_MODULE_0__);
+
+function parseCookies(req) {
+  return cookie__WEBPACK_IMPORTED_MODULE_0___default.a.parse(req ? req.headers.cookie || "" : document.cookie);
 }
 
 /***/ }),
@@ -4572,8 +5707,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _components_widgets_product_ProductGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/widgets/product/ProductGrid */ "./components/widgets/product/ProductGrid.js");
+/* harmony import */ var _lib_parseCookies__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/parseCookies */ "./lib/parseCookies.js");
+/* harmony import */ var _services_api_get_getRequest__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../services/api/get/getRequest */ "./services/api/get/getRequest.js");
+/* harmony import */ var _services_authentication_authentication__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../services/authentication/authentication */ "./services/authentication/authentication.js");
+/* harmony import */ var _services_authentication_checkUser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../services/authentication/checkUser */ "./services/authentication/checkUser.js");
+/* harmony import */ var _components_elements_authentication__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/elements/authentication */ "./components/elements/authentication/index.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
 
 
 
@@ -4597,21 +5742,9 @@ const images = {
   cover9: "images/Articles/cover-9.jpg"
 };
 
-const hello = ({
-  cookies = {}
-}) => {
-  console.log(cookies);
-
-  let contentDOM = __jsx("h1", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 5
-    }
-  }, "HELLO");
-
+const Hello = props => {
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    tags: props.tags,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -4650,7 +5783,7 @@ const hello = ({
       columnNumber: 7
     }
   }, __jsx("div", {
-    className: "max-w-5xl",
+    className: "max-w-screen-md",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -4701,28 +5834,147 @@ const hello = ({
       lineNumber: 59,
       columnNumber: 11
     }
-  }))), __jsx(_components_elements_MakersEntry_MakersEntry__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), __jsx(_components_elements_authentication__WEBPACK_IMPORTED_MODULE_13__["MakerRegist"], {
+    className: "my-4",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
-      columnNumber: 7
+      lineNumber: 65,
+      columnNumber: 11
     }
-  }), __jsx(_components_elements_RegionsEntry_RegionsEntry__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70,
-      columnNumber: 7
-    }
-  }));
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (hello);
+Hello.getInitialProps = async ({
+  req
+}) => {
+  const cookies = Object(_lib_parseCookies__WEBPACK_IMPORTED_MODULE_9__["parseCookies"])(req);
+  console.log(cookies);
+  const tags = await Object(_services_api_get_getRequest__WEBPACK_IMPORTED_MODULE_10__["getRequest"])("http://localhost:8000" + '/api/categories/').then(res => {
+    return res;
+  });
+  return {
+    cookies: cookies,
+    tags: tags
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Hello);
 
 /***/ }),
 
-/***/ 3:
+/***/ "./services/api/get/getRequest.js":
+/*!****************************************!*\
+  !*** ./services/api/get/getRequest.js ***!
+  \****************************************/
+/*! exports provided: getRequest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRequest", function() { return getRequest; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+function getRequest(url) {
+  return new Promise((resolve, reject) => {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(url).then(response => {
+      resolve(response.data);
+    }).catch(error => {
+      reject(error);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./services/authentication/authentication.js":
+/*!***************************************************!*\
+  !*** ./services/authentication/authentication.js ***!
+  \***************************************************/
+/*! exports provided: authenticate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authenticate", function() { return authenticate; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "querystring");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function authenticate(data, operation, csrttoken) {
+  return new Promise((resolve, reject) => {
+    let axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': csrttoken
+      }
+    };
+    let content = {
+      operation: operation,
+      data: querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(data)
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("http://localhost:8000" + '/api/users/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
+      console.log(response.data);
+      localStorage.setItem('_user', JSON.stringify(response.data)); //window.open('/users')
+
+      if (operation == 'logout') {
+        localStorage.setItem('_user', null);
+        window.location = '/maker/auth';
+      } else {
+        window.location = '/maker';
+      } //resolve(response.data)
+
+    }).catch(error => {
+      console.log(error); //reject(error)
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./services/authentication/checkUser.js":
+/*!**********************************************!*\
+  !*** ./services/authentication/checkUser.js ***!
+  \**********************************************/
+/*! exports provided: checkUser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkUser", function() { return checkUser; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "querystring");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
+
+
+async function checkUser(operation, csrttoken) {
+  let axiosConfig = {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'X-CSRFToken': csrttoken
+    }
+  };
+  let content = {
+    operation: operation,
+    data: 'None'
+  };
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("http://localhost:8000" + '/api/users/', querystring__WEBPACK_IMPORTED_MODULE_1___default.a.stringify(content), axiosConfig).then(response => {
+    return response;
+  }).catch(error => {
+    return null;
+  });
+}
+
+/***/ }),
+
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -4731,6 +5983,28 @@ const hello = ({
 
 module.exports = __webpack_require__(/*! C:\Users\1337\Documents\WorkSpace\ecomart\dev\mormadeWebSite\pages\index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ "cookie":
+/*!*************************!*\
+  !*** external "cookie" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("cookie");
 
 /***/ }),
 
@@ -4764,6 +6038,17 @@ module.exports = require("prop-types");
 /***/ (function(module, exports) {
 
 module.exports = require("prop-types-exact");
+
+/***/ }),
+
+/***/ "querystring":
+/*!******************************!*\
+  !*** external "querystring" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("querystring");
 
 /***/ }),
 

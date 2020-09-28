@@ -20,12 +20,10 @@ const Story = props => {
 
 export async function getStaticPaths() {
 
-    const res = await getRequest(process.env.domain + '/api/articles/')
+    const stories = await getRequest(process.env.domain + '/api/articles/')
         .then(res => {
-            return (JSON.stringify(res))
+            return (res)
         })
-
-    const stories = JSON.parse(res)
 
     const paths = stories.map((story) => `/stories/${story.url}`)
 

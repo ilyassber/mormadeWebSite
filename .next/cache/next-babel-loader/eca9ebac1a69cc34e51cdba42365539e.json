@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default as Brand } from './Brand';","map":{"version":3,"sources":["C:/Users/1337/Documents/WorkSpace/ecomart/dev/mormadeWebSite/components/logo/index.js"],"names":["default","Brand"],"mappings":"AAAA,SAASA,OAAO,IAAIC,KAApB,QAAiC,SAAjC","sourcesContent":["export { default as Brand } from './Brand'"]},"metadata":{},"sourceType":"module"}

@@ -1,18 +1,34 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { authenticate } from '../../../services/authentication/authentication'
 import { onClickOutside } from '../../../services/hooks/onClickOutside'
+import { BtnBbw } from '../../graphics/buttons'
 
 const NavMenu = props => {
 
+    let user = (props.user) ? JSON.parse(props.user) : null
+    //let user = null
+
     let object = (
         <div className="">
-            <div className="hover:bg-xw-100 w-24 border border-gray-900 bg-white">
-                <button
-                    className="focus:outline-none font-sans font-medium text-gray-900 text-sm ml-2"
-                    type="button"
-                    onClick={() => {authenticate({}, "logout", props.cookies['csrftoken'])}}>
-                    logout
-                </button>
+            <div className="w-auto flex flex-col bg-white shadow">
+                <div className="w-32 flex flex-col m-4">
+                    {(user != null) ? (
+                        <button
+                            className="focus:outline-none font-sans font-semibold text-gray-900 text-sm text-left hover:underline my-2"
+                            type="button"
+                            onClick={() => { }}>
+                            {user.username}
+                        </button>
+                    ) : <BtnBbw className="w-auto h-12 mt-2 mb-2" value="SIGN IN" onClick={() => { }} />}
+                    {(user != null) ? (
+                        <button
+                            className="focus:outline-none font-sans font-semibold text-gray-700 text-xs text-left hover:underline my-2"
+                            type="button"
+                            onClick={() => { authenticate({}, "logout", props.cookies['csrftoken']) }}>
+                            Sign out
+                        </button>
+                    ) : null}
+                </div>
             </div>
         </div>
     )

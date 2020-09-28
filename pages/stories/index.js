@@ -27,29 +27,29 @@ const Stories = props => {
             })
     }, []);
 
-    let content = <p>Loading characters...</p>;
+    let content = null;
 
     if (!isLoading) {
 
         const articlesList = (data) ? JSON.parse(data).map(function (article) {
-            return <ArticleBanner className="h-auto w-auto m-4" key={article.id} data={article} />
+            return <ArticleBanner className="h-auto w-full max-w-screen-md m-4" key={article.id} data={article} />
         }) : null
 
-        let articles = (<ArticleList className="p-2" data={articlesList} />)
+        let articles = (<ArticleList className="w-full p-2" data={articlesList} />)
 
         content = (
-            <div className="w-full flex flex-col items-center">
+            <div className="w-screen flex flex-col items-center">
                 <Navbar cookies={props.cookies} className="w-full" />
-                <WelcomeBar className="pt-12" />
-                <div className="w-3/5 flex pt-10">
-                    <div className="w-full h-full">
+                <WelcomeBar className="w-screen pt-12" />
+                <div className="w-full h-auto flex pt-10">
+                    <div className="w-full h-auto flex flex-col items-center">
                         {articles}
                     </div>
                 </div>
             </div>
         );
     } else if (!isLoading && (!data || data.length === 0)) {
-        content = <p>Could not fetch any data.</p>;
+        content = null;
     }
     return content;
 };

@@ -4903,6 +4903,10 @@ video {
   background-image: linear-gradient(to top left, var(--gradient-color-stops));
 }
 
+.bg-wheel-pot{
+  background-image: url('/wheel-pot.jpg');
+}
+
 .from-transparent{
   --gradient-from-color: transparent;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -12169,6 +12173,10 @@ video {
 
 .flex-1{
   flex: 1 1 0%;
+}
+
+.flex-2{
+  flex: 2 2 0%;
 }
 
 .flex-auto{
@@ -39171,6 +39179,10 @@ video {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .sm\:bg-wheel-pot{
+    background-image: url('/wheel-pot.jpg');
+  }
+
   .sm\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -46437,6 +46449,10 @@ video {
 
   .sm\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .sm\:flex-2{
+    flex: 2 2 0%;
   }
 
   .sm\:flex-auto{
@@ -73354,6 +73370,10 @@ video {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .md\:bg-wheel-pot{
+    background-image: url('/wheel-pot.jpg');
+  }
+
   .md\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -80620,6 +80640,10 @@ video {
 
   .md\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .md\:flex-2{
+    flex: 2 2 0%;
   }
 
   .md\:flex-auto{
@@ -107537,6 +107561,10 @@ video {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .lg\:bg-wheel-pot{
+    background-image: url('/wheel-pot.jpg');
+  }
+
   .lg\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -114803,6 +114831,10 @@ video {
 
   .lg\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .lg\:flex-2{
+    flex: 2 2 0%;
   }
 
   .lg\:flex-auto{
@@ -141720,6 +141752,10 @@ video {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .xl\:bg-wheel-pot{
+    background-image: url('/wheel-pot.jpg');
+  }
+
   .xl\:from-transparent{
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -148986,6 +149022,10 @@ video {
 
   .xl\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .xl\:flex-2{
+    flex: 2 2 0%;
   }
 
   .xl\:flex-auto{

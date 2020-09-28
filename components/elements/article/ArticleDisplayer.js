@@ -14,7 +14,7 @@ const ArticleDisplayer = props => {
                         ? (<ImgFreeDisp className="w-full h-auto" src={data.cover.path} />)
                         : null}
                     <div className="h-auto w-auto max-w-screen flex flex-col items-center bg-white mt-6">
-                        <h1 className="font-roboto font-bold text-3xl text-center mt-6 mx-6">
+                        <h1 className="font-roboto font-bold text-3xl text-center leading-snug mt-6 mx-6">
                             {data.title}
                         </h1>
                         <h3 className="font-roboto font-medium text-base text-center mx-6 mb-6 mt-4">

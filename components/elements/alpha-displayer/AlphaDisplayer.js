@@ -10,7 +10,7 @@ export default function AlphaDisplayer({ image, title, description, buttonText, 
 
     return (
 
-        <div onClick={clickAction} className="relative flex justify-center my-5 mx-5 cursor-pointer overflow-hidden">
+        <div onClick={clickAction} className="relative flex justify-center my-5 cursor-pointer overflow-hidden">
             {/* <div className="absolute opacity-75 h-auto w-full bg-orange-500"> </div> */}
             <img className="w-full object-cover object-center" src={image} alt="image cover" />
             <div className="absolute flex flex-col justify-end items-center p-2 w-full h-full ">

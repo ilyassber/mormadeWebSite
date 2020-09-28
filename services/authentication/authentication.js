@@ -16,9 +16,11 @@ export function authenticate(data, operation, csrttoken) {
         axios.defaults.withCredentials = true
         axios.post(process.env.domain + '/api/users/', querystring.stringify(content), axiosConfig)
             .then((response) => {
-                console.log(response)
+                console.log(response.data)
+                localStorage.setItem('_user', JSON.stringify(response.data))
                 //window.open('/users')
                 if (operation == 'logout') {
+                    localStorage.setItem('_user', null)
                     window.location = '/maker/auth'
                 } else {
                     window.location = '/maker'

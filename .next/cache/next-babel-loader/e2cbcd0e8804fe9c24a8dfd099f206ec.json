@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default as Login } from './Login';\nexport { default as SignUp } from './SignUp';\nexport { default as Authentication } from './Authentication';","map":null,"metadata":{},"sourceType":"module"}
