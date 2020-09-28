@@ -21,9 +21,9 @@ export function authenticate(data, operation, csrttoken) {
                 //window.open('/users')
                 if (operation == 'logout') {
                     localStorage.setItem('_user', null)
-                    window.location = '/maker/auth'
+                    //window.location = '/maker/auth'
                 } else {
-                    window.location = '/maker'
+                   // window.location = '/maker'
                 }
                 //resolve(response.data)
             })

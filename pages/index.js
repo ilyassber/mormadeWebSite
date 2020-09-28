@@ -62,13 +62,10 @@ const Hello = (props) => {
             description="Timeless designs made from recycled materials"
             buttonText="SHOP NOW"
           />
-          <MakerRegist className="my-4"/>
+          <MakerRegist className="my-4" csrf={props.cookies['csrftoken']}/>
         </div>
       </div>
     </Layout>
-
-
-
   )
 }
 
