@@ -425,6 +425,10 @@ var MakerRegist = function MakerRegist(props) {
       welcome = _useState3[0],
       setWelcome = _useState3[1];
 
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      reset = _useState4[0],
+      setReset = _useState4[1];
+
   var email;
   var num;
 
@@ -452,6 +456,7 @@ var MakerRegist = function MakerRegist(props) {
           console.log('error');
         } else {
           setWelcome('شكرا، سنقوم بالتواصل معك قريبا');
+          setReset(true);
           console.log('success');
         }
       })["catch"](function (error) {
@@ -473,7 +478,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -481,7 +486,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 59,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -490,7 +495,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 60,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -498,7 +503,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 61,
       columnNumber: 17
     }
   }, __jsx("h3", {
@@ -506,7 +511,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 62,
       columnNumber: 21
     }
   }, welcome), __jsx("div", {
@@ -514,10 +519,11 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 65,
       columnNumber: 21
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    reset: reset,
     error: numError,
     align: "right",
     color: "white",
@@ -527,10 +533,11 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 66,
       columnNumber: 25
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    reset: reset,
     error: emailError,
     align: "right",
     color: "white",
@@ -540,7 +547,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 67,
       columnNumber: 25
     }
   }), __jsx("div", {
@@ -548,7 +555,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 68,
       columnNumber: 25
     }
   }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
@@ -559,7 +566,7 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 69,
       columnNumber: 29
     }
   }))))));
@@ -3268,7 +3275,9 @@ var _this = undefined,
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+
 var TxtField = function TxtField(props) {
+  var inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   var align = 'left';
   var color = 'gray-900';
   var borderColor = 'gray-500';
@@ -3286,12 +3295,29 @@ var TxtField = function TxtField(props) {
     color = 'red-600';
   }
 
+  if (props.reset == true) {
+    color = 'white';
+    borderColor = 'gray-500';
+    inputRef.current.value = '';
+  }
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    console.log("before reset");
+
+    if (props.reset == true) {
+      console.log("reset");
+      color = 'gray-900';
+      borderColor = 'gray-500';
+      inputRef.current.reset();
+    }
+  }, []);
+
   var content = __jsx("div", {
     className: props.className,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 38,
       columnNumber: 9
     }
   }, __jsx("label", {
@@ -3299,17 +3325,18 @@ var TxtField = function TxtField(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 39,
       columnNumber: 13
     }
   }, props.label), __jsx("input", {
+    ref: inputRef,
     className: 'appearance-none border ' + 'border-' + borderColor + ' w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black',
     type: "text",
     onChange: props.onChange,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 40,
       columnNumber: 13
     }
   }));
@@ -19703,7 +19730,7 @@ function registerMaker(data, operation, csrttoken) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js ***!
   \****************************************************************************************************************************************************************/
@@ -19726,5 +19753,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

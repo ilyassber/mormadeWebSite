@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -532,6 +532,10 @@ const MakerRegist = props => {
     0: welcome,
     1: setWelcome
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('صانع ؟ إنضم إلينا');
+  const {
+    0: reset,
+    1: setReset
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   let email;
   let num;
 
@@ -559,6 +563,7 @@ const MakerRegist = props => {
           console.log('error');
         } else {
           setWelcome('شكرا، سنقوم بالتواصل معك قريبا');
+          setReset(true);
           console.log('success');
         }
       }).catch(error => {
@@ -580,7 +585,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 58,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -588,7 +593,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 59,
       columnNumber: 13
     }
   }, __jsx("img", {
@@ -597,7 +602,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 60,
       columnNumber: 17
     }
   }), __jsx("div", {
@@ -605,7 +610,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 61,
       columnNumber: 17
     }
   }, __jsx("h3", {
@@ -613,7 +618,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 62,
       columnNumber: 21
     }
   }, welcome), __jsx("div", {
@@ -621,10 +626,11 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 65,
       columnNumber: 21
     }
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    reset: reset,
     error: numError,
     align: "right",
     color: "white",
@@ -634,10 +640,11 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 66,
       columnNumber: 25
     }
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    reset: reset,
     error: emailError,
     align: "right",
     color: "white",
@@ -647,7 +654,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 67,
       columnNumber: 25
     }
   }), __jsx("div", {
@@ -655,7 +662,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 68,
       columnNumber: 25
     }
   }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
@@ -666,7 +673,7 @@ const MakerRegist = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 69,
       columnNumber: 29
     }
   }))))));
@@ -3255,7 +3262,9 @@ var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormade
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+
 const TxtField = props => {
+  const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
   let align = 'left';
   let color = 'gray-900';
   let borderColor = 'gray-500';
@@ -3273,12 +3282,29 @@ const TxtField = props => {
     color = 'red-600';
   }
 
+  if (props.reset == true) {
+    color = 'white';
+    borderColor = 'gray-500';
+    inputRef.current.value = '';
+  }
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    console.log("before reset");
+
+    if (props.reset == true) {
+      console.log("reset");
+      color = 'gray-900';
+      borderColor = 'gray-500';
+      inputRef.current.reset();
+    }
+  }, []);
+
   let content = __jsx("div", {
     className: props.className,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 38,
       columnNumber: 9
     }
   }, __jsx("label", {
@@ -3286,17 +3312,18 @@ const TxtField = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 39,
       columnNumber: 13
     }
   }, props.label), __jsx("input", {
+    ref: inputRef,
     className: 'appearance-none border ' + 'border-' + borderColor + ' w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black',
     type: "text",
     onChange: props.onChange,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 40,
       columnNumber: 13
     }
   }));
@@ -6049,7 +6076,7 @@ function registerMaker(data, operation, csrttoken) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

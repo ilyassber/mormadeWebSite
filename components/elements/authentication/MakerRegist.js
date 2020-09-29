@@ -8,6 +8,7 @@ const MakerRegist = props => {
     const [emailError, setEmailError] = useState(false)
     const [numError, setNumError] = useState(false)
     const [welcome, setWelcome] = useState('صانع ؟ إنضم إلينا')
+    const [reset, setReset] = useState(false)
 
     let email;
     let num;
@@ -36,6 +37,7 @@ const MakerRegist = props => {
                 }
                 else {
                     setWelcome('شكرا، سنقوم بالتواصل معك قريبا')
+                    setReset(true)
                     console.log('success')
                 }
             })
@@ -61,8 +63,8 @@ const MakerRegist = props => {
                         {welcome}
                     </h3>
                     <div className="w-full h-auto flex flex-wrap flex-col md:flex-row-reverse items-end">
-                        <TxtField error={numError} align='right' color='white' className="w-full flex-2 mt-2" label="رقم الهاتف" onChange={handleNumChange} />
-                        <TxtField error={emailError} align='right' color='white' className="w-full flex-2 mt-2 md:mr-2" label="البريد الإلكتروني" onChange={handleEmailChange} />
+                        <TxtField reset={reset} error={numError} align='right' color='white' className="w-full flex-2 mt-2" label="رقم الهاتف" onChange={handleNumChange} />
+                        <TxtField reset={reset} error={emailError} align='right' color='white' className="w-full flex-2 mt-2 md:mr-2" label="البريد الإلكتروني" onChange={handleEmailChange} />
                         <div className="w-full h-full flex-1 content-end flex-wrap mt-4 md:mr-2 md:mt-0">
                             <BtnBbw className="w-full h-12" weight="bold" value="إنضم" onClick={handleSubmit} />
                         </div>
