@@ -402,7 +402,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
 /* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
-/* harmony import */ var _services_authentication_registerMaker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/authentication/registerMaker */ "./services/authentication/registerMaker.js");
+/* harmony import */ var _services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/authentication/registerUser */ "./services/authentication/registerUser.js");
 var _this = undefined,
     _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\MakerRegist.js";
 
@@ -450,7 +450,7 @@ var MakerRegist = function MakerRegist(props) {
         phone: num,
         is_maker: true
       };
-      Object(_services_authentication_registerMaker__WEBPACK_IMPORTED_MODULE_3__["registerMaker"])(data, "signup_maker", props.csrf).then(function (response) {
+      Object(_services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__["registerUser"])(data, "signup_maker", props.csrf).then(function (response) {
         if (response.status === "error") {
           setWelcome('لقد تعذر تسجيل هذا البريد الإلكتروني!');
           console.log('error');
@@ -507,7 +507,7 @@ var MakerRegist = function MakerRegist(props) {
       columnNumber: 17
     }
   }, __jsx("h3", {
-    className: "h-auto w-full text-white text-xl text-right align-right mb-6",
+    className: "h-auto w-full font-roboto font-bold text-white text-2xl text-right align-right mb-6",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -529,6 +529,8 @@ var MakerRegist = function MakerRegist(props) {
     color: "white",
     className: "w-full flex-2 mt-2",
     label: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641",
+    placeholder: "xxxxxxxxxx",
+    height: 10,
     onChange: handleNumChange,
     __self: _this,
     __source: {
@@ -543,11 +545,13 @@ var MakerRegist = function MakerRegist(props) {
     color: "white",
     className: "w-full flex-2 mt-2 md:mr-2",
     label: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    placeholder: "example@email.com",
+    height: 10,
     onChange: handleEmailChange,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 76,
       columnNumber: 25
     }
   }), __jsx("div", {
@@ -555,18 +559,18 @@ var MakerRegist = function MakerRegist(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 86,
       columnNumber: 25
     }
   }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
-    className: "w-full h-12",
+    className: "w-full h-10",
     weight: "bold",
     value: "\u0625\u0646\u0636\u0645",
     onClick: handleSubmit,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69,
+      lineNumber: 87,
       columnNumber: 29
     }
   }))))));
@@ -3281,6 +3285,8 @@ var TxtField = function TxtField(props) {
   var align = 'left';
   var color = 'gray-900';
   var borderColor = 'gray-500';
+  var placeholder = '';
+  var height = 12;
 
   if (props.align != null) {
     align = props.align;
@@ -3288,6 +3294,10 @@ var TxtField = function TxtField(props) {
 
   if (props.color != null) {
     color = props.color;
+  }
+
+  if (props.height != null) {
+    height = props.height;
   }
 
   if (props.error == true) {
@@ -3301,42 +3311,36 @@ var TxtField = function TxtField(props) {
     inputRef.current.value = '';
   }
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    console.log("before reset");
-
-    if (props.reset == true) {
-      console.log("reset");
-      color = 'gray-900';
-      borderColor = 'gray-500';
-      inputRef.current.reset();
-    }
-  }, []);
+  if (props.placeholder != null) {
+    placeholder = props.placeholder;
+  }
 
   var content = __jsx("div", {
     className: props.className,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 41,
       columnNumber: 9
     }
-  }, __jsx("label", {
+  }, props.label != null ? __jsx("label", {
     className: 'w-full block mb-1 font-sans font-medium' + ' text-' + color + ' text-' + align,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 13
+      lineNumber: 43,
+      columnNumber: 16
     }
-  }, props.label), __jsx("input", {
+  }, props.label) : null, __jsx("input", {
     ref: inputRef,
-    className: 'appearance-none border ' + 'border-' + borderColor + ' w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black',
+    placeholder: placeholder,
+    className: 'appearance-none border ' + 'border-' + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black',
     type: "text",
     onChange: props.onChange,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 45,
       columnNumber: 13
     }
   }));
@@ -19689,23 +19693,23 @@ function checkUser(operation, csrttoken) {
 
 /***/ }),
 
-/***/ "./services/authentication/registerMaker.js":
-/*!**************************************************!*\
-  !*** ./services/authentication/registerMaker.js ***!
-  \**************************************************/
-/*! exports provided: registerMaker */
+/***/ "./services/authentication/registerUser.js":
+/*!*************************************************!*\
+  !*** ./services/authentication/registerUser.js ***!
+  \*************************************************/
+/*! exports provided: registerUser */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerMaker", function() { return registerMaker; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerUser", function() { return registerUser; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_1__);
 
 
-function registerMaker(data, operation, csrttoken) {
+function registerUser(data, operation, csrttoken) {
   return new Promise(function (resolve, reject) {
     var axiosConfig = {
       headers: {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { TxtField } from '../../graphics/textFields'
 import { BtnBbw } from '../../graphics/buttons'
-import { registerMaker } from '../../../services/authentication/registerMaker'
+import { registerUser } from '../../../services/authentication/registerUser'
 
 const MakerRegist = props => {
 
@@ -30,7 +30,7 @@ const MakerRegist = props => {
                 phone: num,
                 is_maker: true
             }
-            registerMaker(data, "signup_maker", props.csrf).then((response) => {
+            registerUser(data, "signup_maker", props.csrf).then((response) => {
                 if (response.status === "error") {
                     setWelcome('لقد تعذر تسجيل هذا البريد الإلكتروني!')
                     console.log('error')
@@ -59,14 +59,32 @@ const MakerRegist = props => {
             <div className="relative w-full h-auto overflow-hidden">
                 <img className="absolute h-full w-full object-cover" src="/wheel-pot.jpg" />
                 <div className="relative w-full h-auto p-6 justify-end">
-                    <h3 className="h-auto w-full text-white text-xl text-right align-right mb-6">
+                    <h3 className="h-auto w-full font-roboto font-bold text-white text-2xl text-right align-right mb-6">
                         {welcome}
                     </h3>
                     <div className="w-full h-auto flex flex-wrap flex-col md:flex-row-reverse items-end">
-                        <TxtField reset={reset} error={numError} align='right' color='white' className="w-full flex-2 mt-2" label="رقم الهاتف" onChange={handleNumChange} />
-                        <TxtField reset={reset} error={emailError} align='right' color='white' className="w-full flex-2 mt-2 md:mr-2" label="البريد الإلكتروني" onChange={handleEmailChange} />
+                        <TxtField
+                            reset={reset}
+                            error={numError}
+                            align='right'
+                            color='white'
+                            className="w-full flex-2 mt-2"
+                            label="رقم الهاتف"
+                            placeholder='xxxxxxxxxx'
+                            height={10}
+                            onChange={handleNumChange} />
+                        <TxtField
+                            reset={reset}
+                            error={emailError}
+                            align='right'
+                            color='white'
+                            className="w-full flex-2 mt-2 md:mr-2"
+                            label="البريد الإلكتروني"
+                            placeholder='example@email.com'
+                            height={10}
+                            onChange={handleEmailChange} />
                         <div className="w-full h-full flex-1 content-end flex-wrap mt-4 md:mr-2 md:mt-0">
-                            <BtnBbw className="w-full h-12" weight="bold" value="إنضم" onClick={handleSubmit} />
+                            <BtnBbw className="w-full h-10" weight="bold" value="إنضم" onClick={handleSubmit} />
                         </div>
                     </div>
                 </div>

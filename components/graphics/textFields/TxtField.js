@@ -7,12 +7,21 @@ const TxtField = props => {
     let align = 'left'
     let color = 'gray-900'
     let borderColor = 'gray-500'
+    let placeholder = ''
+    let height = 12
+
     if (props.align != null) {
         align = props.align
     }
+
     if (props.color != null) {
         color = props.color
     }
+
+    if (props.height != null) {
+        height = props.height
+    }
+
     if (props.error == true) {
         borderColor = 'red-600'
         color = 'red-600'
@@ -24,22 +33,19 @@ const TxtField = props => {
         inputRef.current.value = ''
     }
 
-    useEffect(() => {
-        console.log("before reset")
-        if (props.reset == true) {
-            console.log("reset")
-            color = 'gray-900'
-            borderColor = 'gray-500'
-            inputRef.current.reset()
-        }
-    }, [])
+    if (props.placeholder != null) {
+        placeholder = props.placeholder
+    }
 
     let content = (
         <div className={props.className}>
-            <label className={'w-full block mb-1 font-sans font-medium' + ' text-' + color + ' text-' + align}>{props.label}</label>
+            {(props.label != null)
+            ? (<label className={'w-full block mb-1 font-sans font-medium' + ' text-' + color + ' text-' + align}>{props.label}</label>)
+            : null}
             <input
                 ref={inputRef}
-                className={'appearance-none border ' + 'border-' + borderColor + ' w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black'}
+                placeholder={placeholder}
+                className={'appearance-none border ' + 'border-' + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black'}
                 type="text"
                 onChange={props.onChange}
             />

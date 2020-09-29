@@ -1,7 +1,7 @@
 import axios from 'axios'
 import querystring from 'querystring'
 
-export function registerMaker(data, operation, csrttoken) {
+export function registerUser(data, operation, csrttoken) {
     return new Promise((resolve, reject) => {
         let axiosConfig = {
             headers: {
