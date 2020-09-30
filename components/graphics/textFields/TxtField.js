@@ -6,7 +6,7 @@ const TxtField = props => {
 
     let align = 'left'
     let color = 'gray-900'
-    let borderColor = 'gray-500'
+    let borderColor = 'gray-300'
     let placeholder = ''
     let height = 12
 
@@ -29,7 +29,7 @@ const TxtField = props => {
 
     if (props.reset == true) {
         color = 'white'
-        borderColor = 'gray-500'
+        borderColor = 'gray-300'
         inputRef.current.value = ''
     }
 

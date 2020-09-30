@@ -21,7 +21,9 @@ const AddImage = props => {
                     multiple
                     type="file"
                     onChange={(input) => {
+                        console.log(input)
                         props.onChange(Array.from(input.target.files))
+                        inputRef.current.value = null
                     }}
                 />
                 <div className="container flex content-center flex-wrap text-center h-32 w-32 border border-1 border-gray-900 hover:bg-xw-200" role="button" onClick={() => { inputRef.current.click() }}>

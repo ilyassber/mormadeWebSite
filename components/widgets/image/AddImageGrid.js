@@ -6,6 +6,7 @@ const AddImageGrid = props => {
     const [imagesList, setImagesList] = useState(null)
 
     const appendFile = (newFiles) => {
+        console.log(newFiles)
         if (newFiles.length > 0) {
             props.addImage(newFiles)
             initList()
