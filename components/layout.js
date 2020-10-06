@@ -5,6 +5,7 @@ import SideMenu from './elements/side-menu/sideMenu'
 import SearchGate from './elements/searchGate/searchGate'
 import BlackFocusScreen from './elements/blackFocusScreen/BlackFocusScreen'
 import { getRequest } from '../services/api/get/getRequest'
+import Footer from './elements/footer/footer'
 
 // fake data 
 const categories = [
@@ -83,100 +84,108 @@ const links = [
 
 
 const Layout = (props) => {
-    
-// GLOBAL STATES
-    
-    const [openMenu, setOpenMenu]           = useState(false)   // menu open/close state
-    const [selectedPage, setSelectedPage]   = useState({ page: "HOME", path: "/" }) // current selected page
-    const [openSearch, setOpenSearch]       = useState(false)   // search open/close state
-    const [searchData, setSearchData]       = useState({
-                                                searchHistory : [],
-                                                searchTarget : "",
-                                                searchTrackedInputText : "",
-                                            })  // saved search DATA 
+
+    // GLOBAL STATES
+
+    const [openMenu, setOpenMenu] = useState(false)   // menu open/close state
+    const [selectedPage, setSelectedPage] = useState({ page: "HOME", path: "/" }) // current selected page
+    const [openSearch, setOpenSearch] = useState(false)   // search open/close state
+    const [searchData, setSearchData] = useState({
+        searchHistory: [],
+        searchTarget: "",
+        searchTrackedInputText: "",
+    })  // saved search DATA 
 
 
 
-// STATE CALLBACKS
+    // STATE CALLBACKS
 
-    
+
     // openSearch callBacks
-    
+
     const changeOpenSearch = () => {
         setOpenSearch(!openSearch)
     }
 
     // openMenu callBacks
-    
+
     const changeOpenMenu = () => {
         setOpenMenu(!openMenu)
     }
 
     // selectedPage callBacks
-    
+
     const changeSelectedPage = (link) => {
         setSelectedPage(link)
     }
 
-    
-// DISPLAYED CONTENT 
+
+    // DISPLAYED CONTENT 
+
+    const FooterBar = () => (
+        <Footer categories={categories}
+            max_shown={5}
+            links={links}
+        />
+    )
 
     const Page = () => (
         !openSearch && props.children
     )
-    
+
     const Menu = () => (
-        openMenu && <SideMenu   menuClick={openMenu}
-                                    changeMenuClicked={changeOpenMenu}
-                                    currentPage={selectedPage}
-                                    changeCurrentPage={changeSelectedPage}
-                                    categories={categories}
-                                    max_shown={8}
-                                    links={links}
-                        />
+        openMenu && <SideMenu menuClick={openMenu}
+            changeMenuClicked={changeOpenMenu}
+            currentPage={selectedPage}
+            changeCurrentPage={changeSelectedPage}
+            categories={categories}
+            max_shown={8}
+            links={links}
+        />
     )
 
     const NavigationBar = () => (
         <NavBar changeMenuClicked={changeOpenMenu}
-                openSearch={openSearch}
-                openSearchClickHandler={changeOpenSearch}
-                logo="/logo.png"
-                categories={props.tags}
-                max_shown={8}
-                links={links}
-                home="/"
+            openSearch={openSearch}
+            openSearchClickHandler={changeOpenSearch}
+            logo="/logo.png"
+            categories={props.tags}
+            max_shown={8}
+            links={links}
+            home="/"
         />
     )
-    
+
     const SearchPage = () => (
-        openSearch  &&  <SearchGate changeOpenSearch={ changeOpenSearch }
-                                    searchData={searchData}
-                                    setSearchData={(data) => setSearchData(data)}
-                        />
+        openSearch && <SearchGate changeOpenSearch={changeOpenSearch}
+            searchData={searchData}
+            setSearchData={(data) => setSearchData(data)}
+        />
     )
 
     const BlackFocusOff = () => (
-        (openMenu ) &&  <BlackFocusScreen onClick={changeOpenMenu}/>
+        (openMenu) && <BlackFocusScreen onClick={changeOpenMenu} />
     )
 
     const SpacingTop = () => (
-        openSearch ? <Wrapper style=" w-full bg-blue-600" /> : <Wrapper style="w-full h-48" />
+        openSearch ? <Wrapper style=" w-full absolute top-0 bg-blue-600" /> : <Wrapper style="w-full absolute top-0 h-48" />
     )
 
 
-// RENDER THAT SHIT
+    // RENDER THAT SHIT
 
     return (
-        <div className="flex flex-col w-full bg-scroll" >
+        <div className="relative flex flex-col w-full bg-scroll" >
 
             <Menu />
-            <BlackFocusOff/>
-            <NavigationBar/>
-            <SpacingTop/>
-            <SearchPage/>
-            <Page/>
+            <BlackFocusOff />
+            <NavigationBar />
+            <SpacingTop />
+            <SearchPage />
+            <Page />
+            <FooterBar />
 
-        </div>    
+        </div>
     )
 }
 

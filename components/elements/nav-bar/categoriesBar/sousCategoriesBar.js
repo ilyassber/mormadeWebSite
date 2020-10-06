@@ -1,48 +1,59 @@
 import React, { useState } from 'react'
 import Cover from '../../../graphics/imageCover/Cover'
+import IconsContainer from '../upperNav/iconsContainer/iconsContainer'
+import { Icon } from 'react-icons-kit'
+import { close } from 'react-icons-kit/ikons/close'
 
+function SousCategoriesBar({categorie, closeClickHandler}) {
 
-function SousCategoriesBar({ show, hide, hovredCategorie }) {
+    // close icon
+    const CloseIcon = () => (
+        <Icon className="cursor-pointer text-gray-800 "
+            onClick={closeClickHandler}
+            size={20} icon={close}>
+        </Icon>
+    )
 
     const SousCategoriesContent = () => (
-        <div className="flex justify-between flex-shrink-0 w-full h-full pt-2">
-            <div className="flex items-start  flex-1 flex-shrink-0 mr-5 ml-10">
-                <ul className="flex flex-col items-start justify-start w-full p-5">
-                    {hovredCategorie.categorie && hovredCategorie.categorie.sous_tags.map((sous_tag, index) =>
-                        <li className="w-full mt-1 cursor-pointer text-center hover:text-gray-500" key={index}>{sous_tag}</li>
+        <div className="flex justify-center w-full">
+            <div className="flex flex-col items-center justify-start flex-1 flex-shrink-0 m-5">
+                <ul className=" w-6/12 flex flex-col items-start justify-start ">
+                    <h2 className="my-2 font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap cursor-default">Sous Categories</h2>
+                    <li key={-1}></li>
+                    {categorie && categorie.sous_tags.map((sous_tag, index) =>
+                        <li className="ml-2 cursor-pointer whitespace-no-wrap text-md hover:underline text-justify" key={index}>{sous_tag}</li>
                     )}
                 </ul>
             </div>
-            <div className="flex  flex-col items-center flex-1 flex-shrink-0 ml-5 mr-5 border-l border-gray-200">
-                <div className="flex items-end justify-center w-full h-5">
-                    <h1>HIGH LIGHT</h1>
-                </div>
-                <div className="h-64 w-48 m-10 rounded-full overflow-hidden shadow-2xl">
-                    {hovredCategorie.categorie && <img className="object-contain" src={hovredCategorie.categorie.tag_image} alt={hovredCategorie.categorie.tag} />}
+            <div className="flex flex-col justify-start items-center flex-1 m-5 border-gray-200">
+                <h2 className="my-2 font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap cursor-default">HIGH LIGHT</h2>
+                <div className=" m-5  overflow-hidden shadow-2xl">
+                    <p>no image to be shown</p>
                 </div>
             </div>
         </div>
     )
 
 
+    const BlankContent = () => (
+        <div className="relative flex flex-col justify-start items-center w-11/12 max-w-7xl bg-white">
+            <div className="flex flex-row justify-end items-center w-full px-2 h-12 ">
+                <CloseIcon/>
+            </div>
+            <div className="flex flex-col justify-center items-center w-full h-144">
+            <h1 className="my-2 font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap cursor-default">{categorie.tag}</h1>
+            <div className="flex flex-col justify-start items-center m-5 h-64 w-10/12 ">
+                <p className="m-2">No content available</p>
+                <h1 className="text-lg">Stay Tuned</h1>
+            </div>
+            </div>
+        </div>
+    )
     return (
 
-        <div
-            className={hovredCategorie.hovered ? " transform h-96 transition-all ease-out duration-100 flex flex-col items-center w-full shadow bg-white" : "shadow transform h-0 transition-all ease-out duration-100 w-full overflow-hidden bg-white"}
-            onMouseEnter={show}
-            onMouseLeave={hide}
-        >
-            <Cover
-                style="flex justify-center items-center w-full h-full bg-gray-900 bg-opacity-75"
-                image="/images/Styles/style2.jpg"
-                height="h-full"
-                imageStyle="opacity-25"
-            >
-                <h1 className="text-xl font-amiri font-bold text-white">SOUS CATEGORIES</h1>
-            </Cover>
-
+        <div className="flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white">
             {/* <SousCategoriesContent /> */}
-        
+            <BlankContent/>
         </div>
     )
 }

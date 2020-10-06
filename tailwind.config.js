@@ -44,6 +44,10 @@ module.exports = {
         '-4': '-1rem',
         '-8': '-2rem',
         '-12': '-3rem',
+        '-24': '-6rem',
+        '-36': '-9rem',
+        '-48': '-12rem',
+        '-full': '-100%',
         '4': '1rem',
         '8': '2rem',
         '12': '3rem',
@@ -51,7 +55,6 @@ module.exports = {
         '36': '9rem',
         '48': '12rem',
         'full': '100%',
-
       },
       colors: {
         'xw': {
@@ -126,10 +129,36 @@ module.exports = {
         ticker: {
           '0%': { transform: 'translate3d(0, 0, 0)' },
           '100%': { transform: 'translate3d(-100%, 0, 0)' },
+        },
+        show: {
+          '0%': { transform: 'translateY(-25%)' },
+          '100%': { transform: 'translateY(0%)' }
+        },
+        smouthAppearance: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
+        },
+        menuSlideIn: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0%)' }
+        },
+        menuSlideOut: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' }
         }
       },
       animation: {
         ticker: 'ticker 22s linear infinite',
+        show1: 'show 0.8s ease-in  none',
+        show2: 'show 0.6s ease-out  none',
+        show3: 'show 0.5s ease-in  none',
+        show4: 'show 0.4s ease-out  none',
+        show5: 'show 0.3s ease-in  none',
+        show6: 'show 0.2s ease-out  none',
+        show7: 'show 0.1s ease-in  none',
+        smouthAppearance: 'smouthAppearance 0.5s ease-out none',
+        menuSlideIn: 'menuSlideIn 0.5s ease-out none',
+        menuSlideOut: 'menuSlideOut 0.5s ease-out none',
       }
     },
   },

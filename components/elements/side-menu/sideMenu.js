@@ -39,7 +39,7 @@ function Block({children , changeTitle, title, changeItems}){
 }
 
 
-function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage, categories, max_shown, links}) {
+function SideMenu ({menuClick, changeMenuClicked, currentPage, firstRender , changeCurrentPage, categories, max_shown, links}) {
     
     const [initAppearance, setInitAppearance] = useState(false)
     const [swap , setSwap] = useState(true)
@@ -70,7 +70,7 @@ function SideMenu ({menuClick, changeMenuClicked, currentPage, changeCurrentPage
         setSwap(!swap)
     }
     return (
-        <nav className={`${menuClick ? "transform translate-x-0 transition-all ease-out duration-500": "transform -translate-x-full transition-all ease-out duration-0 "} fixed top-0 -left-full  flex-row w-11/12 z-30 h-full font-sans bg-white`}> {/*initAppearance ? "absolute" : "fixed" */}
+        <nav className={`${menuClick ? "animate-menuSlideIn left-0" :  !firstRender ? " animate-menuSlideOut -left-full": "-left-full"  } fixed flex-row w-11/12 z-30 h-full font-sans bg-white`}>
             <TitleBlock>
                 <div 
                     className="flex justify-center items-center h-full p-5 cursor-pointer"

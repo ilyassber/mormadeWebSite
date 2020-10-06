@@ -145,13 +145,13 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
 
     // default content displayed in case there is no word to search for  
     const DefaultContentCard = () => (
-        <div className="flex flex-row justify-start items-start mt-16 w-full">
-            <LeftContentCard style="flex flex-col justify-center w-4/12 px-4 " />
-            <div className="flex flex-row justify-start w-8/12 h-full ">
+        <div className="flex flex-col md:flex-row justify-start items-start mt-16 w-full">
+            <LeftContentCard style="animate-smouthAppearance  flex flex-col justify-center w-4/12 px-4 " />
+            <div className="flex flex-row justify-start w-full md:w-8/12 h-full ">
                 <div className="flex flex-col justify-start items-start w-2/12">
 
                 </div>
-                <div className="flex flex-col justify-start items-start w-10/12">
+                <div className="flex flex-col justify-start items-start md:w-10/12">
                 <AlphaDisplayer image="images/Articles/cover-04.jpg"
                                 title="The Lovely Place"
                                 description="have u ever been in a place where .. ."
@@ -222,7 +222,7 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
 // RENDER THAT SHIT
 
     return (
-        <div className={`z-50 w-full flex flex-col items-center justify-start bg-white`}>
+        <div className={`fixed z-50 w-full flex flex-col items-center justify-start bg-white h-full`}>
 
             <TopBar />
             <MainBody />

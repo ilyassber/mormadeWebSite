@@ -1,41 +1,75 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useEffect , useRef } from 'react'
 import SousCategoriesBar from './sousCategoriesBar'
+import { Brand } from '../../../logo'
+
+
+const SiteNameContainer = ({style}) => (
+        
+    <div className={style}>
+        <Brand />
+    </div>
+
+)
+
+
+export default function CategoriesBar({ style ,max_shown, categories, brandNameStyle }) {
+
+    const [openCategorie, setOpenCategorie] = useState({open : false, categorie : null}) // open/close + the categorie to be shown in sougategories 
+    const categorieRef = useRef(null) // reference on "categories list" : to track outside click 
 
 
 
-export default function CategoriesBar({ style ,max_shown, categories }) {
+    console.log(" Categorie RENDER")
 
-    const [hovredCategorie, setHovredCategorie] = useState({ hovered: false, categorie: null })
-    const [moreCategorie, setmoreCategorie] = useState(true)
-    const show = () => {
-        setHovredCategorie((prevstate) => ({ ...prevstate, hovered: true }))
+
+    // load clicked categorie and set sousCategories to open  
+    const clickOnCategorie = (categorie) => {
+        setOpenCategorie({open : true, categorie : categorie})
+        console.log(" openCategorie : ->  ", openCategorie) 
     }
-    const hide = () => {
-        setHovredCategorie((prevstate) => ({ ...prevstate, hovered: false }))
-    }
+
+
+    // add eventListener to track clicks : close souscategories bar when an outside click was detected  
+    useEffect(
+        () => {
+
+            function categorieClickHandler (event) {
+                if (categorieRef.current && !categorieRef.current.contains(event.target))
+                    setOpenCategorie({open : false, categorie : null})
+            }
+
+            document.addEventListener("mousedown", categorieClickHandler)
+            
+            return () => {
+                document.removeEventListener("mousedown", categorieClickHandler)
+            }
+        
+        },[]
+    )
 
 
     return (
-        <div className={style}>
-            <div className="flex justify-center w-full shadow-sm">
-                <ul className="flex justify-center items-center h-12 " >
+        <div ref={categorieRef}  className={style}>
+            <div className="flex flex-row justify-between h-16 w-full">
+                <div className="flex flex-row justify-start items-center h-full flex-1 ">
+                    <SiteNameContainer style={brandNameStyle}
+                    />
+                </div>
+                <ul className="flex flex-row justify-center items-center h-full" >
                     {categories.map((categorie, index) =>
-                        (index < max_shown || moreCategorie) && <li key={ index }
-                            className="flex-shrink p-4 cursor-pointer font-lato text-base font-black hover:text-gray-500"
-                            onMouseEnter={() => setHovredCategorie({ hovered: true, categorie: categorie })}
-                            onMouseLeave={() => setHovredCategorie({ hovered: false, categorie: categorie })}
-                        >{categorie.name.toUpperCase()}</li>
+                        (index < max_shown) && <li  key={ index }
+                                                    className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-base font-black ${(openCategorie.categorie && openCategorie.categorie === categorie) ? "text-yellow-600" : "text-gray-900 hover:text-gray-700" }`}
+                                                    onClick={() => clickOnCategorie(categorie)}
+                        >
+                        {categorie.name.toUpperCase()}</li>
                     )}
-                    {categories.length >= max_shown && <li className="flex-shrink p-4 cursor-pointer font-bold font-amiri" key={ max_shown }
-                        onMouseDown={() => setmoreCategorie(!moreCategorie)}
-                    >{moreCategorie ? "less" : "more ..."}</li>}
                 </ul>
+                <div className="flex flex-1 h-full">
+                </div>
             </div>
-            <SousCategoriesBar
-                hovredCategorie={ hovredCategorie }
-                show={ show }
-                hide={ hide }
-            />
+            {openCategorie.open && <SousCategoriesBar closeClickHandler={() => setOpenCategorie({open : false, categorie : null})}
+                categorie={openCategorie.categorie}
+            />}
         </div>
     )
 }
