@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nexport default function BlackFocusScreen({\n  onClick\n}) {\n  return __jsx(\"div\", {\n    className: \"animate-smouthAppearance absolute z-20 top-0 left-0 w-full h-full  bg-gray-900 bg-opacity-50\",\n    onClick: onClick\n  });\n}","map":null,"metadata":{},"sourceType":"module"}
