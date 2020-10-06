@@ -7,7 +7,7 @@ const MakerRegist = props => {
 
     const [emailError, setEmailError] = useState(false)
     const [numError, setNumError] = useState(false)
-    const [welcome, setWelcome] = useState('صانع ؟ إنضم إلينا')
+    const [welcome, setWelcome] = useState('Maker | Join us')
     const [reset, setReset] = useState(false)
 
     let email;
@@ -32,11 +32,11 @@ const MakerRegist = props => {
             }
             registerUser(data, "signup_maker", props.csrf).then((response) => {
                 if (response.status === "error") {
-                    setWelcome('لقد تعذر تسجيل هذا البريد الإلكتروني!')
+                    setWelcome('Someting wrong! .. Try again')
                     console.log('error')
                 }
                 else {
-                    setWelcome('شكرا، سنقوم بالتواصل معك قريبا')
+                    setWelcome('Thank you! we will reach you soon')
                     setReset(true)
                     console.log('success')
                 }
@@ -56,35 +56,35 @@ const MakerRegist = props => {
 
     let content = (
         <div className={props.className}>
-            <div className="relative w-full h-auto overflow-hidden">
-                <img className="absolute h-full w-full object-cover" src="/wheel-pot.jpg" />
+            <div className="relative w-full h-auto shadow-sm bg-white overflow-hidden">
+                {/* <img className="absolute h-full w-full object-cover" src="/wheel-pot-origin.jpg" /> */}
                 <div className="relative w-full h-auto p-6 justify-end">
-                    <h3 className="h-auto w-full font-roboto font-bold text-white text-2xl text-right align-right mb-6">
+                    <h3 className="h-auto w-full font-roboto font-bold text-gray-900 text-2xl text-left align-left mb-6">
                         {welcome}
                     </h3>
-                    <div className="w-full h-auto flex flex-wrap flex-col md:flex-row-reverse items-end">
+                    <div className="w-full h-auto flex flex-wrap flex-col md:flex-row items-end">
                         <TxtField
                             reset={reset}
                             error={numError}
-                            align='right'
-                            color='white'
-                            className="w-full flex-2 mt-2"
-                            label="رقم الهاتف"
+                            align='left'
+                            color='gray-900'
+                            className="w-full flex-2 mt-2 md:mr-2"
+                            label="Phone number"
                             placeholder='xxxxxxxxxx'
                             height={10}
                             onChange={handleNumChange} />
                         <TxtField
                             reset={reset}
                             error={emailError}
-                            align='right'
-                            color='white'
+                            align='left'
+                            color='gray-900'
                             className="w-full flex-2 mt-2 md:mr-2"
-                            label="البريد الإلكتروني"
+                            label="E-mail"
                             placeholder='example@email.com'
                             height={10}
                             onChange={handleEmailChange} />
                         <div className="w-full h-full flex-1 content-end flex-wrap mt-4 md:mr-2 md:mt-0">
-                            <BtnBbw className="w-full h-10" weight="bold" value="إنضم" onClick={handleSubmit} />
+                            <BtnBbw className="w-full h-10" weight="bold" value="JOIN" onClick={handleSubmit} />
                         </div>
                     </div>
                 </div>

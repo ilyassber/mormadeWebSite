@@ -36,33 +36,9 @@ const Hello = (props) => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div className="w-full flex flex-col items-center">
-        <div className="max-w-screen-md">
-          <AlphaDisplayer
-            image={images.cover01}
-            title="Dresses made to last"
-            description="Timeless designs made from recycled materials"
-            buttonText="SHOP NOW"
-          />
-          <AlphaDisplayer
-            image={images.cover02}
-            title="Dresses made to last"
-            description="Timeless designs made from recycled materials"
-            buttonText="SHOP NOW"
-          />
-          <AlphaDisplayer
-            image={images.cover02}
-            title="Dresses made to last"
-            description="Timeless designs made from recycled materials"
-            buttonText="SHOP NOW"
-          />
-          <AlphaDisplayer
-            image={images.cover7}
-            title="Dresses made to last"
-            description="Timeless designs made from recycled materials"
-            buttonText="SHOP NOW"
-          />
-          <MakerRegist className="my-4" csrf={props.cookies['csrftoken']}/>
+      <div className="w-full min-h-screen flex flex-col bg-xw-100 items-center">
+        <div className="w-full max-w-screen-md">
+          <MakerRegist className="w-full my-4" csrf={props.cookies['csrftoken']}/>
         </div>
       </div>
     </Layout>

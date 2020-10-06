@@ -421,7 +421,7 @@ var MakerRegist = function MakerRegist(props) {
       numError = _useState2[0],
       setNumError = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('صانع ؟ إنضم إلينا'),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('Maker | Join us'),
       welcome = _useState3[0],
       setWelcome = _useState3[1];
 
@@ -452,10 +452,10 @@ var MakerRegist = function MakerRegist(props) {
       };
       Object(_services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__["registerUser"])(data, "signup_maker", props.csrf).then(function (response) {
         if (response.status === "error") {
-          setWelcome('لقد تعذر تسجيل هذا البريد الإلكتروني!');
+          setWelcome('Someting wrong! .. Try again');
           console.log('error');
         } else {
-          setWelcome('شكرا، سنقوم بالتواصل معك قريبا');
+          setWelcome('Thank you! we will reach you soon');
           setReset(true);
           console.log('success');
         }
@@ -482,23 +482,14 @@ var MakerRegist = function MakerRegist(props) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "relative w-full h-auto overflow-hidden",
+    className: "relative w-full h-auto shadow-sm bg-white overflow-hidden",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59,
       columnNumber: 13
     }
-  }, __jsx("img", {
-    className: "absolute h-full w-full object-cover",
-    src: "/wheel-pot.jpg",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 17
-    }
-  }), __jsx("div", {
+  }, __jsx("div", {
     className: "relative w-full h-auto p-6 justify-end",
     __self: _this,
     __source: {
@@ -507,7 +498,7 @@ var MakerRegist = function MakerRegist(props) {
       columnNumber: 17
     }
   }, __jsx("h3", {
-    className: "h-auto w-full font-roboto font-bold text-white text-2xl text-right align-right mb-6",
+    className: "h-auto w-full font-roboto font-bold text-gray-900 text-2xl text-left align-left mb-6",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -515,7 +506,7 @@ var MakerRegist = function MakerRegist(props) {
       columnNumber: 21
     }
   }, welcome), __jsx("div", {
-    className: "w-full h-auto flex flex-wrap flex-col md:flex-row-reverse items-end",
+    className: "w-full h-auto flex flex-wrap flex-col md:flex-row items-end",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -525,10 +516,10 @@ var MakerRegist = function MakerRegist(props) {
   }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
     reset: reset,
     error: numError,
-    align: "right",
-    color: "white",
-    className: "w-full flex-2 mt-2",
-    label: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641",
+    align: "left",
+    color: "gray-900",
+    className: "w-full flex-2 mt-2 md:mr-2",
+    label: "Phone number",
     placeholder: "xxxxxxxxxx",
     height: 10,
     onChange: handleNumChange,
@@ -541,10 +532,10 @@ var MakerRegist = function MakerRegist(props) {
   }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
     reset: reset,
     error: emailError,
-    align: "right",
-    color: "white",
+    align: "left",
+    color: "gray-900",
     className: "w-full flex-2 mt-2 md:mr-2",
-    label: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    label: "E-mail",
     placeholder: "example@email.com",
     height: 10,
     onChange: handleEmailChange,
@@ -565,7 +556,7 @@ var MakerRegist = function MakerRegist(props) {
   }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
     className: "w-full h-10",
     weight: "bold",
-    value: "\u0625\u0646\u0636\u0645",
+    value: "JOIN",
     onClick: handleSubmit,
     __self: _this,
     __source: {
@@ -3626,7 +3617,7 @@ var Layout = function Layout(props) {
 
 
   return __jsx("div", {
-    className: "flex flex-col w-full bg-xw-100 bg-scroll",
+    className: "flex flex-col w-full bg-scroll",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -19489,7 +19480,7 @@ var Hello = function Hello(props) {
       columnNumber: 9
     }
   })), __jsx("div", {
-    className: "w-full flex flex-col items-center",
+    className: "w-full min-h-screen flex flex-col bg-xw-100 items-center",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -19497,64 +19488,20 @@ var Hello = function Hello(props) {
       columnNumber: 7
     }
   }, __jsx("div", {
-    className: "max-w-screen-md",
+    className: "w-full max-w-screen-md",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    image: images.cover01,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 11
-    }
-  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    image: images.cover02,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
-      columnNumber: 11
-    }
-  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    image: images.cover02,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 11
-    }
-  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    image: images.cover7,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 11
-    }
-  }), __jsx(_components_elements_authentication__WEBPACK_IMPORTED_MODULE_14__["MakerRegist"], {
-    className: "my-4",
+  }, __jsx(_components_elements_authentication__WEBPACK_IMPORTED_MODULE_14__["MakerRegist"], {
+    className: "w-full my-4",
     csrf: props.cookies['csrftoken'],
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 41,
       columnNumber: 11
     }
   }))));

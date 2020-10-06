@@ -167,7 +167,7 @@ const Layout = (props) => {
 // RENDER THAT SHIT
 
     return (
-        <div className="flex flex-col w-full bg-xw-100 bg-scroll" >
+        <div className="flex flex-col w-full bg-scroll" >
 
             <Menu />
             <BlackFocusOff/>
