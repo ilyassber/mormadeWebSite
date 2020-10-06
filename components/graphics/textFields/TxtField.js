@@ -9,6 +9,7 @@ const TxtField = props => {
     let borderColor = 'gray-300'
     let placeholder = ''
     let height = 12
+    let shadow = 'border border-'
 
     if (props.align != null) {
         align = props.align
@@ -37,6 +38,11 @@ const TxtField = props => {
         placeholder = props.placeholder
     }
 
+    if (props.shadow == true) {
+        shadow = 'shadow'
+        borderColor = ''
+    }
+
     let content = (
         <div className={props.className}>
             {(props.label != null)
@@ -45,7 +51,7 @@ const TxtField = props => {
             <input
                 ref={inputRef}
                 placeholder={placeholder}
-                className={'appearance-none border ' + 'border-' + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black'}
+                className={'appearance-none ' + shadow + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black'}
                 type="text"
                 onChange={props.onChange}
             />

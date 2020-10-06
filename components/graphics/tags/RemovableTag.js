@@ -6,7 +6,7 @@ const RemovableTag = props => {
         <div className={props.className}>
             <div className="h-8 flex align-middle">
                 <div className="h-full w-auto content-center mx-auto flex flex-wrap font-sans font-bold">
-                    <b className="text-gray-900 text-sm text-center ml-2 mr-2">&#8250;</b>
+                    <b className="text-gray-900 text-sm text-center ml-2 mr-2">{props.separator}</b>
                 </div>
                 <div className="h-full w-auto pl-2 pr-2 bg-gray-900 rounded mx-auto flex content-center">
                     <div className="h-full w-auto content-center mx-auto flex flex-wrap">

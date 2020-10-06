@@ -3,7 +3,6 @@ import { getCategories } from '../../../services/api/fetch/getCategories'
 
 const SelectCategory = props => {
 
-    const forceUpdate = React.useReducer(() => ({}))[1]
     const selectedRef = useRef()
     const [data, setData] = useState()
     let currentLvl = null
@@ -12,9 +11,21 @@ const SelectCategory = props => {
 
     const getData = () => {
         setData(null)
-        getCategories(currentLvl, props.parent, props.csrftoken).then((res) => {
-            setData(JSON.stringify(res))
-        })
+        if (props.all == true) {
+            let tags = localStorage.getItem('_tags')
+            if (tags == null) {
+                getCategories(null, null, null, props.csrftoken).then((res) => {
+                    localStorage.setItem('_tags', JSON.stringify(res))
+                    setData(JSON.stringify(res))
+                })
+            } else {
+                setData(tags)
+            }
+        } else {
+            getCategories(null, currentLvl, props.parent, props.csrftoken).then((res) => {
+                setData(JSON.stringify(res))
+            })
+        }
     }
 
     useEffect(() => {
@@ -36,8 +47,6 @@ const SelectCategory = props => {
                     props.setCategory(option)
                     currentLvl = option.lvl + 1
                     getData()
-                    //selectedRef.current.value = ''
-                    //forceUpdate()
                 }
             })
         }
@@ -46,7 +55,9 @@ const SelectCategory = props => {
             <div className={props.className}>
                 <div className="h-8 flex">
                 <div className="h-full w-auto content-center mx-auto flex flex-wrap font-sans font-bold">
-                    <b className="text-gray-900 text-sm text-center ml-2 mr-2">&#8250;</b>
+                    <b className="text-gray-900 text-sm text-center ml-2 mr-2">
+                        {props.separator}
+                    </b>
                 </div>
                 <div>
                 <input

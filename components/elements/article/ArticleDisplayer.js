@@ -1,10 +1,11 @@
 import React from 'react'
 import { ImgFreeDisp } from '../../graphics/images'
 import { TextDisp } from '../../graphics/textFields'
+import DisplayCategories from '../../widgets/category/DisplayCategories'
 
 const ArticleDisplayer = props => {
 
-    let data = JSON.parse(props.story)
+    let data = props.story
 
     let content = (
         <div className={props.className}>
@@ -34,7 +35,8 @@ const ArticleDisplayer = props => {
                         })
                     }
                 </div>
-
+                <hr className="w-full md:w-3/4 lg:w-3/5 bg-gray-900 m-2 mt-4" />
+                <DisplayCategories className="w-full md:w-3/4 lg:w-3/5 h-auto mb-4 m-2" tags={data.tags}/>
             </div>
         </div>
     )

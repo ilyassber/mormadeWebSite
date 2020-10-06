@@ -41,13 +41,12 @@ export async function getStaticProps(context) {
 
     const story = await getRequest(process.env.domain + '/api/articles/' + id)
         .then(res => {
-            return (JSON.stringify(res[0]))
+            console.log(res)
+            return (res)
         })
         .catch(err => {
             return null
         })
-
-    console.log(story)
 
     return {
         props: {

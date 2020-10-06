@@ -1,7 +1,7 @@
 import axios from 'axios'
 import querystring from 'querystring'
 
-export function getCategories(lvl, id, csrttoken) {
+export function getCategories(id, lvl, parent, csrttoken) {
     return new Promise((resolve, reject) => {
         let axiosConfig = {
             headers: {
@@ -10,9 +10,10 @@ export function getCategories(lvl, id, csrttoken) {
             }
         }
         let content = {
+            id: id,
             operation: 'get',
             lvl: lvl,
-            id: id
+            parent: parent,
         }
         axios.defaults.withCredentials = true
         axios.post(process.env.domain + '/api/categories/', querystring.stringify(content), axiosConfig)

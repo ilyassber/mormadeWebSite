@@ -7,6 +7,7 @@ import AddSingleImage from '../../widgets/image/AddSingleImage'
 import AddText from '../../widgets/article/AddText'
 import querystring from 'querystring'
 import { postRequest } from '../../../services/api/post/postRequest'
+import AddArticleCategory from '../../widgets/category/AddArticleCategory'
 
 const AddArticle = props => {
 
@@ -20,7 +21,8 @@ const AddArticle = props => {
                 image: null
             }
         },
-        text: []
+        text: [],
+        tags: []
     })
 
     const getValue = (event, access) => {
@@ -37,6 +39,18 @@ const AddArticle = props => {
 
     const removeCover = () => {
         setData({ ...data, cover: null })
+    }
+
+    const appendCategory = (category) => {
+        let categories = data.tags
+        categories.push(category)
+        setData({ ...data, tags: categories })
+    }
+
+    const removeCategory = (index) => {
+        let categories = data.tags
+        categories.splice(index, 1)
+        setData({ ...data, tags: categories })
     }
 
     const appendContent = (content) => {
@@ -81,10 +95,15 @@ const AddArticle = props => {
                 }))
             }
         }
+        let newTags = []
+        for (let i = 0; i < data.tags.length; i++) {
+            newTags.push(data.tags[i].id)
+        }
         let newData = {
             ...data,
             cover: coverId,
-            text: querystring.stringify(textList)
+            text: querystring.stringify(textList),
+            tags: newTags
         }
         postRequest(querystring.stringify({
             operation: "register",
@@ -116,6 +135,11 @@ const AddArticle = props => {
                         <AddContent className="m-2" appendContent={appendContent} />
                     </div>
                 </div>
+                <AddArticleCategory
+                    categories={data.tags}
+                    addCategory={appendCategory}
+                    removeCategory={removeCategory}
+                    csrftoken={props.cookies['csrftoken']}/>
                 <BtnBbw className="w-full h-12 mt-8 mb-4" value="ADD ARTICLE" onClick={handleSubmit} />
             </form>
         </div>
