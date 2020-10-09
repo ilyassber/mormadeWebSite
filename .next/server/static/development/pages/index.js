@@ -1183,6 +1183,396 @@ function BlackFocusScreen({
 
 /***/ }),
 
+/***/ "./components/elements/discuss/LeaveMessage.js":
+/*!*****************************************************!*\
+  !*** ./components/elements/discuss/LeaveMessage.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+/* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! js-cookie */ "js-cookie");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _services_api_post_postRequest__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../services/api/post/postRequest */ "./services/api/post/postRequest.js");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! querystring */ "querystring");
+/* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\discuss\\LeaveMessage.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+const LeaveMessage = props => {
+  const {
+    0: emailError,
+    1: setEmailError
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: welcome,
+    1: setWelcome
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('LEAVE US A MESSAGE');
+  const {
+    0: reset,
+    1: setReset
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  let email;
+  let message;
+
+  const handleEmailChange = event => {
+    email = event.target.value;
+  };
+
+  const handleMessageChange = event => {
+    message = event.target.value;
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    if (email != null && email != '') {
+      let data = {
+        email: email,
+        text: message
+      };
+      let content = {
+        operation: 'register',
+        data: querystring__WEBPACK_IMPORTED_MODULE_5___default.a.stringify(data)
+      };
+      Object(_services_api_post_postRequest__WEBPACK_IMPORTED_MODULE_4__["postRequest"])(querystring__WEBPACK_IMPORTED_MODULE_5___default.a.stringify(content), js_cookie__WEBPACK_IMPORTED_MODULE_3___default.a.get('csrftoken'), "http://localhost:8000" + '/api/messages/').then(response => {
+        console.log(response);
+
+        if (response.status === "error") {
+          setWelcome('Something Wrong!');
+          console.log('error');
+        } else {
+          setWelcome('THANK YOU!');
+          setReset(true);
+          console.log('success');
+        }
+      }).catch(error => {
+        console.log(error);
+      });
+    } else {
+      if (email == null || email == '') {
+        setEmailError(true);
+      }
+    }
+  };
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "w-full h-full flex flex-col items-left",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 13
+    }
+  }, __jsx("strong", {
+    className: "font-roboto font-black text-3xl text-white mb-4",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 17
+    }
+  }, welcome), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 17
+    }
+  }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_2__["TxtField"], {
+    reset: reset,
+    disabled: reset,
+    error: emailError,
+    borderColor: "white",
+    textColor: "white",
+    focusColor: "white",
+    bgColor: "transparent",
+    disableColor: "gray-900",
+    height: 10,
+    placeholder: "EMAIL",
+    placeholderColor: "white",
+    className: "w-full max-w-64 mt-2",
+    onChange: handleEmailChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 21
+    }
+  }), __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_2__["TxtArea"], {
+    reset: reset,
+    disabled: reset,
+    borderColor: "white",
+    textColor: "white",
+    focusColor: "white",
+    bgColor: "transparent",
+    disableColor: "gray-900",
+    height: "full",
+    placeholder: "Message...",
+    placeholderColor: "white",
+    onChange: handleMessageChange,
+    className: "w-full max-w-64 mt-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
+      columnNumber: 21
+    }
+  }), __jsx("div", {
+    className: "w-full h-auto flex flex-row-reverse",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95,
+      columnNumber: 21
+    }
+  }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["Btn"], {
+    disabled: reset,
+    className: "w-full h-auto",
+    borderColor: "white",
+    bgColor: "transparent",
+    textColor: "white",
+    textSize: "sm",
+    textWeight: "medium",
+    hoverColor: "gray-900",
+    disableColor: "gray-900",
+    height: 10,
+    value: "Send",
+    onClick: handleSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96,
+      columnNumber: 25
+    }
+  })))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LeaveMessage);
+
+/***/ }),
+
+/***/ "./components/elements/discuss/WaitList.js":
+/*!*************************************************!*\
+  !*** ./components/elements/discuss/WaitList.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
+/* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
+/* harmony import */ var _services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/authentication/registerUser */ "./services/authentication/registerUser.js");
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\discuss\\WaitList.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const WaitList = props => {
+  const {
+    0: emailError,
+    1: setEmailError
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: welcome,
+    1: setWelcome
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('JOIN OUR NEWSLETTER');
+  const {
+    0: reset,
+    1: setReset
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  let email;
+
+  const handleEmailChange = event => {
+    email = event.target.value;
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    if (email != null && email != '') {
+      const data = {
+        username: email.split('@')[0],
+        email: email,
+        role: 'wait_list'
+      };
+      Object(_services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__["registerUser"])(data, "wait_list", props.csrf).then(response => {
+        if (response.status === "error") {
+          setWelcome('Go Back Soon!');
+          console.log('error');
+        } else {
+          setWelcome('THANK YOU, GO BACK SOON!');
+          setReset(true);
+          console.log('success');
+        }
+      }).catch(error => {
+        console.log(error);
+      });
+    } else {
+      if (email == null || email == '') {
+        setEmailError(true);
+      }
+
+      if (num == null || num == '') {
+        setNumError(true);
+      }
+    }
+  };
+
+  let content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative max-w-screen-sm h-auto overflow-hidden",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 13
+    }
+  }, __jsx("img", {
+    className: "absolute h-full w-full object-cover",
+    src: "/street-vendor-b.jpg",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 17
+    }
+  }), __jsx("div", {
+    className: "relative w-full h-auto p-6 justify-end",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 17
+    }
+  }, __jsx("h3", {
+    className: "h-auto w-full font-roboto font-bold text-white text-3xl text-left align-left mb-6",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 21
+    }
+  }, "SOON"), __jsx("h3", {
+    className: "h-auto w-full font-bold text-white text-3xl text-right align-right mb-6",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 21
+    }
+  }, 'قريبا'), __jsx("span", {
+    className: "h-auto w-full font-roboto font-light text-white text-base text-center align-center mb-6",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 21
+    }
+  }, welcome), __jsx("div", {
+    className: "w-full h-auto flex flex-wrap flex-col items-center mt-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 21
+    }
+  }, __jsx(_graphics_textFields__WEBPACK_IMPORTED_MODULE_1__["TxtField"], {
+    reset: reset,
+    error: emailError,
+    color: "white",
+    height: 10,
+    placeholder: "ENTER YOUR EMAIL HERE",
+    className: "w-full max-w-64 mt-2",
+    onChange: handleEmailChange,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 25
+    }
+  }), __jsx("div", {
+    className: "w-full h-full flex-1 content-end flex-wrap mt-4",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 25
+    }
+  }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
+    className: "w-full h-10",
+    weight: "bold",
+    value: "JOIN US",
+    onClick: handleSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 29
+    }
+  }))))));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (WaitList);
+
+/***/ }),
+
+/***/ "./components/elements/discuss/index.js":
+/*!**********************************************!*\
+  !*** ./components/elements/discuss/index.js ***!
+  \**********************************************/
+/*! exports provided: WaitList, LeaveMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _WaitList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./WaitList */ "./components/elements/discuss/WaitList.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WaitList", function() { return _WaitList__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _LeaveMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LeaveMessage */ "./components/elements/discuss/LeaveMessage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "LeaveMessage", function() { return _LeaveMessage__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+
+
+
+/***/ }),
+
 /***/ "./components/elements/footer/footer.js":
 /*!**********************************************!*\
   !*** ./components/elements/footer/footer.js ***!
@@ -1201,9 +1591,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons-kit/icomoon */ "react-icons-kit/icomoon");
 /* harmony import */ var react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _discuss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../discuss */ "./components/elements/discuss/index.js");
 var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\footer\\footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -1217,7 +1609,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 10,
       columnNumber: 9
     }
   }, __jsx("a", {
@@ -1225,7 +1617,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 11,
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1234,7 +1626,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 11,
       columnNumber: 33
     }
   })), __jsx("a", {
@@ -1242,7 +1634,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1251,7 +1643,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 12,
       columnNumber: 33
     }
   })), __jsx("a", {
@@ -1259,7 +1651,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -1268,7 +1660,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 33
     }
   })));
@@ -1278,7 +1670,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 18,
       columnNumber: 9
     }
   }, __jsx("h2", {
@@ -1286,7 +1678,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 19,
       columnNumber: 13
     }
   }, "CATEGORIES"), __jsx("ul", {
@@ -1294,7 +1686,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 20,
       columnNumber: 13
     }
   }, categories.map((categorie, index) => index < max_shown && __jsx("li", {
@@ -1303,7 +1695,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 44
     }
   }, categorie.tag.toLowerCase()))));
@@ -1313,7 +1705,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, __jsx("h2", {
@@ -1321,7 +1713,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 13
     }
   }, "ENTRIES"), __jsx("ul", {
@@ -1329,7 +1721,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 13
     }
   }, links.map((link, indx) => __jsx("li", {
@@ -1338,7 +1730,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 21
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -1346,14 +1738,14 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 37,
       columnNumber: 25
     }
   }, __jsx("a", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 37,
       columnNumber: 48
     }
   }, link.page.toLowerCase()))))));
@@ -1363,7 +1755,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
+      lineNumber: 45,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -1371,7 +1763,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 46,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1379,7 +1771,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 17
     }
   }, __jsx("h1", {
@@ -1387,7 +1779,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 21
     }
   }, __jsx("span", {
@@ -1395,7 +1787,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 25
     }
   }, "MORMADE |"), __jsx("br", {
@@ -1403,7 +1795,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 78
     }
   }), " MOROCCO")), __jsx("div", {
@@ -1411,7 +1803,7 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 17
     }
   }, __jsx("div", {
@@ -1419,51 +1811,51 @@ function Footer({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 21
     }
   }, __jsx(CategoriesCard, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 54,
       columnNumber: 25
     }
   }), __jsx(EntriesCard, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 55,
       columnNumber: 25
     }
   })), __jsx("div", {
-    className: "flex flex-1 flex-row justify-center items-center w-full md:w-auto text-gray-500",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56,
-      columnNumber: 21
-    }
-  }, __jsx("p", {
+    className: "w-full h-full flex flex-1 justify-center items-center md:w-auto text-gray-500",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57,
+      columnNumber: 21
+    }
+  }, __jsx(_discuss__WEBPACK_IMPORTED_MODULE_4__["LeaveMessage"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
       columnNumber: 28
     }
-  }, "ilyass stufffs"))), __jsx("div", {
+  }))), __jsx("div", {
     className: "flex flex-row justify-end items-center w-full h-16 border-t border-gray-800 text-gray-500",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 17
     }
   }, __jsx(IconsContainer, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
+      lineNumber: 62,
       columnNumber: 21
     }
   }))));
@@ -3117,6 +3509,111 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./components/graphics/buttons/Btn.js":
+/*!********************************************!*\
+  !*** ./components/graphics/buttons/Btn.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\Btn.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+const Btn = props => {
+  let borderColor = 'black';
+  let textColor = 'white';
+  let textSize = 'sm';
+  let textWeight = 'medium';
+  let hoverColor = 'gray-700';
+  let borderHoverColor = 'white';
+  let bgColor = 'black';
+  let disableColor = 'gray-300';
+  let disabled = false;
+  let height = 12;
+  let shadow = 'border border-';
+
+  if (props.height != null) {
+    height = props.height;
+  }
+
+  if (props.borderColor != null) {
+    borderColor = props.borderColor;
+  }
+
+  if (props.borderHoverColor != null) {
+    borderHoverColor = props.borderHoverColor;
+  }
+
+  if (props.textColor != null) {
+    textColor = props.textColor;
+  }
+
+  if (props.textSize != null) {
+    textSize = props.textSize;
+  }
+
+  if (props.hoverColor != null) {
+    hoverColor = props.hoverColor;
+  }
+
+  if (props.bgColor != null) {
+    bgColor = props.bgColor;
+  }
+
+  if (props.disableColor != null) {
+    disableColor = props.disableColor;
+  }
+
+  if (props.shadow == true) {
+    shadow = 'shadow';
+    borderColor = '';
+  }
+
+  if (props.textWeight != null) {
+    textWeight = props.textWeight;
+  }
+
+  if (props.disabled != null) {
+    disabled = props.disabled;
+  }
+
+  if (props.disabled == true) {
+    bgColor = disableColor;
+  }
+
+  const content = __jsx("div", {
+    className: props.className,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 9
+    }
+  }, __jsx("button", {
+    className: 'w-full h-full bg-' + bgColor + ' ' + shadow + ' hover:bg-' + hoverColor + ' focus:outline-none hover:border-' + borderHoverColor + ' font-roboto font-' + textWeight + ' text-' + textColor + ' text-' + textSize + ' py-2 px-4',
+    type: "button",
+    disabled: disabled,
+    onClick: props.onClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 13
+    }
+  }, props.value));
+
+  return content;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Btn);
+
+/***/ }),
+
 /***/ "./components/graphics/buttons/BtnBbw.js":
 /*!***********************************************!*\
   !*** ./components/graphics/buttons/BtnBbw.js ***!
@@ -3313,7 +3810,7 @@ const BtnTtb = props => {
 /*!**********************************************!*\
   !*** ./components/graphics/buttons/index.js ***!
   \**********************************************/
-/*! exports provided: BtnBbw, BtnBtb, BtnTtb, BtnIcon */
+/*! exports provided: BtnBbw, BtnBtb, BtnTtb, BtnIcon, Btn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3329,6 +3826,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _BtnIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BtnIcon */ "./components/graphics/buttons/BtnIcon.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BtnIcon", function() { return _BtnIcon__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _Btn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Btn */ "./components/graphics/buttons/Btn.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Btn", function() { return _Btn__WEBPACK_IMPORTED_MODULE_4__["default"]; });
+
 
 
 
@@ -3649,11 +4150,100 @@ var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormade
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+
 const TxtArea = props => {
-  let shadow = 'border';
+  const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  let align = 'left';
+  let color = 'gray-900';
+  let borderColor = 'gray-300';
+  let textColor = 'gray-700';
+  let focusColor = 'black';
+  let bgColor = 'transparent';
+  let disableColor = 'gray-300';
+  let disabled = false;
+  let placeholder = '';
+  let placeholderColor = 'gray-500';
+  let height = 12;
+  let shadow = 'border border-';
+
+  if (props.align != null) {
+    align = props.align;
+  }
+
+  if (props.color != null) {
+    color = props.color;
+  }
+
+  if (props.height != null) {
+    height = props.height;
+  }
+
+  if (props.borderColor != null) {
+    borderColor = props.borderColor;
+  }
+
+  if (props.textColor != null) {
+    textColor = props.textColor;
+  }
+
+  if (props.focusColor != null) {
+    focusColor = props.focusColor;
+  }
+
+  if (props.bgColor != null) {
+    bgColor = props.bgColor;
+  }
+
+  if (props.disableColor != null) {
+    disableColor = props.disableColor;
+  }
+
+  if (props.placeholderColor != null) {
+    placeholderColor = props.placeholderColor;
+  }
+
+  if (props.error == true) {
+    borderColor = 'red-600';
+    color = 'red-600';
+  }
+
+  if (props.disabled != null) {
+    disabled = props.disabled;
+  }
+
+  if (props.disabled == true) {
+    bgColor = disableColor;
+  }
+
+  if (props.reset == true) {
+    if (props.color != null) {
+      color = props.color;
+    } else {
+      color = 'white';
+    }
+
+    if (props.borderColor != null) {
+      borderColor = props.borderColor;
+    } else {
+      borderColor = 'gray-300';
+    }
+
+    if (props.textColor != null) {
+      textColor = props.textColor;
+    } else {
+      textColor = 'gray-700';
+    }
+
+    inputRef.current.value = '';
+  }
+
+  if (props.placeholder != null) {
+    placeholder = props.placeholder;
+  }
 
   if (props.shadow == true) {
     shadow = 'shadow';
+    borderColor = '';
   }
 
   let content = __jsx("div", {
@@ -3661,27 +4251,30 @@ const TxtArea = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 98,
       columnNumber: 9
     }
-  }, __jsx("label", {
-    className: "block mb-1 font-sans font-medium",
+  }, props.label != null ? __jsx("label", {
+    className: 'w-full block mb-1 font-sans font-medium' + ' text-' + color + ' text-' + align,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 13
+      lineNumber: 100,
+      columnNumber: 16
     }
-  }, props.label), __jsx("textarea", {
+  }, props.label) : null, __jsx("textarea", {
+    ref: inputRef,
     rows: "4",
     cols: "50",
-    className: 'appearance-none ' + shadow + ' w-full h-12 py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black',
+    disabled: disabled,
+    placeholder: placeholder,
+    className: 'appearance-none ' + shadow + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-' + textColor + ' leading-tight bg-' + bgColor + ' placeholder-' + placeholderColor + ' focus:outline-none focus:border-' + focusColor,
     type: "text",
     onChange: props.onChange,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 102,
       columnNumber: 13
     }
   }));
@@ -3714,7 +4307,13 @@ const TxtField = props => {
   let align = 'left';
   let color = 'gray-900';
   let borderColor = 'gray-300';
+  let textColor = 'gray-700';
+  let focusColor = 'black';
+  let bgColor = 'transparent';
+  let disableColor = 'gray-300';
+  let disabled = false;
   let placeholder = '';
+  let placeholderColor = 'gray-500';
   let height = 12;
   let shadow = 'border border-';
 
@@ -3730,14 +4329,62 @@ const TxtField = props => {
     height = props.height;
   }
 
+  if (props.borderColor != null) {
+    borderColor = props.borderColor;
+  }
+
+  if (props.textColor != null) {
+    textColor = props.textColor;
+  }
+
+  if (props.focusColor != null) {
+    focusColor = props.focusColor;
+  }
+
+  if (props.bgColor != null) {
+    bgColor = props.bgColor;
+  }
+
+  if (props.disableColor != null) {
+    disableColor = props.disableColor;
+  }
+
+  if (props.placeholderColor != null) {
+    placeholderColor = props.placeholderColor;
+  }
+
   if (props.error == true) {
     borderColor = 'red-600';
     color = 'red-600';
   }
 
+  if (props.disabled != null) {
+    disabled = props.disabled;
+  }
+
+  if (props.disabled == true) {
+    bgColor = disableColor;
+  }
+
   if (props.reset == true) {
-    color = 'white';
-    borderColor = 'gray-300';
+    if (props.color != null) {
+      color = props.color;
+    } else {
+      color = 'white';
+    }
+
+    if (props.borderColor != null) {
+      borderColor = props.borderColor;
+    } else {
+      borderColor = 'gray-300';
+    }
+
+    if (props.textColor != null) {
+      textColor = props.textColor;
+    } else {
+      textColor = 'gray-700';
+    }
+
     inputRef.current.value = '';
   }
 
@@ -3755,7 +4402,7 @@ const TxtField = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 98,
       columnNumber: 9
     }
   }, props.label != null ? __jsx("label", {
@@ -3763,19 +4410,20 @@ const TxtField = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 100,
       columnNumber: 16
     }
   }, props.label) : null, __jsx("input", {
     ref: inputRef,
+    disabled: disabled,
     placeholder: placeholder,
-    className: 'appearance-none ' + shadow + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black',
+    className: 'appearance-none ' + shadow + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-' + textColor + ' leading-tight bg-' + bgColor + ' placeholder-' + placeholderColor + ' focus:outline-none focus:border-' + focusColor,
     type: "text",
     onChange: props.onChange,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 102,
       columnNumber: 13
     }
   }));
@@ -6403,6 +7051,38 @@ function getRequest(url) {
 
 /***/ }),
 
+/***/ "./services/api/post/postRequest.js":
+/*!******************************************!*\
+  !*** ./services/api/post/postRequest.js ***!
+  \******************************************/
+/*! exports provided: postRequest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postRequest", function() { return postRequest; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+function postRequest(data, csrftoken, url) {
+  return new Promise((resolve, reject) => {
+    let axiosConfig = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-CSRFToken': csrftoken
+      }
+    };
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.withCredentials = true;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(url, data, axiosConfig).then(response => {
+      resolve(response.data);
+    }).catch(error => {
+      reject(error);
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./services/authentication/authentication.js":
 /*!***************************************************!*\
   !*** ./services/authentication/authentication.js ***!
@@ -6560,6 +7240,17 @@ module.exports = require("axios");
 /***/ (function(module, exports) {
 
 module.exports = require("cookie");
+
+/***/ }),
+
+/***/ "js-cookie":
+/*!****************************!*\
+  !*** external "js-cookie" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("js-cookie");
 
 /***/ }),
 

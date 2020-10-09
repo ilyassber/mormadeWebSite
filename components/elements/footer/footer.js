@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Icon } from 'react-icons-kit'
 import { facebook2 , twitter, instagram} from 'react-icons-kit/icomoon'
+import { LeaveMessage } from '../discuss'
 
 export default function Footer({categories, max_shown, links}) {
 
@@ -53,8 +54,8 @@ export default function Footer({categories, max_shown, links}) {
                         <CategoriesCard />
                         <EntriesCard />
                     </div>
-                    <div className="flex flex-1 flex-row justify-center items-center w-full md:w-auto text-gray-500">
-                           <p>ilyass stufffs</p> 
+                    <div className="w-full h-full flex flex-1 justify-center items-center md:w-auto text-gray-500">
+                           <LeaveMessage/> 
                     </div>
                 </div>
                 <div className="flex flex-row justify-end items-center w-full h-16 border-t border-gray-800 text-gray-500">

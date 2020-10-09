@@ -7,7 +7,13 @@ const TxtField = props => {
     let align = 'left'
     let color = 'gray-900'
     let borderColor = 'gray-300'
+    let textColor = 'gray-700'
+    let focusColor = 'black'
+    let bgColor = 'transparent'
+    let disableColor = 'gray-300'
+    let disabled = false
     let placeholder = ''
+    let placeholderColor = 'gray-500'
     let height = 12
     let shadow = 'border border-'
 
@@ -23,14 +29,59 @@ const TxtField = props => {
         height = props.height
     }
 
+    if (props.borderColor != null) {
+        borderColor = props.borderColor
+    }
+
+    if (props.textColor != null) {
+        textColor = props.textColor
+    }
+
+    if (props.focusColor != null) {
+        focusColor = props.focusColor
+    }
+
+    if (props.bgColor != null) {
+        bgColor = props.bgColor
+    }
+
+    if (props.disableColor != null) {
+        disableColor = props.disableColor
+    }
+
+    if (props.placeholderColor != null) {
+        placeholderColor = props.placeholderColor
+    }
+
     if (props.error == true) {
         borderColor = 'red-600'
         color = 'red-600'
     }
 
+    if (props.disabled != null) {
+        disabled = props.disabled
+    }
+
+    if (props.disabled == true) {
+        bgColor = disableColor
+    }
+
     if (props.reset == true) {
-        color = 'white'
-        borderColor = 'gray-300'
+        if (props.color != null) {
+            color = props.color
+        } else {
+            color = 'white'
+        }
+        if (props.borderColor != null) {
+            borderColor = props.borderColor
+        } else {
+            borderColor = 'gray-300'
+        }
+        if (props.textColor != null) {
+            textColor = props.textColor
+        } else {
+            textColor = 'gray-700'
+        }
         inputRef.current.value = ''
     }
 
@@ -50,8 +101,9 @@ const TxtField = props => {
             : null}
             <input
                 ref={inputRef}
+                disabled={disabled}
                 placeholder={placeholder}
-                className={'appearance-none ' + shadow + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-gray-700 leading-tight focus:outline-none focus:border-black'}
+                className={'appearance-none ' + shadow + borderColor + ' w-full h-' + height + ' py-2 px-3 font-sans font-medium text-' + textColor + ' leading-tight bg-' + bgColor + ' placeholder-' + placeholderColor + ' focus:outline-none focus:border-' + focusColor}
                 type="text"
                 onChange={props.onChange}
             />
