@@ -145,7 +145,7 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
 
     // default content displayed in case there is no word to search for  
     const DefaultContentCard = () => (
-        <div className="flex flex-col md:flex-row justify-start items-start mt-16 w-full">
+        <div className="flex flex-col md:flex-row justify-start items-start mt-16 w-full  animate-smouthAppearance">
             <LeftContentCard style="animate-smouthAppearance  flex flex-col justify-center w-4/12 px-4 " />
             <div className="flex flex-row justify-start w-full md:w-8/12 h-full ">
                 <div className="flex flex-col justify-start items-start w-2/12">
@@ -180,7 +180,7 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
 
     // the entire default search displayed
     const DefaultBody = () => (
-        <div className="flex flex-col items-center justify-start w-9/12">
+        <div className="flex flex-col items-center justify-start w-9/12 bg-white">
             <SearchWidget style="w-full h-12 mt-4"
                 clickHandler={changeSearchTarget}
                 inputFocus={data.inputFocus}
@@ -222,7 +222,7 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
 // RENDER THAT SHIT
 
     return (
-        <div className={`fixed z-50 w-full flex flex-col items-center justify-start bg-white h-full`}>
+        <div className={`animate-menuSlideDown fixed top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full`}>
 
             <TopBar />
             <MainBody />

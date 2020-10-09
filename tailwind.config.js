@@ -153,6 +153,10 @@ module.exports = {
           '0%': { transform: 'translateY(-100%)' },
           '100%': { transform: 'translateY(0%)' }
         },
+        menuSlideUp: {
+          '0%': { transform: 'translateY(200%)' },
+          '100%': { transform: 'translateY(0%)' }
+        },
       },
       animation: {
         ticker: 'ticker 22s linear infinite',
@@ -164,9 +168,11 @@ module.exports = {
         show6: 'show 0.2s ease-out  none',
         show7: 'show 0.1s ease-in  none',
         smouthAppearance: 'smouthAppearance 0.5s ease-out none',
+        smouthAppearanceS: 'smouthAppearance 1s ease-out none',
         menuSlideIn: 'menuSlideIn 0.5s ease-out none',
         menuSlideOut: 'menuSlideOut 0.5s ease-out none',
         menuSlideDown: 'menuSlideDown 0.2s ease-out none',
+        menuSlideDownF: 'menuSlideDown 0.1s ease-out none',
       }
     },
   },

@@ -51,7 +51,7 @@ function SousCategoriesBar({categorie, closeClickHandler}) {
     )
     return (
 
-        <div className="flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white">
+        <div className="absolute flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white">
             {/* <SousCategoriesContent /> */}
             <BlankContent/>
         </div>

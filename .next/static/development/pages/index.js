@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MakersEntry; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\MakersEntry\\MakersEntry.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\MakersEntry\\MakersEntry.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function MakersEntry() {
@@ -40,7 +40,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RegionsEntry; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\RegionsEntry\\RegionsEntry.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\RegionsEntry\\RegionsEntry.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function RegionsEntry() {
@@ -69,7 +69,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\alpha-displayer\\AlphaDisplayer.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\alpha-displayer\\AlphaDisplayer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -161,7 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./components/elements/authentication/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\Authentication.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\authentication\\Authentication.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -251,7 +251,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
 /* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\Login.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\authentication\\Login.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -404,7 +404,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
 /* harmony import */ var _services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/authentication/registerUser */ "./services/authentication/registerUser.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\MakerRegist.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\authentication\\MakerRegist.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -588,7 +588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
 /* harmony import */ var _graphics_textFields__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../graphics/textFields */ "./components/graphics/textFields/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\authentication\\SignUp.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\authentication\\SignUp.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -801,7 +801,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\bar\\WelcomeBar.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\bar\\WelcomeBar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1060,7 +1060,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BlackFocusScreen; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\blackFocusScreen\\BlackFocusScreen.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\blackFocusScreen\\BlackFocusScreen.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function BlackFocusScreen(_ref) {
@@ -1098,7 +1098,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! querystring */ "./node_modules/querystring-es3/index.js");
 /* harmony import */ var querystring__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(querystring__WEBPACK_IMPORTED_MODULE_5__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\discuss\\LeaveMessage.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\discuss\\LeaveMessage.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -1287,7 +1287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _graphics_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../graphics/buttons */ "./components/graphics/buttons/index.js");
 /* harmony import */ var _services_authentication_registerUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/authentication/registerUser */ "./services/authentication/registerUser.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\discuss\\WaitList.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\discuss\\WaitList.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1492,7 +1492,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons-kit/icomoon */ "./node_modules/react-icons-kit/icomoon/index.js");
 /* harmony import */ var react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _discuss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../discuss */ "./components/elements/discuss/index.js");
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\footer\\footer.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\footer\\footer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1790,7 +1790,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sousCategoriesBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sousCategoriesBar */ "./components/elements/nav-bar/categoriesBar/sousCategoriesBar.js");
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../logo */ "./components/logo/index.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\categoriesBar\\categoriesBar.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\categoriesBar\\categoriesBar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1823,7 +1823,8 @@ function CategoriesBar(_ref2) {
   var style = _ref2.style,
       max_shown = _ref2.max_shown,
       categories = _ref2.categories,
-      brandNameStyle = _ref2.brandNameStyle;
+      brandNameStyle = _ref2.brandNameStyle,
+      changeWelcomeBarAppearance = _ref2.changeWelcomeBarAppearance;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     open: false,
@@ -1838,6 +1839,7 @@ function CategoriesBar(_ref2) {
   console.log(" Categorie RENDER"); // load clicked categorie and set sousCategories to open  
 
   var clickOnCategorie = function clickOnCategorie(categorie) {
+    changeWelcomeBarAppearance(false);
     setOpenCategorie({
       open: true,
       categorie: categorie
@@ -1848,10 +1850,13 @@ function CategoriesBar(_ref2) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     function categorieClickHandler(event) {
-      if (categorieRef.current && !categorieRef.current.contains(event.target)) setOpenCategorie({
-        open: false,
-        categorie: null
-      });
+      if (categorieRef.current && !categorieRef.current.contains(event.target)) {
+        setOpenCategorie({
+          open: false,
+          categorie: null
+        });
+        changeWelcomeBarAppearance(true);
+      }
     }
 
     document.addEventListener("mousedown", categorieClickHandler);
@@ -1865,15 +1870,23 @@ function CategoriesBar(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 56,
       columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: "relative w-full h-auto",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 13
     }
   }, __jsx("div", {
     className: "flex flex-row justify-between h-12 w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 58,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -1881,7 +1894,7 @@ function CategoriesBar(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 59,
       columnNumber: 17
     }
   }, __jsx(SiteNameContainer, {
@@ -1889,15 +1902,15 @@ function CategoriesBar(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 60,
       columnNumber: 21
     }
   })), __jsx("ul", {
-    className: "animate-smouthAppearance flex flex-row justify-center items-center h-full",
+    className: "flex flex-row justify-center items-center h-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 63,
       columnNumber: 17
     }
   }, categories.map(function (categorie, index) {
@@ -1910,7 +1923,7 @@ function CategoriesBar(_ref2) {
       __self: _this2,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 65,
         columnNumber: 48
       }
     }, categorie.name.toUpperCase());
@@ -1919,24 +1932,25 @@ function CategoriesBar(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 72,
       columnNumber: 17
     }
   })), openCategorie.open && __jsx(_sousCategoriesBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
     closeClickHandler: function closeClickHandler() {
-      return setOpenCategorie({
+      setOpenCategorie({
         open: false,
         categorie: null
       });
+      changeWelcomeBarAppearance(true);
     },
     categorie: openCategorie.categorie,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70,
+      lineNumber: 75,
       columnNumber: 36
     }
-  }));
+  })));
 }
 
 /***/ }),
@@ -1958,7 +1972,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
 /* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\categoriesBar\\sousCategoriesBar.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\categoriesBar\\sousCategoriesBar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2142,7 +2156,7 @@ function SousCategoriesBar(_ref) {
   };
 
   return __jsx("div", {
-    className: "flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white",
+    className: "absolute flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2180,7 +2194,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\middleNav\\MiddleNav.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\middleNav\\MiddleNav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2305,7 +2319,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _middleNav_MiddleNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middleNav/MiddleNav */ "./components/elements/nav-bar/middleNav/MiddleNav.js");
 /* harmony import */ var _categoriesBar_categoriesBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./categoriesBar/categoriesBar */ "./components/elements/nav-bar/categoriesBar/categoriesBar.js");
 /* harmony import */ var _bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../bar/WelcomeBar */ "./components/elements/bar/WelcomeBar.js");
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\navbar.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2336,9 +2350,17 @@ function NavBar(_ref) {
       style = _useState[0],
       setStyle = _useState[1];
 
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      showWelcomeBar = _useState2[0],
+      setShowWelcomeBar = _useState2[1];
+
   var upperNavRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // const middleNavRef = useRef(null)
   // const WelcomeNavRef = useRef(null)
   // const categoriesNavRef = useRef(null)
+
+  var changeWelcomeBarAppearance = function changeWelcomeBarAppearance(value) {
+    setShowWelcomeBar(value);
+  };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     function adjustNavsPosition(event) {
@@ -2357,13 +2379,13 @@ function NavBar(_ref) {
     return function () {
       document.removeEventListener('scroll', adjustNavsPosition);
     };
-  }, []);
+  }, [showWelcomeBar]);
   return __jsx("nav", {
     className: "z-10 flex flex-col w-ful",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 51,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -2372,7 +2394,7 @@ function NavBar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 52,
       columnNumber: 13
     }
   }, __jsx(_upperNav_UpperNav__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2385,7 +2407,7 @@ function NavBar(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 53,
       columnNumber: 17
     }
   }), __jsx(_categoriesBar_categoriesBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -2393,19 +2415,20 @@ function NavBar(_ref) {
     max_shown: max_shown,
     categories: categories,
     brandNameStyle: style.brandNameStyle,
+    changeWelcomeBarAppearance: changeWelcomeBarAppearance,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 66,
       columnNumber: 17
     }
-  }), __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "w-full",
+  }), showWelcomeBar && __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "w-full animate-smouthAppearanceS",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
-      columnNumber: 17
+      lineNumber: 74,
+      columnNumber: 36
     }
   })));
 }
@@ -2433,7 +2456,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../logo */ "./components/logo/index.js");
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\upperNav\\UpperNav.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\upperNav\\UpperNav.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2561,7 +2584,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_icons_kit_icomoon_cross__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons-kit/icomoon/cross */ "./node_modules/react-icons-kit/icomoon/cross.js");
 /* harmony import */ var react_icons_kit_icomoon_cross__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_icomoon_cross__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\nav-bar\\upperNav\\iconsContainer\\iconsContainer.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\upperNav\\iconsContainer\\iconsContainer.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2703,7 +2726,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
 /* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\searchGate\\searchGate.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\searchGate\\searchGate.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -2981,7 +3004,7 @@ function SearchGate(_ref2) {
 
   var DefaultContentCard = function DefaultContentCard() {
     return __jsx("div", {
-      className: "flex flex-col md:flex-row justify-start items-start mt-16 w-full",
+      className: "flex flex-col md:flex-row justify-start items-start mt-16 w-full  animate-smouthAppearance",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -3080,7 +3103,7 @@ function SearchGate(_ref2) {
 
   var DefaultBody = function DefaultBody() {
     return __jsx("div", {
-      className: "flex flex-col items-center justify-start w-9/12",
+      className: "flex flex-col items-center justify-start w-9/12 bg-white",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -3173,7 +3196,7 @@ function SearchGate(_ref2) {
 
 
   return __jsx("div", {
-    className: "fixed z-50 w-full flex flex-col items-center justify-start bg-white h-full",
+    className: "animate-menuSlideDown fixed top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -3216,7 +3239,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_icons_kit_icomoon_arrowRight2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons-kit/icomoon/arrowRight2 */ "./node_modules/react-icons-kit/icomoon/arrowRight2.js");
 /* harmony import */ var react_icons_kit_icomoon_arrowRight2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_icomoon_arrowRight2__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\elements\\side-menu\\sideMenu.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\side-menu\\sideMenu.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3528,7 +3551,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\Btn.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\buttons\\Btn.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3635,7 +3658,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnBbw.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\buttons\\BtnBbw.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3686,7 +3709,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnBtb.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\buttons\\BtnBtb.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3731,7 +3754,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnIcon.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\buttons\\BtnIcon.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3784,7 +3807,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\buttons\\BtnTtb.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\buttons\\BtnTtb.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3868,7 +3891,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Cover1", function() { return Cover1; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\imageCover\\Cover.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\imageCover\\Cover.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Cover(_ref) {
@@ -4000,7 +4023,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\IntField.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\textFields\\IntField.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4060,7 +4083,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\PwdField.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\textFields\\PwdField.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4119,7 +4142,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TextDisp.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\textFields\\TextDisp.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4168,7 +4191,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TxtArea.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\textFields\\TxtArea.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4321,7 +4344,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\graphics\\textFields\\TxtField.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\graphics\\textFields\\TxtField.js";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -4511,7 +4534,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_api_get_getRequest__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/api/get/getRequest */ "./services/api/get/getRequest.js");
 /* harmony import */ var _elements_footer_footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./elements/footer/footer */ "./components/elements/footer/footer.js");
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\layout.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\layout.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4801,7 +4824,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\Brand.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\logo\\Brand.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4852,7 +4875,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\Intro.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\logo\\Intro.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4997,7 +5020,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\product\\ProductGrid.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\widgets\\product\\ProductGrid.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -5105,7 +5128,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchWidget; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\search\\searchWidget.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\widgets\\search\\searchWidget.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -5208,7 +5231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Wrapper; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\widgets\\utilities\\wrapper.js";
+var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\widgets\\utilities\\wrapper.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Wrapper(_ref) {
@@ -7825,7 +7848,7 @@ function tryDecode(str, decode) {
 
 exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".sideMenu_container__1SxfO {\n  width: 100%;\n  height: 16rem;\n  border-width: 1px;\n  --border-opacity: 1;\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--border-opacity));\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}", "",{"version":3,"sources":["C:/Users/1337/Documents/WorkSpace/ecomart/dev/mormadeWebSite/components/elements/side-menu/styles/sideMenu.module.css","C:/Users/1337/Documents/WorkSpace/ecomart/dev/mormadeWebSite/<no source>"],"names":[],"mappings":"AAAA;ECAA,WAAA;EAAA,aAAA;EAAA,iBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADEA","file":"sideMenu.module.css","sourcesContent":[".container {\r\n    @apply  w-full h-64  border border-gray-200 bg-white;\r\n}",null]}]);
+exports.push([module.i, ".sideMenu_container__1SxfO {\n  width: 100%;\n  height: 16rem;\n  border-width: 1px;\n  --border-opacity: 1;\n  border-color: #edf2f7;\n  border-color: rgba(237, 242, 247, var(--border-opacity));\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n}", "",{"version":3,"sources":["C:/Users/Soguma/MorMade_project/webweb/components/elements/side-menu/styles/sideMenu.module.css","C:/Users/Soguma/MorMade_project/webweb/<no source>"],"names":[],"mappings":"AAAA;ECAA,WAAA;EAAA,aAAA;EAAA,iBAAA;EAAA,mBAAA;EAAA,qBAAA;EAAA,wDAAA;EAAA,eAAA;EAAA,sBAAA;EAAA,wDAAA;ADEA","file":"sideMenu.module.css","sourcesContent":[".container {\r\n    @apply  w-full h-64  border border-gray-200 bg-white;\r\n}",null]}]);
 // Exports
 exports.locals = {
 	"container": "sideMenu_container__1SxfO"
@@ -8311,10 +8334,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js!./":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5Cwebweb%5Cpages%5Cindex.js!./":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5Cwebweb%5Cpages%5Cindex.js ***!
+  \********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20710,7 +20733,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _this = undefined,
-    _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\pages\\index.js";
+    _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\pages\\index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -21033,14 +21056,14 @@ function registerUser(data, operation, csrttoken) {
 
 /***/ }),
 
-/***/ 1:
-/*!****************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js ***!
-  \****************************************************************************************************************************************************************/
+/***/ 2:
+/*!************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5Cwebweb%5Cpages%5Cindex.js ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5Cwebweb%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5Cwebweb%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
@@ -21056,5 +21079,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

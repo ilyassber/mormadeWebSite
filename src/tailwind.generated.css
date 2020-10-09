@@ -35970,6 +35970,26 @@ video {
   }
 }
 
+@-webkit-keyframes menuSlideUp{
+  0%{
+    transform: translateY(200%);
+  }
+
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes menuSlideUp{
+  0%{
+    transform: translateY(200%);
+  }
+
+  100%{
+    transform: translateY(0%);
+  }
+}
+
 .animate-none{
   -webkit-animation: none;
           animation: none;
@@ -36040,6 +36060,11 @@ video {
           animation: smouthAppearance 0.5s ease-out none;
 }
 
+.animate-smouthAppearanceS{
+  -webkit-animation: smouthAppearance 1s ease-out none;
+          animation: smouthAppearance 1s ease-out none;
+}
+
 .animate-menuSlideIn{
   -webkit-animation: menuSlideIn 0.5s ease-out none;
           animation: menuSlideIn 0.5s ease-out none;
@@ -36053,6 +36078,11 @@ video {
 .animate-menuSlideDown{
   -webkit-animation: menuSlideDown 0.2s ease-out none;
           animation: menuSlideDown 0.2s ease-out none;
+}
+
+.animate-menuSlideDownF{
+  -webkit-animation: menuSlideDown 0.1s ease-out none;
+          animation: menuSlideDown 0.1s ease-out none;
 }
 
 @media (min-width: 640px){
@@ -71296,6 +71326,11 @@ video {
             animation: smouthAppearance 0.5s ease-out none;
   }
 
+  .sm\:animate-smouthAppearanceS{
+    -webkit-animation: smouthAppearance 1s ease-out none;
+            animation: smouthAppearance 1s ease-out none;
+  }
+
   .sm\:animate-menuSlideIn{
     -webkit-animation: menuSlideIn 0.5s ease-out none;
             animation: menuSlideIn 0.5s ease-out none;
@@ -71309,6 +71344,11 @@ video {
   .sm\:animate-menuSlideDown{
     -webkit-animation: menuSlideDown 0.2s ease-out none;
             animation: menuSlideDown 0.2s ease-out none;
+  }
+
+  .sm\:animate-menuSlideDownF{
+    -webkit-animation: menuSlideDown 0.1s ease-out none;
+            animation: menuSlideDown 0.1s ease-out none;
   }
 }
 
@@ -106553,6 +106593,11 @@ video {
             animation: smouthAppearance 0.5s ease-out none;
   }
 
+  .md\:animate-smouthAppearanceS{
+    -webkit-animation: smouthAppearance 1s ease-out none;
+            animation: smouthAppearance 1s ease-out none;
+  }
+
   .md\:animate-menuSlideIn{
     -webkit-animation: menuSlideIn 0.5s ease-out none;
             animation: menuSlideIn 0.5s ease-out none;
@@ -106566,6 +106611,11 @@ video {
   .md\:animate-menuSlideDown{
     -webkit-animation: menuSlideDown 0.2s ease-out none;
             animation: menuSlideDown 0.2s ease-out none;
+  }
+
+  .md\:animate-menuSlideDownF{
+    -webkit-animation: menuSlideDown 0.1s ease-out none;
+            animation: menuSlideDown 0.1s ease-out none;
   }
 }
 
@@ -141810,6 +141860,11 @@ video {
             animation: smouthAppearance 0.5s ease-out none;
   }
 
+  .lg\:animate-smouthAppearanceS{
+    -webkit-animation: smouthAppearance 1s ease-out none;
+            animation: smouthAppearance 1s ease-out none;
+  }
+
   .lg\:animate-menuSlideIn{
     -webkit-animation: menuSlideIn 0.5s ease-out none;
             animation: menuSlideIn 0.5s ease-out none;
@@ -141823,6 +141878,11 @@ video {
   .lg\:animate-menuSlideDown{
     -webkit-animation: menuSlideDown 0.2s ease-out none;
             animation: menuSlideDown 0.2s ease-out none;
+  }
+
+  .lg\:animate-menuSlideDownF{
+    -webkit-animation: menuSlideDown 0.1s ease-out none;
+            animation: menuSlideDown 0.1s ease-out none;
   }
 }
 
@@ -177067,6 +177127,11 @@ video {
             animation: smouthAppearance 0.5s ease-out none;
   }
 
+  .xl\:animate-smouthAppearanceS{
+    -webkit-animation: smouthAppearance 1s ease-out none;
+            animation: smouthAppearance 1s ease-out none;
+  }
+
   .xl\:animate-menuSlideIn{
     -webkit-animation: menuSlideIn 0.5s ease-out none;
             animation: menuSlideIn 0.5s ease-out none;
@@ -177080,5 +177145,10 @@ video {
   .xl\:animate-menuSlideDown{
     -webkit-animation: menuSlideDown 0.2s ease-out none;
             animation: menuSlideDown 0.2s ease-out none;
+  }
+
+  .xl\:animate-menuSlideDownF{
+    -webkit-animation: menuSlideDown 0.1s ease-out none;
+            animation: menuSlideDown 0.1s ease-out none;
   }
 }

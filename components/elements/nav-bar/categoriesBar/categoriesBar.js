@@ -12,7 +12,7 @@ const SiteNameContainer = ({style}) => (
 )
 
 
-export default function CategoriesBar({ style ,max_shown, categories, brandNameStyle }) {
+export default function CategoriesBar({ style ,max_shown, categories, brandNameStyle, changeWelcomeBarAppearance }) {
 
     const [openCategorie, setOpenCategorie] = useState({open : false, categorie : null}) // open/close + the categorie to be shown in sougategories 
     const categorieRef = useRef(null) // reference on "categories list" : to track outside click 
@@ -24,6 +24,7 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
 
     // load clicked categorie and set sousCategories to open  
     const clickOnCategorie = (categorie) => {
+        changeWelcomeBarAppearance(false)
         setOpenCategorie({open : true, categorie : categorie})
         console.log(" openCategorie : ->  ", openCategorie) 
     }
@@ -35,7 +36,10 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
 
             function categorieClickHandler (event) {
                 if (categorieRef.current && !categorieRef.current.contains(event.target))
-                    setOpenCategorie({open : false, categorie : null})
+                    {
+                        setOpenCategorie({open : false, categorie : null})
+                        changeWelcomeBarAppearance(true)
+                    }
             }
 
             document.addEventListener("mousedown", categorieClickHandler)
@@ -50,12 +54,13 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
 
     return (
         <div ref={categorieRef}  className={style}>
+            <div className="relative w-full h-auto">
             <div className="flex flex-row justify-between h-12 w-full">
                 <div className="flex flex-row justify-start items-center h-full flex-1 ">
                     <SiteNameContainer style={brandNameStyle}
                     />
                 </div>
-                <ul className="animate-smouthAppearance flex flex-row justify-center items-center h-full" >
+                <ul className="flex flex-row justify-center items-center h-full" >
                     {categories.map((categorie, index) =>
                         (index < max_shown) && <li  key={ index }
                                                     className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-base font-black ${(openCategorie.categorie && openCategorie.categorie === categorie) ? "text-yellow-600" : "text-gray-900 hover:text-gray-700" }`}
@@ -67,9 +72,11 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
                 <div className="flex flex-1 h-full">
                 </div>
             </div>
-            {openCategorie.open && <SousCategoriesBar closeClickHandler={() => setOpenCategorie({open : false, categorie : null})}
+            {openCategorie.open && <SousCategoriesBar closeClickHandler={() => {setOpenCategorie({open : false, categorie : null} ); changeWelcomeBarAppearance(true)
+ }}
                 categorie={openCategorie.categorie}
             />}
+            </div>
         </div>
     )
 }

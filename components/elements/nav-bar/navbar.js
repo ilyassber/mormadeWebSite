@@ -15,12 +15,16 @@ const categoriesStyles = {
 function NavBar({ changeMenuClicked, openSearch, openSearchClickHandler, categories, max_shown, links, home }) {
 
     const [style, setStyle] = useState({categoriesBarStyle : categoriesStyles.notFixed, brandNameStyle : categoriesStyles.hideBrandName})
+    const [showWelcomeBar, setShowWelcomeBar] = useState(true)
     const upperNavRef = useRef(null)
     // const middleNavRef = useRef(null)
     // const WelcomeNavRef = useRef(null)
     // const categoriesNavRef = useRef(null)
     
 
+    const changeWelcomeBarAppearance = (value) => {
+        setShowWelcomeBar(value)
+    }
 
     useEffect(
         () => {
@@ -38,7 +42,7 @@ function NavBar({ changeMenuClicked, openSearch, openSearchClickHandler, categor
             return () => {
                 document.removeEventListener('scroll', adjustNavsPosition)
             }
-        }, []
+        }, [showWelcomeBar]
     )
 
     
@@ -64,9 +68,12 @@ function NavBar({ changeMenuClicked, openSearch, openSearchClickHandler, categor
                     max_shown={max_shown}
                     categories={categories}
                     brandNameStyle={style.brandNameStyle}
+                    changeWelcomeBarAppearance={changeWelcomeBarAppearance}
+
                 />
-                <WelcomeBar  className="w-full"/>
+                {showWelcomeBar && <WelcomeBar className="w-full animate-smouthAppearanceS"/>}
             </div>
+
         </nav>
     )
 }
