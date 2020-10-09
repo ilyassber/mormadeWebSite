@@ -36,20 +36,8 @@ const Hello = (props) => {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <div className="w-full flex flex-col bg-xw-100 items-center mt-12">
+      <div className="w-full flex flex-col bg-white items-center">
         <div className="w-full max-w-screen-md">
-          <AlphaDisplayer
-            image={images.cover02}
-            title="Dresses made to last"
-            description="Timeless designs made from recycled materials"
-            buttonText="SHOP NOW"
-          />
-          <AlphaDisplayer
-            image={images.cover02}
-            title="Dresses made to last"
-            description="Timeless designs made from recycled materials"
-            buttonText="SHOP NOW"
-          />
           <MakerRegist className="w-full my-4" csrf={props.cookies['csrftoken']} />
         </div>
       </div>

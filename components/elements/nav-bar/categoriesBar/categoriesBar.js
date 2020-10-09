@@ -50,12 +50,12 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
 
     return (
         <div ref={categorieRef}  className={style}>
-            <div className="flex flex-row justify-between h-16 w-full">
+            <div className="flex flex-row justify-between h-12 w-full">
                 <div className="flex flex-row justify-start items-center h-full flex-1 ">
                     <SiteNameContainer style={brandNameStyle}
                     />
                 </div>
-                <ul className="flex flex-row justify-center items-center h-full" >
+                <ul className="animate-smouthAppearance flex flex-row justify-center items-center h-full" >
                     {categories.map((categorie, index) =>
                         (index < max_shown) && <li  key={ index }
                                                     className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-base font-black ${(openCategorie.categorie && openCategorie.categorie === categorie) ? "text-yellow-600" : "text-gray-900 hover:text-gray-700" }`}

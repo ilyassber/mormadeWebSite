@@ -56,7 +56,7 @@ const MakerRegist = props => {
 
     let content = (
         <div className={props.className}>
-            <div className="w-full h-auto shadow-sm bg-white overflow-hidden">
+            <div className="w-full h-auto border rounded-sm bg-white overflow-hidden">
                 <div className="w-full h-auto p-6 justify-end">
                     <h3 className="h-auto w-full font-roboto font-bold text-gray-900 text-2xl text-left align-left mb-6">
                         {welcome}

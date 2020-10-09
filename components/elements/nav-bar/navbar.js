@@ -6,8 +6,8 @@ import WelcomeBar from '../bar/WelcomeBar'
 
 
 const categoriesStyles = {
-    fixed : "fixed top-0 hidden md:flex flex-col  w-full shadow-lg bg-white",
-    notFixed : "absolute hidden md:flex flex-col w-full  shadow-lg bg-white",
+    fixed : "fixed top-0 hidden md:flex flex-col w-full animate-menuSlideDown border-b border-gray-500 bg-white",
+    notFixed : "hidden md:flex flex-col w-full border-b border-gray-500 bg-white",
     showBrandName : "animate-smouthAppearance flex px-4",
     hideBrandName : "hidden"
 }
@@ -54,17 +54,18 @@ function NavBar({ changeMenuClicked, openSearch, openSearchClickHandler, categor
                     home={home}
                     links={links}
                 />
-                <MiddleNav
+                {/* <MiddleNav
                     style={` hidden md:flex h-12 w-full px-2 bg-white`}
                     links={links}
-                />
-                <WelcomeBar  className="w-full"/>
+                /> */}
+                
                 <CategoriesBar
                     style={style.categoriesBarStyle}
                     max_shown={max_shown}
                     categories={categories}
                     brandNameStyle={style.brandNameStyle}
                 />
+                <WelcomeBar  className="w-full"/>
             </div>
         </nav>
     )

@@ -7,10 +7,10 @@ export default function Footer({categories, max_shown, links}) {
 
 
     const IconsContainer = () => (
-        <div className="flex flex-row mx-2 text-gray-500 ">
-            <a className="mx-4"><Icon size={25} icon={facebook2} /></a>
-            <a className="mx-4"><Icon size={25} icon={instagram} /></a>
-            <a className="mx-4"><Icon size={25} icon={twitter} /></a>
+        <div className="flex flex-row mx-2 text-gray-300 ">
+            <a className="mx-4"><Icon size={20} icon={facebook2} /></a> 
+            <a className="mx-4"><Icon size={20} icon={instagram} /></a>
+            <a className="mx-4"><Icon size={20} icon={twitter} /></a>
         </div>
     )
 
@@ -43,8 +43,8 @@ export default function Footer({categories, max_shown, links}) {
 
     return (
         <div className="flex justify-center w-full bg-black shadow-2xl">
-            <div className="flex flex-col w-9/12">
-                <div className="flex justify-center items-center w-full h-72">
+            <div className="flex flex-col w-10/12">
+                <div className="flex justify-center items-center w-full h-auto mt-24 mb-16">
                     <h1 className="text-white font-bold text-2xl font-kumbhsans cursor-default" >
                         <span className="whitespace-no-wrap">MORMADE |</span><br className="md:hidden"/> MOROCCO
                     </h1>

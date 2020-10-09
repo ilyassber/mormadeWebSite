@@ -589,7 +589,7 @@ const MakerRegist = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "w-full h-auto shadow-sm bg-white overflow-hidden",
+    className: "w-full h-auto border rounded-sm bg-white overflow-hidden",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -919,7 +919,7 @@ const WelcomeBar = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "w-full h-auto bg-gradient-to-r from-orange-200 to-yellow-200 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
+    className: "w-full h-auto bg-gradient-to-r from-gray-700 via-gray-100 to-gray-700 border-b border-gray-500 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1605,7 +1605,7 @@ function Footer({
   links
 }) {
   const IconsContainer = () => __jsx("div", {
-    className: "flex flex-row mx-2 text-gray-500 ",
+    className: "flex flex-row mx-2 text-gray-300 ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1621,7 +1621,7 @@ function Footer({
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    size: 25,
+    size: 20,
     icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__["facebook2"],
     __self: this,
     __source: {
@@ -1638,7 +1638,7 @@ function Footer({
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    size: 25,
+    size: 20,
     icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__["instagram"],
     __self: this,
     __source: {
@@ -1655,7 +1655,7 @@ function Footer({
       columnNumber: 13
     }
   }, __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    size: 25,
+    size: 20,
     icon: react_icons_kit_icomoon__WEBPACK_IMPORTED_MODULE_3__["twitter"],
     __self: this,
     __source: {
@@ -1759,7 +1759,7 @@ function Footer({
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "flex flex-col w-9/12",
+    className: "flex flex-col w-10/12",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1767,7 +1767,7 @@ function Footer({
       columnNumber: 13
     }
   }, __jsx("div", {
-    className: "flex justify-center items-center w-full h-72",
+    className: "flex justify-center items-center w-full h-auto mt-24 mb-16",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1952,7 +1952,7 @@ function CategoriesBar({
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "flex flex-row justify-between h-16 w-full",
+    className: "flex flex-row justify-between h-12 w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1976,7 +1976,7 @@ function CategoriesBar({
       columnNumber: 21
     }
   })), __jsx("ul", {
-    className: "flex flex-row justify-center items-center h-full",
+    className: "animate-smouthAppearance flex flex-row justify-center items-center h-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2378,8 +2378,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const categoriesStyles = {
-  fixed: "fixed top-0 hidden md:flex flex-col  w-full shadow-lg bg-white",
-  notFixed: "absolute hidden md:flex flex-col w-full  shadow-lg bg-white",
+  fixed: "fixed top-0 hidden md:flex flex-col w-full animate-menuSlideDown border-b border-gray-500 bg-white",
+  notFixed: "hidden md:flex flex-col w-full border-b border-gray-500 bg-white",
   showBrandName: "animate-smouthAppearance flex px-4",
   hideBrandName: "hidden"
 };
@@ -2452,23 +2452,6 @@ function NavBar({
       lineNumber: 49,
       columnNumber: 17
     }
-  }), __jsx(_middleNav_MiddleNav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    style: ` hidden md:flex h-12 w-full px-2 bg-white`,
-    links: links,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57,
-      columnNumber: 17
-    }
-  }), __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "w-full",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 17
-    }
   }), __jsx(_categoriesBar_categoriesBar__WEBPACK_IMPORTED_MODULE_3__["default"], {
     style: style.categoriesBarStyle,
     max_shown: max_shown,
@@ -2478,6 +2461,14 @@ function NavBar({
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62,
+      columnNumber: 17
+    }
+  }), __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "w-full",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
       columnNumber: 17
     }
   })));
@@ -6958,7 +6949,7 @@ const Hello = props => {
       columnNumber: 9
     }
   })), __jsx("div", {
-    className: "w-full flex flex-col bg-xw-100 items-center mt-12",
+    className: "w-full flex flex-col bg-white items-center",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -6973,35 +6964,13 @@ const Hello = props => {
       lineNumber: 40,
       columnNumber: 9
     }
-  }, __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover02,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 11
-    }
-  }), __jsx(_components_elements_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    image: images.cover02,
-    title: "Dresses made to last",
-    description: "Timeless designs made from recycled materials",
-    buttonText: "SHOP NOW",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47,
-      columnNumber: 11
-    }
-  }), __jsx(_components_elements_authentication__WEBPACK_IMPORTED_MODULE_13__["MakerRegist"], {
+  }, __jsx(_components_elements_authentication__WEBPACK_IMPORTED_MODULE_13__["MakerRegist"], {
     className: "w-full my-4",
     csrf: props.cookies['csrftoken'],
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53,
+      lineNumber: 41,
       columnNumber: 11
     }
   }))));

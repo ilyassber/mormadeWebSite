@@ -97,6 +97,9 @@ module.exports = {
         '9/12': '75%',
         '10/12': '83.333333%',
         '11/12': '91.666667%',
+        '13': '3.25rem',
+        '14': '3.5rem',
+        '15': '3.75rem',
         '72': '18rem',
         '84': '21rem',
         '96': '24rem',
@@ -145,7 +148,11 @@ module.exports = {
         menuSlideOut: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' }
-        }
+        },
+        menuSlideDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0%)' }
+        },
       },
       animation: {
         ticker: 'ticker 22s linear infinite',
@@ -159,6 +166,7 @@ module.exports = {
         smouthAppearance: 'smouthAppearance 0.5s ease-out none',
         menuSlideIn: 'menuSlideIn 0.5s ease-out none',
         menuSlideOut: 'menuSlideOut 0.5s ease-out none',
+        menuSlideDown: 'menuSlideDown 0.2s ease-out none',
       }
     },
   },

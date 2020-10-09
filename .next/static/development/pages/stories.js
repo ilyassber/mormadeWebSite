@@ -889,7 +889,7 @@ var WelcomeBar = function WelcomeBar(props) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "w-full h-auto bg-gradient-to-r from-orange-200 to-yellow-200 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
+    className: "w-full h-auto bg-gradient-to-r from-gray-700 via-gray-100 to-gray-700 border-b border-gray-500 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
