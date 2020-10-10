@@ -60,10 +60,10 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
                     <SiteNameContainer style={brandNameStyle}
                     />
                 </div>
-                <ul className="flex flex-row justify-center items-center h-full" >
+                <ul className="flex flex-row justify-center items-center h-full pt-2" >
                     {categories.map((categorie, index) =>
                         (index < max_shown) && <li  key={ index }
-                                                    className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-base font-black ${(openCategorie.categorie && openCategorie.categorie === categorie) ? "text-yellow-600" : "text-gray-900 hover:text-gray-700" }`}
+                                                    className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-sm font-black tracking-widest ${(openCategorie.categorie && openCategorie.categorie === categorie) ? "text-gray-900 border-b-2 border-black" : "text-gray-900 border-b-2 border-transparent" }`}
                                                     onClick={() => clickOnCategorie(categorie)}
                         >
                         {categorie.name.toUpperCase()}</li>

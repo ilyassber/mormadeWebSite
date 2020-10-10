@@ -13,6 +13,10 @@ import { authenticate } from '../services/authentication/authentication'
 import { checkUser } from '../services/authentication/checkUser'
 import { MakerRegist } from '../components/elements/authentication'
 import { WelcomeBar } from '../components/elements/bar'
+import { postRequest } from '../services/api/post/postRequest'
+import querystring from 'querystring'
+import ArticleList from '../components/elements/list/ArticleList'
+import ArticleBanner from '../components/widgets/article/ArticleBanner'
 
 const images = {
   cover01: "images/Articles/cover-01.jpg",
@@ -30,6 +34,10 @@ const images = {
 
 const Hello = (props) => {
 
+  let articlesList = props.trending.map(function (article) {
+    return <ArticleBanner className="h-auto w-full max-w-screen-md" key={article.id} data={article} />
+  })
+
   return (
     <Layout tags={props.tags}>
       <Head>
@@ -40,6 +48,7 @@ const Hello = (props) => {
       <div className="w-full flex flex-col bg-white items-center">
         <WelcomeBar className="w-full"/>
         <div className="w-full max-w-screen-md">
+          <ArticleList className="w-full mt-4" data={articlesList} />
           <MakerRegist className="w-full my-4" csrf={props.cookies['csrftoken']} />
         </div>
       </div>
@@ -56,9 +65,22 @@ Hello.getInitialProps = async ({ req }) => {
     return (res)
   })
 
+  const trending = await postRequest(
+    querystring.stringify({
+      operation: 'trending'
+    }),
+    cookies['csrftoken'],
+    process.env.domain + '/api/articles/'
+  ).then((res) => {
+    return res
+  })
+
+  console.log(trending[0].text[0])
+
   return {
     cookies: cookies,
-    tags: tags
+    tags: tags,
+    trending: trending
   }
 }
 

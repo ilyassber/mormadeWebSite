@@ -1,1 +1,0 @@
-{"version":1,"pages404":true,"basePath":"","redirects":[],"rewrites":[],"headers":[],"dynamicRoutes":[{"page":"/stories/[story]","regex":"^\\/stories\\/([^/]+?)(?:\\/)?$"}],"dataRoutes":[{"page":"/stories/[story]","dataRouteRegex":"^\\/_next\\/data\\/fPhZ9QrdsprJyiIHZ1l1e\\/stories\\/([^/]+?)\\.json$"}]}

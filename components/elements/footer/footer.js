@@ -15,7 +15,7 @@ export default function Footer({categories, max_shown, links}) {
     )
 
     const CategoriesCard = () => (
-        <div className="my-2 sm:mx-8 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start sm:items-center ">
+        <div className="my-2 sm:mx-8 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start sm:items-start ">
             <h2 className="tracking-widest my-4  text-lg text-white font-kumbhsans cursor-default">CATEGORIES</h2>
             <ul className="flex flex-col justify-start items-start" >
                 {categories.map((categorie, index) =>
@@ -29,7 +29,7 @@ export default function Footer({categories, max_shown, links}) {
     )
 
     const EntriesCard = () => (
-        <div className="my-2 sm:mx-8 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start sm:items-center">
+        <div className="my-2 sm:mx-8 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start sm:items-start">
             <h2 className="tracking-widest my-4 text-lg text-white font-kumbhsans cursor-default">ENTRIES</h2>
             <ul className="flex flex-col justify-start items-start">
                 {links.map((link, indx) =>
