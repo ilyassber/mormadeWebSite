@@ -15,7 +15,7 @@ export default function Footer({categories, max_shown, links}) {
     )
 
     const CategoriesCard = () => (
-        <div className="my-2 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start md:items-center md:items-start ">
+        <div className="my-2 sm:mx-8 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start sm:items-center ">
             <h2 className="tracking-widest my-4  text-lg text-white font-kumbhsans cursor-default">CATEGORIES</h2>
             <ul className="flex flex-col justify-start items-start" >
                 {categories.map((categorie, index) =>
@@ -29,7 +29,7 @@ export default function Footer({categories, max_shown, links}) {
     )
 
     const EntriesCard = () => (
-        <div className="my-2 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start md:items-center md:items-start">
+        <div className="my-2 sm:mx-8 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start sm:items-center">
             <h2 className="tracking-widest my-4 text-lg text-white font-kumbhsans cursor-default">ENTRIES</h2>
             <ul className="flex flex-col justify-start items-start">
                 {links.map((link, indx) =>
@@ -50,11 +50,11 @@ export default function Footer({categories, max_shown, links}) {
                     </h1>
                 </div>
                 <div className="my-10 flex flex-col lg:flex-row justify-start lg:justify-around items-center w-full h-auto">
-                    <div className="mb-5 md:mb-10 flex flex-1 flex-col md:flex-row items-start md:justify-center lg:justify-between  w-full  ">
+                    <div className="mb-5 sm:mb-10 flex flex-1 flex-col sm:flex-row items-start sm:justify-center lg:justify-between  w-full  ">
                         <CategoriesCard />
                         <EntriesCard />
                     </div>
-                    <div className="mx-5 w-full flex flex-1 md:justify-center items-center md:w-auto text-gray-500">
+                    <div className="mx-5 mt-5 w-full flex flex-1 sm:justify-center items-center md:w-auto text-gray-500">
                            <LeaveMessage/> 
                     </div>
                 </div>
