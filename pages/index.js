@@ -12,6 +12,7 @@ import { getRequest } from '../services/api/get/getRequest'
 import { authenticate } from '../services/authentication/authentication'
 import { checkUser } from '../services/authentication/checkUser'
 import { MakerRegist } from '../components/elements/authentication'
+import { WelcomeBar } from '../components/elements/bar'
 
 const images = {
   cover01: "images/Articles/cover-01.jpg",
@@ -37,6 +38,7 @@ const Hello = (props) => {
       </Head>
 
       <div className="w-full flex flex-col bg-white items-center">
+        <WelcomeBar className="w-full"/>
         <div className="w-full max-w-screen-md">
           <MakerRegist className="w-full my-4" csrf={props.cookies['csrftoken']} />
         </div>

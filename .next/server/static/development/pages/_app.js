@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_tailwind_generated_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_src_tailwind_generated_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/style.css */ "./src/style.css");
 /* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_src_style_css__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\pages\\_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
