@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1285,7 +1285,7 @@ const LeaveMessage = props => {
       columnNumber: 13
     }
   }, __jsx("strong", {
-    className: "font-roboto font-black text-3xl text-white mb-4",
+    className: " md:whitespace-no-wrap font-roboto font-black text-3xl text-white mb-4",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1666,7 +1666,7 @@ function Footer({
   })));
 
   const CategoriesCard = () => __jsx("div", {
-    className: "flex flex-1  flex-col justify-start items-center md:items-start md:pl-10",
+    className: "my-2 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start md:items-center md:items-start ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1682,7 +1682,7 @@ function Footer({
       columnNumber: 13
     }
   }, "CATEGORIES"), __jsx("ul", {
-    className: "ml-2 flex flex-col justify-start items-start",
+    className: "flex flex-col justify-start items-start",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1691,7 +1691,7 @@ function Footer({
     }
   }, categories.map((categorie, index) => index < max_shown && __jsx("li", {
     key: index,
-    className: "my-2 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
+    className: "my-1 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1701,7 +1701,7 @@ function Footer({
   }, categorie.tag.toLowerCase()))));
 
   const EntriesCard = () => __jsx("div", {
-    className: "flex flex-1 flex-col justify-start items-center md:items-start pl-10 ",
+    className: "my-2 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start md:items-center md:items-start",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1717,7 +1717,7 @@ function Footer({
       columnNumber: 13
     }
   }, "ENTRIES"), __jsx("ul", {
-    className: "ml-2 flex flex-col justify-start items-start",
+    className: "flex flex-col justify-start items-start",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1725,7 +1725,7 @@ function Footer({
       columnNumber: 13
     }
   }, links.map((link, indx) => __jsx("li", {
-    className: "my-2 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
+    className: "my-1 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
     key: indx,
     __self: this,
     __source: {
@@ -1799,7 +1799,7 @@ function Footer({
       columnNumber: 78
     }
   }), " MOROCCO")), __jsx("div", {
-    className: "flex flex-col md:flex-row justify-start md:justify-around items-center w-full h-96",
+    className: "my-10 flex flex-col lg:flex-row justify-start lg:justify-around items-center w-full h-auto",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1807,7 +1807,7 @@ function Footer({
       columnNumber: 17
     }
   }, __jsx("div", {
-    className: "flex flex-1 flex-row justify-between  w-full md:w-auto",
+    className: "mb-5 md:mb-10 flex flex-1 flex-col md:flex-row items-start md:justify-center lg:justify-between  w-full  ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1829,7 +1829,7 @@ function Footer({
       columnNumber: 25
     }
   })), __jsx("div", {
-    className: "w-full h-full flex flex-1 justify-center items-center md:w-auto text-gray-500",
+    className: "mx-5 w-full flex flex-1 md:justify-center items-center md:w-auto text-gray-500",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2489,7 +2489,7 @@ function NavBar({
       columnNumber: 17
     }
   }), showWelcomeBar && __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "w-full animate-smouthAppearanceS",
+    className: "w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -7203,7 +7203,7 @@ function registerUser(data, operation, csrttoken) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -71,7 +71,7 @@ function NavBar({ changeMenuClicked, openSearch, openSearchClickHandler, categor
                     changeWelcomeBarAppearance={changeWelcomeBarAppearance}
 
                 />
-                {showWelcomeBar && <WelcomeBar className="w-full animate-smouthAppearanceS"/>}
+                {showWelcomeBar && <WelcomeBar className="w-full"/>}
             </div>
 
         </nav>

@@ -1183,7 +1183,7 @@ var LeaveMessage = function LeaveMessage(props) {
       columnNumber: 13
     }
   }, __jsx("strong", {
-    className: "font-roboto font-black text-3xl text-white mb-4",
+    className: " md:whitespace-no-wrap font-roboto font-black text-3xl text-white mb-4",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -1571,7 +1571,7 @@ function Footer(_ref) {
 
   var CategoriesCard = function CategoriesCard() {
     return __jsx("div", {
-      className: "flex flex-1  flex-col justify-start items-center md:items-start md:pl-10",
+      className: "my-2 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start md:items-center md:items-start ",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -1587,7 +1587,7 @@ function Footer(_ref) {
         columnNumber: 13
       }
     }, "CATEGORIES"), __jsx("ul", {
-      className: "ml-2 flex flex-col justify-start items-start",
+      className: "flex flex-col justify-start items-start",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -1597,7 +1597,7 @@ function Footer(_ref) {
     }, categories.map(function (categorie, index) {
       return index < max_shown && __jsx("li", {
         key: index,
-        className: "my-2 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
+        className: "my-1 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
         __self: _this,
         __source: {
           fileName: _jsxFileName,
@@ -1610,7 +1610,7 @@ function Footer(_ref) {
 
   var EntriesCard = function EntriesCard() {
     return __jsx("div", {
-      className: "flex flex-1 flex-col justify-start items-center md:items-start pl-10 ",
+      className: "my-2 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start md:items-center md:items-start",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -1626,7 +1626,7 @@ function Footer(_ref) {
         columnNumber: 13
       }
     }, "ENTRIES"), __jsx("ul", {
-      className: "ml-2 flex flex-col justify-start items-start",
+      className: "flex flex-col justify-start items-start",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -1635,7 +1635,7 @@ function Footer(_ref) {
       }
     }, links.map(function (link, indx) {
       return __jsx("li", {
-        className: "my-2 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
+        className: "my-1 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400",
         key: indx,
         __self: _this,
         __source: {
@@ -1711,7 +1711,7 @@ function Footer(_ref) {
       columnNumber: 78
     }
   }), " MOROCCO")), __jsx("div", {
-    className: "flex flex-col md:flex-row justify-start md:justify-around items-center w-full h-96",
+    className: "my-10 flex flex-col lg:flex-row justify-start lg:justify-around items-center w-full h-auto",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1719,7 +1719,7 @@ function Footer(_ref) {
       columnNumber: 17
     }
   }, __jsx("div", {
-    className: "flex flex-1 flex-row justify-between  w-full md:w-auto",
+    className: "mb-5 md:mb-10 flex flex-1 flex-col md:flex-row items-start md:justify-center lg:justify-between  w-full  ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -1741,7 +1741,7 @@ function Footer(_ref) {
       columnNumber: 25
     }
   })), __jsx("div", {
-    className: "w-full h-full flex flex-1 justify-center items-center md:w-auto text-gray-500",
+    className: "mx-5 w-full flex flex-1 md:justify-center items-center md:w-auto text-gray-500",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -2423,7 +2423,7 @@ function NavBar(_ref) {
       columnNumber: 17
     }
   }), showWelcomeBar && __jsx(_bar_WelcomeBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "w-full animate-smouthAppearanceS",
+    className: "w-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -21056,7 +21056,7 @@ function registerUser(data, operation, csrttoken) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CSoguma%5CMorMade_project%5Cwebweb%5Cpages%5Cindex.js ***!
   \************************************************************************************************************************************/
@@ -21079,5 +21079,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

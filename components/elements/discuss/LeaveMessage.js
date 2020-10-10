@@ -59,7 +59,7 @@ const LeaveMessage = props => {
     let content = (
         <div className={props.className} >
             <div className="w-full h-full flex flex-col items-left">
-                <strong className="font-roboto font-black text-3xl text-white mb-4">
+                <strong className=" md:whitespace-no-wrap font-roboto font-black text-3xl text-white mb-4">
                     {welcome}
                 </strong>
                 <div>

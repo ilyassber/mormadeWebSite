@@ -15,12 +15,12 @@ export default function Footer({categories, max_shown, links}) {
     )
 
     const CategoriesCard = () => (
-        <div className="flex flex-1  flex-col justify-start items-center md:items-start md:pl-10">
+        <div className="my-2 md:mx-10 lg:mx-5 flex lg:flex-1  flex-col justify-start items-start md:items-center md:items-start ">
             <h2 className="tracking-widest my-4  text-lg text-white font-kumbhsans cursor-default">CATEGORIES</h2>
-            <ul className="ml-2 flex flex-col justify-start items-start" >
+            <ul className="flex flex-col justify-start items-start" >
                 {categories.map((categorie, index) =>
                     (index < max_shown) && <li  key={ index }
-                                                className="my-2 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400"
+                                                className="my-1 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400"
                     >
                     {categorie.tag.toLowerCase()}</li>
                 )}
@@ -29,11 +29,11 @@ export default function Footer({categories, max_shown, links}) {
     )
 
     const EntriesCard = () => (
-        <div className="flex flex-1 flex-col justify-start items-center md:items-start pl-10 ">
+        <div className="my-2 md:mx-10 lg:mx-5 flex lg:flex-1 flex-col justify-start items-start md:items-center md:items-start">
             <h2 className="tracking-widest my-4 text-lg text-white font-kumbhsans cursor-default">ENTRIES</h2>
-            <ul className="ml-2 flex flex-col justify-start items-start">
+            <ul className="flex flex-col justify-start items-start">
                 {links.map((link, indx) =>
-                    <li className="my-2 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400" key={indx}>
+                    <li className="my-1 cursor-pointer tracking-widest whitespace-no-wrap text-sm hover:underline text-justify text-gray-400" key={indx}>
                         <Link href={link.path}><a>{link.page.toLowerCase()}</a></Link>
                     </li>
                 )}
@@ -49,12 +49,12 @@ export default function Footer({categories, max_shown, links}) {
                         <span className="whitespace-no-wrap">MORMADE |</span><br className="md:hidden"/> MOROCCO
                     </h1>
                 </div>
-                <div className="flex flex-col md:flex-row justify-start md:justify-around items-center w-full h-96">
-                    <div className="flex flex-1 flex-row justify-between  w-full md:w-auto">
+                <div className="my-10 flex flex-col lg:flex-row justify-start lg:justify-around items-center w-full h-auto">
+                    <div className="mb-5 md:mb-10 flex flex-1 flex-col md:flex-row items-start md:justify-center lg:justify-between  w-full  ">
                         <CategoriesCard />
                         <EntriesCard />
                     </div>
-                    <div className="w-full h-full flex flex-1 justify-center items-center md:w-auto text-gray-500">
+                    <div className="mx-5 w-full flex flex-1 md:justify-center items-center md:w-auto text-gray-500">
                            <LeaveMessage/> 
                     </div>
                 </div>
