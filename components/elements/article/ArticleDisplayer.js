@@ -12,7 +12,7 @@ const ArticleDisplayer = props => {
             <div className="h-auto w-full flex flex-col items-center bg-white">
                 <div className="relative md:w-3/4 lg:w-3/5 h-auto min-h-24 flex flex-col items-center mx-6 mb-6">
                     {(data.cover != null)
-                        ? (<ImgFreeDisp className="w-full h-auto" src={data.cover.path} />)
+                        ? (<ImgFreeDisp className="w-full h-auto" src={data.cover.path} alt={data.cover.alt} displayAlt={false} />)
                         : null}
                     <div className="h-auto w-auto max-w-screen flex flex-col items-center bg-white mt-6">
                         <h1 className="font-roboto font-bold text-3xl text-center leading-snug mt-6 mx-6">
@@ -27,7 +27,7 @@ const ArticleDisplayer = props => {
                     {
                         data.text.map((content, index) => {
                             if (content.type == 'image') {
-                                return (<ImgFreeDisp key={index} className="w-full h-auto mt-4 mb-8" src={content.image.path} />)
+                                return (<ImgFreeDisp key={index} className="w-full h-auto mt-4 mb-8" src={content.image.path} alt={data.cover.alt} displayAlt={true} />)
                             } else if (content.type == 'text') {
                                 return (<TextDisp key={index} className="w-full lg:w-3/4 h-auto mb-4" align="left" text={content.text} />)
                             }
@@ -35,7 +35,7 @@ const ArticleDisplayer = props => {
                         })
                     }
                 </div>
-                <hr className="w-full md:w-3/4 lg:w-3/5 bg-gray-900 m-2 mt-4" />
+                <hr className="w-full md:w-3/4 lg:w-3/5 bg-gray-300 m-2 mt-4" />
                 <DisplayCategories className="w-full md:w-3/4 lg:w-3/5 h-auto mb-4 m-2" tags={data.tags}/>
             </div>
         </div>

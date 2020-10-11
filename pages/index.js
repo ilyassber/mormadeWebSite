@@ -35,7 +35,7 @@ const images = {
 const Hello = (props) => {
 
   let articlesList = props.trending.map(function (article) {
-    return <ArticleBanner className="h-auto w-full max-w-screen-md" key={article.id} data={article} />
+    return <ArticleBanner className="h-auto w-full max-w-screen-md mt-4" key={article.id} data={article} />
   })
 
   return (
@@ -48,7 +48,7 @@ const Hello = (props) => {
       <div className="w-full flex flex-col bg-white items-center">
         <WelcomeBar className="w-full"/>
         <div className="w-full max-w-screen-md">
-          <ArticleList className="w-full mt-4" data={articlesList} />
+          <ArticleList className="w-full" data={articlesList} />
           <MakerRegist className="w-full my-4" csrf={props.cookies['csrftoken']} />
         </div>
       </div>
@@ -75,7 +75,7 @@ Hello.getInitialProps = async ({ req }) => {
     return res
   })
 
-  console.log(trending[0].text[0])
+  console.log(trending)
 
   return {
     cookies: cookies,

@@ -62,10 +62,10 @@ const IconsContainer = ({ openSearch, openSearchClickHandler, style }) => {
         <div className={style}>
             <div className="relative">
                 <div className={`${!openSearch ? "flex" : "hidden"} flex-row h-full`}>
-                    <NewIcon className="h-5 w-5" src='icons/loop.svg' clickHandler={openSearchClickHandler} />
-                    <NewIcon className="h-5 w-5" src='icons/avatar.svg' clickHandler={dropMenuOn} />
-                    <NewIcon className="h-5 w-5" src='icons/heart.svg' />
-                    <NewIcon className="h-5 w-5" src='icons/cart.svg' />
+                    <NewIcon className="h-5 w-5" src={process.env.localdomain + '/icons/loop.svg'} clickHandler={openSearchClickHandler} />
+                    <NewIcon className="h-5 w-5" src={process.env.localdomain + '/icons/avatar.svg'} clickHandler={dropMenuOn} />
+                    <NewIcon className="h-5 w-5" src={process.env.localdomain + '/icons/heart.svg'} />
+                    <NewIcon className="h-5 w-5" src={process.env.localdomain + '/icons/cart.svg'} />
                 </div>
                 <NavMenu className="absolute right-0" user={user} drop={menuDrop} callBack={dropMenuOff} />
             </div>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2363,7 +2363,7 @@ const WaitList = props => {
       columnNumber: 17
     }
   }), __jsx("div", {
-    className: "relative w-full h-auto p-6 justify-end",
+    className: "relative w-full h-auto p-6 justify-end text-white",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2371,7 +2371,7 @@ const WaitList = props => {
       columnNumber: 17
     }
   }, __jsx("h3", {
-    className: "h-auto w-full font-roboto font-bold text-white text-3xl text-left align-left mb-6",
+    className: "h-auto w-full font-roboto font-bold text-3xl text-left align-left mb-6",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2379,7 +2379,7 @@ const WaitList = props => {
       columnNumber: 21
     }
   }, "SOON"), __jsx("h3", {
-    className: "h-auto w-full font-bold text-white text-3xl text-right align-right mb-6",
+    className: "h-auto w-full font-bold text-3xl text-right align-right mb-6",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2387,7 +2387,7 @@ const WaitList = props => {
       columnNumber: 21
     }
   }, 'قريبا'), __jsx("span", {
-    className: "h-auto w-full font-roboto font-light text-white text-base text-center align-center mb-6",
+    className: "h-auto w-full font-roboto font-light text-base text-center align-center mb-6",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2406,6 +2406,10 @@ const WaitList = props => {
     reset: reset,
     error: emailError,
     color: "white",
+    textColor: "black",
+    bgColor: "white",
+    borderColor: "gray-500",
+    focusColor: "gray-500",
     height: 10,
     placeholder: "ENTER YOUR EMAIL HERE",
     className: "w-full max-w-64 mt-2",
@@ -2421,7 +2425,7 @@ const WaitList = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73,
+      lineNumber: 77,
       columnNumber: 25
     }
   }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_2__["BtnBbw"], {
@@ -2432,7 +2436,7 @@ const WaitList = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 78,
       columnNumber: 29
     }
   }))))));
@@ -3694,7 +3698,7 @@ const IconsContainer = ({
     }
   }, __jsx(NewIcon, {
     className: "h-5 w-5",
-    src: "icons/loop.svg",
+    src: "http://localhost:3000" + '/icons/loop.svg',
     clickHandler: openSearchClickHandler,
     __self: undefined,
     __source: {
@@ -3704,7 +3708,7 @@ const IconsContainer = ({
     }
   }), __jsx(NewIcon, {
     className: "h-5 w-5",
-    src: "icons/avatar.svg",
+    src: "http://localhost:3000" + '/icons/avatar.svg',
     clickHandler: dropMenuOn,
     __self: undefined,
     __source: {
@@ -3714,7 +3718,7 @@ const IconsContainer = ({
     }
   }), __jsx(NewIcon, {
     className: "h-5 w-5",
-    src: "icons/heart.svg",
+    src: "http://localhost:3000" + '/icons/heart.svg',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -3723,7 +3727,7 @@ const IconsContainer = ({
     }
   }), __jsx(NewIcon, {
     className: "h-5 w-5",
-    src: "icons/cart.svg",
+    src: "http://localhost:3000" + '/icons/cart.svg',
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -5132,7 +5136,7 @@ const ImgFreeDisp = props => {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "w-full h-auto",
+    className: "relative w-full h-auto",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -5141,13 +5145,22 @@ const ImgFreeDisp = props => {
     }
   }, __jsx("img", {
     src: props.src,
+    alt: props.alt,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6,
       columnNumber: 17
     }
-  })));
+  }), props.displayAlt ? __jsx("p", {
+    className: "absolute bottom-0 right-0 font-lato font-regular text-xs text-white bg-gray-900 bg-opacity-50 px-2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 24
+    }
+  }, props.alt) : null));
 
   return content;
 };
@@ -6377,52 +6390,71 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const ArticleBanner = props => {
+  let bannerState = props.data.cover == null ? 'relative bg-yellow-300 text-gray-900' : 'absolute bottom-0 text-white';
+
   let content = __jsx("div", {
     className: props.className,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 10,
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "h-auto w-full flex flex-col items-center bg-purple-200",
+    className: "relative",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 11,
       columnNumber: 13
+    }
+  }, props.data.cover ? __jsx("img", {
+    className: "w-full",
+    src: props.data.cover.path,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 24
+    }
+  }) : null, __jsx("div", {
+    className: bannerState + ' h-auto w-full flex flex-col items-center',
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 17
     }
   }, __jsx("h2", {
     className: "font-roboto font-bold text-xl mt-4 mx-4",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 17
+      lineNumber: 16,
+      columnNumber: 21
     }
   }, props.data.title), __jsx("span", {
     className: "mx-4",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 17
+      lineNumber: 19,
+      columnNumber: 21
     }
   }, props.data.description), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: `/stories/${props.data.url}`,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 17
+      lineNumber: 22,
+      columnNumber: 21
     }
   }, __jsx("a", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 21
+      lineNumber: 23,
+      columnNumber: 25
     }
   }, __jsx(_graphics_buttons__WEBPACK_IMPORTED_MODULE_1__["BtnBbw"], {
     className: "h-auto w-auto m-4",
@@ -6431,10 +6463,10 @@ const ArticleBanner = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 24
+      lineNumber: 23,
+      columnNumber: 28
     }
-  })))));
+  }))))));
 
   return content;
 };
@@ -8444,7 +8476,7 @@ const images = {
 const Hello = props => {
   let articlesList = props.trending.map(function (article) {
     return __jsx(_components_widgets_article_ArticleBanner__WEBPACK_IMPORTED_MODULE_18__["default"], {
-      className: "h-auto w-full max-w-screen-md",
+      className: "h-auto w-full max-w-screen-md mt-4",
       key: article.id,
       data: article,
       __self: this,
@@ -8511,7 +8543,7 @@ const Hello = props => {
       columnNumber: 9
     }
   }, __jsx(_components_elements_list_ArticleList__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    className: "w-full mt-4",
+    className: "w-full",
     data: articlesList,
     __self: undefined,
     __source: {
@@ -8544,7 +8576,7 @@ Hello.getInitialProps = async ({
   }), cookies['csrftoken'], "http://localhost:8000" + '/api/articles/').then(res => {
     return res;
   });
-  console.log(trending[0].text[0]);
+  console.log(trending);
   return {
     cookies: cookies,
     tags: tags,
@@ -8777,7 +8809,7 @@ function onClickOutside(ref, handler) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -28,7 +28,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/stories": [
+    "/stories/[story]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

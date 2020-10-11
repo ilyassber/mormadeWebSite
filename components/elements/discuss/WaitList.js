@@ -51,14 +51,14 @@ const WaitList = props => {
         <div className={props.className}>
             <div className="relative max-w-screen-sm h-auto overflow-hidden">
                 <img className="absolute h-full w-full object-cover" src="/street-vendor-b.jpg" />
-                <div className="relative w-full h-auto p-6 justify-end">
-                    <h3 className="h-auto w-full font-roboto font-bold text-white text-3xl text-left align-left mb-6">
+                <div className="relative w-full h-auto p-6 justify-end text-white">
+                    <h3 className="h-auto w-full font-roboto font-bold text-3xl text-left align-left mb-6">
                         SOON
                     </h3>
-                    <h3 className="h-auto w-full font-bold text-white text-3xl text-right align-right mb-6">
+                    <h3 className="h-auto w-full font-bold text-3xl text-right align-right mb-6">
                         {'قريبا'}
                     </h3>
-                    <span className="h-auto w-full font-roboto font-light text-white text-base text-center align-center mb-6">
+                    <span className="h-auto w-full font-roboto font-light text-base text-center align-center mb-6">
                         {welcome}
                     </span>
                     <div className="w-full h-auto flex flex-wrap flex-col items-center mt-2">
@@ -66,6 +66,10 @@ const WaitList = props => {
                             reset={reset}
                             error={emailError}
                             color='white'
+                            textColor='black'
+                            bgColor='white'
+                            borderColor="gray-500"
+                            focusColor="gray-500"
                             height={10}
                             placeholder='ENTER YOUR EMAIL HERE'
                             className="w-full max-w-64 mt-2"

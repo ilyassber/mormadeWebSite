@@ -6,13 +6,16 @@ import querystring from 'querystring'
 import { postRequest } from '../../services/api/post/postRequest'
 import { getRequest } from '../../services/api/get/getRequest'
 import { strict } from 'assert';
+import Layout from '../../components/layout';
 
 const Story = props => {
 
     let content = (
-        <div className="w-full h-screen bg-xw-100" >
-            <ArticleDisplayer story={props.story} />
-        </div>
+        <Layout tags={props.tags}>
+            <div className="w-full h-auto bg-white" >
+                <ArticleDisplayer story={props.story} />
+            </div>
+        </Layout>
     );
 
     return content;
@@ -48,9 +51,14 @@ export async function getStaticProps(context) {
             return null
         })
 
+    const tags = await getRequest(process.env.domain + '/api/categories/').then((res) => {
+        return (res)
+    })
+
     return {
         props: {
-            story: story
+            story: story,
+            tags: tags
         }
     }
 }
