@@ -187,6 +187,9 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
             />
             {/* <SearchFilter /> */}
             <DefaultContentCard />
+            <DefaultContentCard />
+            <DefaultContentCard />
+
         </div>
     )
 
@@ -222,7 +225,7 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
 // RENDER THAT SHIT
 
     return (
-        <div className={`animate-menuSlideDown fixed top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full`}>
+        <div className={`animate-menuSlideDown absolute top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full overscroll-contain overflow-scroll`}>
 
             <TopBar />
             <MainBody />

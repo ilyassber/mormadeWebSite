@@ -123,14 +123,21 @@ const Layout = (props) => {
     // DISPLAYED CONTENT 
 
     const FooterBar = () => (
+        <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+
         <Footer categories={categories}
             max_shown={5}
             links={links}
         />
+        </div>
     )
 
     const Page = () => (
-        !openSearch && props.children
+        <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+
+        {props.children}
+        </div>
+
     )
 
     const Menu = () => (
@@ -145,6 +152,8 @@ const Layout = (props) => {
     )
 
     const NavigationBar = () => (
+        // <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+
         <NavBar changeMenuClicked={changeOpenMenu}
             openSearch={openSearch}
             openSearchClickHandler={changeOpenSearch}
@@ -154,6 +163,7 @@ const Layout = (props) => {
             links={links}
             home="/"
         />
+// </div>
     )
 
     const SearchPage = () => (
@@ -168,22 +178,28 @@ const Layout = (props) => {
     )
 
     const SpacingTop = () => (
-        openSearch ? <Wrapper style=" w-full absolute top-0 bg-blue-600" /> : <Wrapper style="w-full absolute top-0 h-48" />
+        // <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+    <Wrapper style="w-full absolute top-0 h-48" />
+    // </div>
     )
 
 
     // RENDER THAT SHIT
 
     return (
-        <div className="relative flex flex-col w-full bg-scroll" >
+        <div className="flex flex-col w-full h-full overflow-scroll bg-scroll" >
 
             <Menu />
             <BlackFocusOff />
+            {/* <div className={`${openSearch ? "hidden" : "" } w-full h-full`}> */}
             <NavigationBar />
             <SpacingTop />
+            {/* </div> */}
             <SearchPage />
-            <Page />
-            <FooterBar />
+            {/* <div className={`${openSearch ? "hidden" : "" } w-full h-full`}> */}
+                <Page />
+                <FooterBar />
+            {/* </div> */}
 
         </div>
     )

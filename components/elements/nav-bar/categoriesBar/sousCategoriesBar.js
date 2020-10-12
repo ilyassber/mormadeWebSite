@@ -40,7 +40,10 @@ function SousCategoriesBar({categorie, closeClickHandler}) {
             <div className="flex flex-row justify-end items-center w-full px-2 h-12 ">
                 <CloseIcon/>
             </div>
-            <div className="flex flex-col justify-center items-center w-full h-144">
+            <div className="flex flex-row justify-center items-center w-full px-2 h-12 ">
+                <h1 className=" animate-smouthAppearanceS font-lato text-sm font-black tracking-widest">{categorie.name.toUpperCase()}</h1>                
+            </div>
+            <div className="flex flex-col justify-center items-center w-full h-120">
             <h1 className="my-2 font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap cursor-default">{categorie.tag}</h1>
             <div className="flex flex-col justify-start items-center m-5 h-64 w-10/12 ">
                 <p className="m-2">No content available</p>
@@ -51,7 +54,7 @@ function SousCategoriesBar({categorie, closeClickHandler}) {
     )
     return (
 
-        <div className="absolute flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white">
+        <div className=" animate-smouthAppearance absolute flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white">
             {/* <SousCategoriesContent /> */}
             <BlankContent/>
         </div>

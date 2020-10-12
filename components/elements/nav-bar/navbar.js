@@ -48,7 +48,7 @@ function NavBar({ changeMenuClicked, openSearch, openSearchClickHandler, categor
     
 
     return (
-        <nav   className="z-10 flex flex-col w-ful" >
+        <nav   className="z-10 flex flex-col w-full" >
             <div ref={upperNavRef} className="fixed md:static z-10 w-full bg-white">
                 <UpperNav
                     style=" flex w-full md:w-4/5 mx-auto content-center h-12 py-5/12  pt-4 pb-2 bg-white"
