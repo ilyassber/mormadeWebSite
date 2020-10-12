@@ -1683,7 +1683,7 @@ var WelcomeBar = function WelcomeBar(props) {
       columnNumber: 9
     }
   }, __jsx("div", {
-    className: "w-full h-auto bg-gradient-to-r from-gray-700 via-gray-100 to-gray-700 border-b border-gray-300 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
+    className: "w-full h-auto bg-gradient-to-r from-xw-300 via-white to-xw-300 border-b border-t border-gray-900 flex felx-wrap box-content overflow-hidden pt-1 pb-1",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -2859,12 +2859,16 @@ function CategoriesBar(_ref2) {
       lineNumber: 63,
       columnNumber: 17
     }
-  }, categories.map(function (categorie, index) {
+  }, categories.map(function (category, index) {
     return index < max_shown && __jsx("li", {
       key: index,
-      className: "flex px-4 h-full justify-center items-center cursor-pointer font-lato text-sm font-black tracking-widest ".concat(openCategorie.categorie && openCategorie.categorie === categorie ? "text-gray-900 border-b-2 border-black" : "text-gray-900 border-b-2 border-transparent"),
+      className: "flex px-4 h-full justify-center items-center cursor-pointer font-lato text-sm font-black tracking-widest ".concat(openCategorie.categorie && openCategorie.categorie === category ? "text-gray-900 border-b-2 border-black" : "text-gray-900 border-b-2 border-transparent"),
       onClick: function onClick() {
-        return clickOnCategorie(categorie);
+        if (category.type == 'page') {
+          window.location = category.link;
+        } else {
+          clickOnCategorie(category);
+        }
       },
       __self: _this2,
       __source: {
@@ -2872,13 +2876,13 @@ function CategoriesBar(_ref2) {
         lineNumber: 65,
         columnNumber: 48
       }
-    }, categorie.name.toUpperCase());
+    }, category.name.toUpperCase());
   })), __jsx("div", {
     className: "flex flex-1 h-full",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 78,
       columnNumber: 17
     }
   })), openCategorie.open && __jsx(_sousCategoriesBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -2893,7 +2897,7 @@ function CategoriesBar(_ref2) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 81,
       columnNumber: 36
     }
   })));
@@ -6173,12 +6177,15 @@ var Layout = function Layout(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
     _jsxFileName = "C:\\Users\\1337\\Documents\\WorkSpace\\ecomart\\dev\\mormadeWebSite\\components\\logo\\Brand.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 var Brand = function Brand(props) {
@@ -6187,26 +6194,35 @@ var Brand = function Brand(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 7,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: "container h-full w-auto content-center mx-auto flex flex-wrap",
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+    href: "/",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 13
+    }
+  }, __jsx("div", {
+    className: "container h-full w-auto content-center mx-auto flex flex-wrap",
+    role: "button",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 17
     }
   }, __jsx("strong", {
     className: "font-raleway font-bold text-2xl text-gray-900",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 17
+      lineNumber: 10,
+      columnNumber: 21
     }
-  }, "MORMADE")));
+  }, "MORMADE"))));
 
   return content;
 };
@@ -22550,9 +22566,9 @@ function authenticate(data, operation, csrttoken) {
 
       if (operation == 'logout') {
         localStorage.setItem('_user', null);
-        window.location = '/maker/auth';
+        window.location = '/';
       } else {
-        window.location = '/maker';
+        window.location = '/';
       } //resolve(response.data)
 
     })["catch"](function (error) {
@@ -22695,7 +22711,7 @@ function onClickOutside(ref, handler) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5C1337%5CDocuments%5CWorkSpace%5Cecomart%5Cdev%5CmormadeWebSite%5Cpages%5Cindex.js ***!
   \****************************************************************************************************************************************************************/
@@ -22718,5 +22734,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

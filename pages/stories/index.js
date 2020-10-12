@@ -5,6 +5,8 @@ import ArticleList from '../../components/elements/list/ArticleList'
 import { postRequest } from '../../services/api/post/postRequest'
 import ArticleBanner from '../../components/widgets/article/ArticleBanner'
 import querystring from 'querystring'
+import { getRequest } from '../../services/api/get/getRequest'
+import Layout from '../../components/layout'
 
 const Stories = props => {
 
@@ -19,7 +21,7 @@ const Stories = props => {
         setIsLoading(true);
         postRequest(querystring.stringify({
             operation: "all"
-        }), props.cookies['csrftoken'],process.env.domain + '/api/articles/')
+        }), props.cookies['csrftoken'], process.env.domain + '/api/articles/')
             .then(res => {
                 console.log(res)
                 setData(JSON.stringify(res))
@@ -27,7 +29,7 @@ const Stories = props => {
             })
     }, []);
 
-    let content = null;
+    let body = null;
 
     if (!isLoading) {
 
@@ -37,28 +39,34 @@ const Stories = props => {
 
         let articles = (<ArticleList className="w-full p-2" data={articlesList} />)
 
-        content = (
-            <div className="w-screen flex flex-col items-center">
-                <Navbar cookies={props.cookies} className="w-full" />
-                <WelcomeBar className="w-screen pt-12" />
-                <div className="w-full h-auto flex pt-10">
-                    <div className="w-full h-auto flex flex-col items-center">
-                        {articles}
-                    </div>
-                </div>
+        body = (
+            <div className="w-full flex flex-col items-center">
+                {articles}
             </div>
         );
     } else if (!isLoading && (!data || data.length === 0)) {
-        content = null;
+        body = null;
     }
+
+    let content = (
+        <Layout tags={props.tags}>
+            {body}
+        </Layout>
+    )
+
     return content;
 };
 
-Stories.getInitialProps = ({ req }) => {
+Stories.getInitialProps = async ({ req }) => {
     const cookies = parseCookies(req);
+
+    const tags = await getRequest(process.env.domain + '/api/categories/').then((res) => {
+        return (res)
+    })
 
     return {
         cookies: cookies,
+        tags: tags
     };
 };
 

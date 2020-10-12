@@ -28,7 +28,15 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/stories/[story]": [
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/regions": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/stories": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

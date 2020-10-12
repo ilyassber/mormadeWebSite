@@ -4,7 +4,7 @@ const WelcomeBar = props => {
 
     let content = (
         <div className={props.className}>
-            <div className="w-full h-auto bg-gradient-to-r from-gray-700 via-gray-100 to-gray-700 border-b border-gray-300 flex felx-wrap box-content overflow-hidden pt-1 pb-1">
+            <div className="w-full h-auto bg-gradient-to-r from-xw-300 via-white to-xw-300 border-b border-t border-gray-900 flex felx-wrap box-content overflow-hidden pt-1 pb-1">
                 <div className="animate-ticker w-auto h-auto box-content flex felx-wrap">
                     <label className="h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none">&#8901; &thinsp;&thinsp;&thinsp;&thinsp; مرحبا بك في المغرب &thinsp;&thinsp;&thinsp;&thinsp; </label>
                     <label className="h-auto w-auto inline-block whitespace-no-wrap font-sans font-medium outline-none">&#8901; &thinsp;&thinsp;&thinsp;&thinsp; Welcome to Morocco &thinsp;&thinsp;&thinsp;&thinsp; </label>

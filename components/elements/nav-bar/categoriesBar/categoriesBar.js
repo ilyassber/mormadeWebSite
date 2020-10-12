@@ -61,12 +61,18 @@ export default function CategoriesBar({ style ,max_shown, categories, brandNameS
                     />
                 </div>
                 <ul className="flex flex-row justify-center items-center h-full pt-2" >
-                    {categories.map((categorie, index) =>
+                    {categories.map((category, index) =>
                         (index < max_shown) && <li  key={ index }
-                                                    className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-sm font-black tracking-widest ${(openCategorie.categorie && openCategorie.categorie === categorie) ? "text-gray-900 border-b-2 border-black" : "text-gray-900 border-b-2 border-transparent" }`}
-                                                    onClick={() => clickOnCategorie(categorie)}
+                                                    className={`flex px-4 h-full justify-center items-center cursor-pointer font-lato text-sm font-black tracking-widest ${(openCategorie.categorie && openCategorie.categorie === category) ? "text-gray-900 border-b-2 border-black" : "text-gray-900 border-b-2 border-transparent" }`}
+                                                    onClick={() => {
+                                                        if (category.type == 'page') {
+                                                            window.location = category.link
+                                                        } else {
+                                                            clickOnCategorie(category)
+                                                        }
+                                                    }}
                         >
-                        {categorie.name.toUpperCase()}</li>
+                        {category.name.toUpperCase()}</li>
                     )}
                 </ul>
                 <div className="flex flex-1 h-full">
