@@ -2918,12 +2918,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphics_imageCover_Cover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../graphics/imageCover/Cover */ "./components/graphics/imageCover/Cover.js");
 /* harmony import */ var _upperNav_iconsContainer_iconsContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../upperNav/iconsContainer/iconsContainer */ "./components/elements/nav-bar/upperNav/iconsContainer/iconsContainer.js");
-/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons-kit */ "./node_modules/react-icons-kit/index.js");
-/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
-/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utilities_lockBodyScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utilities/lockBodyScroll */ "./components/elements/utilities/lockBodyScroll.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit */ "./node_modules/react-icons-kit/index.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\nav-bar\\categoriesBar\\sousCategoriesBar.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2938,15 +2940,15 @@ function SousCategoriesBar(_ref) {
 
   // close icon
   var CloseIcon = function CloseIcon() {
-    return __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    return __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
       className: "cursor-pointer text-gray-800 ",
       onClick: closeClickHandler,
       size: 20,
-      icon: react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_4__["close"],
+      icon: react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__["close"],
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 9
       }
     });
@@ -2958,7 +2960,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -2966,7 +2968,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 13
       }
     }, __jsx("ul", {
@@ -2974,7 +2976,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 17
       }
     }, __jsx("h2", {
@@ -2982,7 +2984,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 21
       }
     }, "Sous Categories"), __jsx("li", {
@@ -2990,7 +2992,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 23,
         columnNumber: 21
       }
     }), categorie && categorie.sous_tags.map(function (sous_tag, index) {
@@ -3000,7 +3002,7 @@ function SousCategoriesBar(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24,
+          lineNumber: 25,
           columnNumber: 25
         }
       }, sous_tag);
@@ -3009,7 +3011,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 13
       }
     }, __jsx("h2", {
@@ -3017,7 +3019,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 17
       }
     }, "HIGH LIGHT"), __jsx("div", {
@@ -3025,14 +3027,14 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 17
       }
     }, __jsx("p", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31,
+        lineNumber: 32,
         columnNumber: 21
       }
     }, "no image to be shown"))));
@@ -3044,7 +3046,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -3052,14 +3054,14 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40,
+        lineNumber: 41,
         columnNumber: 13
       }
     }, __jsx(CloseIcon, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 17
       }
     })), __jsx("div", {
@@ -3067,15 +3069,15 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
+        lineNumber: 44,
         columnNumber: 13
       }
     }, __jsx("h1", {
-      className: " animate-smouthAppearanceS font-lato text-sm font-black tracking-widest",
+      className: " font-lato text-sm font-black tracking-widest",
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 17
       }
     }, categorie.name.toUpperCase())), __jsx("div", {
@@ -3083,7 +3085,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 47,
         columnNumber: 13
       }
     }, __jsx("h1", {
@@ -3091,7 +3093,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 48,
         columnNumber: 13
       }
     }, categorie.tag), __jsx("div", {
@@ -3099,7 +3101,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 49,
         columnNumber: 13
       }
     }, __jsx("p", {
@@ -3107,7 +3109,7 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49,
+        lineNumber: 50,
         columnNumber: 17
       }
     }, "No content available"), __jsx("h1", {
@@ -3115,25 +3117,26 @@ function SousCategoriesBar(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 17
       }
     }, "Stay Tuned"))));
   };
 
+  Object(_utilities_lockBodyScroll__WEBPACK_IMPORTED_MODULE_3__["default"])();
   return __jsx("div", {
     className: " animate-smouthAppearance absolute flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 59,
       columnNumber: 9
     }
   }, __jsx(BlankContent, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 61,
       columnNumber: 13
     }
   }));
@@ -3736,12 +3739,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
-/* harmony import */ var _widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../widgets/search/searchWidget */ "./components/widgets/search/searchWidget.js");
-/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons-kit */ "./node_modules/react-icons-kit/index.js");
-/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
-/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _utilities_lockBodyScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utilities/lockBodyScroll */ "./components/elements/utilities/lockBodyScroll.js");
+/* harmony import */ var _alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../alpha-displayer/AlphaDisplayer */ "./components/elements/alpha-displayer/AlphaDisplayer.js");
+/* harmony import */ var _widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../widgets/search/searchWidget */ "./components/widgets/search/searchWidget.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons-kit */ "./node_modules/react-icons-kit/index.js");
+/* harmony import */ var react_icons_kit__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-icons-kit/ikons/close */ "./node_modules/react-icons-kit/ikons/close.js");
+/* harmony import */ var react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_6__);
 
 var _jsxFileName = "C:\\Users\\Soguma\\MorMade_project\\webweb\\components\\elements\\searchGate\\searchGate.js";
 
@@ -3750,6 +3754,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -3766,7 +3771,7 @@ function NewHistoryItem(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 9
     }
   }, __jsx("p", {
@@ -3775,7 +3780,7 @@ function NewHistoryItem(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 17,
       columnNumber: 13
     }
   }, title));
@@ -3793,9 +3798,10 @@ function SearchGate(_ref2) {
   })),
       data = _useState[0],
       setData = _useState[1]; // searchGate data --> check searchData state in "layout.js"
-  // STATE CALLBACKS
-  // turn search input focus OFF
 
+
+  var pointer = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null); // STATE CALLBACKS
+  // turn search input focus OFF
 
   var InputFocusOff = function InputFocusOff() {
     setData(_objectSpread({}, data, {
@@ -3859,15 +3865,15 @@ function SearchGate(_ref2) {
 
 
   var CloseIcon = function CloseIcon() {
-    return __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_4__["Icon"], {
+    return __jsx(react_icons_kit__WEBPACK_IMPORTED_MODULE_5__["Icon"], {
       className: "cursor-pointer text-gray-600 hover:text-gray-700",
       onClick: UpdateAndExit,
       size: 40,
-      icon: react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_5__["close"],
+      icon: react_icons_kit_ikons_close__WEBPACK_IMPORTED_MODULE_6__["close"],
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 86,
+        lineNumber: 87,
         columnNumber: 9
       }
     });
@@ -3882,7 +3888,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94,
+        lineNumber: 95,
         columnNumber: 9
       }
     }, __jsx("h2", {
@@ -3890,7 +3896,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95,
+        lineNumber: 96,
         columnNumber: 13
       }
     }, "Recent Search"), __jsx("ul", {
@@ -3898,7 +3904,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96,
+        lineNumber: 97,
         columnNumber: 13
       }
     }, data.searchHistory.map(function (item, indx) {
@@ -3908,7 +3914,7 @@ function SearchGate(_ref2) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98,
+          lineNumber: 99,
           columnNumber: 47
         }
       }, __jsx(NewHistoryItem, {
@@ -3917,7 +3923,7 @@ function SearchGate(_ref2) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 100,
           columnNumber: 25
         }
       }));
@@ -3927,7 +3933,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105,
+        lineNumber: 106,
         columnNumber: 53
       }
     }, "Delete History"), "        ");
@@ -3942,7 +3948,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113,
+        lineNumber: 114,
         columnNumber: 9
       }
     }, __jsx("h2", {
@@ -3950,7 +3956,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115,
+        lineNumber: 116,
         columnNumber: 13
       }
     }, cardTitle), __jsx("ul", {
@@ -3958,7 +3964,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117,
+        lineNumber: 118,
         columnNumber: 13
       }
     }, titleLinks.map(function (title, indx) {
@@ -3968,7 +3974,7 @@ function SearchGate(_ref2) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119,
+          lineNumber: 120,
           columnNumber: 21
         }
       }, title);
@@ -3983,7 +3989,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130,
+        lineNumber: 131,
         columnNumber: 9
       }
     }, __jsx(RecentSearchCard, {
@@ -3992,7 +3998,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132,
+        lineNumber: 133,
         columnNumber: 13
       }
     }), __jsx(AnnouceCard, {
@@ -4002,7 +4008,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134,
+        lineNumber: 135,
         columnNumber: 13
       }
     }), __jsx(AnnouceCard, {
@@ -4012,7 +4018,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138,
+        lineNumber: 139,
         columnNumber: 13
       }
     }));
@@ -4025,7 +4031,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148,
+        lineNumber: 149,
         columnNumber: 9
       }
     }, __jsx(LeftContentCard, {
@@ -4033,7 +4039,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149,
+        lineNumber: 150,
         columnNumber: 13
       }
     }), __jsx("div", {
@@ -4041,7 +4047,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150,
+        lineNumber: 151,
         columnNumber: 13
       }
     }, __jsx("div", {
@@ -4049,7 +4055,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151,
+        lineNumber: 152,
         columnNumber: 17
       }
     }), __jsx("div", {
@@ -4057,10 +4063,10 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 154,
+        lineNumber: 155,
         columnNumber: 17
       }
-    }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__["default"], {
       image: "images/Articles/cover-04.jpg",
       title: "The Lovely Place",
       description: "have u ever been in a place where .. .",
@@ -4071,7 +4077,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155,
+        lineNumber: 156,
         columnNumber: 17
       }
     }))));
@@ -4084,7 +4090,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168,
+        lineNumber: 169,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -4092,7 +4098,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 170,
+        lineNumber: 171,
         columnNumber: 13
       }
     }, __jsx("div", {
@@ -4100,10 +4106,10 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171,
+        lineNumber: 172,
         columnNumber: 17
       }
-    }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_alpha_displayer_AlphaDisplayer__WEBPACK_IMPORTED_MODULE_3__["default"], {
       title: "",
       description: "",
       buttonText: "",
@@ -4111,7 +4117,7 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172,
+        lineNumber: 173,
         columnNumber: 21
       }
     }))));
@@ -4124,24 +4130,17 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183,
+        lineNumber: 184,
         columnNumber: 9
       }
-    }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_4__["default"], {
       style: "w-full h-12 mt-4",
       clickHandler: changeSearchTarget,
       inputFocus: data.inputFocus,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184,
-        columnNumber: 13
-      }
-    }), __jsx(DefaultContentCard, {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 189,
+        lineNumber: 185,
         columnNumber: 13
       }
     }), __jsx(DefaultContentCard, {
@@ -4149,13 +4148,6 @@ function SearchGate(_ref2) {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 190,
-        columnNumber: 13
-      }
-    }), __jsx(DefaultContentCard, {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 191,
         columnNumber: 13
       }
     }));
@@ -4168,24 +4160,24 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 198,
+        lineNumber: 197,
         columnNumber: 9
       }
-    }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, __jsx(_widgets_search_searchWidget__WEBPACK_IMPORTED_MODULE_4__["default"], {
       style: "w-full h-12 my-0 bg-white ",
       clickHandler: submitInputText,
       inputFocus: data.inputFocus,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 199,
+        lineNumber: 198,
         columnNumber: 13
       }
     }), __jsx(ResultContentCard, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 203,
+        lineNumber: 202,
         columnNumber: 13
       }
     }));
@@ -4199,14 +4191,14 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212,
+        lineNumber: 211,
         columnNumber: 9
       }
     }, __jsx(CloseIcon, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213,
+        lineNumber: 212,
         columnNumber: 13
       }
     }));
@@ -4218,34 +4210,49 @@ function SearchGate(_ref2) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 220,
+        lineNumber: 219,
         columnNumber: 9
       }
     }) // <SearchResultBody/>
     ;
-  }; // RENDER THAT SHIT
+  }; // Hook
 
+
+  Object(_utilities_lockBodyScroll__WEBPACK_IMPORTED_MODULE_2__["default"])(); // useEffect(() => {
+  //     // Get original body overflow
+  //     const style = pointer.current.style.overflow;
+  //     pointer.current.style.overflow = 'hidden'
+  //     console.log("style : ", pointer.current.style, " overflow : ", style)
+  //     // const originalStyle = window.getComputedStyle(document.body).overflow;  
+  //     // Prevent scrolling on mount
+  //     // document.body.style.overflow = 'hidden';
+  //     // Re-enable scrolling when component unmounts
+  //     // return () => document.body.style.overflow = originalStyle;
+  //     }, []); // Empty array ensures effect is only run on mount and unmount
+  // //  }
+  // RENDER THAT SHIT
 
   return __jsx("div", {
+    ref: pointer,
     className: "animate-menuSlideDown absolute top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full overscroll-contain overflow-scroll",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
+      lineNumber: 240,
       columnNumber: 9
     }
   }, __jsx(TopBar, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230,
+      lineNumber: 242,
       columnNumber: 13
     }
   }), __jsx(MainBody, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231,
+      lineNumber: 243,
       columnNumber: 13
     }
   }));
@@ -4566,6 +4573,34 @@ if (true) {
   module.hot.dispose(function() { 
     update();
   });
+}
+
+/***/ }),
+
+/***/ "./components/elements/utilities/lockBodyScroll.js":
+/*!*********************************************************!*\
+  !*** ./components/elements/utilities/lockBodyScroll.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useLockBodyScroll; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function useLockBodyScroll() {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // Get original body overflow
+    var originalStyle = window.getComputedStyle(document.body).overflow; // Prevent scrolling on mount
+
+    document.body.style.overflow = 'hidden'; // Re-enable scrolling when component unmounts
+
+    return function () {
+      return document.body.style.overflow = originalStyle;
+    };
+  }, []); // Empty array ensures effect is only run on mount and unmount
 }
 
 /***/ }),
@@ -5985,35 +6020,41 @@ var links = [{
 }];
 
 var Layout = function Layout(props) {
-  // GLOBAL STATES
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      openMenu = _useState[0],
-      setOpenMenu = _useState[1]; // menu open/close state
+  console.log("LYOUT RENDERRR"); // GLOBAL STATES
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      scroll = _useState[0],
+      setScroll = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      openMenu = _useState2[0],
+      setOpenMenu = _useState2[1]; // menu open/close state
 
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     page: "HOME",
     path: "/"
   }),
-      selectedPage = _useState2[0],
-      setSelectedPage = _useState2[1]; // current selected page
+      selectedPage = _useState3[0],
+      setSelectedPage = _useState3[1]; // current selected page
 
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      openSearch = _useState3[0],
-      setOpenSearch = _useState3[1]; // search open/close state
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      openSearch = _useState4[0],
+      setOpenSearch = _useState4[1]; // search open/close state
 
 
-  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     searchHistory: [],
     searchTarget: "",
     searchTrackedInputText: ""
   }),
-      searchData = _useState4[0],
-      _setSearchData = _useState4[1]; // saved search DATA 
-  // STATE CALLBACKS
-  // openSearch callBacks
+      searchData = _useState5[0],
+      _setSearchData = _useState5[1]; // saved search DATA 
 
+
+  var layoutRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // STATE CALLBACKS
+  // openSearch callBacks
 
   var changeOpenSearch = function changeOpenSearch() {
     setOpenSearch(!openSearch);
@@ -6031,37 +6072,27 @@ var Layout = function Layout(props) {
 
 
   var FooterBar = function FooterBar() {
-    return __jsx("div", {
-      className: "".concat(openSearch ? "hidden" : "", " w-full h-full"),
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 126,
-        columnNumber: 9
-      }
-    }, __jsx(_elements_footer_footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      categories: categories,
-      max_shown: 5,
-      links: links,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 128,
-        columnNumber: 9
-      }
-    }));
+    return (// <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+      __jsx(_elements_footer_footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        categories: categories,
+        max_shown: 5,
+        links: links,
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131,
+          columnNumber: 9
+        }
+      }) // </div>
+
+    );
   };
 
   var Page = function Page() {
-    return __jsx("div", {
-      className: "".concat(openSearch ? "hidden" : "", " w-full h-full"),
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 136,
-        columnNumber: 9
-      }
-    }, props.children);
+    return (// <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+      props.children // </div>
+
+    );
   };
 
   var Menu = function Menu() {
@@ -6076,32 +6107,29 @@ var Layout = function Layout(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144,
+        lineNumber: 147,
         columnNumber: 21
       }
     });
   };
 
   var NavigationBar = function NavigationBar() {
-    return (// <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
-      __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        changeMenuClicked: changeOpenMenu,
-        openSearch: openSearch,
-        openSearchClickHandler: changeOpenSearch,
-        logo: "/logo.png",
-        categories: props.tags,
-        max_shown: 8,
-        links: links,
-        home: "/",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 157,
-          columnNumber: 9
-        }
-      }) // </div>
-
-    );
+    return __jsx(_elements_nav_bar_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      changeMenuClicked: changeOpenMenu,
+      openSearch: openSearch,
+      openSearchClickHandler: changeOpenSearch,
+      logo: "/logo.png",
+      categories: props.tags,
+      max_shown: 8,
+      links: links,
+      home: "/",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 158,
+        columnNumber: 9
+      }
+    });
   };
 
   var SearchPage = function SearchPage() {
@@ -6133,77 +6161,75 @@ var Layout = function Layout(props) {
   };
 
   var SpacingTop = function SpacingTop() {
-    return (// <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
-      __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        style: "w-full absolute top-0 h-48",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 182,
-          columnNumber: 5
-        }
-      }) // </div>
-
-    );
+    return __jsx(_widgets_utilities_wrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      style: "w-full absolute top-0 h-48",
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 181,
+        columnNumber: 9
+      }
+    });
   }; // RENDER THAT SHIT
 
 
   return __jsx("div", {
-    className: "flex flex-col w-full h-full overflow-scroll bg-scroll",
+    ref: layoutRef,
+    className: "flex flex-col w-full h-full",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190,
+      lineNumber: 188,
       columnNumber: 9
     }
   }, __jsx(Menu, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192,
+      lineNumber: 190,
       columnNumber: 13
     }
   }), __jsx(BlackFocusOff, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193,
+      lineNumber: 191,
       columnNumber: 13
     }
   }), __jsx(NavigationBar, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195,
+      lineNumber: 192,
       columnNumber: 13
     }
   }), __jsx(SpacingTop, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 196,
+      lineNumber: 193,
       columnNumber: 13
     }
   }), __jsx(SearchPage, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198,
+      lineNumber: 194,
       columnNumber: 13
     }
   }), __jsx(Page, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200,
-      columnNumber: 17
+      lineNumber: 195,
+      columnNumber: 13
     }
   }), __jsx(FooterBar, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
-      columnNumber: 17
+      lineNumber: 196,
+      columnNumber: 13
     }
   }));
 };

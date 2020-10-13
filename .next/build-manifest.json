@@ -28,10 +28,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/regions": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/stories": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

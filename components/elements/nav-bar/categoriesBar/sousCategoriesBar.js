@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Cover from '../../../graphics/imageCover/Cover'
 import IconsContainer from '../upperNav/iconsContainer/iconsContainer'
+import useLockBodyScroll from '../../utilities/lockBodyScroll'
 import { Icon } from 'react-icons-kit'
 import { close } from 'react-icons-kit/ikons/close'
 
@@ -41,7 +42,7 @@ function SousCategoriesBar({categorie, closeClickHandler}) {
                 <CloseIcon/>
             </div>
             <div className="flex flex-row justify-center items-center w-full px-2 h-12 ">
-                <h1 className=" animate-smouthAppearanceS font-lato text-sm font-black tracking-widest">{categorie.name.toUpperCase()}</h1>                
+                <h1 className=" font-lato text-sm font-black tracking-widest">{categorie.name.toUpperCase()}</h1>                
             </div>
             <div className="flex flex-col justify-center items-center w-full h-120">
             <h1 className="my-2 font-bold text-lg text-gray-900 font-kumbhsans my-2  whitespace-no-wrap cursor-default">{categorie.tag}</h1>
@@ -52,6 +53,7 @@ function SousCategoriesBar({categorie, closeClickHandler}) {
             </div>
         </div>
     )
+    useLockBodyScroll()
     return (
 
         <div className=" animate-smouthAppearance absolute flex flex-col items-center w-full  py-5 border-t border-gray-500 bg-white">

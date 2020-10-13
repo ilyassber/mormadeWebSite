@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useRef, useState } from 'react'
 import Wrapper from './widgets/utilities/wrapper'
 import NavBar from './elements/nav-bar/navbar'
 import SideMenu from './elements/side-menu/sideMenu'
@@ -85,8 +85,10 @@ const links = [
 
 const Layout = (props) => {
 
+    console.log("LYOUT RENDERRR")
     // GLOBAL STATES
 
+    const [scroll, setScroll] = useState(null)
     const [openMenu, setOpenMenu] = useState(false)   // menu open/close state
     const [selectedPage, setSelectedPage] = useState({ page: "HOME", path: "/" }) // current selected page
     const [openSearch, setOpenSearch] = useState(false)   // search open/close state
@@ -96,6 +98,7 @@ const Layout = (props) => {
         searchTrackedInputText: "",
     })  // saved search DATA 
 
+    const layoutRef = useRef(null) 
 
 
     // STATE CALLBACKS
@@ -123,20 +126,20 @@ const Layout = (props) => {
     // DISPLAYED CONTENT 
 
     const FooterBar = () => (
-        <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+        // <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
 
         <Footer categories={categories}
             max_shown={5}
             links={links}
         />
-        </div>
+        // </div>
     )
 
     const Page = () => (
-        <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
+        // <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
 
-        {props.children}
-        </div>
+        props.children
+        // </div>
 
     )
 
@@ -152,8 +155,6 @@ const Layout = (props) => {
     )
 
     const NavigationBar = () => (
-        // <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
-
         <NavBar changeMenuClicked={changeOpenMenu}
             openSearch={openSearch}
             openSearchClickHandler={changeOpenSearch}
@@ -163,7 +164,6 @@ const Layout = (props) => {
             links={links}
             home="/"
         />
-// </div>
     )
 
     const SearchPage = () => (
@@ -178,28 +178,22 @@ const Layout = (props) => {
     )
 
     const SpacingTop = () => (
-        // <div className={`${openSearch ? "hidden" : "" } w-full h-full`}>
-    <Wrapper style="w-full absolute top-0 h-48" />
-    // </div>
+        <Wrapper style="w-full absolute top-0 h-48" />
     )
 
 
     // RENDER THAT SHIT
 
     return (
-        <div className="flex flex-col w-full h-full overflow-scroll bg-scroll" >
+        <div ref={layoutRef} className="flex flex-col w-full h-full" >
 
             <Menu />
             <BlackFocusOff />
-            {/* <div className={`${openSearch ? "hidden" : "" } w-full h-full`}> */}
             <NavigationBar />
             <SpacingTop />
-            {/* </div> */}
             <SearchPage />
-            {/* <div className={`${openSearch ? "hidden" : "" } w-full h-full`}> */}
-                <Page />
-                <FooterBar />
-            {/* </div> */}
+            <Page />
+            <FooterBar />
 
         </div>
     )

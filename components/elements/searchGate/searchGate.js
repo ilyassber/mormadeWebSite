@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect } from 'react'
+import useLockBodyScroll from '../utilities/lockBodyScroll'
 import AlphaDisplayer from '../alpha-displayer/AlphaDisplayer'
 import SearchWidget from '../../widgets/search/searchWidget'
 import { Icon } from 'react-icons-kit'
@@ -22,7 +23,7 @@ function NewHistoryItem({ title, deleteOneHistory }) {
 export default function SearchGate({ changeOpenSearch , searchData, setSearchData }) {
 
     const [data, setData] = useState({...searchData, ...{inputFocus : true}})  // searchGate data --> check searchData state in "layout.js"
-
+    const pointer = useRef(null);
 
 // STATE CALLBACKS
 
@@ -187,8 +188,6 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
             />
             {/* <SearchFilter /> */}
             <DefaultContentCard />
-            <DefaultContentCard />
-            <DefaultContentCard />
 
         </div>
     )
@@ -221,11 +220,24 @@ export default function SearchGate({ changeOpenSearch , searchData, setSearchDat
         // <SearchResultBody/>
     )
 
-
+// Hook
+useLockBodyScroll()
+// useEffect(() => {
+//     // Get original body overflow
+//     const style = pointer.current.style.overflow;
+//     pointer.current.style.overflow = 'hidden'
+//     console.log("style : ", pointer.current.style, " overflow : ", style)
+//     // const originalStyle = window.getComputedStyle(document.body).overflow;  
+//     // Prevent scrolling on mount
+//     // document.body.style.overflow = 'hidden';
+//     // Re-enable scrolling when component unmounts
+//     // return () => document.body.style.overflow = originalStyle;
+//     }, []); // Empty array ensures effect is only run on mount and unmount
+// //  }
 // RENDER THAT SHIT
 
     return (
-        <div className={`animate-menuSlideDown absolute top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full overscroll-contain overflow-scroll`}>
+        <div ref={pointer} className={`animate-menuSlideDown absolute top-0 z-50 w-full flex flex-col items-center justify-start bg-white h-full overscroll-contain overflow-scroll`}>
 
             <TopBar />
             <MainBody />
